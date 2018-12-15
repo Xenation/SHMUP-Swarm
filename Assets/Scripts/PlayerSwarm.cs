@@ -10,6 +10,8 @@ namespace Swarm {
 		public int unitsToCreate = 50;
 		public float unitSpeed = 4f;
 		public float unitRadius = .1f;
+		public Transform bossTransform;
+		public float bossRadius = 3f;
 
 		public bool debug = false;
 
@@ -17,12 +19,14 @@ namespace Swarm {
 		[System.NonSerialized] public Transform cursor;
 
 		private Vector2 velocity;
+		private Rigidbody2D cursorRB;
 
 		private void Awake() {
 			for (int i = 0; i < unitsToCreate; i++) {
 				Instantiate(unitPrefab, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f)), Quaternion.identity, transform);
 			}
 			cursor = transform.Find("Cursor");
+			cursorRB = cursor.GetComponent<Rigidbody2D>();
 			GetComponentsInChildren(units);
 		}
 
@@ -34,7 +38,8 @@ namespace Swarm {
 		}
 
 		private void FixedUpdate() {
-			cursor.position += (Vector3) velocity * Time.fixedDeltaTime;
+			//Vector2 nextPos = cursor.position + (Vector3) velocity * Time.fixedDeltaTime;
+			cursorRB.velocity = velocity;
 		}
 
 	}

@@ -35,7 +35,6 @@ namespace Swarm {
 				}
 			}
 			DebugVelocity(displace, Color.yellow);
-			
 			velocity += displace;
 
 			DebugVelocity(velocity, Color.blue);
