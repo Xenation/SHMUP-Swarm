@@ -42,6 +42,7 @@ namespace Swarm {
 
 		private void FixedUpdate() {
 			rb.velocity = velocity;
+			rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
 		}
 
 		private void DebugVelocity(Vector2 vel, Color col) {

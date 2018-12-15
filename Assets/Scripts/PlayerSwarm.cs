@@ -38,7 +38,6 @@ namespace Swarm {
 		}
 
 		private void FixedUpdate() {
-			//Vector2 nextPos = cursor.position + (Vector3) velocity * Time.fixedDeltaTime;
 			cursorRB.velocity = velocity;
 		}
 
