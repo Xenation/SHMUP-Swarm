@@ -10,6 +10,7 @@ namespace Swarm {
 		public int unitsToCreate = 50;
 		public float unitSpeed = 4f;
 		public float unitRadius = .1f;
+		public float suicideSpeed = 10f;
 		public Transform bossTransform;
 		public float bossRadius = 3f;
 
@@ -35,6 +36,13 @@ namespace Swarm {
 			velocity.y = Input.GetAxisRaw("Vertical");
 			velocity.Normalize();
 			velocity *= cursorSpeed;
+
+			if (Input.GetButtonDown("Fire1") && units.Count > 0) {
+				PlayerUnit unit = units[0];
+				units.RemoveAt(0);
+				unit.Suicide();
+			}
+
 		}
 
 		private void FixedUpdate() {

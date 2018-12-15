@@ -45,6 +45,12 @@ namespace Swarm {
 			rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
 		}
 
+		public void Suicide() {
+			ProjectileUnit projUnit = gameObject.AddComponent<ProjectileUnit>();
+			projUnit.Init(swarm);
+			Destroy(this);
+		}
+
 		private void DebugVelocity(Vector2 vel, Color col) {
 			if (!swarm.debug) return;
 			Debug.DrawLine(transform.position, transform.position + (Vector3) vel, col);
