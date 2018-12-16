@@ -5,7 +5,53 @@ using TMPro;
 
 public class LeaderboardController : MonoBehaviour
 {
-	private string textFromWWW;
+
+    private string textFromWWW;
+    private string[] nameScore;
+    private GameObject[] playerScores;
+
+
+    void Start()
+    {
+        playerScores = GameObject.FindGameObjectsWithTag("playerScore");
+        StartCoroutine(GetText());
+    }
+
+    IEnumerator GetText()
+    {
+        UnityWebRequest www = new UnityWebRequest("https://raw.githubusercontent.com/Xenation/SHMUP-Swarm/master/Assets/Scripts/Leaderboard.txt?token=AXXqOuDnb07FcI_HV5OWQnWtZMnOu0G5ks5cH2NowA%3D%3D");
+        www.downloadHandler = new DownloadHandlerBuffer();
+        yield return www.SendWebRequest();
+        
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+           textFromWWW = www.downloadHandler.text;
+        }
+
+        string[] splitScores = textFromWWW.Split(';');
+        int num = 0;
+        foreach (string score in splitScores)
+        {
+            if (score != null)
+            {
+                nameScore = score.Split(',');
+                if (nameScore.Length == 2)
+                {
+                    playerScores[num].GetComponent<TextMeshProUGUI>().text = nameScore[0] + " " + nameScore[1];
+
+                    num++;
+                }
+            }
+        }
+    }
+    /*
+
+    private string textFromWWW;
 	private string url = "https://raw.githubusercontent.com/Xenation/SHMUP-Swarm/master/Assets/Scripts/Leaderboard.txt?token=AXXqOuDnb07FcI_HV5OWQnWtZMnOu0G5ks5cH2NowA%3D%3D"; // <-- enter your url here
 	private string[] nameScore;
 	private GameObject[] playerScores;
@@ -44,6 +90,6 @@ public class LeaderboardController : MonoBehaviour
 				}
 			}
 		}
-	}
+	}*/
 }
 
