@@ -23,7 +23,12 @@ namespace Swarm
             {
                 for (int i = 0; i < unitsToCreate; i++)
                 {
-                    GameObject tmp = Instantiate(unitPrefab, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f)), Quaternion.identity, playerSwarm.transform);
+                    Transform pos = playerSwarm.transform.GetChild(0);
+
+                    float playerX = pos.position.x;
+                    float playerY = pos.position.y;
+
+                    GameObject tmp = Instantiate(unitPrefab, new Vector2(Random.Range(playerX-0.1f, playerX+0.1f), Random.Range(playerY-0.1f, playerY+0.1f)), Quaternion.identity, playerSwarm.transform);
                     PlayerSwarm player = playerSwarm.GetComponent<PlayerSwarm>();
                     player.AddUnit(tmp);
                 }
