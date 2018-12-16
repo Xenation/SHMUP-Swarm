@@ -49,5 +49,12 @@ namespace Swarm {
 			cursorRB.velocity = velocity;
 		}
 
+
+        public void AddUnit(GameObject unit)
+        {
+            PlayerUnit testUnit = unit.GetComponent<PlayerUnit>();
+            if(testUnit)
+                units.Add(testUnit);
+        }
 	}
 }
