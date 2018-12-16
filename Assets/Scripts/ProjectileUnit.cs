@@ -19,7 +19,8 @@ namespace Swarm {
 
 		private void OnCollisionEnter2D(Collision2D collision) {
 			Boss boss = collision.gameObject.GetComponent<Boss>();
-			if (boss) {
+			partController part = collision.gameObject.GetComponent<partController>();
+			if (boss || part) {
 				Destroy(gameObject);
 			}
 		}
