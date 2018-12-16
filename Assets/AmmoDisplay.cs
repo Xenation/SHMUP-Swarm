@@ -9,6 +9,7 @@ namespace Swarm
     {
 
         public float distance = 0.2f;
+        public float distanceRatio = 100.0f;
         public Text text;
         public PlayerSwarm ps;
 
@@ -24,7 +25,7 @@ namespace Swarm
             Vector3 vectDir = ps.cursor.transform.position;
             vectDir.Normalize();
 
-            Vector3 textPos = ps.cursor.transform.position + vectDir * distance;
+            Vector3 textPos = ps.cursor.transform.position + vectDir * (distance + ((float)ps.getNbOfUnits() / distanceRatio));
 
             text.transform.position = textPos;
         }
