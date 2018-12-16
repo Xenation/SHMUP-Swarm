@@ -6,34 +6,31 @@ using Xenon.Processes;
 namespace Swarm {
 	public class SequenceElementProcess : CompositeProcess {
 
-		public SequenceElementProcess(AttackSequenceModule.SequenceElement seqElem, List<AttackPoint> points) {
-			ProjectileDefinition def;
-			if (!PatternManager.I.GetProjectileDefinition(seqElem.projectileName, out def)) return;
-
+		public SequenceElementProcess(SequenceElement seqElem, List<AttackPoint> points) {
 			switch (seqElem.type) {
-				case AttackSequenceModule.SequenceElementType.Bullet:
+				case SequenceElementType.Bullet:
 					for (int i = 0; i < seqElem.count; i++) {
-						AddProcess(new ShootProcess(def, points));
+						AddProcess(new ShootProcess(seqElem.projectile, points));
 						AddProcess(new TimedProcess(seqElem.duration / seqElem.count));
 					}
 					break;
-				case AttackSequenceModule.SequenceElementType.Lazer:
-					AddProcess(new ShootProcess(def, points));
+				case SequenceElementType.Lazer:
+					AddProcess(new ShootProcess(seqElem.projectile, points));
 					AddProcess(new TimedProcess(seqElem.duration));
 					break;
-				case AttackSequenceModule.SequenceElementType.Mortar:
+				case SequenceElementType.Mortar:
 					for (int i = 0; i < seqElem.count; i++) {
-						AddProcess(new ShootProcess(def, points));
+						AddProcess(new ShootProcess(seqElem.projectile, points));
 						AddProcess(new TimedProcess(seqElem.duration / seqElem.count));
 					}
 					break;
-				case AttackSequenceModule.SequenceElementType.Delay:
+				case SequenceElementType.Delay:
 					AddProcess(new TimedProcess(seqElem.duration));
 					break;
-				case AttackSequenceModule.SequenceElementType.EnablePoint:
+				case SequenceElementType.EnablePoint:
 					AddProcess(new AttackPointStateProcess(seqElem.point, true));
 					break;
-				case AttackSequenceModule.SequenceElementType.DisablePoint:
+				case SequenceElementType.DisablePoint:
 					AddProcess(new AttackPointStateProcess(seqElem.point, false));
 					break;
 			}

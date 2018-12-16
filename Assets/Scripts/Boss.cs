@@ -5,17 +5,14 @@ using Xenon;
 namespace Swarm {
 	public class Boss : MonoBehaviour {
 
-		public string startPattern;
-
-		private Pattern currentPattern;
+		public PatternDefinition startPattern;
 
 		private void Awake() {
-			currentPattern = PatternManager.I.GetPattern(startPattern).Copy();
-			currentPattern.Start();
+			startPattern.Attach(gameObject);
 		}
 
 		private void Update() {
-			currentPattern.Update(Time.deltaTime);
+			
 		}
 
 	}

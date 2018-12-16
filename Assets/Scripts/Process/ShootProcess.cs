@@ -5,11 +5,11 @@ using Xenon;
 namespace Swarm {
 	public class ShootProcess : Process {
 
-		private ProjectileDefinition definition;
+		private Projectile prefab;
 		private List<AttackPoint> points;
 
-		public ShootProcess(ProjectileDefinition def, List<AttackPoint> pts) {
-			definition = def;
+		public ShootProcess(Projectile pre, List<AttackPoint> pts) {
+			prefab = pre;
 			points = pts;
 		}
 
@@ -20,7 +20,7 @@ namespace Swarm {
 		public override void Update(float dt) {
 			foreach (AttackPoint point in points) {
 				if (!point.shootingEnabled) continue;
-				PatternManager.I.ShootProjectile(definition, point.position, point.rotation);
+				ProjectileManager.I.ShootProjectile(prefab, point.position, point.rotation);
 			}
 			Terminate();
 		}

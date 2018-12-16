@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,42 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a0fb7f429cc91458e355d7fe683198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileDefinitions:
-  - name: test
-    prefab: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-      type: 3}
-  patterns:
-  - name: test1
-    finishedDelay: 3
-    nextPossible:
-    - test1
-    parent: {fileID: 0}
-    attackPointsModule:
-      active: 1
-      autoPlaced: 1
-      count: 4
-      startRotation: 0
-      distanceFromCenter: 1
-      rotationSpeed: 0
-      attackPoints: []
-    attackSequenceModule:
-      active: 1
-      sequence:
-      - type: 0
-        count: 50
-        duration: 2
-        projectileName: test
-        point: {fileID: 0}
-      - type: 3
-        count: 0
-        duration: 5
-        projectileName: test
-        point: {fileID: 0}
-      - type: 0
-        count: 30
-        duration: 1
-        projectileName: test
-        point: {fileID: 0}
+  poolSize: 200
 --- !u!4 &146560670
 Transform:
   m_ObjectHideFlags: 0
@@ -632,7 +597,8 @@ PrefabInstance:
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: startPattern
-      value: test1
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: ac4020f85b9594c4fa792b5663263fe1,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
