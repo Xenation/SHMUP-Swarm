@@ -8,6 +8,7 @@ namespace Swarm
     public class AmmoDisplay : MonoBehaviour
     {
 
+        public float distance = 0.2f;
         public Text text;
         public PlayerSwarm ps;
 
@@ -20,7 +21,12 @@ namespace Swarm
         {
             text.text = ""+ps.getNbOfUnits();
 
-            text.transform.position = ps.cursor.transform.position;
+            Vector3 vectDir = ps.cursor.transform.position;
+            vectDir.Normalize();
+
+            Vector3 textPos = ps.cursor.transform.position + vectDir * distance;
+
+            text.transform.position = textPos;
         }
     }
 }
