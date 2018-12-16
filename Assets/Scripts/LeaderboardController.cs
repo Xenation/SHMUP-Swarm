@@ -20,6 +20,7 @@ public class LeaderboardController : MonoBehaviour
     IEnumerator GetText()
     {
         UnityWebRequest www = new UnityWebRequest("https://raw.githubusercontent.com/Xenation/SHMUP-Swarm/master/Assets/Scripts/Leaderboard.txt?token=AXXqOuDnb07FcI_HV5OWQnWtZMnOu0G5ks5cH2NowA%3D%3D");
+        //UnityWebRequest www = new UnityWebRequest("");
         www.downloadHandler = new DownloadHandlerBuffer();
         yield return www.SendWebRequest();
         

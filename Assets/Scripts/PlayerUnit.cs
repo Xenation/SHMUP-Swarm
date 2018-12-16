@@ -58,6 +58,8 @@ namespace Swarm {
 
         private void OnDestroy()
         {
+            //METTRE SON DE LA MORT
+
             PlayerSwarm ps = GetComponentInParent<PlayerSwarm>();
 
             ps.RemoveUnit(this);
