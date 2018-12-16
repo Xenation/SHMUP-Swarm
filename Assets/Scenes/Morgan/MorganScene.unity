@@ -224,7 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3915184db38c10d4e8a38f90bcc1c356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1
+  distance: 1.1
+  distanceRatio: 150
   text: {fileID: 258761918}
   ps: {fileID: 230935861}
 --- !u!1 &230935860 stripped
