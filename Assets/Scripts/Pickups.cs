@@ -12,6 +12,10 @@ namespace Swarm
         public GameObject unitPrefab;
         public GameObject playerSwarm;
 
+        private void Start()
+        {
+            transform.position = new Vector2((Random.Range(0,2)*2-1)*Random.Range(1, 8) ,(Random.Range(0,2)*2-1)*Random.Range(1, 4.5f));
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -23,10 +27,12 @@ namespace Swarm
                     PlayerSwarm player = playerSwarm.GetComponent<PlayerSwarm>();
                     player.AddUnit(tmp);
                 }
+
+                Destroy(gameObject);
             }
-
-
         }
+
+
 
     }
 }

@@ -146,6 +146,7 @@ MonoBehaviour:
   unitsToCreate: 10
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
+  playerSwarm: {fileID: 739041906}
 --- !u!212 &591177230
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -218,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591177228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.52, y: 0, z: 0}
+  m_LocalPosition: {x: 3.27, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -308,6 +309,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97b8a4c5d62e13f478de6f90a6946bbd, type: 3}
+--- !u!1 &739041906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7103110863744034858, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+    type: 3}
+  m_PrefabInstance: {fileID: 632534680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &827645724
 GameObject:
   m_ObjectHideFlags: 0
