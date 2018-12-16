@@ -57,6 +57,11 @@ namespace Swarm {
                 units.Add(testUnit);
         }
 
+        public void RemoveUnit(PlayerUnit unit)
+        {
+            units.Remove(unit);
+        }
+
         public int getNbOfUnits()
         {
             return units.Count;

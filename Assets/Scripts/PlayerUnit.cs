@@ -56,5 +56,12 @@ namespace Swarm {
 			Debug.DrawLine(transform.position, transform.position + (Vector3) vel, col);
 		}
 
-	}
+        private void OnDestroy()
+        {
+            PlayerSwarm ps = GetComponentInParent<PlayerSwarm>();
+
+            ps.RemoveUnit(this);
+        }
+
+    }
 }
