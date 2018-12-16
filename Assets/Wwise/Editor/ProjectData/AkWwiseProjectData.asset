@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67c5c08ed7f3404289de2169d44361b, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 898f6f7d8115964aa3970ca86831ae6d
+    m_lastTime: -8586566220643493942
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 0f68c3a13b89a145835cc0a1e0db27b7
+    m_lastTime: -8586566210147686890
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 244abfbb0095c14eb0f174697cefa6ed
+    m_lastTime: -8586566208911570381
+    List:
+    - name: Main_Bank
+      guid: 7eb536d41637b245aaeb68c1eaa0e937
+      id: 3989171651
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main_Bank
+        ObjectType: 7
+      Path: Default Work Unit\Main_Bank
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3eaae172fd2c184583ca1012ddcff4ad
+    m_lastTime: -8586566209489967944
+    List:
+    - name: Play_Music
+      guid: 0f6b987130bc4c409772cd11a1d0d25f
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Music
+        ObjectType: 3
+      Path: Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_PickUp
+      guid: db8f5818b420f14a958b9b1d72c05019
+      id: 3860455926
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_PickUp
+        ObjectType: 3
+      Path: Default Work Unit\Play_PickUp
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Shots
+      guid: b84d5f2cfe18e94aa9c75ddceb5ce710
+      id: 3061091197
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Shots
+        ObjectType: 3
+      Path: Default Work Unit\Play_Shots
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 12f391762f07df4187e60b4141493a89
+    m_lastTime: -8586566220642227311
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 023fa2e858ecc04f9a82163a94473bfd
+    m_lastTime: -8586566220642257231
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: f1e5421d17e46549b6b40ef9a1efd514
+    m_lastTime: -8586566220642745636
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: f37b394e8c50524690e7a0ed2fa41fea
+    m_lastTime: -8586566220642615978
+    List: []
+  ExpandedItems:
+  - /SHMUP
+  - /SHMUP/Events
+  - /SHMUP/Events/Default Work Unit
+  - /SHMUP/SoundBanks
+  - /SHMUP/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

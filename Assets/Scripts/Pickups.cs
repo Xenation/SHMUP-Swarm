@@ -37,6 +37,7 @@ namespace Swarm
                     player.AddUnit(tmp);
 
                     //INSERER SON DE PICKUP
+                    AkSoundEngine.PostEvent("Play_PickUp", gameObject);
                 }
 
                 Destroy(gameObject);
