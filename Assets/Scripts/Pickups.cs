@@ -24,17 +24,22 @@ namespace Swarm
                 for (int i = 0; i < unitsToCreate; i++)
                 {
                     Transform pos = playerSwarm.transform.GetChild(0);
+                    PlayerSwarm player = playerSwarm.GetComponent<PlayerSwarm>();
 
                     float playerX = pos.position.x;
                     float playerY = pos.position.y;
 
                     GameObject tmp = Instantiate(unitPrefab, new Vector2(Random.Range(playerX-0.1f, playerX+0.1f), Random.Range(playerY-0.1f, playerY+0.1f)), Quaternion.identity, playerSwarm.transform);
-                    PlayerSwarm player = playerSwarm.GetComponent<PlayerSwarm>();
                     player.AddUnit(tmp);
                 }
 
                 Destroy(gameObject);
             }
+        }
+
+        public void setPlayer(GameObject player)
+        {
+            playerSwarm = player;
         }
 
 
