@@ -41,8 +41,5 @@ namespace Swarm
         {
             playerSwarm = player;
         }
-
-
-
     }
 }

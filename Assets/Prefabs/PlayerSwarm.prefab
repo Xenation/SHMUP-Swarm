@@ -170,7 +170,6 @@ MonoBehaviour:
   unitSpeed: 6
   unitRadius: 0.8
   suicideSpeed: 10
-  bossTransform: {fileID: 4788165427147069084, guid: 50a6274365a1cac479f4e84b07ee86df,
-    type: 3}
+  bossTransform: {fileID: 0}
   bossRadius: 3
   debug: 0

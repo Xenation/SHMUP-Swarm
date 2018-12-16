@@ -12,7 +12,7 @@ namespace Swarm {
 		public float unitRadius = .1f;
 		public float suicideSpeed = 10f;
 		public Transform bossTransform;
-		public float bossRadius = 3f;
+        private int nbOfUnits;
 
 		public bool debug = false;
 
@@ -55,6 +55,11 @@ namespace Swarm {
             PlayerUnit testUnit = unit.GetComponent<PlayerUnit>();
             if(testUnit)
                 units.Add(testUnit);
+        }
+
+        public int getNbOfUnits()
+        {
+            return units.Count;
         }
 	}
 }

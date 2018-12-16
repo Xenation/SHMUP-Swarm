@@ -22,11 +22,7 @@ namespace Swarm
                 Pickups currentPickup = tmp.GetComponent<Pickups>();
                 currentPickup.setPlayer(Player);
                 timeSpent = 0;
-            }
-                
+            }       
         }
-
-
-
     }
 }
