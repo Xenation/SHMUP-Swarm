@@ -34,6 +34,7 @@ public class partController : MonoBehaviour
 		if (pv <= 0)
 		{
 			isDestroyed = true;
+			this.GetComponent<SpriteRenderer>().color = Color.red;
 			transform.parent.GetComponent<bossLife>().checkParts();
 		}
 	}
