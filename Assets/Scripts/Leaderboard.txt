@@ -1,1 +1,1 @@
-ambroise , 100 ;
+ambroise,100;moi,200;
