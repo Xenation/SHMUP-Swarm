@@ -112,7 +112,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -169,6 +169,8 @@ MonoBehaviour:
   unitsToCreate: 50
   unitSpeed: 6
   unitRadius: 0.8
-  bossTransform: {fileID: 0}
+  suicideSpeed: 10
+  bossTransform: {fileID: 4788165427147069084, guid: 50a6274365a1cac479f4e84b07ee86df,
+    type: 3}
   bossRadius: 3
   debug: 0
