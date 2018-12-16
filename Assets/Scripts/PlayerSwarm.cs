@@ -38,6 +38,7 @@ namespace Swarm {
 			velocity *= cursorSpeed;
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0) {
+                //INSERER LE SON D'UN TIR ALLIE
 				PlayerUnit unit = units[0];
 				units.RemoveAt(0);
 				unit.Suicide();

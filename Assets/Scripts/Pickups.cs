@@ -19,7 +19,7 @@ namespace Swarm
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Cursor"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerUnits"))
             {
                 for (int i = 0; i < unitsToCreate; i++)
                 {
@@ -31,6 +31,8 @@ namespace Swarm
 
                     GameObject tmp = Instantiate(unitPrefab, new Vector2(Random.Range(playerX-0.1f, playerX+0.1f), Random.Range(playerY-0.1f, playerY+0.1f)), Quaternion.identity, playerSwarm.transform);
                     player.AddUnit(tmp);
+
+                    //INSERER SON DE PICKUP
                 }
 
                 Destroy(gameObject);
