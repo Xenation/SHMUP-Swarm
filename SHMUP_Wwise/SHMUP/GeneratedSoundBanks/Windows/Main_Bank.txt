@@ -1,0 +1,33 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3061091197	Play_Shots			\Default Work Unit\Play_Shots	
+	3860455926	Play_PickUp			\Default Work Unit\Play_PickUp	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	45749575	Shot_Bow_4	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_4		77576
+	71074522	Shot_Drop_6	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_6		76864
+	104690411	Shot_Bow_3	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_3		77576
+	141637456	Swarm_Pickup	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Swarm_Pickup_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swarm_Pickup		144816
+	146998876	Shot_Water_5	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_5		76996
+	233521555	Swarm_ZIK_WIP_V2	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Swarm_ZIK_WIP_V2_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Swarm_ZIK_WIP_V2\Swarm_ZIK_WIP_V2		43968064
+	244034840	Shot_Water_3	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_3		76904
+	257628064	Shot_Water_4	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_4		76864
+	258372542	Shot_Water_1	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_1		76904
+	290234121	Shot_Drop_2	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_2		76864
+	327780098	Shot_Drop_5	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_5		76864
+	353381999	Shot_Bow_1	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_1		76864
+	359734570	Shot_Water_6	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_6		76996
+	469242409	Shot_Bow_5	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_5		76864
+	478677072	Shot_Bow_2	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_2		77576
+	480564895	Shot_Bow_7	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_7		77576
+	549481154	Shot_Water_2	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_2		76864
+	626629245	Shot_Drop_4	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_4		76864
+	676939592	Shot_Drop_7	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_7		76864
+	725843751	Shot_Water_7	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_7		76996
+	747443390	Shot_Drop_8	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_8		76864
+	781799212	Shot_Bow_6	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_6		77576
+	854428154	Shot_Drop_1	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_1		76864
+	866779702	Shot_Water_8	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_8		76996
+	974832734	Shot_Drop_3	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_3		76864
+	1066645175	Shot_Bow_8	D:\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_8		77576
+
