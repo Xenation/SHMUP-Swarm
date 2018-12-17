@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: Test 1
   m_EditorClassIdentifier: 
   finishedDelay: 5
-  nextPossible: []
+  simultaneous: []
+  nextPossible:
+  - {fileID: 11400000, guid: ac4020f85b9594c4fa792b5663263fe1, type: 2}
   autoPlaced: 0
   count: 4
   startRotation: 0
   distanceFromCenter: 1
-  rotationSpeed: 30
+  rotationSpeed: 40
   spawnPoints:
   - position: {x: 0.71792305, y: -0.70519245}
-    rotation: 337.06674
+    rotation: 333
   - position: {x: 0.7522042, y: 0.67091024}
-    rotation: 34.973896
+    rotation: 33
   sequence:
   - type: 0
     count: 50

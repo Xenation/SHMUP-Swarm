@@ -34,6 +34,7 @@ namespace Swarm {
 	public class PatternDefinition : ScriptableObject {
 		
 		public float finishedDelay = 1f;
+		public List<PatternDefinition> simultaneous;
 		public List<PatternDefinition> nextPossible;
 
 		// Spawn Points
