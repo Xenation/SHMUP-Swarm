@@ -20,10 +20,14 @@ namespace Swarm.Editor {
 
 		public bool indentElements;
 
-		public ReorderableListProperty(SerializedProperty prop, bool indentElems = false) {
+		public ReorderableListProperty(SerializedProperty prop, bool indentElems = false, ReorderableList.ElementCallbackDelegate drawCallback = null) {
 			_property = prop;
 			indentElements = indentElems;
-			InitList();
+			if (drawCallback != null) {
+				InitList(drawCallback);
+			} else {
+				InitList(DrawElement);
+			}
 		}
 
 		public void DoLayoutList() {
@@ -38,11 +42,11 @@ namespace Swarm.Editor {
 			}
 		}
 
-		private void InitList() {
+		private void InitList(ReorderableList.ElementCallbackDelegate drawCallback) {
 			List = new ReorderableList(_property.serializedObject, _property);
 			List.drawHeaderCallback += rect => _property.isExpanded = EditorGUI.ToggleLeft(rect, _property.displayName, _property.isExpanded, EditorStyles.boldLabel);
 			List.onCanRemoveCallback += (list) => { return List.count > 0; };
-			List.drawElementCallback += DrawElement;
+			List.drawElementCallback += drawCallback;
 			List.elementHeightCallback += (idx) => { return Mathf.Max(EditorGUIUtility.singleLineHeight, EditorGUI.GetPropertyHeight(_property.GetArrayElementAtIndex(idx), GUIContent.none, true)) + 4.0f; };
 		}
 
