@@ -9,7 +9,9 @@ namespace Swarm {
 		public PatternDefinition startPattern;
 
 		private void Awake() {
-			startPattern.Attach(gameObject);
+			if (startPattern != null) {
+				startPattern.Attach(gameObject);
+			}
 		}
 
 		private void Update() {
