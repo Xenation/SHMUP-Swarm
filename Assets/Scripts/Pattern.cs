@@ -14,7 +14,7 @@ namespace Swarm {
 
 		// Sequence
 		private ProcessManager procManager;
-
+		
 		private bool suppressNext = false;
 
 		public void Initialize(PatternDefinition def) {
@@ -55,6 +55,7 @@ namespace Swarm {
 				}
 			}
 			Destroy(this);
+			Destroy(pointsParent.gameObject);
 		}
 
 	}
