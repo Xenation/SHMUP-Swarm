@@ -23,11 +23,15 @@ namespace Swarm {
 		private Rigidbody2D cursorRB;
 
 		private void Awake() {
-			for (int i = 0; i < unitsToCreate; i++) {
-				Instantiate(unitPrefab, new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f)), Quaternion.identity, transform);
-			}
 			cursor = transform.Find("Cursor");
 			cursorRB = cursor.GetComponent<Rigidbody2D>();
+
+			for (int i = 0; i < unitsToCreate; i++) {
+				float perim = Random.Range(0f, Mathf.PI);
+				float dist = Random.Range(0f, cursorRadius);
+				Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
+			}
+
 			GetComponentsInChildren(units);
 		}
 

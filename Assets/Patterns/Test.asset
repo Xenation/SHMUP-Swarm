@@ -19,16 +19,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4238ff7d0dd72f48b4c00635dbe034b, type: 2}
   autoPlaced: 1
   count: 3
-  startRotation: 0
+  startRotation: 60
   distanceFromCenter: 2
   rotationSpeed: 0
   spawnPoints:
-  - position: {x: 2, y: 0}
-    rotation: 0
-  - position: {x: -1.0000001, y: 1.7320508}
-    rotation: 120.00001
-  - position: {x: -0.9999998, y: -1.7320509}
-    rotation: 240
+  - position: {x: 0.99999994, y: 1.7320509}
+    rotation: 60.000004
+  - position: {x: -2, y: -0.00000017484555}
+    rotation: 180
+  - position: {x: 0.9999998, y: -1.7320509}
+    rotation: 300
   sequence:
   - type: 0
     count: 50
