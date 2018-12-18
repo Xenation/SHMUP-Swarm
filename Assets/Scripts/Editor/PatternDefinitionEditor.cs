@@ -42,11 +42,33 @@ namespace Swarm.Editor {
 			distanceFromCenterProp = serializedObject.FindProperty("distanceFromCenter");
 			rotationSpeedProp = serializedObject.FindProperty("rotationSpeed");
 			spawnPointsProp = serializedObject.FindProperty("spawnPoints");
-			spawnPointsList = new ReorderableListProperty(spawnPointsProp, true, DrawSpawnPoint);
+			spawnPointsList = new ReorderableListProperty(spawnPointsProp, true, DrawSpawnPoint, (i) => { return EditorGUIUtility.singleLineHeight + 2f; });
 			spawnPointsList.List.draggable = false;
 
 			sequenceProp = serializedObject.FindProperty("sequence");
 			sequenceList = new ReorderableListProperty(sequenceProp, true);
+
+			SceneView.onSceneGUIDelegate += SceneGUI;
+		}
+
+		private void OnDisable() {
+			SceneView.onSceneGUIDelegate -= SceneGUI;
+		}
+
+		private void SceneGUI(SceneView view) {
+			Color colTmp = Handles.color;
+			Undo.RecordObject(patternDefinition, "Pattern Spawn Point Move");
+			for (int i = 0; i < patternDefinition.spawnPoints.Length; i++) {
+				Handles.color = Color.blue;
+				patternDefinition.spawnPoints[i].position = Handles.FreeMoveHandle(patternDefinition.spawnPoints[i].position, Quaternion.identity, HandleUtility.GetHandleSize(patternDefinition.spawnPoints[i].position) * 0.1f, Vector3.zero, Handles.CubeHandleCap);
+				Handles.color = Color.white;
+				Quaternion rot = Handles.Disc(Quaternion.Euler(0, 0, patternDefinition.spawnPoints[i].rotation), patternDefinition.spawnPoints[i].position, Vector3.forward, HandleUtility.GetHandleSize(patternDefinition.spawnPoints[i].position) * .5f, false, 0f);
+				patternDefinition.spawnPoints[i].rotation = rot.eulerAngles.z;
+				Vector2 directionPosition = patternDefinition.spawnPoints[i].position + (Vector2) (Quaternion.Euler(0f, 0f, patternDefinition.spawnPoints[i].rotation) * Vector2.right);
+				Handles.color = Color.red;
+				Handles.DrawLine(patternDefinition.spawnPoints[i].position, directionPosition);
+			}
+			Handles.color = colTmp;
 		}
 
 		public override void OnInspectorGUI() {
@@ -85,19 +107,22 @@ namespace Swarm.Editor {
 			rect.width -= labelRect.width;
 
 			Rect rectLeft = new Rect(rect);
-			rectLeft.width /= 4f;
+			rectLeft.width /= 2f;
 			Rect rectRight = new Rect(rect);
-			rectRight.width /= 4f;
-			rectRight.x += rectRight.width * 2f;
+			rectRight.width /= 2f;
+			rectRight.width -= 20f;
+			rectRight.x += rectRight.width + 40f;
 
+			rectLeft.width /= 3f;
 			EditorGUI.LabelField(rectLeft, "position");
 			rectLeft.x += rectLeft.width;
-			rectLeft.width /= 2f;
 			patternDefinition.spawnPoints[index].position.x = EditorGUI.FloatField(rectLeft, patternDefinition.spawnPoints[index].position.x);
 			rectLeft.x += rectLeft.width;
 			patternDefinition.spawnPoints[index].position.y = EditorGUI.FloatField(rectLeft, patternDefinition.spawnPoints[index].position.y);
+			rectRight.width /= 3f;
 			EditorGUI.LabelField(rectRight, "rotation");
 			rectRight.x += rectRight.width;
+			rectRight.width *= 2f;
 			patternDefinition.spawnPoints[index].rotation = EditorGUI.FloatField(rectRight, patternDefinition.spawnPoints[index].rotation);
 			spawnPointsList.List.elementHeight = rect.height + 4.0f;
 		}

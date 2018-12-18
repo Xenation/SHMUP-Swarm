@@ -51,12 +51,6 @@ namespace Swarm {
 		public List<SequenceElement> sequence;
 
 
-		private void OnEnable() {
-#if UNITY_EDITOR
-			SceneView.onSceneGUIDelegate += SceneGUI;
-#endif
-		}
-
 		private void OnValidate() {
 			if (autoPlaced) {
 				spawnPoints = new SpawnPointDefinition[count];
@@ -69,25 +63,6 @@ namespace Swarm {
 				}
 			}
 		}
-
-#if UNITY_EDITOR
-		private void SceneGUI(SceneView view) {
-			if (Selection.activeObject != this) return;
-			Color colTmp = Handles.color;
-			Undo.RecordObject(this, "Pattern Spawn Point Move");
-			for (int i = 0; i < spawnPoints.Length; i++) {
-				Handles.color = Color.blue;
-				spawnPoints[i].position = Handles.FreeMoveHandle(spawnPoints[i].position, Quaternion.identity, HandleUtility.GetHandleSize(spawnPoints[i].position) * 0.1f, Vector3.zero, Handles.CubeHandleCap);
-				Handles.color = Color.white;
-				Quaternion rot = Handles.Disc(Quaternion.Euler(0, 0, spawnPoints[i].rotation), spawnPoints[i].position, Vector3.forward, HandleUtility.GetHandleSize(spawnPoints[i].position) * .5f, false, 0f);
-				spawnPoints[i].rotation = rot.eulerAngles.z;
-				Vector2 directionPosition = spawnPoints[i].position + (Vector2) (Quaternion.Euler(0f, 0f, spawnPoints[i].rotation) * Vector2.right);
-				Handles.color = Color.red;
-				Handles.DrawLine(spawnPoints[i].position, directionPosition);
-			}
-			Handles.color = colTmp;
-		}
-#endif
 
 		public Pattern Attach(GameObject host) {
 			Pattern pattern = host.AddComponent<Pattern>();

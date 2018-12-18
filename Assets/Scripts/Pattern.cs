@@ -12,8 +12,10 @@ namespace Swarm {
 		private Transform pointsParent;
 		private List<AttackPoint> attackPoints;
 
-		// Sequance
+		// Sequence
 		private ProcessManager procManager;
+
+		private bool suppressNext = false;
 
 		public void Initialize(PatternDefinition def) {
 			definition = def;
@@ -29,6 +31,11 @@ namespace Swarm {
 			SequenceProcess seqProc = new SequenceProcess(definition.sequence, attackPoints, definition.finishedDelay);
 			seqProc.TerminateCallback += SequenceFinished;
 			procManager.LaunchProcess(seqProc);
+
+			// Simultaneous Patterns
+			foreach (PatternDefinition defSimult in definition.simultaneous) {
+				defSimult.Attach(gameObject).suppressNext = true;
+			}
 		}
 
 		public void Update() {
@@ -41,9 +48,11 @@ namespace Swarm {
 		}
 
 		private void SequenceFinished() {
-			PatternDefinition nextDef = definition.GetRandomNext();
-			if (nextDef != null) {
-				nextDef.Attach(gameObject);
+			if (!suppressNext) {
+				PatternDefinition nextDef = definition.GetRandomNext();
+				if (nextDef != null) {
+					nextDef.Attach(gameObject);
+				}
 			}
 			Destroy(this);
 		}

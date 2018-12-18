@@ -20,14 +20,16 @@ namespace Swarm.Editor {
 
 		public bool indentElements;
 
-		public ReorderableListProperty(SerializedProperty prop, bool indentElems = false, ReorderableList.ElementCallbackDelegate drawCallback = null) {
+		public ReorderableListProperty(SerializedProperty prop, bool indentElems = false, ReorderableList.ElementCallbackDelegate drawCallback = null, ReorderableList.ElementHeightCallbackDelegate heightCallback = null) {
 			_property = prop;
 			indentElements = indentElems;
-			if (drawCallback != null) {
-				InitList(drawCallback);
-			} else {
-				InitList(DrawElement);
+			if (drawCallback == null) {
+				drawCallback = DrawElement;
 			}
+			if (heightCallback == null) {
+				heightCallback = (idx) => { return Mathf.Max(EditorGUIUtility.singleLineHeight, EditorGUI.GetPropertyHeight(_property.GetArrayElementAtIndex(idx), GUIContent.none, true)) + 4.0f; };
+			}
+			InitList(drawCallback, heightCallback);
 		}
 
 		public void DoLayoutList() {
@@ -42,12 +44,12 @@ namespace Swarm.Editor {
 			}
 		}
 
-		private void InitList(ReorderableList.ElementCallbackDelegate drawCallback) {
+		private void InitList(ReorderableList.ElementCallbackDelegate drawCallback, ReorderableList.ElementHeightCallbackDelegate heightCallback) {
 			List = new ReorderableList(_property.serializedObject, _property);
 			List.drawHeaderCallback += rect => _property.isExpanded = EditorGUI.ToggleLeft(rect, _property.displayName, _property.isExpanded, EditorStyles.boldLabel);
 			List.onCanRemoveCallback += (list) => { return List.count > 0; };
 			List.drawElementCallback += drawCallback;
-			List.elementHeightCallback += (idx) => { return Mathf.Max(EditorGUIUtility.singleLineHeight, EditorGUI.GetPropertyHeight(_property.GetArrayElementAtIndex(idx), GUIContent.none, true)) + 4.0f; };
+			List.elementHeightCallback += heightCallback;
 		}
 
 		private void DrawElement(Rect rect, int index, bool active, bool focused) {
