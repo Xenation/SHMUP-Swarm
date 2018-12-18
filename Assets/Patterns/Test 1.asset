@@ -22,9 +22,9 @@ MonoBehaviour:
   distanceFromCenter: 1
   rotationSpeed: 40
   spawnPoints:
-  - position: {x: 0.71792305, y: -0.70519245}
+  - position: {x: 2, y: -1}
     rotation: 333
-  - position: {x: 0.7522042, y: 0.67091024}
+  - position: {x: 2, y: 1}
     rotation: 33
   sequence:
   - type: 0

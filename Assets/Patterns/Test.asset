@@ -10,49 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: Test 2
+  m_Name: Test
   m_EditorClassIdentifier: 
   finishedDelay: 5
-  simultaneous:
-  - {fileID: 11400000, guid: 6e67ca42a6efa6f4394d31e3013986de, type: 2}
+  simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: ac4020f85b9594c4fa792b5663263fe1, type: 2}
+  - {fileID: 11400000, guid: 6e67ca42a6efa6f4394d31e3013986de, type: 2}
+  - {fileID: 11400000, guid: c4238ff7d0dd72f48b4c00635dbe034b, type: 2}
   autoPlaced: 1
-  count: 2
+  count: 3
   startRotation: 0
-  distanceFromCenter: 1
-  rotationSpeed: 60
+  distanceFromCenter: 2
+  rotationSpeed: 0
   spawnPoints:
-  - position: {x: 1, y: 0}
+  - position: {x: 2, y: 0}
     rotation: 0
-  - position: {x: -1, y: -0.00000008742278}
-    rotation: -180
+  - position: {x: -1.0000001, y: 1.7320508}
+    rotation: 120.00001
+  - position: {x: -0.9999998, y: -1.7320509}
+    rotation: 240
   sequence:
   - type: 0
-    count: 20
+    count: 50
     duration: 2
     projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
       type: 3}
     point: {fileID: 0}
   - type: 3
     count: 0
-    duration: 1
+    duration: 2
     projectile: {fileID: 0}
     point: {fileID: 0}
   - type: 0
-    count: 20
-    duration: 2
-    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-      type: 3}
-    point: {fileID: 0}
-  - type: 3
-    count: 0
+    count: 30
     duration: 1
-    projectile: {fileID: 0}
-    point: {fileID: 0}
-  - type: 0
-    count: 20
-    duration: 2
     projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
       type: 3}
     point: {fileID: 0}
