@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="89">
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1544986256" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Attenuations\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Audio Devices\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Control Surface Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Conversion Settings\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Effects\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Effects\Factory Effects.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Events\Default Work Unit.wwu" DateLow="1544985936" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Game Parameters\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1544986104" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1544985870" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Mixing Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Modulators\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Presets\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Queries\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Queries\Factory Queries.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\SHMUP.Jeremy.wsettings" DateLow="1544986265" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\SHMUP.wproj" DateLow="1544986649" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\SoundBanks\Default Work Unit.wwu" DateLow="1544985994" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1544986104" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\States\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Switches\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Triggers\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\SHMUP_Wwise\SHMUP\Virtual Acoustics\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Attenuations\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Audio Devices\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Control Surface Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Conversion Settings\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Effects\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Effects\Factory Effects.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Events\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Game Parameters\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Mixing Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Modulators\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Presets\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Queries\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Queries\Factory Queries.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\SHMUP.wproj" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\SoundBanks\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\States\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Switches\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Triggers\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\BabelOver9000_Sounds\SHMUP\Virtual Acoustics\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1544988336" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Attenuations\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Audio Devices\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Control Surface Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Conversion Settings\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Effects\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Effects\Factory Effects.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Events\Default Work Unit.wwu" DateLow="1544985936" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Game Parameters\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1544986104" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1544985870" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Mixing Sessions\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Modulators\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Presets\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Queries\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Queries\Factory Queries.wwu" DateLow="1544886680" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\SHMUP.Jeremy.wsettings" DateLow="1544986565" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\SHMUP.wproj" DateLow="1544986649" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\SoundBanks\Default Work Unit.wwu" DateLow="1544985994" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1544986104" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\States\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Switches\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Triggers\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\Virtual Acoustics\Default Work Unit.wwu" DateLow="1544984821" DateHigh="0"/>
+</ValidationCache>

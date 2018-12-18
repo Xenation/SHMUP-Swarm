@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\</ProjectRoot>
+		<SourceFilesRoot>D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Unity\SHMUP-Swarm\SHMUP_Wwise\SHMUP\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3989171651" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_Bank</ObjectPath>
+			<ShortName>Main_Bank</ShortName>
+			<Path>Main_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music"/>
+				<Event Id="3860455926" Name="Play_PickUp" ObjectPath="\Events\Default Work Unit\Play_PickUp"/>
+				<Event Id="3061091197" Name="Play_Shots" ObjectPath="\Events\Default Work Unit\Play_Shots"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="45749575" Language="SFX">
+					<ShortName>Shot_Bow_4.wav</ShortName>
+					<Path>SFX\Shot_Bow_4_56D34C19.wem</Path>
+				</File>
+				<File Id="71074522" Language="SFX">
+					<ShortName>Shot_Drop_6.wav</ShortName>
+					<Path>SFX\Shot_Drop_6_56D34C19.wem</Path>
+				</File>
+				<File Id="104690411" Language="SFX">
+					<ShortName>Shot_Bow_3.wav</ShortName>
+					<Path>SFX\Shot_Bow_3_56D34C19.wem</Path>
+				</File>
+				<File Id="141637456" Language="SFX">
+					<ShortName>Swarm_Pickup.wav</ShortName>
+					<Path>SFX\Swarm_Pickup_56D34C19.wem</Path>
+				</File>
+				<File Id="146998876" Language="SFX">
+					<ShortName>Shot_Water_5.wav</ShortName>
+					<Path>SFX\Shot_Water_5_56D34C19.wem</Path>
+				</File>
+				<File Id="233521555" Language="SFX">
+					<ShortName>Swarm_ZIK_WIP_V2.wav</ShortName>
+					<Path>SFX\Swarm_ZIK_WIP_V2_8956FC97.wem</Path>
+				</File>
+				<File Id="244034840" Language="SFX">
+					<ShortName>Shot_Water_3.wav</ShortName>
+					<Path>SFX\Shot_Water_3_56D34C19.wem</Path>
+				</File>
+				<File Id="257628064" Language="SFX">
+					<ShortName>Shot_Water_4.wav</ShortName>
+					<Path>SFX\Shot_Water_4_56D34C19.wem</Path>
+				</File>
+				<File Id="258372542" Language="SFX">
+					<ShortName>Shot_Water_1.wav</ShortName>
+					<Path>SFX\Shot_Water_1_56D34C19.wem</Path>
+				</File>
+				<File Id="290234121" Language="SFX">
+					<ShortName>Shot_Drop_2.wav</ShortName>
+					<Path>SFX\Shot_Drop_2_56D34C19.wem</Path>
+				</File>
+				<File Id="327780098" Language="SFX">
+					<ShortName>Shot_Drop_5.wav</ShortName>
+					<Path>SFX\Shot_Drop_5_56D34C19.wem</Path>
+				</File>
+				<File Id="353381999" Language="SFX">
+					<ShortName>Shot_Bow_1.wav</ShortName>
+					<Path>SFX\Shot_Bow_1_56D34C19.wem</Path>
+				</File>
+				<File Id="359734570" Language="SFX">
+					<ShortName>Shot_Water_6.wav</ShortName>
+					<Path>SFX\Shot_Water_6_56D34C19.wem</Path>
+				</File>
+				<File Id="469242409" Language="SFX">
+					<ShortName>Shot_Bow_5.wav</ShortName>
+					<Path>SFX\Shot_Bow_5_56D34C19.wem</Path>
+				</File>
+				<File Id="478677072" Language="SFX">
+					<ShortName>Shot_Bow_2.wav</ShortName>
+					<Path>SFX\Shot_Bow_2_56D34C19.wem</Path>
+				</File>
+				<File Id="480564895" Language="SFX">
+					<ShortName>Shot_Bow_7.wav</ShortName>
+					<Path>SFX\Shot_Bow_7_56D34C19.wem</Path>
+				</File>
+				<File Id="549481154" Language="SFX">
+					<ShortName>Shot_Water_2.wav</ShortName>
+					<Path>SFX\Shot_Water_2_56D34C19.wem</Path>
+				</File>
+				<File Id="626629245" Language="SFX">
+					<ShortName>Shot_Drop_4.wav</ShortName>
+					<Path>SFX\Shot_Drop_4_56D34C19.wem</Path>
+				</File>
+				<File Id="676939592" Language="SFX">
+					<ShortName>Shot_Drop_7.wav</ShortName>
+					<Path>SFX\Shot_Drop_7_56D34C19.wem</Path>
+				</File>
+				<File Id="725843751" Language="SFX">
+					<ShortName>Shot_Water_7.wav</ShortName>
+					<Path>SFX\Shot_Water_7_56D34C19.wem</Path>
+				</File>
+				<File Id="747443390" Language="SFX">
+					<ShortName>Shot_Drop_8.wav</ShortName>
+					<Path>SFX\Shot_Drop_8_56D34C19.wem</Path>
+				</File>
+				<File Id="781799212" Language="SFX">
+					<ShortName>Shot_Bow_6.wav</ShortName>
+					<Path>SFX\Shot_Bow_6_56D34C19.wem</Path>
+				</File>
+				<File Id="854428154" Language="SFX">
+					<ShortName>Shot_Drop_1.wav</ShortName>
+					<Path>SFX\Shot_Drop_1_56D34C19.wem</Path>
+				</File>
+				<File Id="866779702" Language="SFX">
+					<ShortName>Shot_Water_8.wav</ShortName>
+					<Path>SFX\Shot_Water_8_56D34C19.wem</Path>
+				</File>
+				<File Id="974832734" Language="SFX">
+					<ShortName>Shot_Drop_3.wav</ShortName>
+					<Path>SFX\Shot_Drop_3_56D34C19.wem</Path>
+				</File>
+				<File Id="1066645175" Language="SFX">
+					<ShortName>Shot_Bow_8.wav</ShortName>
+					<Path>SFX\Shot_Bow_8_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
