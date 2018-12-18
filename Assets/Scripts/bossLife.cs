@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bossLife : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class bossLife : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (!isPart && col.gameObject.layer == 11)
+		if (!isPart && col.gameObject.layer == LayerMask.NameToLayer("ProjectileUnit"))
 		{
 			lowerPV();
 		}
@@ -56,5 +57,11 @@ public class bossLife : MonoBehaviour
 			}
 		}
 	}
+
+    private void OnDestroy()
+    {
+        Debug.Log("died");
+        SceneManager.LoadScene("Win");
+    }
 
 }
