@@ -41,7 +41,7 @@ public class menuController : MonoBehaviour
 
 	void onClickPlay()
 	{
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("MorganScene");
 	}
 
 	void onClickExit()

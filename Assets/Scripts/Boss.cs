@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Xenon;
 
 namespace Swarm {
@@ -13,6 +14,10 @@ namespace Swarm {
 
 		private void Update() {
 			
+		}
+
+		private void OnDestroy() {
+			SceneManager.LoadScene("Win");
 		}
 
 	}
