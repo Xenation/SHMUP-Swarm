@@ -12,7 +12,7 @@ namespace Swarm {
 		public float unitRadius = .1f;
 		public float suicideSpeed = 10f;
 		public Transform bossTransform;
-		public float bossRadius = 3f;
+        private int nbOfUnits;
 
 		public bool debug = false;
 
@@ -38,6 +38,8 @@ namespace Swarm {
 			velocity *= cursorSpeed;
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0) {
+                //INSERER LE SON D'UN TIR ALLIE
+                AkSoundEngine.PostEvent("Play_Shots", gameObject);
 				PlayerUnit unit = units[0];
 				units.RemoveAt(0);
 				unit.Suicide();
@@ -49,5 +51,22 @@ namespace Swarm {
 			cursorRB.velocity = velocity;
 		}
 
+
+        public void AddUnit(GameObject unit)
+        {
+            PlayerUnit testUnit = unit.GetComponent<PlayerUnit>();
+            if(testUnit)
+                units.Add(testUnit);
+        }
+
+        public void RemoveUnit(PlayerUnit unit)
+        {
+            units.Remove(unit);
+        }
+
+        public int getNbOfUnits()
+        {
+            return units.Count;
+        }
 	}
 }

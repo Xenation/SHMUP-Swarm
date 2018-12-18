@@ -168,7 +168,7 @@ MonoBehaviour:
     type: 3}
   unitsToCreate: 50
   unitSpeed: 6
-  unitRadius: 0.45
+  unitRadius: 0.8
   suicideSpeed: 10
   bossTransform: {fileID: 0}
   bossRadius: 3
