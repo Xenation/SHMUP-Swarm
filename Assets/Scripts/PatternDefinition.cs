@@ -6,75 +6,6 @@ using UnityEngine;
 using Xenon;
 
 namespace Swarm {
-	public enum SequenceElementType {
-		/// <summary>
-		/// 0/int count
-		/// 1/float duration
-		/// 2/Projectile projectile
-		/// 3/float speed
-		/// </summary>
-		Bullet,
-		/// <summary>
-		/// 0/float duration
-		/// </summary>
-		Lazer,
-		/// <summary>
-		/// 0/int count
-		/// </summary>
-		Mortar,
-		/// <summary>
-		/// 0/float duration
-		/// </summary>
-		Delay,
-		/// <summary>
-		/// 0/AttackPoint point
-		/// </summary>
-		EnablePoint,
-		/// <summary>
-		/// 0/AttackPoint point
-		/// </summary>
-		DisablePoint,
-		/// <summary>
-		/// 0/float rotation
-		/// </summary>
-		SetRotation,
-		/// <summary>
-		/// 0/float rotationSpeed
-		/// </summary>
-		RotationSpeed
-	}
-
-	[System.Serializable]
-	public struct SequenceElement {
-		public SequenceElementType type;
-		public int count;
-		public float duration;
-		public Projectile projectile;
-		public AttackPoint point;
-		/// <summary>
-		/// Available Types:
-		/// int, float,
-		/// Projectile, AttackPoint
-		/// </summary>
-		public object[] _objValues;
-
-		public int Int(int i) {
-			return (int) _objValues[i];
-		}
-
-		public float Float(int i) {
-			return (float) _objValues[i];
-		}
-
-		public Projectile Projectile(int i) {
-			return (Projectile) _objValues[i];
-		}
-
-		public AttackPoint Point(int i) {
-			return (AttackPoint) _objValues[i];
-		}
-	}
-
 	[System.Serializable]
 	public struct SpawnPointDefinition {
 		public Vector2 position;
@@ -102,6 +33,18 @@ namespace Swarm {
 		public List<SequenceElement> sequence;
 
 
+		private void OnEnable() {
+			if (sequence.Count != 0 && (sequence[0].count != 0 || sequence[0].duration != 0f || sequence[0].projectile != null || sequence[0].point != null)) { // Has Old Style Storage
+				ConvertToObjArray();
+			}
+		}
+
+		private void ConvertToObjArray() {
+			for (int i = 0; i < sequence.Count; i++) {
+				sequence[i].Convert();
+			}
+		}
+
 		private void OnValidate() {
 			if (autoPlaced) {
 				spawnPoints = new SpawnPointDefinition[count];
@@ -111,6 +54,11 @@ namespace Swarm {
 					Vector2 pos = new Vector2(Mathf.Cos(perimeter), Mathf.Sin(perimeter)) * distanceFromCenter;
 					float rot = Vector2.SignedAngle(Vector2.right, pos.normalized);
 					spawnPoints[i] = new SpawnPointDefinition() { position = pos, rotation = rot };
+				}
+			}
+			foreach (SequenceElement elem in sequence) {
+				if (!elem.CheckDataValidity()) {
+					elem.ClearData();
 				}
 			}
 		}
