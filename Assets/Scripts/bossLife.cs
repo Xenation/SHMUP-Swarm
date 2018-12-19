@@ -32,7 +32,9 @@ public class bossLife : MonoBehaviour
 		{
 			animator.SetBool("isOpen", false);
 			isPart = true;
-			foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
+            isAnimationEnd = false;
+
+            foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
 			{
 				part.GetComponent<partController>().resetPart();
 			}
