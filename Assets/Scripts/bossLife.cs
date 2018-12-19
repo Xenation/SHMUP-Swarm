@@ -70,7 +70,7 @@ public class bossLife : MonoBehaviour
 
     private void hitstun()
     {
-        if (inHitStun == false)
+        if (!inHitStun)
         {
             inHitStun = true;
             this.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 1f, 1);
@@ -80,6 +80,11 @@ public class bossLife : MonoBehaviour
         {
             inHitStun = false;
             this.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        else
+        {
+            //ScreenShake
+
         }
     }
 
