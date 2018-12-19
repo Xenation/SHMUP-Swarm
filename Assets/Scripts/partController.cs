@@ -6,7 +6,8 @@ public class partController : MonoBehaviour
 {
 
 	[SerializeField]
-	public int pv = 1;
+	private int pv = 1;
+	public int basepv = 1;
 	public bool isDestroyed = false;
 
     private bool inHitStun = false;
@@ -15,8 +16,8 @@ public class partController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		pv = basepv;
+	}
 
     // Update is called once per frame
     void Update()
@@ -35,7 +36,6 @@ public class partController : MonoBehaviour
 		if (col.gameObject.layer == 11 && !isDestroyed)
 		{
 			lowerPV();
-            
 		}
 	}
 
@@ -68,4 +68,16 @@ public class partController : MonoBehaviour
             this.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
+
+	public void resetPart()
+	{
+		isDestroyed = false;
+		pv = basepv;
+		this.GetComponent<SpriteRenderer>().color = Color.white;
+	}
+
+	public void animationEnd(bool endAnimation)
+	{
+	
+	}
 }
