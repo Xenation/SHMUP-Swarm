@@ -21,7 +21,7 @@ MonoBehaviour:
   count: 3
   startRotation: 60
   distanceFromCenter: 2
-  rotationSpeed: 0
+  rotationSpeed: 45
   spawnPoints:
   - position: {x: 0.99999994, y: 1.7320509}
     rotation: 60.000004

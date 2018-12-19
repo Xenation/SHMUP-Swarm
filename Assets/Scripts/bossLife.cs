@@ -9,16 +9,24 @@ public class bossLife : MonoBehaviour
 	private int pv = 1;
 	public bool isPart = true;
 
+    private bool inHitStun = false;
+    private Color originalColor;
+    private float hitStunDuration = 0.05f;
+    private float hitStunFirstFrame = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        originalColor = this.GetComponent<SpriteRenderer>().color;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (inHitStun == true)
+        {
+            hitstun();
+        }
     }
 
 	void OnCollisionEnter2D(Collision2D col)
@@ -26,6 +34,7 @@ public class bossLife : MonoBehaviour
 		if (!isPart && col.gameObject.layer == LayerMask.NameToLayer("ProjectileUnit"))
 		{
 			lowerPV();
+            hitstun();
 		}
 	}
 
@@ -58,6 +67,21 @@ public class bossLife : MonoBehaviour
 			}
 		}
 	}
+
+    private void hitstun()
+    {
+        if (inHitStun == false)
+        {
+            inHitStun = true;
+            this.GetComponent<SpriteRenderer>().color = new Color(0f, 0.5f, 0.4f, 1);
+            hitStunFirstFrame = Time.time;
+        }
+        else if (Time.time > (hitStunFirstFrame + hitStunDuration))
+        {
+            inHitStun = false;
+            this.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
 
     private void OnDestroy()
     {
