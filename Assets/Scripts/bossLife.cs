@@ -73,7 +73,7 @@ public class bossLife : MonoBehaviour
         if (inHitStun == false)
         {
             inHitStun = true;
-            this.GetComponent<SpriteRenderer>().color = new Color(0f, 0.5f, 0.4f, 1);
+            this.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 1f, 1);
             hitStunFirstFrame = Time.time;
         }
         else if (Time.time > (hitStunFirstFrame + hitStunDuration))
