@@ -8,22 +8,35 @@ public class bossLife : MonoBehaviour
 	[SerializeField]
 	private int pv = 1;
 	public bool isPart = true;
+	private Animator animator;
+	public float openingDuration= 5;
+	private float openingTime = 2;
+	private bool isAnimationEnd= false;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
-        
-    }
+		animator = gameObject.GetComponent<Animator>();
+
+	}
 
     // Update is called once per frame
     void Update()
     {
-
+		if (!isPart && isAnimationEnd && Time.time - openingTime > openingDuration)
+		{
+			animator.SetBool("isOpen", false);
+			isPart = true;
+			foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
+			{
+				part.GetComponent<partController>().resetPart();
+			}
+		}
     }
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (!isPart && col.gameObject.layer == LayerMask.NameToLayer("ProjectileUnit"))
+		if (!isPart && isAnimationEnd && col.gameObject.layer == LayerMask.NameToLayer("ProjectileUnit"))
 		{
 			lowerPV();
 		}
@@ -54,7 +67,8 @@ public class bossLife : MonoBehaviour
 		{
 			foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
 			{
-				part.SetActive(false);
+				animator.SetBool("isOpen",true);
+				//part.SetActive(false);
 			}
 		}
 	}
@@ -65,4 +79,12 @@ public class bossLife : MonoBehaviour
         //SceneManager.LoadScene("Win");
     }
 
+	public void AlertObservers(string message)
+	{
+		if (message.Equals("AttackAnimationEnded"))
+		{
+			isAnimationEnd = true;
+			openingTime = Time.time;
+		}
+	}
 }

@@ -6,13 +6,14 @@ public class partController : MonoBehaviour
 {
 
 	[SerializeField]
-	public int pv = 1;
+	private int pv = 1;
+	public int basepv = 1;
 	public bool isDestroyed = false;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		pv = basepv;
+	}
 
     // Update is called once per frame
     void Update()
@@ -37,5 +38,17 @@ public class partController : MonoBehaviour
 			this.GetComponent<SpriteRenderer>().color = Color.red;
 			transform.parent.GetComponent<bossLife>().checkParts();
 		}
+	}
+
+	public void resetPart()
+	{
+		isDestroyed = false;
+		pv = basepv;
+		this.GetComponent<SpriteRenderer>().color = Color.white;
+	}
+
+	public void animationEnd(bool endAnimation)
+	{
+	
 	}
 }
