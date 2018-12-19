@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   finishedDelay: 5
-  simultaneous: []
+  simultaneous:
+  - {fileID: 11400000, guid: 6e67ca42a6efa6f4394d31e3013986de, type: 2}
   nextPossible:
   - {fileID: 11400000, guid: 6e67ca42a6efa6f4394d31e3013986de, type: 2}
   - {fileID: 11400000, guid: c4238ff7d0dd72f48b4c00635dbe034b, type: 2}

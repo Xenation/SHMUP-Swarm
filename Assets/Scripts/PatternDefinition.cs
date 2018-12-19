@@ -7,12 +7,41 @@ using Xenon;
 
 namespace Swarm {
 	public enum SequenceElementType {
+		/// <summary>
+		/// 0/int count
+		/// 1/float duration
+		/// 2/Projectile projectile
+		/// 3/float speed
+		/// </summary>
 		Bullet,
+		/// <summary>
+		/// 0/float duration
+		/// </summary>
 		Lazer,
+		/// <summary>
+		/// 0/int count
+		/// </summary>
 		Mortar,
+		/// <summary>
+		/// 0/float duration
+		/// </summary>
 		Delay,
+		/// <summary>
+		/// 0/AttackPoint point
+		/// </summary>
 		EnablePoint,
-		DisablePoint
+		/// <summary>
+		/// 0/AttackPoint point
+		/// </summary>
+		DisablePoint,
+		/// <summary>
+		/// 0/float rotation
+		/// </summary>
+		SetRotation,
+		/// <summary>
+		/// 0/float rotationSpeed
+		/// </summary>
+		RotationSpeed
 	}
 
 	[System.Serializable]
@@ -22,6 +51,28 @@ namespace Swarm {
 		public float duration;
 		public Projectile projectile;
 		public AttackPoint point;
+		/// <summary>
+		/// Available Types:
+		/// int, float,
+		/// Projectile, AttackPoint
+		/// </summary>
+		public object[] _objValues;
+
+		public int Int(int i) {
+			return (int) _objValues[i];
+		}
+
+		public float Float(int i) {
+			return (float) _objValues[i];
+		}
+
+		public Projectile Projectile(int i) {
+			return (Projectile) _objValues[i];
+		}
+
+		public AttackPoint Point(int i) {
+			return (AttackPoint) _objValues[i];
+		}
 	}
 
 	[System.Serializable]
