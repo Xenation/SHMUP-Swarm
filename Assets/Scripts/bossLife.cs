@@ -34,7 +34,8 @@ public class bossLife : MonoBehaviour
 		pv--;
 		if (pv <= 0)
 		{
-			Destroy(this.gameObject);
+            SceneManager.LoadScene("Win");
+            //Destroy(this.gameObject);
 		}
 	}
 
@@ -60,8 +61,8 @@ public class bossLife : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("died");
-        SceneManager.LoadScene("Win");
+        //Debug.Log("died");
+        //SceneManager.LoadScene("Win");
     }
 
 }
