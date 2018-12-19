@@ -17,9 +17,5 @@ namespace Swarm {
 			
 		}
 
-		private void OnDestroy() {
-			SceneManager.LoadScene("Win");
-		}
-
 	}
 }
