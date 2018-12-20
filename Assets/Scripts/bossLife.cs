@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class bossLife : MonoBehaviour
 {
 	[SerializeField]
-	private int pv = 1;
+	private int pv;
 	public bool isPart = true;
 	private Animator animator;
+    public Camera cam;
+
 	public float openingDuration= 5;
 	private float openingTime = 2;
 	private bool isAnimationEnd= false;
@@ -17,6 +19,7 @@ public class bossLife : MonoBehaviour
     private Color originalColor;
     private float hitStunDuration = 0.05f;
     private float hitStunFirstFrame = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -97,10 +100,13 @@ public class bossLife : MonoBehaviour
         {
             inHitStun = false;
             this.GetComponent<SpriteRenderer>().color = Color.white;
+            //cam.transform.position =new Vector3(0, 0, -10);
         }
         else
         {
             //ScreenShake
+            cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
+            
 
         }
     }

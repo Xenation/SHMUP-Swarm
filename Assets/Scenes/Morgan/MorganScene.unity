@@ -627,6 +627,7 @@ GameObject:
   - component: {fileID: 827645726}
   - component: {fileID: 827645728}
   - component: {fileID: 827645725}
+  - component: {fileID: 827645729}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -726,6 +727,19 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &827645729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827645724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0289eea67247f6442a7e64e3dbb47d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 230935861}
 --- !u!1 &1092747907
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,24 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1479841543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4788165427147069081, guid: 50a6274365a1cac479f4e84b07ee86df,
-    type: 3}
-  m_PrefabInstance: {fileID: 1698669232}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1479841545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479841543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1698669232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -986,8 +982,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: pv
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 827645726}
     - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: pv
       value: 20
