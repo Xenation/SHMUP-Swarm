@@ -27,6 +27,8 @@ namespace Swarm.Editor {
 		SerializedProperty sequenceProp;
 		ReorderableListProperty sequenceList;
 
+		private int selectedSpawnPoint = -1;
+
 		private void OnEnable() {
 			patternDefinition = (PatternDefinition) serializedObject.targetObject;
 
@@ -59,7 +61,11 @@ namespace Swarm.Editor {
 			Color colTmp = Handles.color;
 			Undo.RecordObject(patternDefinition, "Pattern Spawn Point Move");
 			for (int i = 0; i < patternDefinition.spawnPoints.Length; i++) {
-				Handles.color = Color.blue;
+				if (selectedSpawnPoint == i) {
+					Handles.color = Color.yellow;
+				} else {
+					Handles.color = Color.blue;
+				}
 				patternDefinition.spawnPoints[i].position = Handles.FreeMoveHandle(patternDefinition.spawnPoints[i].position, Quaternion.identity, HandleUtility.GetHandleSize(patternDefinition.spawnPoints[i].position) * 0.1f, Vector3.zero, Handles.CubeHandleCap);
 				Handles.color = Color.white;
 				Quaternion rot = Handles.Disc(Quaternion.Euler(0, 0, patternDefinition.spawnPoints[i].rotation), patternDefinition.spawnPoints[i].position, Vector3.forward, HandleUtility.GetHandleSize(patternDefinition.spawnPoints[i].position) * .5f, false, 0f);
@@ -72,6 +78,7 @@ namespace Swarm.Editor {
 		}
 
 		public override void OnInspectorGUI() {
+			selectedSpawnPoint = -1;
 			serializedObject.Update();
 
 			EditorGUILayout.PropertyField(finishedDelayProp);
@@ -97,6 +104,9 @@ namespace Swarm.Editor {
 
 		private void DrawSpawnPoint(Rect rect, int index, bool active, bool focused) {
 			//rect.height = 16;
+			if (active) {
+				selectedSpawnPoint = index;
+			}
 			rect.height = EditorGUIUtility.singleLineHeight;
 			rect.y += 1;
 
@@ -125,6 +135,10 @@ namespace Swarm.Editor {
 			rectRight.width *= 2f;
 			patternDefinition.spawnPoints[index].rotation = EditorGUI.FloatField(rectRight, patternDefinition.spawnPoints[index].rotation);
 			spawnPointsList.List.elementHeight = rect.height + 4.0f;
+		}
+
+		private void DrawSequenceElement(Rect rect, int index, bool active, bool focused) {
+
 		}
 
 	}
