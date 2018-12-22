@@ -76,7 +76,7 @@ public class partController : MonoBehaviour
 	{
 		isDestroyed = false;
 		pv = basepv;
-		this.GetComponent<SpriteRenderer>().color = Color.white;
+        mat.SetFloat("_ReplaceAmount", 0.0f);
 	}
 
 	public void animationEnd(bool endAnimation)
