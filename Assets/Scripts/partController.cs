@@ -13,11 +13,14 @@ public class partController : MonoBehaviour
     private bool inHitStun = false;
     private float hitStunFirstFrame = 0;
     private float hitStunDuration = 0.05f;
+    private Material mat;
     // Start is called before the first frame update
     void Start()
     {
 		pv = basepv;
-	}
+        SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
+        mat = rend.material;
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,7 +48,7 @@ public class partController : MonoBehaviour
 		if (pv <= 0)
 		{
 			isDestroyed = true;
-			this.GetComponent<SpriteRenderer>().color = Color.red;
+            mat.SetFloat("_ReplaceAmount", 0.5f);
 			transform.parent.GetComponent<bossLife>().checkParts();
         }
         else
@@ -59,13 +62,13 @@ public class partController : MonoBehaviour
         if (inHitStun == false)
         {
             inHitStun = true;
-            this.GetComponent<SpriteRenderer>().color = new Color(0f, 0.5f, 0.4f, 1);
+            mat.SetFloat("_ReplaceAmount", 1.0f);
             hitStunFirstFrame = Time.time;
         }
         else if(Time.time > (hitStunFirstFrame + hitStunDuration))
         {
             inHitStun = false;
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            mat.SetFloat("_ReplaceAmount", 0.0f);
         }
     }
 

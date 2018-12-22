@@ -16,7 +16,8 @@ public class bossLife : MonoBehaviour
 	private bool isAnimationEnd= false;
 
     private bool inHitStun = false;
-    private Color originalColor;
+    private Material mat;
+
     private float hitStunDuration = 0.05f;
     private float hitStunFirstFrame = 0;
 
@@ -25,7 +26,8 @@ public class bossLife : MonoBehaviour
     void Start()
     {
 		animator = gameObject.GetComponent<Animator>();
-        originalColor = this.GetComponent<SpriteRenderer>().color;
+        SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
+        mat = rend.material;
     }
 
     // Update is called once per frame
@@ -93,13 +95,14 @@ public class bossLife : MonoBehaviour
         if (!inHitStun)
         {
             inHitStun = true;
-            this.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 1f, 1);
+            mat.SetFloat("_ReplaceAmount", 1.0f);
+            
             hitStunFirstFrame = Time.time;
         }
         else if (Time.time > (hitStunFirstFrame + hitStunDuration))
         {
             inHitStun = false;
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            mat.SetFloat("_ReplaceAmount", 0.0f);
             //cam.transform.position =new Vector3(0, 0, -10);
         }
         else
