@@ -49,6 +49,8 @@ namespace Swarm {
 				unit.Suicide();
 			}
 
+            //Le nombre d'unitées est obtenable avec units.Count
+
 		}
 
 		private void FixedUpdate() {
