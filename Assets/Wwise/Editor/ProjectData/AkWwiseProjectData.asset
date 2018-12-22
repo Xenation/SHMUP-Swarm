@@ -16,19 +16,19 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 898f6f7d8115964aa3970ca86831ae6d
-    m_lastTime: -8586563690241040361
+    m_lastTime: -8586562036386050450
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586563690241120204
+    m_lastTime: -8586562036386259892
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586563690241040361
+    m_lastTime: -8586561319899627088
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -43,8 +43,20 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586563690244734149
+    m_lastTime: -8586561320880588675
     List:
+    - name: Play_Death
+      guid: c0eab6849e6d9448b9a75d5e16c7fe9f
+      id: 1172822028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Death
+        ObjectType: 3
+      Path: Default Work Unit\Play_Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Music
       guid: 0f6b987130bc4c409772cd11a1d0d25f
       id: 2932040671
@@ -85,7 +97,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 12f391762f07df4187e60b4141493a89
-    m_lastTime: -8586563690244734149
+    m_lastTime: -8586562036386279840
     List:
     - name: PyuNumber
       guid: 754a834001aead4bbd25f729bfb5ffae
@@ -100,7 +112,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 023fa2e858ecc04f9a82163a94473bfd
-    m_lastTime: -8586563690241040361
+    m_lastTime: -8586562036386050450
     List:
     - name: BossPhase
       guid: d91262db66d97c438ab1c75398ee09bd
@@ -140,13 +152,13 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f1e5421d17e46549b6b40ef9a1efd514
-    m_lastTime: -8586563690241040361
+    m_lastTime: -8586562036386040486
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f37b394e8c50524690e7a0ed2fa41fea
-    m_lastTime: -8586563690241040361
+    m_lastTime: -8586562036386060432
     List: []
   ExpandedItems:
   - /SHMUP

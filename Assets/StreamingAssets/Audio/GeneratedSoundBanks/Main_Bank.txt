@@ -1,33 +1,50 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1172822028	Play_Death			\Default Work Unit\Play_Death	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
 	3061091197	Play_Shots			\Default Work Unit\Play_Shots	
 	3860455926	Play_PickUp			\Default Work Unit\Play_PickUp	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	45749575	Shot_Bow_4	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_4		77576
-	71074522	Shot_Drop_6	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_6		76864
-	104690411	Shot_Bow_3	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_3		77576
-	141637456	Swarm_Pickup	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Swarm_Pickup_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swarm_Pickup		144816
-	146998876	Shot_Water_5	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_5		76996
-	233521555	Swarm_ZIK_WIP_V2	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Swarm_ZIK_WIP_V2_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Swarm_ZIK_WIP_V2\Swarm_ZIK_WIP_V2		43968064
-	244034840	Shot_Water_3	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_3		76904
-	257628064	Shot_Water_4	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_4		76864
-	258372542	Shot_Water_1	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_1		76904
-	290234121	Shot_Drop_2	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_2		76864
-	327780098	Shot_Drop_5	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_5		76864
-	353381999	Shot_Bow_1	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_1		76864
-	359734570	Shot_Water_6	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_6		76996
-	469242409	Shot_Bow_5	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_5		76864
-	478677072	Shot_Bow_2	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_2		77576
-	480564895	Shot_Bow_7	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_7		77576
-	549481154	Shot_Water_2	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_2		76864
-	626629245	Shot_Drop_4	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_4		76864
-	676939592	Shot_Drop_7	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_7		76864
-	725843751	Shot_Water_7	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_7		76996
-	747443390	Shot_Drop_8	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_8		76864
-	781799212	Shot_Bow_6	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_6		77576
-	854428154	Shot_Drop_1	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_1		76864
-	866779702	Shot_Water_8	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_8		76996
-	974832734	Shot_Drop_3	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_3		76864
-	1066645175	Shot_Bow_8	C:\Users\jeremy.guarober\Documents\WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Bow_8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_8		77576
+	12607921	Shot_Pizz_01	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_01		291904
+	23718123	Shot_Drop_01	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_01		291444
+	52560143	Shot_Water_03	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_03		291904
+	61541177	Death_07	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_07		115268
+	90020239	Shot_Drop_04	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_04		291444
+	141637456	Swarm_Pickup	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Swarm_Pickup_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Swarm_Pickup		144816
+	170147237	Shot_Bow_03	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_03		291904
+	230960577	Shot_Bow_06	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_06		291904
+	233521555	Swarm_ZIK_WIP_V2	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Swarm_ZIK_WIP_V2_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Swarm_ZIK_WIP_V2\Swarm_ZIK_WIP_V2		43968064
+	244548495	Shot_Drop_06	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_06		291444
+	253266080	Shot_Water_02	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_02		291904
+	281350948	Shot_Pizz_02	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_02		291904
+	294782063	Death_01	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_01		115268
+	336564444	Shot_Bow_01	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_01		291904
+	364253741	Shot_Drop_02	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_02		291444
+	383731950	Shot_Drop_08	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_08		291444
+	394518430	Shot_Pizz_05	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_05		291904
+	458283295	Shot_Water_05	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_05		291904
+	488822358	Shot_Pizz_04	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_04		291904
+	497442396	Shot_Water_08	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_08		291904
+	572382267	Shot_Pizz_06	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_06		291904
+	608375069	Shot_Water_01	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_01_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_01		291904
+	611979770	Death_05	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_05		115264
+	628022234	Shot_Drop_07	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_07		291444
+	661280703	Shot_Bow_05	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_05		291904
+	706712330	Shot_Bow_07	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_07		291904
+	731146243	Shot_Drop_03	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_03		291444
+	739289746	Shot_Pizz_07	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_07		291904
+	752994685	Shot_Water_04	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_04		291904
+	788984634	Death_06	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_06		115268
+	808792766	Shot_Water_06	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_06_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_06		291904
+	856376613	Shot_Drop_05	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Drop_05_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Drop\Shot_Drop_05		291444
+	892627949	Death_02	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_02		115268
+	903324977	Shot_Water_07	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Shot_Water_07_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Water\Shot_Water_07		291904
+	914693096	Death_03	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_03		115264
+	937063638	Shot_Bow_08	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_08		291904
+	967551366	Shot_Bow_04	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_04		291904
+	979913459	Death_04	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_04_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_04		115268
+	1013208886	Death_08	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Death_08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Death\Death_08		115264
+	1023921326	Shot_Pizz_03	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_03_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_03		291904
+	1024678382	Shot_Bow_02	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Bow\Shot_Bow_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Bow\Shot_Bow_02		291904
+	1060065124	Shot_Pizz_08	D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\SFX\Pizz\Shot_Pizz_08_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Shots\Pizz\Shot_Pizz_08		291904
 
