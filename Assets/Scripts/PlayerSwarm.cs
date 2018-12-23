@@ -10,6 +10,12 @@ namespace Swarm {
 		public int unitsToCreate = 50;
 		public float unitSpeed = 4f;
 		public float unitRadius = .1f;
+
+        public float cursorShrinkSpeed = 2.5f;
+        public float cursorShrinkRadius = 0.5f;
+        public float unitShrinkSpeed = 8f;
+        public float unitShrinkRadius = 0.5f;
+
 		public float suicideSpeed = 10f;
 		public Transform bossTransform;
         private int nbOfUnits;
@@ -49,6 +55,10 @@ namespace Swarm {
 				unit.Suicide();
 			}
 
+            if (Input.GetButtonDown("Fire2"))
+            {
+
+            }
             //Le nombre d'unitées est obtenable avec units.Count
 
 		}
