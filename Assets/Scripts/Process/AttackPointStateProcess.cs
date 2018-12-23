@@ -1,13 +1,16 @@
-﻿using Xenon;
+﻿using System.Collections.Generic;
+using Xenon;
 
 namespace Swarm {
 	public class AttackPointStateProcess : Process {
 
-		private AttackPoint point;
+		private List<AttackPoint> points;
+		private int index;
 		private bool nState;
 
-		public AttackPointStateProcess(AttackPoint pt, bool nSt) {
-			point = pt;
+		public AttackPointStateProcess(List<AttackPoint> pt, int i, bool nSt) {
+			points = pt;
+			index = i;
 			nState = nSt;
 		}
 
@@ -16,7 +19,7 @@ namespace Swarm {
 		}
 
 		public override void Update(float dt) {
-			point.shootingEnabled = nState;
+			points[index].shootingEnabled = nState;
 			Terminate();
 		}
 

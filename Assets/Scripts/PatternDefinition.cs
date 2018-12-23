@@ -34,7 +34,7 @@ namespace Swarm {
 
 
 		private void OnEnable() {
-			if (sequence.Count != 0 && (sequence[0].count != 0 || sequence[0].duration != 0f || sequence[0].projectile != null || sequence[0].point != null)) { // Has Old Style Storage
+			if (sequence.Count != 0 && (sequence[0].count != 0 || sequence[0].duration != 0f || sequence[0].projectile != null)) { // Has Old Style Storage
 				ConvertToObjArray();
 			}
 		}
@@ -58,7 +58,7 @@ namespace Swarm {
 			}
 			foreach (SequenceElement elem in sequence) {
 				if (!elem.CheckDataValidity()) {
-					elem.ClearData();
+					elem.ResetData();
 				}
 			}
 		}

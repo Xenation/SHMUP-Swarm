@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Swarm {
@@ -40,139 +41,168 @@ namespace Swarm {
 		RotationSpeed
 	}
 
-	[System.Serializable]
-	public class SequenceElement : ISerializationCallbackReceiver {
+	public struct SequenceElementTypeDef {
 
-		private enum DataType {
-			Int,
-			Float,
-			Proj,
-			Point
+		public static SequenceElementTypeDef bullet = new SequenceElementTypeDef() { fieldNames = new string[] { "Count", "Duration", "Projectile", "Speed Override" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer, SequenceDataType.Floating, SequenceDataType.Projectile, SequenceDataType.Floating } };
+		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Count" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
+		public static SequenceElementTypeDef delay = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef enablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
+		public static SequenceElementTypeDef disablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
+		public static SequenceElementTypeDef setRotation = new SequenceElementTypeDef() { fieldNames = new string[] { "Absolute Rotation" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef rotationSpeed = new SequenceElementTypeDef() { fieldNames = new string[] { "Rotation Speed" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+
+		public int fieldCount { get { return fieldNames.Length; } }
+		public string[] fieldNames;
+		public SequenceDataType[] fieldTypes;
+
+		public int GetFieldIndex(string name) {
+			for (int i = 0; i < fieldNames.Length; i++) {
+				if (fieldNames[i] == name) return i;
+			}
+			return 0;
 		}
+
+		public void ResetFields(ref SequenceElementField[] fields) {
+			fields = new SequenceElementField[fieldTypes.Length];
+			for (int i = 0; i < fieldTypes.Length; i++) {
+				fields[i].type = fieldTypes[i];
+			}
+		}
+
+	}
+
+	public static class SequenceElementTypeExt {
+		public static int GetFieldsCount(this SequenceElementType type) {
+			switch (type) {
+				case SequenceElementType.Bullet:
+					return 4;
+				case SequenceElementType.Delay:
+					return 1;
+				case SequenceElementType.EnablePoint:
+				case SequenceElementType.DisablePoint:
+					return 1;
+				case SequenceElementType.Lazer:
+					return 1;
+				case SequenceElementType.Mortar:
+					return 1;
+				case SequenceElementType.RotationSpeed:
+					return 1;
+				case SequenceElementType.SetRotation:
+					return 1;
+				default:
+					Debug.LogWarning("Sequence Element Type has undefined fields count!");
+					return 0;
+			}
+		}
+
+		public static SequenceElementTypeDef GetDef(this SequenceElementType type) {
+			switch (type) {
+				case SequenceElementType.Bullet:
+					return SequenceElementTypeDef.bullet;
+				case SequenceElementType.Delay:
+					return SequenceElementTypeDef.delay;
+				case SequenceElementType.EnablePoint:
+					return SequenceElementTypeDef.enablePoint;
+				case SequenceElementType.DisablePoint:
+					return SequenceElementTypeDef.disablePoint;
+				case SequenceElementType.Lazer:
+					return SequenceElementTypeDef.lazer;
+				case SequenceElementType.Mortar:
+					return SequenceElementTypeDef.mortar;
+				case SequenceElementType.RotationSpeed:
+					return SequenceElementTypeDef.rotationSpeed;
+				case SequenceElementType.SetRotation:
+					return SequenceElementTypeDef.setRotation;
+				default:
+					Debug.LogWarning("Sequence Element Type has undefined definition object!");
+					return new SequenceElementTypeDef();
+			}
+		}
+		
+		public static int FieldNameToIndex(this SequenceElementType type, string name) {
+			return type.GetDef().GetFieldIndex(name);
+		}
+
+		public static string FieldIndexToName(this SequenceElementType type, int index) {
+			return type.GetDef().fieldNames[index];
+		}
+	}
+
+	[System.Serializable]
+	public class SequenceElement {
 
 		public SequenceElementType type;
 		public int count;
 		public float duration;
 		public Projectile projectile;
-		public AttackPoint point;
+		
+		public SequenceElementField[] fields = new SequenceElementField[0];
 
-		public object[] objValues;
-		[SerializeField] private List<DataType> dataTypes;
-		[SerializeField] private List<int> integers;
-		[SerializeField] private List<float> floats;
-		[SerializeField] private List<Projectile> projectiles;
-		[SerializeField] private List<AttackPoint> points;
-
-		public int Int(int i) {
-			return (int) objValues[i];
+		public ref int Int(int i) {
+			return ref fields[i].intValue;
 		}
 
-		public float Float(int i) {
-			return (float) objValues[i];
+		public ref float Float(int i) {
+			return ref fields[i].floatValue;
 		}
 
-		public Projectile Projectile(int i) {
-			return (Projectile) objValues[i];
+		public ref Projectile Projectile(int i) {
+			return ref fields[i].projectileValue;
 		}
 
-		public AttackPoint Point(int i) {
-			return (AttackPoint) objValues[i];
+		public ref SequenceElementField GetField(string name) {
+			return ref fields[type.FieldNameToIndex(name)];
+		}
+
+		public string GetFieldName(int index) {
+			return type.FieldIndexToName(index);
 		}
 
 		public void Convert() {
+			ResetData();
 			switch (type) {
 				case SequenceElementType.Bullet:
-					objValues = new object[4];
-					objValues[0] = count;
-					objValues[1] = duration;
-					objValues[2] = projectile;
-					objValues[3] = 0f;
+					fields[0] = count;
+					fields[1] = duration;
+					fields[2] = projectile;
+					fields[3] = 0f;
 					break;
 				case SequenceElementType.Delay:
-					objValues = new object[1];
-					objValues[0] = duration;
-					break;
-				case SequenceElementType.EnablePoint:
-				case SequenceElementType.DisablePoint:
-					objValues = new object[1];
-					objValues[0] = point;
+					fields[0] = duration;
 					break;
 			}
+			count = 0;
+			duration = 0f;
+			projectile = null;
 		}
 
 		public bool CheckDataValidity() {
+			if (fields.Length != type.GetFieldsCount()) return false;
 			switch (type) {
 				case SequenceElementType.Bullet:
-					return dataTypes.Count == 4 && dataTypes[0] == DataType.Int && dataTypes[1] == DataType.Float && dataTypes[2] == DataType.Proj && dataTypes[3] == DataType.Float;
+					return fields[0].type == SequenceDataType.Integer && fields[1].type == SequenceDataType.Floating && fields[2].type == SequenceDataType.Projectile && fields[3].type == SequenceDataType.Floating;
 				case SequenceElementType.Delay:
-					return dataTypes.Count == 1 && dataTypes[0] == DataType.Float;
+					return fields[0].type == SequenceDataType.Floating;
 				case SequenceElementType.EnablePoint:
 				case SequenceElementType.DisablePoint:
-					return dataTypes.Count == 1 && dataTypes[0] == DataType.Point;
+					return fields[0].type == SequenceDataType.Integer;
 				case SequenceElementType.Lazer:
-					return dataTypes.Count == 1 && dataTypes[0] == DataType.Float;
+					return fields[0].type == SequenceDataType.Floating;
 				case SequenceElementType.Mortar:
-					return dataTypes.Count == 1 && dataTypes[0] == DataType.Int;
+					return fields[0].type == SequenceDataType.Integer;
 				case SequenceElementType.RotationSpeed:
-					return dataTypes.Count == 1 && dataTypes[0] == DataType.Float;
+					return fields[0].type == SequenceDataType.Floating;
 				case SequenceElementType.SetRotation:
-					return dataTypes.Count == 1 && dataTypes[0] == DataType.Float;
+					return fields[0].type == SequenceDataType.Floating;
 				default:
 					return false;
 			}
 		}
 
-		public void ClearData() {
-			dataTypes = new List<DataType>();
-			integers = new List<int>();
-			floats = new List<float>();
-			projectiles = new List<Projectile>();
-			points = new List<AttackPoint>();
+		public void ResetData() {
+			type.GetDef().ResetFields(ref fields);
 		}
 
-		public void OnBeforeSerialize() {
-			ClearData();
-			for (int i = 0; i < objValues.Length; i++) {
-				switch (objValues[i]) {
-					case int integer:
-						dataTypes.Add(DataType.Int);
-						integers.Add(integer);
-						break;
-					case float floating:
-						dataTypes.Add(DataType.Float);
-						floats.Add(floating);
-						break;
-					case Projectile projectile:
-						dataTypes.Add(DataType.Proj);
-						projectiles.Add(projectile);
-						break;
-					case AttackPoint point:
-						dataTypes.Add(DataType.Point);
-						points.Add(point);
-						break;
-				}
-			}
-		}
-
-		public void OnAfterDeserialize() {
-			int integersIndex = 0, floatsIndex = 0, projectilesIndex = 0, pointsIndex = 0;
-			objValues = new object[dataTypes.Count];
-			for (int i = 0; i < dataTypes.Count; i++) {
-				switch (dataTypes[i]) {
-					case DataType.Int:
-						objValues[i] = integers[integersIndex++];
-						break;
-					case DataType.Float:
-						objValues[i] = floats[floatsIndex++];
-						break;
-					case DataType.Proj:
-						objValues[i] = projectiles[projectilesIndex++];
-						break;
-					case DataType.Point:
-						objValues[i] = points[pointsIndex++];
-						break;
-				}
-			}
-		}
 	}
 }

@@ -10,8 +10,8 @@ namespace Swarm {
 			switch (seqElem.type) {
 				case SequenceElementType.Bullet:
 					for (int i = 0; i < seqElem.count; i++) {
-						AddProcess(new ShootProcess(seqElem.Projectile(2), points));
-						AddProcess(new TimedProcess(seqElem.Float(1) / seqElem.Int(0)));
+						AddProcess(new ShootProcess(seqElem.GetField("Projectile").projectileValue, points));
+						AddProcess(new TimedProcess(seqElem.GetField("Duration").floatValue / seqElem.GetField("Count").intValue));
 					}
 					break;
 				case SequenceElementType.Lazer:
@@ -25,13 +25,13 @@ namespace Swarm {
 					//}
 					break;
 				case SequenceElementType.Delay:
-					AddProcess(new TimedProcess(seqElem.Float(0)));
+					AddProcess(new TimedProcess(seqElem.GetField("Duration").floatValue));
 					break;
 				case SequenceElementType.EnablePoint:
-					AddProcess(new AttackPointStateProcess(seqElem.Point(0), true));
+					AddProcess(new AttackPointStateProcess(points, seqElem.GetField("Point index").intValue, true));
 					break;
 				case SequenceElementType.DisablePoint:
-					AddProcess(new AttackPointStateProcess(seqElem.Point(0), false));
+					AddProcess(new AttackPointStateProcess(points, seqElem.GetField("Point index").intValue, false));
 					break;
 			}
 		}

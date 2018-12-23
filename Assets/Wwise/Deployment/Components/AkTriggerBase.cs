@@ -1,10 +1,11 @@
-#if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
 //////////////////////////////////////////////////////////////////////
 //
 // Copyright (c) 2014 Audiokinetic Inc. / All Rights Reserved
 //
 //////////////////////////////////////////////////////////////////////
 
+using UnityEngine;
 /// Base class for the generic triggering mechanism for Wwise Integration.
 /// All Wwise components will use this mechanism to drive their behavior.
 /// Derive from this class to add your own triggering condition, as described in \ref unity_add_triggers
@@ -37,11 +38,27 @@ public abstract class AkTriggerBase : UnityEngine.MonoBehaviour
 			}
 		}
 #else
-		var types = baseType.Assembly.GetTypes();
+		System.Collections.Generic.List<System.Type> types;
+		try {
+			types = new System.Collections.Generic.List<System.Type>(baseType.Assembly.GetTypes());
+		} catch (System.Reflection.ReflectionTypeLoadException e) {
+			Debug.LogWarning("ReflectionTypeLoadException");
+			types = new System.Collections.Generic.List<System.Type>();
+			foreach (System.Type t in e.Types) {
+				if (t == null || t.Assembly != baseType.Assembly) continue;
+				types.Add(t);
+			}
+			string str = "";
+			foreach (System.Type t in types) {
+				if (t == null) continue;
+				str += t.Name + "\n";
+			}
+			Debug.Log(str);
+		}
 
-		for (var i = 0; i < types.Length; i++)
+		for (var i = 0; i < types.Count; i++)
 		{
-			if (types[i].IsClass &&
+			if (types[i] != null && types[i].IsClass &&
 			    (types[i].IsSubclassOf(baseType) || baseType.IsAssignableFrom(types[i]) && baseType != types[i]))
 			{
 				var typeName = types[i].Name;

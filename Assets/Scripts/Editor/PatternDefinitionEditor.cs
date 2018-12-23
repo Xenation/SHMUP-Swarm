@@ -28,6 +28,7 @@ namespace Swarm.Editor {
 		ReorderableListProperty sequenceList;
 
 		private int selectedSpawnPoint = -1;
+		private GUIStyle styleBoldPopup;
 
 		private void OnEnable() {
 			patternDefinition = (PatternDefinition) serializedObject.targetObject;
@@ -48,9 +49,11 @@ namespace Swarm.Editor {
 			spawnPointsList.List.draggable = false;
 
 			sequenceProp = serializedObject.FindProperty("sequence");
-			sequenceList = new ReorderableListProperty(sequenceProp, true);
+			sequenceList = new ReorderableListProperty(sequenceProp, true, DrawSequenceElement, SequenceElementHeight);
 
 			SceneView.onSceneGUIDelegate += SceneGUI;
+			styleBoldPopup = new GUIStyle(EditorGUIUtility.GetBuiltinSkin(EditorSkin.Inspector).FindStyle("MiniPopup"));
+			styleBoldPopup.font = EditorGUIUtility.GetBuiltinSkin(EditorSkin.Inspector).FindStyle("BoldLabel").font;
 		}
 
 		private void OnDisable() {
@@ -138,7 +141,20 @@ namespace Swarm.Editor {
 		}
 
 		private void DrawSequenceElement(Rect rect, int index, bool active, bool focused) {
+			rect.SubVerticalRect(4f);
+			Rect typeRect = rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f);
+			SequenceElementType prevType = patternDefinition.sequence[index].type;
+			patternDefinition.sequence[index].type = (SequenceElementType) EditorGUI.EnumPopup(typeRect, patternDefinition.sequence[index].type, styleBoldPopup);
+			if (prevType != patternDefinition.sequence[index].type) {
+				patternDefinition.sequence[index].ResetData();
+			}
+			for (int i = 0; i < patternDefinition.sequence[index].fields.Length; i++) {
+				patternDefinition.sequence[index].fields[i].DrawField(rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f), patternDefinition.sequence[index].GetFieldName(i));
+			}
+		}
 
+		private float SequenceElementHeight(int index) {
+			return (EditorGUIUtility.singleLineHeight + 2f) * (patternDefinition.sequence[index].fields.Length + 1) + 10f;
 		}
 
 	}
