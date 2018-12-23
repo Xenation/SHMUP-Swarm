@@ -14,8 +14,9 @@ public class partController : MonoBehaviour
     private bool inHitStun = false;
     private bool inDestroyShake = false;
     private float hitStunFirstFrame = 0;
-    private float hitStunDuration = 0.05f;
-    private float destroyDuration = 0.2f;
+    private float destroyFirstFrame = 0;
+    public float hitStunDuration = 0.05f;
+    public float destroyDuration = 0.2f;
     private Material mat;
     // Start is called before the first frame update
     void Start()
@@ -85,7 +86,7 @@ public class partController : MonoBehaviour
             inDestroyShake = true;
             hitStunFirstFrame = Time.time;
         }
-        else if(Time.time > (hitStunFirstFrame + destroyDuration))
+        else if(Time.time > (destroyFirstFrame + destroyDuration))
         {
             inDestroyShake = false;
         }

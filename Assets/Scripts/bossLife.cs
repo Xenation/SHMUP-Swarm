@@ -18,7 +18,7 @@ public class bossLife : MonoBehaviour
     private bool inHitStun = false;
     private Material mat;
 
-    private float hitStunDuration = 0.05f;
+    public float hitStunDuration = 0.05f;
     private float hitStunFirstFrame = 0;
 
 
