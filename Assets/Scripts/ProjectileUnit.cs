@@ -23,6 +23,7 @@ namespace Swarm {
 			if (boss || part) {
                 //Add vibration
 				Destroy(gameObject);
+                //SON DE MORT A L'IMPACT EN MODE KAMIKAZE
 			}
 		}
 
