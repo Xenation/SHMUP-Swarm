@@ -9,8 +9,10 @@ public class partController : MonoBehaviour
 	private int pv = 1;
 	public int basepv = 1;
 	public bool isDestroyed = false;
+    public Camera cam;
 
     private bool inHitStun = false;
+    private bool inDestroyShake = false;
     private float hitStunFirstFrame = 0;
     private float hitStunDuration = 0.05f;
     private Material mat;
@@ -27,6 +29,8 @@ public class partController : MonoBehaviour
     {
         if (inHitStun)
             hitstun();
+        if (inDestroyShake)
+            destroyShake();
     }
 
     private void FixedUpdate()
@@ -50,6 +54,7 @@ public class partController : MonoBehaviour
 			isDestroyed = true;
             mat.SetFloat("_ReplaceAmount", 0.5f);
 			transform.parent.GetComponent<bossLife>().checkParts();
+            destroyShake();
         }
         else
         {
@@ -59,7 +64,7 @@ public class partController : MonoBehaviour
 
     private void hitstun()
     {
-        if (inHitStun == false)
+        if (!inHitStun)
         {
             inHitStun = true;
             mat.SetFloat("_ReplaceAmount", 1.0f);
@@ -70,6 +75,21 @@ public class partController : MonoBehaviour
             inHitStun = false;
             mat.SetFloat("_ReplaceAmount", 0.0f);
         }
+    }
+
+    private void destroyShake()
+    {
+        if (!inDestroyShake)
+        {
+            inDestroyShake = true;
+            hitStunFirstFrame = Time.time;
+        }
+        else if(Time.time > (hitStunFirstFrame + hitStunDuration))
+        {
+            inDestroyShake = false;
+        }
+        else
+            cam.transform.position += new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
     }
 
 	public void resetPart()
