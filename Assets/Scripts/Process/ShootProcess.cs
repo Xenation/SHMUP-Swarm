@@ -7,10 +7,12 @@ namespace Swarm {
 
 		private Projectile prefab;
 		private List<AttackPoint> points;
+		private float speedOverride;
 
-		public ShootProcess(Projectile pre, List<AttackPoint> pts) {
+		public ShootProcess(Projectile pre, List<AttackPoint> pts, float speedOv) {
 			prefab = pre;
 			points = pts;
+			speedOverride = speedOv;
 		}
 
 		public override void OnBegin() {
@@ -20,7 +22,11 @@ namespace Swarm {
 		public override void Update(float dt) {
 			foreach (AttackPoint point in points) {
 				if (!point.shootingEnabled) continue;
-				ProjectileManager.I.ShootProjectile(prefab, point.position, point.rotation);
+				Projectile proj = ProjectileManager.I.ShootProjectile(prefab, point.position, point.rotation);
+				if (speedOverride != 0f) {
+					proj.speed = speedOverride;
+				}
+				proj.Launch();
 			}
 			Terminate();
 		}

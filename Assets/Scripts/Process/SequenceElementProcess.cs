@@ -11,7 +11,7 @@ namespace Swarm {
 				case SequenceElementType.Bullet:
 					float count = seqElem.GetField("Count").intValue;
 					for (int i = 0; i < count; i++) {
-						AddProcess(new ShootProcess(seqElem.GetField("Projectile").projectileValue, runParams.attackPoints));
+						AddProcess(new ShootProcess(seqElem.GetField("Projectile").projectileValue, runParams.attackPoints, seqElem.GetField("Speed Override").floatValue));
 						AddProcess(new TimedProcess(seqElem.GetField("Duration").floatValue / count));
 					}
 					break;
