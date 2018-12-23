@@ -15,6 +15,7 @@ public class partController : MonoBehaviour
     private bool inDestroyShake = false;
     private float hitStunFirstFrame = 0;
     private float hitStunDuration = 0.05f;
+    private float destroyDuration = 0.2f;
     private Material mat;
     // Start is called before the first frame update
     void Start()
@@ -84,12 +85,12 @@ public class partController : MonoBehaviour
             inDestroyShake = true;
             hitStunFirstFrame = Time.time;
         }
-        else if(Time.time > (hitStunFirstFrame + hitStunDuration))
+        else if(Time.time > (hitStunFirstFrame + destroyDuration))
         {
             inDestroyShake = false;
         }
         else
-            cam.transform.position += new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
+            cam.transform.position += new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f));
     }
 
 	public void resetPart()
