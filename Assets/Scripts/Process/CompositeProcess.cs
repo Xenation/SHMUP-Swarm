@@ -1,4 +1,5 @@
-﻿using Xenon;
+﻿using UnityEngine;
+using Xenon;
 
 namespace Swarm {
 	public class CompositeProcess : Process {
@@ -25,6 +26,11 @@ namespace Swarm {
 		}
 
 		public override void OnBegin() {
+			if (last == null) {
+				Debug.LogWarning("Empty Composite Process!");
+				Terminate();
+				return;
+			}
 			last.TerminateCallback += LastTerminated;
 			manager.LaunchProcess(first);
 		}

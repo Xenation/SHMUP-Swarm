@@ -6,12 +6,13 @@ using Xenon.Processes;
 namespace Swarm {
 	public class SequenceElementProcess : CompositeProcess {
 
-		public SequenceElementProcess(SequenceElement seqElem, List<AttackPoint> points) {
+		public SequenceElementProcess(SequenceElement seqElem, Pattern.RuntimeParameters runParams) {
 			switch (seqElem.type) {
 				case SequenceElementType.Bullet:
-					for (int i = 0; i < seqElem.count; i++) {
-						AddProcess(new ShootProcess(seqElem.GetField("Projectile").projectileValue, points));
-						AddProcess(new TimedProcess(seqElem.GetField("Duration").floatValue / seqElem.GetField("Count").intValue));
+					float count = seqElem.GetField("Count").intValue;
+					for (int i = 0; i < count; i++) {
+						AddProcess(new ShootProcess(seqElem.GetField("Projectile").projectileValue, runParams.attackPoints));
+						AddProcess(new TimedProcess(seqElem.GetField("Duration").floatValue / count));
 					}
 					break;
 				case SequenceElementType.Lazer:
@@ -28,10 +29,16 @@ namespace Swarm {
 					AddProcess(new TimedProcess(seqElem.GetField("Duration").floatValue));
 					break;
 				case SequenceElementType.EnablePoint:
-					AddProcess(new AttackPointStateProcess(points, seqElem.GetField("Point index").intValue, true));
+					AddProcess(new AttackPointStateProcess(runParams.attackPoints, seqElem.GetField("Point index").intValue, true));
 					break;
 				case SequenceElementType.DisablePoint:
-					AddProcess(new AttackPointStateProcess(points, seqElem.GetField("Point index").intValue, false));
+					AddProcess(new AttackPointStateProcess(runParams.attackPoints, seqElem.GetField("Point index").intValue, false));
+					break;
+				case SequenceElementType.SetRotationAbsolute:
+					AddProcess(new SetRotationAbsProcess(runParams, seqElem.GetField("Absolute Rotation").floatValue));
+					break;
+				case SequenceElementType.SetRotationSpeed:
+					AddProcess(new SetRotationSpeedProcess(runParams, seqElem.GetField("Rotation Speed").floatValue));
 					break;
 			}
 		}

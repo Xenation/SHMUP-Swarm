@@ -5,12 +5,16 @@ using Xenon;
 namespace Swarm {
 	public class Pattern : MonoBehaviour {
 
+		public class RuntimeParameters {
+			public Transform pointsParent;
+			public List<AttackPoint> attackPoints;
+			public float currentRotation = 0f;
+			public float rotationSpeed = 0f;
+		}
+
 		public PatternDefinition definition;
 
-		// Spawn Points
-		private float currentRotation = 0f;
-		private Transform pointsParent;
-		private List<AttackPoint> attackPoints;
+		public RuntimeParameters runParams;
 
 		// Sequence
 		private ProcessManager procManager;
@@ -19,16 +23,17 @@ namespace Swarm {
 
 		public void Initialize(PatternDefinition def) {
 			definition = def;
+			runParams = new RuntimeParameters() { rotationSpeed = def.rotationSpeed };
 
 			// Spawn Points
 			GameObject pointsParentGo = new GameObject("AttackPoints Root");
-			pointsParent = pointsParentGo.transform;
-			pointsParent.SetParent(transform);
-			attackPoints = definition.CreateSpawnPoints(pointsParent);
+			runParams.pointsParent = pointsParentGo.transform;
+			runParams.pointsParent.SetParent(transform);
+			runParams.attackPoints = definition.CreateSpawnPoints(runParams.pointsParent);
 
 			// Sequence
 			procManager = new ProcessManager();
-			SequenceProcess seqProc = new SequenceProcess(definition.sequence, attackPoints, definition.finishedDelay);
+			SequenceProcess seqProc = new SequenceProcess(definition.sequence, runParams, definition.finishedDelay);
 			seqProc.TerminateCallback += SequenceFinished;
 			procManager.LaunchProcess(seqProc);
 
@@ -40,8 +45,8 @@ namespace Swarm {
 
 		public void Update() {
 			// Spawn Points
-			currentRotation += definition.rotationSpeed * Time.deltaTime;
-			pointsParent.rotation = Quaternion.Euler(0f, 0f, currentRotation);
+			runParams.currentRotation += runParams.rotationSpeed * Time.deltaTime;
+			runParams.pointsParent.rotation = Quaternion.Euler(0f, 0f, runParams.currentRotation);
 
 			// Sequence
 			procManager.UpdateProcesses(Time.deltaTime);
@@ -55,7 +60,7 @@ namespace Swarm {
 				}
 			}
 			Destroy(this);
-			Destroy(pointsParent.gameObject);
+			Destroy(runParams.pointsParent.gameObject);
 		}
 
 	}

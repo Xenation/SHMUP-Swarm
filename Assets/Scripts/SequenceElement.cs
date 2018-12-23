@@ -34,11 +34,11 @@ namespace Swarm {
 		/// <summary>
 		/// 0/float rotation
 		/// </summary>
-		SetRotation,
+		SetRotationAbsolute,
 		/// <summary>
 		/// 0/float rotationSpeed
 		/// </summary>
-		RotationSpeed
+		SetRotationSpeed
 	}
 
 	public struct SequenceElementTypeDef {
@@ -49,8 +49,8 @@ namespace Swarm {
 		public static SequenceElementTypeDef delay = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef enablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
 		public static SequenceElementTypeDef disablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
-		public static SequenceElementTypeDef setRotation = new SequenceElementTypeDef() { fieldNames = new string[] { "Absolute Rotation" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
-		public static SequenceElementTypeDef rotationSpeed = new SequenceElementTypeDef() { fieldNames = new string[] { "Rotation Speed" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef setRotationAbs = new SequenceElementTypeDef() { fieldNames = new string[] { "Absolute Rotation" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef setRotationSpeed = new SequenceElementTypeDef() { fieldNames = new string[] { "Rotation Speed" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 
 		public int fieldCount { get { return fieldNames.Length; } }
 		public string[] fieldNames;
@@ -86,9 +86,9 @@ namespace Swarm {
 					return 1;
 				case SequenceElementType.Mortar:
 					return 1;
-				case SequenceElementType.RotationSpeed:
+				case SequenceElementType.SetRotationSpeed:
 					return 1;
-				case SequenceElementType.SetRotation:
+				case SequenceElementType.SetRotationAbsolute:
 					return 1;
 				default:
 					Debug.LogWarning("Sequence Element Type has undefined fields count!");
@@ -110,10 +110,10 @@ namespace Swarm {
 					return SequenceElementTypeDef.lazer;
 				case SequenceElementType.Mortar:
 					return SequenceElementTypeDef.mortar;
-				case SequenceElementType.RotationSpeed:
-					return SequenceElementTypeDef.rotationSpeed;
-				case SequenceElementType.SetRotation:
-					return SequenceElementTypeDef.setRotation;
+				case SequenceElementType.SetRotationSpeed:
+					return SequenceElementTypeDef.setRotationSpeed;
+				case SequenceElementType.SetRotationAbsolute:
+					return SequenceElementTypeDef.setRotationAbs;
 				default:
 					Debug.LogWarning("Sequence Element Type has undefined definition object!");
 					return new SequenceElementTypeDef();
@@ -191,9 +191,9 @@ namespace Swarm {
 					return fields[0].type == SequenceDataType.Floating;
 				case SequenceElementType.Mortar:
 					return fields[0].type == SequenceDataType.Integer;
-				case SequenceElementType.RotationSpeed:
+				case SequenceElementType.SetRotationSpeed:
 					return fields[0].type == SequenceDataType.Floating;
-				case SequenceElementType.SetRotation:
+				case SequenceElementType.SetRotationAbsolute:
 					return fields[0].type == SequenceDataType.Floating;
 				default:
 					return false;
