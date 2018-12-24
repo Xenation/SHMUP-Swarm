@@ -4,12 +4,9 @@ using UnityEngine;
 namespace Swarm {
 	public class PlayerSwarm : MonoBehaviour {
 
-		public float cursorSpeed = 5f;
-		public float cursorRadius = 1f;
-		public GameObject unitPrefab;
+        public GameObject unitPrefab;
 		public int unitsToCreate = 50;
-		public float unitSpeed = 4f;
-		public float unitRadius = .1f;
+		
 
         public float cursorShrinkSpeed = 2.5f;
         public float cursorShrinkRadius = 0.5f;
@@ -27,7 +24,13 @@ namespace Swarm {
 
 		public bool debug = false;
 
-		[System.NonSerialized] public List<PlayerUnit> units = new List<PlayerUnit>();
+        [HideInInspector]
+        public float cursorSpeed = 5f;
+        public float cursorRadius = 1f;
+        public float unitSpeed = 4f;
+        public float unitRadius = .1f;
+
+        [System.NonSerialized] public List<PlayerUnit> units = new List<PlayerUnit>();
 		[System.NonSerialized] public Transform cursor;
 
 		private Vector2 velocity;
@@ -44,7 +47,12 @@ namespace Swarm {
 			}
 
 			GetComponentsInChildren(units);
-		}
+
+            cursorSpeed = cursorNormalSpeed;
+            cursorRadius = cursorNormalRadius;
+            unitSpeed = unitNormalSpeed;
+            unitRadius = unitNormalRadius;
+        }
 
 		private void Update() {
 			velocity.x = Input.GetAxisRaw("Horizontal");
