@@ -162,14 +162,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed051f616c9b2a247bc262200a641437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorSpeed: 8
-  cursorRadius: 1
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
-  unitsToCreate: 50
-  unitSpeed: 6
-  unitRadius: 0.8
+  unitsToCreate: 60
+  cursorShrinkSpeed: 2.5
+  cursorShrinkRadius: 0.5
+  unitShrinkSpeed: 8
+  unitShrinkRadius: 0.5
+  cursorNormalSpeed: 8
+  cursorNormalRadius: 1
+  unitNormalSpeed: 6
+  unitNormalRadius: 0.8
   suicideSpeed: 10
   bossTransform: {fileID: 0}
-  bossRadius: 3
   debug: 0
+  cursorSpeed: 8
+  cursorRadius: 1
+  unitSpeed: 6
+  unitRadius: 0.8
