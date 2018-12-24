@@ -16,6 +16,11 @@ namespace Swarm {
         public float unitShrinkSpeed = 8f;
         public float unitShrinkRadius = 0.5f;
 
+        public float cursorNormalSpeed = 5f;
+        public float cursorNormalRadius = 1f;
+        public float unitNormalSpeed = 4f;
+        public float unitNormalRadius = .1f;
+
 		public float suicideSpeed = 10f;
 		public Transform bossTransform;
         private int nbOfUnits;
@@ -45,7 +50,6 @@ namespace Swarm {
 			velocity.x = Input.GetAxisRaw("Horizontal");
 			velocity.y = Input.GetAxisRaw("Vertical");
 			//velocity.Normalize();
-			velocity *= cursorSpeed;
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0) {
                 //INSERER LE SON D'UN TIR ALLIE
@@ -57,11 +61,25 @@ namespace Swarm {
 
             if (Input.GetButtonDown("Fire2"))
             {
-
+                cursorSpeed = cursorShrinkSpeed;
+                cursorRadius = cursorShrinkRadius;
+                unitSpeed = unitShrinkSpeed;
+                unitRadius = unitShrinkRadius;
             }
+
+            if (Input.GetButtonUp("Fire2"))
+            {
+                cursorSpeed = cursorNormalSpeed;
+                cursorRadius = cursorNormalRadius;
+                unitSpeed = unitNormalSpeed;
+                unitRadius = unitNormalRadius;
+            }
+
+            velocity *= cursorSpeed;
+
             //Le nombre d'unitées est obtenable avec units.Count
 
-		}
+        }
 
 		private void FixedUpdate() {
 			cursorRB.velocity = velocity;
