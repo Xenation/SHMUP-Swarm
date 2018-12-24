@@ -458,6 +458,21 @@ PrefabInstance:
       propertyPath: bossTransform
       value: 
       objectReference: {fileID: 1904157086}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: cursorNormalSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitNormalSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitNormalRadius
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034856, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_LocalPosition.x
