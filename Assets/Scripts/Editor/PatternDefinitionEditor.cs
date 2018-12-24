@@ -61,6 +61,7 @@ namespace Swarm.Editor {
 		}
 
 		private void SceneGUI(SceneView view) {
+			if (patternDefinition.spawnPoints == null) return;
 			Color colTmp = Handles.color;
 			Undo.RecordObject(patternDefinition, "Pattern Spawn Point Move");
 			for (int i = 0; i < patternDefinition.spawnPoints.Length; i++) {
