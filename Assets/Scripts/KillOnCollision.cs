@@ -17,6 +17,7 @@ namespace Swarm {
 
             if (pu)
             {
+                AkSoundEngine.PostEvent("Play_Death", gameObject);
                 Destroy(collision.gameObject);
             }
         }

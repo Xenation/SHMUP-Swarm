@@ -38,7 +38,7 @@ namespace Swarm {
 		private void Update() {
 			velocity.x = Input.GetAxisRaw("Horizontal");
 			velocity.y = Input.GetAxisRaw("Vertical");
-			velocity.Normalize();
+			//velocity.Normalize();
 			velocity *= cursorSpeed;
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0) {
@@ -48,6 +48,8 @@ namespace Swarm {
 				units.RemoveAt(0);
 				unit.Suicide();
 			}
+
+            //Le nombre d'unitées est obtenable avec units.Count
 
 		}
 

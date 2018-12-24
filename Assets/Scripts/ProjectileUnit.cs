@@ -21,7 +21,9 @@ namespace Swarm {
 			Boss boss = collision.gameObject.GetComponent<Boss>();
 			partController part = collision.gameObject.GetComponent<partController>();
 			if (boss || part) {
+                //Add vibration
 				Destroy(gameObject);
+                //SON DE MORT A L'IMPACT EN MODE KAMIKAZE
 			}
 		}
 

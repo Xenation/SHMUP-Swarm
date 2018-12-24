@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\</ProjectRoot>
+		<SourceFilesRoot>D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Unity\SHMUP-Swarm\Assets\StreamingAssets\Audio\GeneratedSoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\SHMUP_WwiseRepo\Wwise_SwarmRepo\SHMUP_Wwise\SHMUP\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3989171651" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_Bank</ObjectPath>
+			<ShortName>Main_Bank</ShortName>
+			<Path>Main_Bank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Play_Death"/>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music"/>
+				<Event Id="3860455926" Name="Play_PickUp" ObjectPath="\Events\Default Work Unit\Play_PickUp"/>
+				<Event Id="3061091197" Name="Play_Shots" ObjectPath="\Events\Default Work Unit\Play_Shots"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="12607921" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_01.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_01_56D34C19.wem</Path>
+				</File>
+				<File Id="23718123" Language="SFX">
+					<ShortName>Shot_Drop_01.wav</ShortName>
+					<Path>SFX\Shot_Drop_01_56D34C19.wem</Path>
+				</File>
+				<File Id="52560143" Language="SFX">
+					<ShortName>Shot_Water_03.wav</ShortName>
+					<Path>SFX\Shot_Water_03_56D34C19.wem</Path>
+				</File>
+				<File Id="61541177" Language="SFX">
+					<ShortName>Death_07.wav</ShortName>
+					<Path>SFX\Death_07_56D34C19.wem</Path>
+				</File>
+				<File Id="90020239" Language="SFX">
+					<ShortName>Shot_Drop_04.wav</ShortName>
+					<Path>SFX\Shot_Drop_04_56D34C19.wem</Path>
+				</File>
+				<File Id="141637456" Language="SFX">
+					<ShortName>Swarm_Pickup.wav</ShortName>
+					<Path>SFX\Swarm_Pickup_56D34C19.wem</Path>
+				</File>
+				<File Id="170147237" Language="SFX">
+					<ShortName>Bow\Shot_Bow_03.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_03_56D34C19.wem</Path>
+				</File>
+				<File Id="230960577" Language="SFX">
+					<ShortName>Bow\Shot_Bow_06.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_06_56D34C19.wem</Path>
+				</File>
+				<File Id="233521555" Language="SFX">
+					<ShortName>Swarm_ZIK_WIP_V2.wav</ShortName>
+					<Path>SFX\Swarm_ZIK_WIP_V2_8956FC97.wem</Path>
+				</File>
+				<File Id="244548495" Language="SFX">
+					<ShortName>Shot_Drop_06.wav</ShortName>
+					<Path>SFX\Shot_Drop_06_56D34C19.wem</Path>
+				</File>
+				<File Id="253266080" Language="SFX">
+					<ShortName>Shot_Water_02.wav</ShortName>
+					<Path>SFX\Shot_Water_02_56D34C19.wem</Path>
+				</File>
+				<File Id="281350948" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_02.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_02_56D34C19.wem</Path>
+				</File>
+				<File Id="294782063" Language="SFX">
+					<ShortName>Death_01.wav</ShortName>
+					<Path>SFX\Death_01_56D34C19.wem</Path>
+				</File>
+				<File Id="336564444" Language="SFX">
+					<ShortName>Bow\Shot_Bow_01.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_01_56D34C19.wem</Path>
+				</File>
+				<File Id="364253741" Language="SFX">
+					<ShortName>Shot_Drop_02.wav</ShortName>
+					<Path>SFX\Shot_Drop_02_56D34C19.wem</Path>
+				</File>
+				<File Id="383731950" Language="SFX">
+					<ShortName>Shot_Drop_08.wav</ShortName>
+					<Path>SFX\Shot_Drop_08_56D34C19.wem</Path>
+				</File>
+				<File Id="394518430" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_05.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_05_56D34C19.wem</Path>
+				</File>
+				<File Id="458283295" Language="SFX">
+					<ShortName>Shot_Water_05.wav</ShortName>
+					<Path>SFX\Shot_Water_05_56D34C19.wem</Path>
+				</File>
+				<File Id="488822358" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_04.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_04_56D34C19.wem</Path>
+				</File>
+				<File Id="497442396" Language="SFX">
+					<ShortName>Shot_Water_08.wav</ShortName>
+					<Path>SFX\Shot_Water_08_56D34C19.wem</Path>
+				</File>
+				<File Id="572382267" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_06.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_06_56D34C19.wem</Path>
+				</File>
+				<File Id="608375069" Language="SFX">
+					<ShortName>Shot_Water_01.wav</ShortName>
+					<Path>SFX\Shot_Water_01_56D34C19.wem</Path>
+				</File>
+				<File Id="611979770" Language="SFX">
+					<ShortName>Death_05.wav</ShortName>
+					<Path>SFX\Death_05_56D34C19.wem</Path>
+				</File>
+				<File Id="628022234" Language="SFX">
+					<ShortName>Shot_Drop_07.wav</ShortName>
+					<Path>SFX\Shot_Drop_07_56D34C19.wem</Path>
+				</File>
+				<File Id="661280703" Language="SFX">
+					<ShortName>Bow\Shot_Bow_05.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_05_56D34C19.wem</Path>
+				</File>
+				<File Id="706712330" Language="SFX">
+					<ShortName>Bow\Shot_Bow_07.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_07_56D34C19.wem</Path>
+				</File>
+				<File Id="731146243" Language="SFX">
+					<ShortName>Shot_Drop_03.wav</ShortName>
+					<Path>SFX\Shot_Drop_03_56D34C19.wem</Path>
+				</File>
+				<File Id="739289746" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_07.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_07_56D34C19.wem</Path>
+				</File>
+				<File Id="752994685" Language="SFX">
+					<ShortName>Shot_Water_04.wav</ShortName>
+					<Path>SFX\Shot_Water_04_56D34C19.wem</Path>
+				</File>
+				<File Id="788984634" Language="SFX">
+					<ShortName>Death_06.wav</ShortName>
+					<Path>SFX\Death_06_56D34C19.wem</Path>
+				</File>
+				<File Id="808792766" Language="SFX">
+					<ShortName>Shot_Water_06.wav</ShortName>
+					<Path>SFX\Shot_Water_06_56D34C19.wem</Path>
+				</File>
+				<File Id="856376613" Language="SFX">
+					<ShortName>Shot_Drop_05.wav</ShortName>
+					<Path>SFX\Shot_Drop_05_56D34C19.wem</Path>
+				</File>
+				<File Id="892627949" Language="SFX">
+					<ShortName>Death_02.wav</ShortName>
+					<Path>SFX\Death_02_56D34C19.wem</Path>
+				</File>
+				<File Id="903324977" Language="SFX">
+					<ShortName>Shot_Water_07.wav</ShortName>
+					<Path>SFX\Shot_Water_07_56D34C19.wem</Path>
+				</File>
+				<File Id="914693096" Language="SFX">
+					<ShortName>Death_03.wav</ShortName>
+					<Path>SFX\Death_03_56D34C19.wem</Path>
+				</File>
+				<File Id="937063638" Language="SFX">
+					<ShortName>Bow\Shot_Bow_08.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_08_56D34C19.wem</Path>
+				</File>
+				<File Id="967551366" Language="SFX">
+					<ShortName>Bow\Shot_Bow_04.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_04_56D34C19.wem</Path>
+				</File>
+				<File Id="979913459" Language="SFX">
+					<ShortName>Death_04.wav</ShortName>
+					<Path>SFX\Death_04_56D34C19.wem</Path>
+				</File>
+				<File Id="1013208886" Language="SFX">
+					<ShortName>Death_08.wav</ShortName>
+					<Path>SFX\Death_08_56D34C19.wem</Path>
+				</File>
+				<File Id="1023921326" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_03.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_03_56D34C19.wem</Path>
+				</File>
+				<File Id="1024678382" Language="SFX">
+					<ShortName>Bow\Shot_Bow_02.wav</ShortName>
+					<Path>SFX\Bow\Shot_Bow_02_56D34C19.wem</Path>
+				</File>
+				<File Id="1060065124" Language="SFX">
+					<ShortName>Pizz\Shot_Pizz_08.wav</ShortName>
+					<Path>SFX\Pizz\Shot_Pizz_08_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

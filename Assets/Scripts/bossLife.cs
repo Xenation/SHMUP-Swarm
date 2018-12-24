@@ -6,23 +6,28 @@ using UnityEngine.SceneManagement;
 public class bossLife : MonoBehaviour
 {
 	[SerializeField]
-	private int pv = 1;
+	private int pv;
 	public bool isPart = true;
 	private Animator animator;
+    public Camera cam;
+
 	public float openingDuration= 5;
 	private float openingTime = 2;
 	private bool isAnimationEnd= false;
 
     private bool inHitStun = false;
-    private Color originalColor;
-    private float hitStunDuration = 0.05f;
+    private Material mat;
+
+    public float hitStunDuration = 0.05f;
     private float hitStunFirstFrame = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
 		animator = gameObject.GetComponent<Animator>();
-        originalColor = this.GetComponent<SpriteRenderer>().color;
+        SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
+        mat = rend.material;
     }
 
     // Update is called once per frame
@@ -90,17 +95,21 @@ public class bossLife : MonoBehaviour
         if (!inHitStun)
         {
             inHitStun = true;
-            this.GetComponent<SpriteRenderer>().color = new Color(0f, 1f, 1f, 1);
+            mat.SetFloat("_ReplaceAmount", 1.0f);
+            
             hitStunFirstFrame = Time.time;
         }
         else if (Time.time > (hitStunFirstFrame + hitStunDuration))
         {
             inHitStun = false;
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            mat.SetFloat("_ReplaceAmount", 0.0f);
+            //cam.transform.position =new Vector3(0, 0, -10);
         }
         else
         {
             //ScreenShake
+            cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
+            
 
         }
     }
