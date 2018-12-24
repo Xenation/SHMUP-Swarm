@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0eb3bcc84ac455546a8db702c26a89fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,6 +97,9 @@ MonoBehaviour:
   pv: 1
   basepv: 1
   isDestroyed: 0
+  cam: {fileID: 0}
+  hitStunDuration: 0.05
+  destroyDuration: 0.2
 --- !u!60 &6832616089361022018
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -216,7 +219,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0eb3bcc84ac455546a8db702c26a89fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -262,6 +265,9 @@ MonoBehaviour:
   pv: 1
   basepv: 1
   isDestroyed: 0
+  cam: {fileID: 0}
+  hitStunDuration: 0.05
+  destroyDuration: 0.2
 --- !u!60 &2971063216610123062
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -374,7 +380,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0eb3bcc84ac455546a8db702c26a89fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -420,6 +426,9 @@ MonoBehaviour:
   pv: 1
   basepv: 1
   isDestroyed: 0
+  cam: {fileID: 0}
+  hitStunDuration: 0.05
+  destroyDuration: 0.2
 --- !u!60 &6590165387116208124
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -559,7 +568,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0eb3bcc84ac455546a8db702c26a89fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -605,6 +614,9 @@ MonoBehaviour:
   pv: 1
   basepv: 1
   isDestroyed: 0
+  cam: {fileID: 0}
+  hitStunDuration: 0.05
+  destroyDuration: 0.2
 --- !u!60 &2438208476656868145
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -750,7 +762,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0eb3bcc84ac455546a8db702c26a89fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -806,9 +818,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e100992b27bd742918ce70c4156d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 1
+  pv: 5
   isPart: 1
+  cam: {fileID: 0}
   openingDuration: 5
+  hitStunDuration: 0.05
 --- !u!95 &3057257070053065724
 Animator:
   serializedVersion: 3
