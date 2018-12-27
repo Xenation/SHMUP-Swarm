@@ -451,7 +451,7 @@ PrefabInstance:
     - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: unitsToCreate
-      value: 60
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
@@ -472,6 +472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: unitNormalRadius
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitShrinkRadius
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034856, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}

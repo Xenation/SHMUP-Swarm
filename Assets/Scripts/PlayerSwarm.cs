@@ -59,7 +59,7 @@ namespace Swarm {
 			velocity.y = Input.GetAxisRaw("Vertical");
 			//velocity.Normalize();
 
-			if (Input.GetButtonDown("Fire1") && units.Count > 0) {
+			if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed) {
                 //INSERER LE SON D'UN TIR ALLIE
                 AkSoundEngine.PostEvent("Play_Shots", gameObject);
 				PlayerUnit unit = units[0];
