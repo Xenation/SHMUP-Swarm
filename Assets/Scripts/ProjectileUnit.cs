@@ -24,6 +24,7 @@ namespace Swarm {
                 //Add vibration
 				Destroy(gameObject);
                 //SON DE MORT A L'IMPACT EN MODE KAMIKAZE
+                AkSoundEngine.PostEvent("Play_Death", gameObject);
 			}
 		}
 

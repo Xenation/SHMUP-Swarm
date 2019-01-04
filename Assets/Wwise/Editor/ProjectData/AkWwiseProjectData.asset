@@ -28,7 +28,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586561319899627088
+    m_lastTime: -8586550562951685108
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -43,8 +43,32 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586561320880588675
+    m_lastTime: -8586550580872181138
     List:
+    - name: Play_Boss_Bullets
+      guid: eefb729a83e3664988ef94785df863ab
+      id: 695538091
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Boss_Bullets
+        ObjectType: 3
+      Path: Default Work Unit\Play_Boss_Bullets
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Boss_NormalHit
+      guid: 691f85f2285e12409dce23f6489674d8
+      id: 2842351876
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Boss_NormalHit
+        ObjectType: 3
+      Path: Default Work Unit\Play_Boss_NormalHit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Death
       guid: c0eab6849e6d9448b9a75d5e16c7fe9f
       id: 1172822028
@@ -162,7 +186,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /SHMUP
-  - /SHMUP/Events
-  - /SHMUP/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
