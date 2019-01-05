@@ -22,13 +22,24 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586562036386259892
-    List: []
+    m_lastTime: -8586548996687942120
+    List:
+    - name: Rev
+      guid: 4c9e66656c13574a8d67f379fd6d3aad
+      id: 980603520
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Rev
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Rev
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586550562951685108
+    m_lastTime: -8586548993740201239
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -43,8 +54,20 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586550580872181138
+    m_lastTime: -8586548996687852581
     List:
+    - name: Play_Amb
+      guid: ddc55d6f1487144b836699945890c16a
+      id: 2959533290
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Amb
+        ObjectType: 3
+      Path: Default Work Unit\Play_Amb
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Boss_Bullets
       guid: eefb729a83e3664988ef94785df863ab
       id: 695538091
@@ -69,6 +92,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Cone
+      guid: 0719f744fc424d49abf9973333563760
+      id: 3198067375
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Cone
+        ObjectType: 3
+      Path: Default Work Unit\Play_Cone
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Death
       guid: c0eab6849e6d9448b9a75d5e16c7fe9f
       id: 1172822028
@@ -78,6 +113,30 @@ MonoBehaviour:
       - ElementName: Play_Death
         ObjectType: 3
       Path: Default Work Unit\Play_Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_HardHit
+      guid: 975bb810b4374d41a7527d39ac77fe5f
+      id: 1822128376
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_HardHit
+        ObjectType: 3
+      Path: Default Work Unit\Play_HardHit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Laser
+      guid: e13f5569f4a7ca4e8b7a0a9eb6cab0f9
+      id: 2270376495
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Laser
+        ObjectType: 3
+      Path: Default Work Unit\Play_Laser
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -117,11 +176,47 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Amb
+      guid: b90a6d849993934a8d2ea72a5c849b43
+      id: 435770000
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Amb
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Amb
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Cone
+      guid: c9ffbf1ee4c1274c99bb9567f5d9fd1a
+      id: 1532176313
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Cone
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Cone
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Laser
+      guid: 424e50826662384d8b0c07e871174264
+      id: 738066393
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Laser
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Laser
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 12f391762f07df4187e60b4141493a89
-    m_lastTime: -8586562036386279840
+    m_lastTime: -8586548996687453645
     List:
     - name: PyuNumber
       guid: 754a834001aead4bbd25f729bfb5ffae
@@ -186,5 +281,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /SHMUP
+  - /SHMUP/Events
+  - /SHMUP/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
