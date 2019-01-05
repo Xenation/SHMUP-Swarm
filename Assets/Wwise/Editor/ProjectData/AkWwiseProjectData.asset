@@ -22,7 +22,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586548996687942120
+    m_lastTime: -8586548799621623351
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586548993740201239
+    m_lastTime: -8586548810963215321
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586548996687852581
+    m_lastTime: -8586548810963055758
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -77,18 +77,6 @@ MonoBehaviour:
       - ElementName: Play_Boss_Bullets
         ObjectType: 3
       Path: Default Work Unit\Play_Boss_Bullets
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Boss_NormalHit
-      guid: 691f85f2285e12409dce23f6489674d8
-      id: 2842351876
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_Boss_NormalHit
-        ObjectType: 3
-      Path: Default Work Unit\Play_Boss_NormalHit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -140,6 +128,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Mortier
+      guid: 555e40ecc0f088428fd980927ffdc28e
+      id: 3355890260
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Mortier
+        ObjectType: 3
+      Path: Default Work Unit\Play_Mortier
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Music
       guid: 0f6b987130bc4c409772cd11a1d0d25f
       id: 2932040671
@@ -149,6 +149,18 @@ MonoBehaviour:
       - ElementName: Play_Music
         ObjectType: 3
       Path: Default Work Unit\Play_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_NormalHit
+      guid: 691f85f2285e12409dce23f6489674d8
+      id: 4153769294
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_NormalHit
+        ObjectType: 3
+      Path: Default Work Unit\Play_NormalHit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -209,6 +221,18 @@ MonoBehaviour:
       - ElementName: Stop_Laser
         ObjectType: 3
       Path: Default Work Unit\Stop_Laser
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Mortier
+      guid: 30ec0fdc1453af4a820fa5ae6ecf5b10
+      id: 1370337034
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Mortier
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Mortier
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

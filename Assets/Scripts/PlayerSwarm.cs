@@ -86,6 +86,7 @@ namespace Swarm {
             velocity *= cursorSpeed;
 
             //Le nombre d'unitées est obtenable avec units.Count
+            AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
 
         }
 
