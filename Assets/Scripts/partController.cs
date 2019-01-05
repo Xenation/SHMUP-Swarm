@@ -57,10 +57,14 @@ public class partController : MonoBehaviour
             mat.SetFloat("_ReplaceAmount", 0.5f);
 			transform.parent.GetComponent<bossLife>().checkParts();
             destroyShake();
+
+            //INSERER SON DESTRUCTION D'UNE PARTIE
         }
         else
         {
             hitstun();
+
+            //INSERER SON DEGATS
         }
 	}
 

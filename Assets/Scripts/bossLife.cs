@@ -66,7 +66,11 @@ public class bossLife : MonoBehaviour
 		{
             SceneManager.LoadScene("Win");
             //Destroy(this.gameObject);
-		}
+        }
+        else
+        {
+            //INSERER SON DEGAT SUR BOSS
+        }
 	}
 
 	public void checkParts()
