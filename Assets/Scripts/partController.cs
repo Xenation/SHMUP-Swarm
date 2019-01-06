@@ -59,12 +59,14 @@ public class partController : MonoBehaviour
             destroyShake();
 
             //INSERER SON DESTRUCTION D'UNE PARTIE
+            AkSoundEngine.PostEvent("Play_HardHit", gameObject);
         }
         else
         {
             hitstun();
 
             //INSERER SON DEGATS
+            AkSoundEngine.PostEvent("Play_NormalHit", gameObject);
         }
 	}
 

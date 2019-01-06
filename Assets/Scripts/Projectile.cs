@@ -17,7 +17,8 @@ namespace Swarm {
 		}
 
 		public void Launch() {
-			velocity = transform.right * speed;
+            velocity = transform.right * speed;
+            AkSoundEngine.PostEvent("Play_Bullets", gameObject);
 		}
 
 		private void OnCollisionEnter2D(Collision2D collision) {
