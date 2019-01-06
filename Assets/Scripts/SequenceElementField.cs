@@ -57,20 +57,65 @@ namespace Swarm {
 		}
 
 #if UNITY_EDITOR
-		public void DrawField(Rect rect, string label) {
+		public void DrawField(Rect rect, string label, Object tomark) {
 			switch (type) {
 				case SequenceDataType.Integer:
+					int prevInt = intValue;
 					intValue = EditorGUI.IntField(rect, label, intValue);
+					if (prevInt != intValue) {
+						EditorUtility.SetDirty(tomark);
+					}
 					break;
 				case SequenceDataType.Floating:
+					float prevFloat = floatValue;
 					floatValue = EditorGUI.FloatField(rect, label, floatValue);
+					if (prevFloat != floatValue) {
+						EditorUtility.SetDirty(tomark);
+					}
 					break;
 				case SequenceDataType.Projectile:
+					Projectile prevProj = projectileValue;
 					projectileValue = (Projectile) EditorGUI.ObjectField(rect, label, projectileValue, typeof(Projectile), false);
+					if (prevProj != projectileValue) {
+						EditorUtility.SetDirty(tomark);
+					}
 					break;
 			}
 		}
 #endif
+
+		public void ConvertTo(SequenceDataType nType) {
+			switch (type) {
+				case SequenceDataType.Floating:
+					switch (nType) {
+						case SequenceDataType.Floating: // Nothing to do
+							break;
+						case SequenceDataType.Integer:
+							intValue = (int) floatValue;
+							break;
+						case SequenceDataType.Projectile:
+							// Can't convert
+							break;
+					}
+					break;
+				case SequenceDataType.Integer:
+					switch (nType) {
+						case SequenceDataType.Floating:
+							floatValue = intValue;
+							break;
+						case SequenceDataType.Integer: // Nothing to do
+							break;
+						case SequenceDataType.Projectile:
+							// Can't convert
+							break;
+					}
+					break;
+				default:
+					// Can't convert
+					break;
+			}
+			type = nType;
+		}
 
 		public void OnBeforeSerialize() {
 			switch (type) {

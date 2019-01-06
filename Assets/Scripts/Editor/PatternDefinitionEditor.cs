@@ -63,7 +63,7 @@ namespace Swarm.Editor {
 		private void SceneGUI(SceneView view) {
 			if (patternDefinition.spawnPoints == null) return;
 			Color colTmp = Handles.color;
-			Undo.RecordObject(patternDefinition, "Pattern Spawn Point Move");
+			Undo.RecordObject(patternDefinition, "Pattern Edit");
 			for (int i = 0; i < patternDefinition.spawnPoints.Length; i++) {
 				if (selectedSpawnPoint == i) {
 					Handles.color = Color.yellow;
@@ -98,6 +98,7 @@ namespace Swarm.Editor {
 				EditorGUI.indentLevel--;
 			}
 			EditorGUILayout.PropertyField(rotationSpeedProp);
+			Undo.RecordObject(patternDefinition, "Pattern Edit");
 			spawnPointsList.DoLayoutList();
 
 			EditorGUILayout.LabelField("Sequence", EditorStyles.boldLabel);
@@ -148,9 +149,10 @@ namespace Swarm.Editor {
 			patternDefinition.sequence[index].type = (SequenceElementType) EditorGUI.EnumPopup(typeRect, patternDefinition.sequence[index].type, styleBoldPopup);
 			if (prevType != patternDefinition.sequence[index].type) {
 				patternDefinition.sequence[index].ResetData();
+
 			}
 			for (int i = 0; i < patternDefinition.sequence[index].fields.Length; i++) {
-				patternDefinition.sequence[index].fields[i].DrawField(rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f), patternDefinition.sequence[index].GetFieldName(i));
+				patternDefinition.sequence[index].fields[i].DrawField(rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f), patternDefinition.sequence[index].GetFieldName(i), patternDefinition);
 			}
 		}
 

@@ -13,6 +13,8 @@ namespace Swarm {
 		Bullet,
 		/// <summary>
 		/// 0/float duration
+		/// 1/float telegraphDuration
+		/// 2/float angle
 		/// </summary>
 		Lazer,
 		/// <summary>
@@ -44,7 +46,7 @@ namespace Swarm {
 	public struct SequenceElementTypeDef {
 
 		public static SequenceElementTypeDef bullet = new SequenceElementTypeDef() { fieldNames = new string[] { "Count", "Duration", "Projectile", "Speed Override" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer, SequenceDataType.Floating, SequenceDataType.Projectile, SequenceDataType.Floating } };
-		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration", "TelegraphDuration", "Angle" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating } };
 		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Count" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
 		public static SequenceElementTypeDef delay = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef enablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
@@ -70,30 +72,41 @@ namespace Swarm {
 			}
 		}
 
+		public bool Matches(SequenceElementField[] fields) {
+			if (fields.Length != fieldNames.Length) return false;
+			for (int i = 0; i < fields.Length; i++) {
+				if (fields[i].type != fieldTypes[i]) return false;
+			}
+			return true;
+		}
+
+		public void UpdateFields(ref SequenceElementField[] fields) {
+			if (fields.Length != fieldNames.Length) { // fields size change
+				SequenceElementField[] oldFields = new SequenceElementField[fields.Length];
+				fields.CopyTo(oldFields, 0);
+				fields = new SequenceElementField[fieldNames.Length];
+				// Copy existing fields and trim
+				for (int i = 0; i < oldFields.Length && i < fieldNames.Length; i++) {
+					fields[i] = oldFields[i];
+				}
+				// Append new fields
+				for (int i = oldFields.Length; i < fieldNames.Length; i++) {
+					fields[i] = new SequenceElementField() { type = fieldTypes[i] };
+				}
+			}
+			// Convert fields
+			for (int i = 0; i < fields.Length; i++) {
+				if (fields[i].type != fieldTypes[i]) { // Conversion needed
+					fields[i].ConvertTo(fieldTypes[i]);
+				}
+			}
+		}
+
 	}
 
 	public static class SequenceElementTypeExt {
 		public static int GetFieldsCount(this SequenceElementType type) {
-			switch (type) {
-				case SequenceElementType.Bullet:
-					return 4;
-				case SequenceElementType.Delay:
-					return 1;
-				case SequenceElementType.EnablePoint:
-				case SequenceElementType.DisablePoint:
-					return 1;
-				case SequenceElementType.Lazer:
-					return 1;
-				case SequenceElementType.Mortar:
-					return 1;
-				case SequenceElementType.SetRotationSpeed:
-					return 1;
-				case SequenceElementType.SetRotationAbsolute:
-					return 1;
-				default:
-					Debug.LogWarning("Sequence Element Type has undefined fields count!");
-					return 0;
-			}
+			return type.GetDef().fieldCount;
 		}
 
 		public static SequenceElementTypeDef GetDef(this SequenceElementType type) {
@@ -130,7 +143,7 @@ namespace Swarm {
 	}
 
 	[System.Serializable]
-	public class SequenceElement {
+	public class SequenceElement : ISerializationCallbackReceiver {
 
 		public SequenceElementType type;
 		public int count;
@@ -178,30 +191,21 @@ namespace Swarm {
 		}
 
 		public bool CheckDataValidity() {
-			if (fields.Length != type.GetFieldsCount()) return false;
-			switch (type) {
-				case SequenceElementType.Bullet:
-					return fields[0].type == SequenceDataType.Integer && fields[1].type == SequenceDataType.Floating && fields[2].type == SequenceDataType.Projectile && fields[3].type == SequenceDataType.Floating;
-				case SequenceElementType.Delay:
-					return fields[0].type == SequenceDataType.Floating;
-				case SequenceElementType.EnablePoint:
-				case SequenceElementType.DisablePoint:
-					return fields[0].type == SequenceDataType.Integer;
-				case SequenceElementType.Lazer:
-					return fields[0].type == SequenceDataType.Floating;
-				case SequenceElementType.Mortar:
-					return fields[0].type == SequenceDataType.Integer;
-				case SequenceElementType.SetRotationSpeed:
-					return fields[0].type == SequenceDataType.Floating;
-				case SequenceElementType.SetRotationAbsolute:
-					return fields[0].type == SequenceDataType.Floating;
-				default:
-					return false;
-			}
+			return type.GetDef().Matches(fields);
 		}
 
 		public void ResetData() {
 			type.GetDef().ResetFields(ref fields);
+		}
+
+		public void OnBeforeSerialize() {
+			// Nothing to do
+		}
+
+		public void OnAfterDeserialize() {
+			if (!CheckDataValidity()) {
+				type.GetDef().UpdateFields(ref fields);
+			}
 		}
 
 	}
