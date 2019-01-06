@@ -70,6 +70,7 @@ public class bossLife : MonoBehaviour
         else
         {
             //INSERER SON DEGAT SUR BOSS
+            AkSoundEngine.PostEvent("Play_CoeurHit", gameObject);
         }
 	}
 
@@ -89,7 +90,8 @@ public class bossLife : MonoBehaviour
 			foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
 			{
 				animator.SetBool("isOpen",true);
-				//part.SetActive(false);
+                //part.SetActive(false);
+                AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
 			}
 		}
 	}

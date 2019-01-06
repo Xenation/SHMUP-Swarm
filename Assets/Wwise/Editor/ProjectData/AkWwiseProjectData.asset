@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586548810963215321
+    m_lastTime: -8586548307210688298
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586548810963055758
+    m_lastTime: -8586548296598966095
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -68,15 +68,39 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Boss_Bullets
-      guid: eefb729a83e3664988ef94785df863ab
-      id: 695538091
+    - name: Play_BossOpen
+      guid: d83d80da7412de40afde06ee8272767c
+      id: 85760201
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Boss_Bullets
+      - ElementName: Play_BossOpen
         ObjectType: 3
-      Path: Default Work Unit\Play_Boss_Bullets
+      Path: Default Work Unit\Play_BossOpen
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Bullets
+      guid: eefb729a83e3664988ef94785df863ab
+      id: 1073586825
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Bullets
+        ObjectType: 3
+      Path: Default Work Unit\Play_Bullets
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_CoeurHit
+      guid: 88c4cbc5083b334a9d3bf30336b86562
+      id: 3726300835
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_CoeurHit
+        ObjectType: 3
+      Path: Default Work Unit\Play_CoeurHit
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
