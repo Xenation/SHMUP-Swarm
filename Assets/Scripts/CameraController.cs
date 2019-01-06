@@ -12,6 +12,8 @@ namespace Swarm
 
         public PlayerSwarm player;
 
+        public float distanceRatio = 10.0f;
+
         private void Awake()
         {
             
@@ -19,7 +21,7 @@ namespace Swarm
 
         private void Update()
         {
-            transform.position = Vector3.Lerp(transform.position, (player.cursor.position / 10 ) + new Vector3(0, 0, -10f), 3f* Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, (player.cursor.position / distanceRatio ) + new Vector3(0, 0, -10f), 3f* Time.deltaTime);
         }
 
     }
