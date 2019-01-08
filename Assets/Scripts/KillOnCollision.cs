@@ -30,6 +30,9 @@ namespace Swarm {
 
         private void FixedUpdate()
         {
+            if(swarm.testController)
+                controllerTester();
+
             //Controller
             if (!playerIndexSet || !prevState.IsConnected)
             {
@@ -81,6 +84,12 @@ namespace Swarm {
         {
             if(Time.time - startVib >= vibrationDuration)
                 GamePad.SetVibration(pIndex, 0, 0);
+        }
+
+
+        private void controllerTester()
+        {
+            GamePad.SetVibration(pIndex, - swarm.cursor.position.x / 10, swarm.cursor.position.x / 10);
         }
     }
 }
