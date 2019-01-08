@@ -64,9 +64,8 @@ public class bossLife : MonoBehaviour
 		pv--;
 		if (pv <= 0)
 		{
-
-
-            SceneManager.LoadScene("Win");
+            
+            Invoke("End", 1.0f);
 
             //Destroy(this.gameObject);
         }
@@ -77,7 +76,12 @@ public class bossLife : MonoBehaviour
         }
 	}
 
-	public void checkParts()
+    public void End()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
+    public void checkParts()
 	{
 		isPart = false;
 		foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
@@ -90,6 +94,7 @@ public class bossLife : MonoBehaviour
 
 		if (!isPart)
 		{
+			openingTime = Time.time;
 			foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
 			{
 				animator.SetBool("isOpen",true);
@@ -134,7 +139,6 @@ public class bossLife : MonoBehaviour
 		if (message.Equals("AttackAnimationEnded"))
 		{
 			isAnimationEnd = true;
-			openingTime = Time.time;
 		}
 	}
 }

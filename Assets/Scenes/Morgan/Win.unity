@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 185022970}
   - component: {fileID: 185022969}
   - component: {fileID: 185022968}
+  - component: {fileID: 185022971}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 758635896}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &185022970
@@ -178,6 +179,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185022971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185022967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52108b595bd5f474c8e7389a1b336fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &208893111
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,7 +473,7 @@ GameObject:
   - component: {fileID: 758635899}
   - component: {fileID: 758635898}
   m_Layer: 5
-  m_Name: Button
+  m_Name: SubmitScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -507,7 +520,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.16794233, g: 0.93916917, b: 0.9622642, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -589,7 +602,7 @@ GameObject:
   - component: {fileID: 1140907834}
   - component: {fileID: 1140907833}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: NameField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,7 +879,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Submit
 --- !u!222 &1306045023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1024,7 +1037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Menu
 --- !u!222 &1807510669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1196,7 +1209,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.70980394, g: 0.8000001, b: 0.8941177, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

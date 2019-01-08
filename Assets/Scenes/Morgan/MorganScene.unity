@@ -423,6 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vibrationDuration: 0.1
+  vibrationStrength: 1
 --- !u!114 &455124672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +453,7 @@ PrefabInstance:
     - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: unitsToCreate
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
@@ -553,6 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vibrationDuration: 0.1
+  vibrationStrength: 1
 --- !u!114 &725464391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,6 +812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vibrationDuration: 0.1
+  vibrationStrength: 1
 --- !u!1001 &1698669232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -960,6 +966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vibrationDuration: 0.1
+  vibrationStrength: 1
 --- !u!114 &1748628708
 MonoBehaviour:
   m_ObjectHideFlags: 0

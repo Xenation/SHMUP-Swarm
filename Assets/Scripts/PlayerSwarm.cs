@@ -7,7 +7,6 @@ namespace Swarm {
 
         public GameObject unitPrefab;
 		public int unitsToCreate = 50;
-		
 
         public float cursorShrinkSpeed = 2.5f;
         public float cursorShrinkRadius = 0.5f;
@@ -24,6 +23,7 @@ namespace Swarm {
 		public Transform bossTransform;
         private int nbOfUnits;
 
+        public bool testController = false;
 		public bool debug = false;
 
         [HideInInspector]
