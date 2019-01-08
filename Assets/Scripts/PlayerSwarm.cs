@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Swarm {
 	public class PlayerSwarm : MonoBehaviour {
@@ -19,6 +20,7 @@ namespace Swarm {
         public float unitNormalRadius = .1f;
 
 		public float suicideSpeed = 10f;
+        public float freezeTime = 1.0f;
 		public Transform bossTransform;
         private int nbOfUnits;
 
@@ -36,7 +38,9 @@ namespace Swarm {
 		private Vector2 velocity;
 		private Rigidbody2D cursorRB;
 
-		private void Awake() {
+        
+
+        private void Awake() {
 			cursor = transform.Find("Cursor");
 			cursorRB = cursor.GetComponent<Rigidbody2D>();
 
@@ -88,11 +92,15 @@ namespace Swarm {
             //Le nombre d'unitées est obtenable avec units.Count
             AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
 
+            if(units.Count == 0)
+            {
+                SceneManager.LoadScene("Lose");
+            }
         }
 
 		private void FixedUpdate() {
 			cursorRB.velocity = velocity;
-		}
+        }
 
 
         public void AddUnit(GameObject unit)

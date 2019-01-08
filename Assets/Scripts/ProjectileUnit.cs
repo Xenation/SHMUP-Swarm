@@ -7,14 +7,19 @@ namespace Swarm {
 
 		private Rigidbody2D rb;
 		private Vector2 velocity;
+        private bool inAttack = false;
 
 		public void Init(PlayerSwarm sw) {
 			gameObject.layer = LayerMask.NameToLayer("ProjectileUnit");
 			rb = GetComponent<Rigidbody2D>();
 			swarm = sw;
-			velocity = swarm.bossTransform.position - transform.position;
-			velocity.Normalize();
-			velocity *= swarm.suicideSpeed;
+
+            velocity = swarm.bossTransform.position - transform.position;
+            velocity.Normalize();
+
+            rb.velocity = Vector2.zero;
+            rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
+            Invoke("FirstAttack", swarm.freezeTime);
 		}
 
 		private void OnCollisionEnter2D(Collision2D collision) {
@@ -28,10 +33,27 @@ namespace Swarm {
 			}
 		}
 
-		private void FixedUpdate() {
-			rb.velocity = velocity;
-			rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
-		}
+		private void FixedUpdate()
+        {
+            Attack();
+        }
+
+        private void FirstAttack()
+        {
+            
+            velocity *= swarm.suicideSpeed;
+            inAttack = true;
+        }
+
+        private void Attack()
+        {
+            
+            if(inAttack)
+            {
+                rb.velocity = velocity;
+                rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
+            }
+        }
 
 	}
 }

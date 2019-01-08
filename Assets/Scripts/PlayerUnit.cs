@@ -10,7 +10,9 @@ namespace Swarm {
 
 		private Vector2 velocity;
 
-		private void Awake() {
+        
+
+        private void Awake() {
 			rb = GetComponent<Rigidbody2D>();
 			swarm = GetComponentInParent<PlayerSwarm>();
 		}
@@ -43,7 +45,10 @@ namespace Swarm {
 		private void FixedUpdate() {
 			rb.velocity = velocity;
 			rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
-		}
+
+            
+
+        }
 
 		public void Suicide() {
 			ProjectileUnit projUnit = gameObject.AddComponent<ProjectileUnit>();
@@ -55,6 +60,7 @@ namespace Swarm {
 			if (!swarm.debug) return;
 			Debug.DrawLine(transform.position, transform.position + (Vector3) vel, col);
 		}
+        
 
         private void OnDestroy()
         {
