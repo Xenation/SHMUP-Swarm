@@ -87,6 +87,7 @@ public class bossLife : MonoBehaviour
 
 		if (!isPart)
 		{
+			openingTime = Time.time;
 			foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
 			{
 				animator.SetBool("isOpen",true);
@@ -131,7 +132,6 @@ public class bossLife : MonoBehaviour
 		if (message.Equals("AttackAnimationEnded"))
 		{
 			isAnimationEnd = true;
-			openingTime = Time.time;
 		}
 	}
 }
