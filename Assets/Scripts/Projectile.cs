@@ -5,7 +5,6 @@ namespace Swarm {
 	public class Projectile : MonoBehaviour {
 
 		public float speed;
-		public int damage;
 		public float maxDistanceFromOrigin = 20f;
 		[System.NonSerialized] public Projectile prefab;
 
@@ -25,7 +24,6 @@ namespace Swarm {
 			if (!gameObject.activeInHierarchy) return;
 			PlayerUnit unit = collision.gameObject.GetComponent<PlayerUnit>();
 			if (unit != null) {
-				// TODO Apply damage to unit
 				ProjectileManager.I.ProjectileDeath(this);
 			}
 		}

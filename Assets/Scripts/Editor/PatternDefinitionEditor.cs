@@ -149,7 +149,6 @@ namespace Swarm.Editor {
 			patternDefinition.sequence[index].type = (SequenceElementType) EditorGUI.EnumPopup(typeRect, patternDefinition.sequence[index].type, styleBoldPopup);
 			if (prevType != patternDefinition.sequence[index].type) {
 				patternDefinition.sequence[index].ResetData();
-
 			}
 			for (int i = 0; i < patternDefinition.sequence[index].fields.Length; i++) {
 				patternDefinition.sequence[index].fields[i].DrawField(rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f), patternDefinition.sequence[index].GetFieldName(i), patternDefinition);

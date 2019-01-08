@@ -756,6 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 166588369}
+  distanceRatio: 10
 --- !u!1 &785700218
 GameObject:
   m_ObjectHideFlags: 0

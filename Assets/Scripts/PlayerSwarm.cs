@@ -38,9 +38,10 @@ namespace Swarm {
 		private Vector2 velocity;
 		private Rigidbody2D cursorRB;
 
-        
+        private float rtpcValue = 5.0f;
+        private float distanceToBoss;
 
-        private void Awake() {
+		private void Awake() {
 			cursor = transform.Find("Cursor");
 			cursorRB = cursor.GetComponent<Rigidbody2D>();
 
@@ -64,8 +65,7 @@ namespace Swarm {
 			//velocity.Normalize();
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed) {
-                //INSERER LE SON D'UN TIR ALLIE
-                AkSoundEngine.PostEvent("Play_Shots", gameObject);
+                
 				PlayerUnit unit = units[0];
 				units.RemoveAt(0);
 				unit.Suicide();
@@ -91,6 +91,8 @@ namespace Swarm {
 
             //Le nombre d'unitées est obtenable avec units.Count
             AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
+            rtpcValue = Vector3.Distance(bossTransform.position, cursor.transform.position);
+            AkSoundEngine.SetRTPCValue("ElectroFilter", rtpcValue);
 
             if(units.Count == 0)
             {

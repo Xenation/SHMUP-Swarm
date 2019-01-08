@@ -64,7 +64,10 @@ public class bossLife : MonoBehaviour
 		pv--;
 		if (pv <= 0)
 		{
+
+
             SceneManager.LoadScene("Win");
+
             //Destroy(this.gameObject);
         }
         else
