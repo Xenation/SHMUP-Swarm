@@ -65,8 +65,7 @@ namespace Swarm {
 			//velocity.Normalize();
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed) {
-                //INSERER LE SON D'UN TIR ALLIE
-                AkSoundEngine.PostEvent("Play_Shots", gameObject);
+                
 				PlayerUnit unit = units[0];
 				units.RemoveAt(0);
 				unit.Suicide();
