@@ -1092,7 +1092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swarm: {fileID: 230935861}
   boss: {fileID: 784736022}
-  testController: 0
+  testController: 1
+  playerIndexSet: 0
 --- !u!4 &2041253143
 Transform:
   m_ObjectHideFlags: 0

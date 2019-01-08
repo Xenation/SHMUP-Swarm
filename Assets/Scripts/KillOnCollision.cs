@@ -4,8 +4,8 @@ namespace Swarm {
 	public class KillOnCollision : MonoBehaviour
     {
 
-        public float vibDuration = 0.5f;
-        public float vibStrength = 0.5f;
+        public float vibDuration = 1.0f;
+        public float vibStrength = 2.5f;
 
 
         private CircleCollider2D bossCollider;
@@ -23,9 +23,8 @@ namespace Swarm {
             if (pu)
             {
                 AkSoundEngine.PostEvent("Play_Death", gameObject);
-
-                Destroy(collision.gameObject);
                 VibrationManager.AddVibrateRight(vibStrength, vibDuration);
+                Destroy(collision.gameObject);
             }
         }
        

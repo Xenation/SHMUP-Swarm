@@ -37,14 +37,14 @@ namespace Swarm
         // Start is called before the first frame update
         void Start()
         {
+            vibrationListLeft.Clear();
+            vibrationListRight.Clear();
         
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            
-
             //Controller
             if (!playerIndexSet || !prevState.IsConnected)
             {
@@ -63,7 +63,7 @@ namespace Swarm
             prevState = state;
             state = GamePad.GetState(pIndex);
 
-
+            //Left motor
             if(vibrationListLeft.Count > 0)
             {
                 float maxStrength = 0.0f;
@@ -87,14 +87,35 @@ namespace Swarm
                 vibStrengthNowLeft = 0.0f;
             }
 
+            //Right motor
             if(vibrationListRight.Count > 0)
             {
                 float maxStrength = 0.0f;
+
+                //V1
+                for (int i = 0; i < vibrationListRight.Count; i++)
+                {
+                    if (Time.fixedTime > vibrationListRight[i].x + vibrationListRight[i].y)
+                    {
+                        Debug.Log(Time.fixedTime);
+                        Debug.Log( i + " - " + vibrationListRight[i].x + vibrationListRight[i].y);
+                        //vibrationListRight.Remove(vib);
+                    }
+                    else
+                    {
+                        if (vibrationListRight[i].z > maxStrength)
+                            Debug.Log("ddd");
+                            maxStrength = vibrationListRight[i].z;
+                    }
+                }
+
+                // V2
+                /*
                 foreach (Vector3 vib in vibrationListRight)
                 {
                     if (Time.time > vib.x + vib.y)
                     {
-                        vibrationListRight.Remove(vib);
+                        //vibrationListRight.Remove(vib);
                     }
                     else
                     {
@@ -102,7 +123,7 @@ namespace Swarm
                             maxStrength = vib.z;
                     }
                 }
-
+                */
                 vibStrengthNowRight = maxStrength;
             }
             else
@@ -152,7 +173,7 @@ namespace Swarm
 
         private void OnDestroy()
         {
-            StopVibration();
+            GamePad.SetVibration(pIndex, 0, 0);
         }
     }
 }
