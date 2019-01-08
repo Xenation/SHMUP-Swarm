@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: JeremyTest
   m_EditorClassIdentifier: 
   finishedDelay: 1
-  simultaneous: []
+  simultaneous:
+  - {fileID: 11400000, guid: ac4020f85b9594c4fa792b5663263fe1, type: 2}
   nextPossible:
-  - {fileID: 11400000, guid: 47324d7cff6ed1248ae35155098ecbed, type: 2}
+  - {fileID: 11400000, guid: 6e67ca42a6efa6f4394d31e3013986de, type: 2}
   autoPlaced: 1
   count: 3
   startRotation: 0
@@ -28,38 +29,4 @@ MonoBehaviour:
     rotation: 120.00001
   - position: {x: -0.4999999, y: -0.86602545}
     rotation: 240
-  sequence:
-  - type: 0
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 0
-      json: 500
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 50
-      unityObject: {fileID: 0}
-    - type: 2
-      json: 
-      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-        type: 3}
-    - type: 1
-      json: 0
-      unityObject: {fileID: 0}
-  - type: 3
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
-  - type: 1
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
+  sequence: []
