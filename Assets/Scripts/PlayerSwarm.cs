@@ -22,8 +22,7 @@ namespace Swarm {
         public float freezeTime = 1.0f;
 		public Transform bossTransform;
         private int nbOfUnits;
-
-        public bool testController = false;
+  
 		public bool debug = false;
 
         [HideInInspector]

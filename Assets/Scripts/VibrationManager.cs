@@ -12,35 +12,27 @@ namespace Swarm
 
         public Boss boss;
 
+        public bool testController;
+
 
         //Controller
-        public static bool playerIndexSet = false;
-        private static PlayerIndex pIndex;
-        private static GamePadState state;
-        private static GamePadState prevState;
+        public bool playerIndexSet = false;
+        private PlayerIndex pIndex;
+        private GamePadState state;
+        private GamePadState prevState;
 
-
-        private static float vibStartTime = 0;
-        public static float vibDuration = 0.1f;
-        public static float vibStrength = 1.0f;
-
-        private static float vibStrengthNowRight;
-        private static float vibStrengthNowLeft;
-
-        public static float vibDurationLeft;
-        public static float vibDurationRight;
-
-        private static float vibStartTimeLeft;
-        private static float vibStartTimeRight;
+        private float vibStrengthNowRight;
+        private float vibStrengthNowLeft;
 
         /***************
+         * List of all vibrations
          * X = startTime
          * Y = duration
          * Z = strength
          * 
         ***************/
-        private static List<Vector3> vibrationListLeft= new List<Vector3>();
-        private static List<Vector3> vibrationListRight= new List<Vector3>();
+        private static List<Vector3> vibrationListLeft = new List<Vector3>();
+        private static List<Vector3> vibrationListRight = new List<Vector3>();
 
         // Start is called before the first frame update
         void Start()
@@ -51,9 +43,7 @@ namespace Swarm
         // Update is called once per frame
         void FixedUpdate()
         {
-            //Testing controller motors
-            if (swarm.testController)
-                controllerTester();
+            
 
             //Controller
             if (!playerIndexSet || !prevState.IsConnected)
@@ -76,17 +66,56 @@ namespace Swarm
 
             if(vibrationListLeft.Count > 0)
             {
+                float maxStrength = 0.0f;
+                foreach(Vector3 vib in vibrationListLeft)
+                {
+                    if(Time.time > vib.x + vib.y)
+                    {
+                        vibrationListLeft.Remove(vib);
+                    }
+                    else
+                    {
+                        if (vib.z > maxStrength)
+                            maxStrength = vib.z;
+                    }
+                }
 
+                vibStrengthNowLeft = maxStrength;
+            }
+            else
+            {
+                vibStrengthNowLeft = 0.0f;
             }
 
             if(vibrationListRight.Count > 0)
             {
+                float maxStrength = 0.0f;
+                foreach (Vector3 vib in vibrationListRight)
+                {
+                    if (Time.time > vib.x + vib.y)
+                    {
+                        vibrationListRight.Remove(vib);
+                    }
+                    else
+                    {
+                        if (vib.z > maxStrength)
+                            maxStrength = vib.z;
+                    }
+                }
 
+                vibStrengthNowRight = maxStrength;
+            }
+            else
+            {
+                vibStrengthNowRight = 0.0f;
             }
 
-            //To stop vibrations
-            if (Time.time - vibStartTime >= vibDuration)
-                GamePad.SetVibration(pIndex, 0, 0);
+            //Testing controller motors
+            if (testController)
+                controllerTester();
+            else
+                GamePad.SetVibration(pIndex, vibStrengthNowLeft, vibStrengthNowRight);
+
         }
 
         public static void AddVibrateRight(float vibStrength, float vibDuration)
@@ -94,7 +123,7 @@ namespace Swarm
             vibrationListRight.Add(new Vector3(Time.time, vibDuration, vibStrength));
         }
 
-        public static void VibrateLeft(float vibStrength, float vibDuration)
+        public static void AddVibrateLeft(float vibStrength, float vibDuration)
         {
             vibrationListLeft.Add(new Vector3(Time.time, vibDuration, vibStrength));
         }
