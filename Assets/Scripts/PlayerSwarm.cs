@@ -19,6 +19,7 @@ namespace Swarm {
         public float unitNormalRadius = .1f;
 
 		public float suicideSpeed = 10f;
+        public float freezeTime = 1.0f;
 		public Transform bossTransform;
         private int nbOfUnits;
 
