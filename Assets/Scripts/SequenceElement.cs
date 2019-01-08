@@ -5,54 +5,65 @@ using UnityEngine;
 namespace Swarm {
 	public enum SequenceElementType {
 		/// <summary>
-		/// 0/int count
-		/// 1/float duration
-		/// 2/Projectile projectile
-		/// 3/float speed
+		/// 0/int Count
+		/// 1/float Duration
+		/// 2/Projectile Projectile
+		/// 3/float Speed Override
 		/// </summary>
 		Bullet,
 		/// <summary>
-		/// 0/float duration
-		/// 1/float telegraphDuration
-		/// 2/float angle
+		/// 0/float Width
+		/// 1/float Telegraph Duration
+		/// 2/float Duration
+		/// 3/GameObject Prefab
+		/// 4/GameObject Telegraph Prefab
 		/// </summary>
 		Lazer,
 		/// <summary>
-		/// 0/int count
+		/// 0/float Telegraph Duration
 		/// </summary>
 		Mortar,
 		/// <summary>
-		/// 0/float duration
+		/// 0/float Duration
 		/// </summary>
 		Delay,
 		/// <summary>
-		/// 0/AttackPoint point
+		/// 0/int Point index
 		/// </summary>
 		EnablePoint,
 		/// <summary>
-		/// 0/AttackPoint point
+		/// 0/int Point index
 		/// </summary>
 		DisablePoint,
 		/// <summary>
-		/// 0/float rotation
+		/// 0/float Absolute Rotation
 		/// </summary>
 		SetRotationAbsolute,
 		/// <summary>
-		/// 0/float rotationSpeed
+		/// 0/float Rotation Speed
 		/// </summary>
-		SetRotationSpeed
+		SetRotationSpeed,
+		/// <summary>
+		/// 0/float Angle
+		/// 1/float Range
+		/// 2/float Telegraph Duration
+		/// 3/float Duration
+		/// 4/GameObject Prefab
+		/// </summary>
+		Cone
 	}
 
 	public struct SequenceElementTypeDef {
 
 		public static SequenceElementTypeDef bullet = new SequenceElementTypeDef() { fieldNames = new string[] { "Count", "Duration", "Projectile", "Speed Override" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer, SequenceDataType.Floating, SequenceDataType.Projectile, SequenceDataType.Floating } };
-		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration", "TelegraphDuration", "Angle" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating } };
-		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Count" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
+		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Width", "Telegraph Duration", "Duration", "Prefab", "Telegraph Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject, SequenceDataType.GameObject } };
+		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Telegraph Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef delay = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef enablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
 		public static SequenceElementTypeDef disablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
 		public static SequenceElementTypeDef setRotationAbs = new SequenceElementTypeDef() { fieldNames = new string[] { "Absolute Rotation" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef setRotationSpeed = new SequenceElementTypeDef() { fieldNames = new string[] { "Rotation Speed" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef cone = new SequenceElementTypeDef() { fieldNames = new string[] { "Angle", "Range", "Telegraph Duration", "Duration", "Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject } };
 
 		public int fieldCount { get { return fieldNames.Length; } }
 		public string[] fieldNames;
@@ -127,6 +138,8 @@ namespace Swarm {
 					return SequenceElementTypeDef.setRotationSpeed;
 				case SequenceElementType.SetRotationAbsolute:
 					return SequenceElementTypeDef.setRotationAbs;
+				case SequenceElementType.Cone:
+					return SequenceElementTypeDef.cone;
 				default:
 					Debug.LogWarning("Sequence Element Type has undefined definition object!");
 					return new SequenceElementTypeDef();
