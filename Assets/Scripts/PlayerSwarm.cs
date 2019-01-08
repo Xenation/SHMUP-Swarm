@@ -38,9 +38,10 @@ namespace Swarm {
 		private Vector2 velocity;
 		private Rigidbody2D cursorRB;
 
-        
+        private float rtpcValue = 5.0f;
+        private float distanceToBoss;
 
-        private void Awake() {
+		private void Awake() {
 			cursor = transform.Find("Cursor");
 			cursorRB = cursor.GetComponent<Rigidbody2D>();
 
@@ -91,6 +92,8 @@ namespace Swarm {
 
             //Le nombre d'unitées est obtenable avec units.Count
             AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
+            rtpcValue = Vector3.Distance(bossTransform.position, cursor.transform.position);
+            AkSoundEngine.SetRTPCValue("ElectroFilter", rtpcValue);
 
             if(units.Count == 0)
             {
