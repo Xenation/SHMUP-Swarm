@@ -37,7 +37,9 @@ namespace Swarm {
 		private Vector2 velocity;
 		private Rigidbody2D cursorRB;
 
-		private void Awake() {
+        
+
+        private void Awake() {
 			cursor = transform.Find("Cursor");
 			cursorRB = cursor.GetComponent<Rigidbody2D>();
 
@@ -93,7 +95,9 @@ namespace Swarm {
 
 		private void FixedUpdate() {
 			cursorRB.velocity = velocity;
-		}
+
+            
+        }
 
 
         public void AddUnit(GameObject unit)
