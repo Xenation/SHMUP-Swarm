@@ -43,6 +43,8 @@ namespace Swarm {
             
             velocity *= swarm.suicideSpeed;
             inAttack = true;
+            //INSERER LE SON D'UN TIR ALLIE
+            AkSoundEngine.PostEvent("Play_Shots", gameObject);
         }
 
         private void Attack()
