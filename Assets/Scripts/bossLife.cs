@@ -64,7 +64,7 @@ public class bossLife : MonoBehaviour
 		pv--;
 		if (pv <= 0)
 		{
-
+            
             Invoke("End", 1.0f);
 
             //Destroy(this.gameObject);
