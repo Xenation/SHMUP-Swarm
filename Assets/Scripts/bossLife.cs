@@ -65,8 +65,7 @@ public class bossLife : MonoBehaviour
 		if (pv <= 0)
 		{
 
-
-            SceneManager.LoadScene("Win");
+            Invoke("End", 1.0f);
 
             //Destroy(this.gameObject);
         }
@@ -77,7 +76,12 @@ public class bossLife : MonoBehaviour
         }
 	}
 
-	public void checkParts()
+    public void End()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
+    public void checkParts()
 	{
 		isPart = false;
 		foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))

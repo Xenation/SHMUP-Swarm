@@ -26,6 +26,6 @@ public class LoseMenu : MonoBehaviour
 
     void onClickRetry()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MorganScene");
     }
 }
