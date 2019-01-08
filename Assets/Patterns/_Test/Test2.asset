@@ -36,14 +36,39 @@ MonoBehaviour:
       json: 0.15
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 4
+      json: 2
       unityObject: {fileID: 0}
     - type: 3
       json: 
       unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}
+    - type: 3
+      json: 
+      unityObject: {fileID: 8390004620712179679, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}
+  - type: 8
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 45
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0.5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
         type: 3}
     - type: 3
       json: 

@@ -40,6 +40,7 @@ namespace Swarm {
 					AddProcess(new SetRotationSpeedProcess(runParams, seqElem.GetField("Rotation Speed").floatValue));
 					break;
 				case SequenceElementType.Cone:
+					AddProcess(new ConeProcess(runParams, seqElem.GetField("Angle").floatValue, seqElem.GetField("Range").floatValue, seqElem.GetField("Telegraph Duration").floatValue, seqElem.GetField("Duration").floatValue, seqElem.GetField("Prefab").gameObjectValue.GetComponent<Cone>(), seqElem.GetField("Telegraph Prefab").gameObjectValue));
 					break;
 			}
 		}

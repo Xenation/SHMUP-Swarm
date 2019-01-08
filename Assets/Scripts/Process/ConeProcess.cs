@@ -3,7 +3,7 @@ using UnityEngine;
 using Xenon.Processes;
 
 namespace Swarm {
-	public class LazerProcess : TimedProcess {
+	public class ConeProcess : TimedProcess {
 
 		private enum AttackState {
 			NotLaunched,
@@ -11,20 +11,22 @@ namespace Swarm {
 			Attacking
 		}
 
-		private float width;
+		private float angle;
+		private float radius;
 		private float telegraphDuration;
 		private float attackDuration;
-		private Lazer prefab;
+		private Cone prefab;
 		private GameObject telegraphEffect;
 		private Pattern.RuntimeParameters runParams;
 
 		private List<GameObject> telegraphs = new List<GameObject>();
-		private List<Lazer> lazers = new List<Lazer>();
+		private List<Cone> cones = new List<Cone>();
 		private AttackState state = AttackState.NotLaunched;
 
-		public LazerProcess(Pattern.RuntimeParameters rParams, float width, float telegraphDuration, float attackDuration, Lazer prefab, GameObject telegraphEffect) : base(telegraphDuration + attackDuration) {
+		public ConeProcess(Pattern.RuntimeParameters rParams, float angle, float radius, float telegraphDuration, float attackDuration, Cone prefab, GameObject telegraphEffect) : base(telegraphDuration + attackDuration) {
 			runParams = rParams;
-			this.width = width;
+			this.angle = angle;
+			this.radius = radius;
 			this.telegraphDuration = telegraphDuration;
 			this.attackDuration = attackDuration;
 			this.prefab = prefab;
@@ -39,7 +41,7 @@ namespace Swarm {
 
 		public override void OnTerminate() {
 			base.OnTerminate();
-			DestroyLayers();
+			DestroyCones();
 		}
 
 		public override void TimeUpdated() {
@@ -50,7 +52,7 @@ namespace Swarm {
 				case AttackState.Telegraph:
 					if (t > telegraphDuration) {
 						DestroyTelegraph();
-						CreateLazers();
+						CreateCones();
 						state = AttackState.Attacking;
 					}
 					break;
@@ -59,20 +61,20 @@ namespace Swarm {
 			}
 		}
 
-		private void CreateLazers() {
+		private void CreateCones() {
 			foreach (AttackPoint point in runParams.attackPoints) {
 				if (!point.shootingEnabled) continue;
-				Lazer lazer = Object.Instantiate(prefab.gameObject, point.transform.position, Quaternion.Euler(0f, 0f, point.rotation), point.transform).GetComponent<Lazer>();
-				lazer.SetWidth(width);
-				lazers.Add(lazer);
+				Cone cone = Object.Instantiate(prefab.gameObject, point.transform.position, Quaternion.Euler(0f, 0f, point.rotation), point.transform).GetComponent<Cone>();
+				cone.SetAngleRadius(angle, radius);
+				cones.Add(cone);
 			}
 		}
 
-		private void DestroyLayers() {
-			foreach (Lazer lazer in lazers) {
-				Object.Destroy(lazer.gameObject);
+		private void DestroyCones() {
+			foreach (Cone cone in cones) {
+				Object.Destroy(cone.gameObject);
 			}
-			lazers.Clear();
+			cones.Clear();
 		}
 
 		private void CreateTelegraph() {
