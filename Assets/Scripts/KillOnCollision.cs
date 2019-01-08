@@ -15,6 +15,7 @@ namespace Swarm {
         private GamePadState prevState;
         private float startVib = 0;
         public float vibrationDuration = 0.1f;
+        public float vibrationStrength = 1.0f;
 
 
         private void Start()
@@ -50,7 +51,7 @@ namespace Swarm {
             if (pu)
             {
                 AkSoundEngine.PostEvent("Play_Death", gameObject);
-                GamePad.SetVibration(pIndex, 1, 1);
+                GamePad.SetVibration(pIndex, vibrationStrength, vibrationStrength);
                 Destroy(collision.gameObject);
                 startVib = Time.time;
                 Invoke("StopVibration", vibrationDuration);
