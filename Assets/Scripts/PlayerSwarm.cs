@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Swarm {
 	public class PlayerSwarm : MonoBehaviour {
@@ -91,12 +92,14 @@ namespace Swarm {
             //Le nombre d'unitées est obtenable avec units.Count
             AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
 
+            if(units.Count == 0)
+            {
+                SceneManager.LoadScene("Lose");
+            }
         }
 
 		private void FixedUpdate() {
 			cursorRB.velocity = velocity;
-
-            
         }
 
 
