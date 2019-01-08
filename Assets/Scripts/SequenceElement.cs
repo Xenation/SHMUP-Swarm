@@ -49,6 +49,7 @@ namespace Swarm {
 		/// 2/float Telegraph Duration
 		/// 3/float Duration
 		/// 4/GameObject Prefab
+		/// 5/GameObject Telegraph Prefab
 		/// </summary>
 		Cone
 	}
@@ -63,7 +64,7 @@ namespace Swarm {
 		public static SequenceElementTypeDef disablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
 		public static SequenceElementTypeDef setRotationAbs = new SequenceElementTypeDef() { fieldNames = new string[] { "Absolute Rotation" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef setRotationSpeed = new SequenceElementTypeDef() { fieldNames = new string[] { "Rotation Speed" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
-		public static SequenceElementTypeDef cone = new SequenceElementTypeDef() { fieldNames = new string[] { "Angle", "Range", "Telegraph Duration", "Duration", "Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject } };
+		public static SequenceElementTypeDef cone = new SequenceElementTypeDef() { fieldNames = new string[] { "Angle", "Range", "Telegraph Duration", "Duration", "Prefab", "Telegraph Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject, SequenceDataType.GameObject } };
 
 		public int fieldCount { get { return fieldNames.Length; } }
 		public string[] fieldNames;
