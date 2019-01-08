@@ -9,11 +9,7 @@ namespace Swarm {
 		Integer = 0,
 		Floating = 1,
 		Projectile = 2,
-	}
-
-	[System.Serializable]
-	public struct JsonObjectReferenceContainer {
-		public UnityEngine.Object obj;
+		GameObject = 3,
 	}
 
 	[System.Serializable/*, StructLayout(LayoutKind.Explicit)*/]
@@ -24,6 +20,7 @@ namespace Swarm {
 		[System.NonSerialized/*, FieldOffset(8)*/] public int intValue;
 		[System.NonSerialized/*, FieldOffset(8)*/] public float floatValue;
 		[System.NonSerialized/*, FieldOffset(8)*/] public Projectile projectileValue;
+		[System.NonSerialized/*, FieldOffset(8)*/] public GameObject gameObjectValue;
 
 		[SerializeField/*, FieldOffset(16)*/] private string json;
 		[SerializeField] private Object unityObject;
@@ -32,6 +29,7 @@ namespace Swarm {
 			type = SequenceDataType.Integer;
 			floatValue = 0f; // pointless af but no choice
 			projectileValue = null; // pointless af but no choice
+			gameObjectValue = null; // pointless af but no choice
 			intValue = val;
 			json = null;
 			unityObject = null;
@@ -42,6 +40,7 @@ namespace Swarm {
 			type = SequenceDataType.Floating;
 			intValue = 0; // pointless af but no choice
 			projectileValue = null; // pointless af but no choice
+			gameObjectValue = null; // pointless af but no choice
 			floatValue = val;
 			json = null;
 			unityObject = null;
@@ -51,7 +50,18 @@ namespace Swarm {
 			type = SequenceDataType.Projectile;
 			intValue = 0; // pointless af but no choice
 			floatValue = 0f; // pointless af but no choice
+			gameObjectValue = null; // pointless af but no choice
 			projectileValue = val;
+			json = null;
+			unityObject = null;
+		}
+
+		public SequenceElementField(GameObject val) {
+			type = SequenceDataType.Projectile;
+			intValue = 0; // pointless af but no choice
+			floatValue = 0f; // pointless af but no choice
+			projectileValue = null; // pointless af but no choice
+			gameObjectValue = val;
 			json = null;
 			unityObject = null;
 		}
@@ -80,6 +90,13 @@ namespace Swarm {
 						EditorUtility.SetDirty(tomark);
 					}
 					break;
+				case SequenceDataType.GameObject:
+					GameObject prevGO = gameObjectValue;
+					gameObjectValue = (GameObject) EditorGUI.ObjectField(rect, label, gameObjectValue, typeof(GameObject), false);
+					if (prevGO != gameObjectValue) {
+						EditorUtility.SetDirty(tomark);
+					}
+					break;
 			}
 		}
 #endif
@@ -93,7 +110,7 @@ namespace Swarm {
 						case SequenceDataType.Integer:
 							intValue = (int) floatValue;
 							break;
-						case SequenceDataType.Projectile:
+						default:
 							// Can't convert
 							break;
 					}
@@ -105,7 +122,7 @@ namespace Swarm {
 							break;
 						case SequenceDataType.Integer: // Nothing to do
 							break;
-						case SequenceDataType.Projectile:
+						default:
 							// Can't convert
 							break;
 					}
@@ -128,6 +145,9 @@ namespace Swarm {
 				case SequenceDataType.Projectile:
 					unityObject = projectileValue;
 					break;
+				case SequenceDataType.GameObject:
+					unityObject = gameObjectValue;
+					break;
 			}
 		}
 
@@ -143,6 +163,10 @@ namespace Swarm {
 					if (unityObject == null) break;
 					projectileValue = (Projectile) unityObject;
 					break;
+				case SequenceDataType.GameObject:
+					if (unityObject == null) break;
+					gameObjectValue = (GameObject) unityObject;
+					break;
 			}
 			json = null;
 		}
@@ -156,6 +180,10 @@ namespace Swarm {
 		}
 
 		public static implicit operator SequenceElementField(Projectile val) {
+			return new SequenceElementField(val);
+		}
+
+		public static implicit operator SequenceElementField(GameObject val) {
 			return new SequenceElementField(val);
 		}
 

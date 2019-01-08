@@ -16,8 +16,7 @@ namespace Swarm {
 					}
 					break;
 				case SequenceElementType.Lazer:
-					//AddProcess(new ShootProcess(seqElem.projectile, points));
-					//AddProcess(new TimedProcess(seqElem.duration));
+					AddProcess(new LazerProcess(runParams, seqElem.GetField("Width").floatValue, seqElem.GetField("Telegraph Duration").floatValue, seqElem.GetField("Duration").floatValue, seqElem.GetField("Prefab").gameObjectValue.GetComponent<Lazer>(), seqElem.GetField("Telegraph Prefab").gameObjectValue));
 					break;
 				case SequenceElementType.Mortar:
 					//for (int i = 0; i < seqElem.count; i++) {
@@ -39,6 +38,8 @@ namespace Swarm {
 					break;
 				case SequenceElementType.SetRotationSpeed:
 					AddProcess(new SetRotationSpeedProcess(runParams, seqElem.GetField("Rotation Speed").floatValue));
+					break;
+				case SequenceElementType.Cone:
 					break;
 			}
 		}
