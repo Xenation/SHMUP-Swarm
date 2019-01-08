@@ -16,7 +16,8 @@ namespace Swarm {
 		private void Awake() {
 			col = GetComponent<PolygonCollider2D>();
 			filter = GetComponent<MeshFilter>();
-			mesh = filter.mesh;
+            mesh = filter.mesh;
+            AkSoundEngine.PostEvent("Play_Cone", gameObject);
 		}
 
 		public void SetAngleRadius(float angle, float radius) {
@@ -28,6 +29,9 @@ namespace Swarm {
 			mesh.SetUVs(0, uvs);
 			mesh.SetTriangles(indices, 0);
 		}
-
-	}
+        private void OnDestroy()
+        {
+            AkSoundEngine.PostEvent("Stop_Cone", gameObject);
+        }
+    }
 }

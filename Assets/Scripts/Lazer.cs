@@ -8,7 +8,8 @@ namespace Swarm {
 
 		private void Awake() {
 			col = GetComponent<BoxCollider2D>();
-		}
+            AkSoundEngine.PostEvent("Play_Laser", gameObject);
+        }
 
 		public void SetWidth(float width) {
 			Transform rayTransf = transform.Find("Ray");
@@ -16,7 +17,12 @@ namespace Swarm {
 			Transform startTransf = transform.Find("Start");
 			startTransf.localScale = new Vector3(width, width, startTransf.localScale.z);
 			col.size = new Vector2(col.size.x, width);
-		}
 
-	}
+		}
+        private void OnDestroy()
+        {
+            AkSoundEngine.PostEvent("Stop_Laser", gameObject);
+            
+        }
+    }
 }
