@@ -8,21 +8,19 @@ namespace Swarm
     public class VibrationManager : MonoBehaviour
     {
 
-        public PlayerSwarm swarm;
+        public static PlayerSwarm swarm;
 
-        public Boss boss;
-
-        public bool testController;
+        public static bool testController;
 
 
         //Controller
-        public bool playerIndexSet = false;
-        private PlayerIndex pIndex;
-        private GamePadState state;
-        private GamePadState prevState;
+        public static bool playerIndexSet = false;
+        private static PlayerIndex pIndex;
+        private static GamePadState state;
+        private static GamePadState prevState;
 
-        private float vibStrengthNowRight;
-        private float vibStrengthNowLeft;
+        private static float vibStrengthNowRight;
+        private static float vibStrengthNowLeft;
 
         /***************
          * List of all vibrations
@@ -95,10 +93,10 @@ namespace Swarm
                 //V1
                 for (int i = 0; i < vibrationListRight.Count; i++)
                 {
-                    if (Time.fixedTime > vibrationListRight[i].x + vibrationListRight[i].y)
+                    if (Time.fixedTime > (vibrationListRight[i].x + vibrationListRight[i].y))
                     {
                         Debug.Log(Time.fixedTime);
-                        Debug.Log( i + " - " + vibrationListRight[i].x + vibrationListRight[i].y);
+                        Debug.Log( i + " - " + vibrationListRight[i].x + " --- " + vibrationListRight[i].y);
                         //vibrationListRight.Remove(vib);
                     }
                     else
@@ -142,6 +140,7 @@ namespace Swarm
         public static void AddVibrateRight(float vibStrength, float vibDuration)
         {
             vibrationListRight.Add(new Vector3(Time.time, vibDuration, vibStrength));
+            Debug.Log("Why is this not working - " + Time.time + "- " + vibDuration);
         }
 
         public static void AddVibrateLeft(float vibStrength, float vibDuration)
@@ -166,7 +165,7 @@ namespace Swarm
             StopVibLeft();
         }
 
-        private void controllerTester()
+        private static void controllerTester()
         {
             GamePad.SetVibration(pIndex, -swarm.cursor.position.x / 10, swarm.cursor.position.x / 10);
         }

@@ -3,17 +3,16 @@
 namespace Swarm {
 	public class KillOnCollision : MonoBehaviour
     {
-
-        public float vibDuration = 1.0f;
-        public float vibStrength = 2.5f;
-
+        
+        public float vD = 1.0f;
+        public float vS = 2.0f;
 
         private CircleCollider2D bossCollider;
 
         private void Start()
         {
             bossCollider = GetComponent<CircleCollider2D>();
-            
+            //Debug.Log("Duration : " + vD + "Str = " + vS);
         }
         
         private void OnCollisionEnter2D(Collision2D collision)
@@ -23,7 +22,9 @@ namespace Swarm {
             if (pu)
             {
                 AkSoundEngine.PostEvent("Play_Death", gameObject);
-                VibrationManager.AddVibrateRight(vibStrength, vibDuration);
+
+                //Debug.Log("Duration : " + vD + "Str = " + vS);
+                VibrationManager.AddVibrateRight(vS, vD);
                 Destroy(collision.gameObject);
             }
         }
