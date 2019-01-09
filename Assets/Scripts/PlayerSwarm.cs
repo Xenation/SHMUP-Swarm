@@ -103,6 +103,13 @@ namespace Swarm {
 			cursorRB.velocity = velocity;
         }
 
+        //This function must sent vibrations to the controller according to the distance between the cursor and attacks / death
+        //Adding a second collider to cursor might be helpfull for optimization
+        private void ProximityToDanger()
+        {
+            //Check if gameObjects containing OnKillCollision are close
+        }
+
 
         public void AddUnit(GameObject unit)
         {

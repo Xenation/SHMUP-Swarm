@@ -23,6 +23,8 @@ public class bossLife : MonoBehaviour
     public float hitStunDuration = 0.05f;
     private float hitStunFirstFrame = 0;
 
+    //Ajouter une référence vers chaque part du boss
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class bossLife : MonoBehaviour
 		animator = gameObject.GetComponent<Animator>();
         SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
         mat = rend.material;
+        
     }
 
     // Update is called once per frame
