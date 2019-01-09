@@ -23,16 +23,21 @@ public class bossLife : MonoBehaviour
     public float hitStunDuration = 0.05f;
     private float hitStunFirstFrame = 0;
 
+    private float ScoreTimer = 0;
+
     //Ajouter une référence vers chaque part du boss
 
 
+    private void Awake()
+    {
+        ScoreTimer = Time.time;
+    }
     // Start is called before the first frame update
     void Start()
     {
 		animator = gameObject.GetComponent<Animator>();
         SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
         mat = rend.material;
-        
     }
 
     // Update is called once per frame
@@ -86,7 +91,11 @@ public class bossLife : MonoBehaviour
 
     public void End()
     {
+        ScoreTimer = Time.time - ScoreTimer;
+        //Envoyez le score dans la prochaine scene + leaderboard
+
         SceneManager.LoadScene("Win");
+        
     }
 
     public void checkParts()
