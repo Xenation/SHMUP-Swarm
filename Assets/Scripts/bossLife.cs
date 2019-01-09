@@ -7,6 +7,8 @@ public class bossLife : MonoBehaviour
 {
 	[SerializeField]
 	private int pv;
+    private int phase2Threshhold;
+    private int phase3Threshhold;
 	public bool isPart = true;
 	private Animator animator;
     public Camera cam;
@@ -43,7 +45,10 @@ public class bossLife : MonoBehaviour
 			{
 				part.GetComponent<partController>().resetPart();
 			}
+
+            CheckPhase();
 		}
+
         if (inHitStun == true)
         {
             hitstun();
@@ -125,6 +130,17 @@ public class bossLife : MonoBehaviour
             cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
             
 
+        }
+    }
+
+    private void CheckPhase()
+    {
+        if(pv < phase3Threshhold)
+        {
+            //Change sprite and patterns to second phase
+        }else if(pv < phase2Threshhold)
+        {
+            //Change sprite and patterns to third phase
         }
     }
 

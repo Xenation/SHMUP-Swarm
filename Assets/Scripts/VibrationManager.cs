@@ -82,6 +82,7 @@ namespace Swarm
 
                 vibStrengthNowLeft = maxStrength;
 
+                //Delete finished vibrations
                 foreach (Vector3 v in deleteIndex)
                 {
                     vibrationListLeft.Remove(v);
@@ -138,7 +139,6 @@ namespace Swarm
         public static void AddVibrateRight(float vibStrength, float vibDuration)
         {
             vibrationListRight.Add(new Vector3(Time.time, vibDuration, vibStrength));
-            Debug.Log("Why is this not working - " + Time.time + "- " + vibDuration);
         }
 
         public static void AddVibrateLeft(float vibStrength, float vibDuration)
