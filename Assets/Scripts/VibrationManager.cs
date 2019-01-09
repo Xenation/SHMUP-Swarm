@@ -65,11 +65,13 @@ namespace Swarm
             if(vibrationListLeft.Count > 0)
             {
                 float maxStrength = 0.0f;
-                foreach(Vector3 vib in vibrationListLeft)
+                List<Vector3> deleteIndex = new List<Vector3>();
+
+                foreach (Vector3 vib in vibrationListLeft)
                 {
                     if(Time.time > vib.x + vib.y)
                     {
-                        vibrationListLeft.Remove(vib);
+                        deleteIndex.Add(vib);
                     }
                     else
                     {
@@ -79,56 +81,52 @@ namespace Swarm
                 }
 
                 vibStrengthNowLeft = maxStrength;
+
+                foreach (Vector3 v in deleteIndex)
+                {
+                    vibrationListLeft.Remove(v);
+                }
+                deleteIndex.Clear();
             }
             else
             {
                 vibStrengthNowLeft = 0.0f;
             }
 
+            
+
             //Right motor
             if(vibrationListRight.Count > 0)
             {
                 float maxStrength = 0.0f;
+                List<Vector3> deleteIndex = new List<Vector3>();
 
                 //V1
+                
                 for (int i = 0; i < vibrationListRight.Count; i++)
                 {
                     if (Time.fixedTime > (vibrationListRight[i].x + vibrationListRight[i].y))
                     {
-                        Debug.Log(Time.fixedTime);
-                        Debug.Log( i + " - " + vibrationListRight[i].x + " --- " + vibrationListRight[i].y);
-                        //vibrationListRight.Remove(vib);
+                        deleteIndex.Add(vibrationListRight[i]);
                     }
                     else
                     {
                         if (vibrationListRight[i].z > maxStrength)
-                            Debug.Log("ddd");
                             maxStrength = vibrationListRight[i].z;
                     }
                 }
 
-                // V2
-                /*
-                foreach (Vector3 vib in vibrationListRight)
+                foreach(Vector3 v in deleteIndex)
                 {
-                    if (Time.time > vib.x + vib.y)
-                    {
-                        //vibrationListRight.Remove(vib);
-                    }
-                    else
-                    {
-                        if (vib.z > maxStrength)
-                            maxStrength = vib.z;
-                    }
+                    vibrationListRight.Remove(v);
                 }
-                */
-                vibStrengthNowRight = maxStrength;
+                deleteIndex.Clear();
             }
             else
             {
                 vibStrengthNowRight = 0.0f;
             }
-
+            
             //Testing controller motors
             if (testController)
                 controllerTester();
