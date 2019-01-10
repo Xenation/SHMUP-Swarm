@@ -108,6 +108,7 @@ namespace Swarm {
         private void ProximityToDanger()
         {
             //Check if gameObjects containing OnKillCollision are close
+            //Add vibration of length fixedDuration
         }
 
 
