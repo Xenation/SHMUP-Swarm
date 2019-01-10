@@ -93,6 +93,7 @@ public class bossLife : MonoBehaviour
     {
         ScoreTimer = Time.time - ScoreTimer;
         //Envoyez le score dans la prochaine scene + leaderboard
+        
 
         SceneManager.LoadScene("Win");
         

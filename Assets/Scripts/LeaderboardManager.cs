@@ -13,6 +13,7 @@ public class LeaderboardManager : MonoBehaviour
         int tableID = 395523;
         string guestName = "Mamene";
         string extraData = "";
+
         //GameJolt.API.Scores.Add(scoreValue, scoreText, guestName, tableID, extraData, (bool success) => {
         //    Debug.Log(string.Format("Score Add {0}.", success ? "Successful" : "Failed"));
         //});
