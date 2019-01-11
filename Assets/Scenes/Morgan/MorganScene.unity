@@ -469,6 +469,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3150457463489301675, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 398909075}
     - target: {fileID: 7103110863744034858, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_Name
@@ -928,16 +933,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6139991217997173754, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6139991217997173754, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4788165427147069081, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: m_Name
@@ -1350,31 +1345,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92266605ff5148d4eae91c7e989f4b73, type: 3}
---- !u!1 &1814859099 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7103110863226394594, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-    type: 3}
-  m_PrefabInstance: {fileID: 567539724}
-  m_PrefabAsset: {fileID: 0}
---- !u!232 &1814859104
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814859099}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 398909075}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 10
-  m_MaxDistanceOnly: 1
 --- !u!4 &1904157086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4788165427147069084, guid: 50a6274365a1cac479f4e84b07ee86df,
