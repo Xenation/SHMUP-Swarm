@@ -43,8 +43,8 @@ namespace Swarm
         // Start is called before the first frame update
         void Start()
         {
-            vibrationListLeft.Clear();
-            vibrationListRight.Clear();
+            vm.vibrationListLeft.Clear();
+            vm.vibrationListRight.Clear();
         
         }
 
@@ -52,7 +52,7 @@ namespace Swarm
         void FixedUpdate()
         {
             //Controller
-            if (!playerIndexSet || !prevState.IsConnected)
+            if (!vm.playerIndexSet || !vm.prevState.IsConnected)
             {
                 for (int i = 0; i < 4; ++i)
                 {
@@ -60,8 +60,8 @@ namespace Swarm
                     GamePadState testState = GamePad.GetState(testPlayerIndex);
                     if (testState.IsConnected)
                     {
-                        pIndex = testPlayerIndex;
-                        playerIndexSet = true;
+                        vm.pIndex = testPlayerIndex;
+                        vm.playerIndexSet = true;
                     }
                 }
             }
@@ -70,13 +70,13 @@ namespace Swarm
             state = GamePad.GetState(pIndex);
 
             //Left motor
-            if(vibrationListLeft.Count > 0)
+            if(vm.vibrationListLeft.Count > 0)
             {
                 Debug.Log("JJE");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
-                foreach (Vector3 vib in vibrationListLeft)
+                foreach (Vector3 vib in vm.vibrationListLeft)
                 {
                     if(Time.time > vib.x + vib.y)
                     {
@@ -90,18 +90,18 @@ namespace Swarm
                     }
                 }
 
-                vibStrengthNowLeft = maxStrength;
+                vm.vibStrengthNowLeft = maxStrength;
 
                 //Delete finished vibrations
                 foreach (Vector3 v in deleteIndex)
                 {
-                    vibrationListLeft.Remove(v);
+                    vm.vibrationListLeft.Remove(v);
                 }
                 deleteIndex.Clear();
             }
             else
             {
-                vibStrengthNowLeft = 0.0f;
+                vm.vibStrengthNowLeft = 0.0f;
             }
 
             
@@ -115,37 +115,40 @@ namespace Swarm
 
                 //V1
                 
-                for (int i = 0; i < vibrationListRight.Count; i++)
+                for (int i = 0; i < vm.vibrationListRight.Count; i++)
                 {
-                    if (Time.fixedTime > (vibrationListRight[i].x + vibrationListRight[i].y))
+                    if (Time.fixedTime > (vm.vibrationListRight[i].x + vm.vibrationListRight[i].y))
                     {
-                        deleteIndex.Add(vibrationListRight[i]);
+                        deleteIndex.Add(vm.vibrationListRight[i]);
                     }
                     else
                     {
-                        if (vibrationListRight[i].z > maxStrength)
+                        if (vm.vibrationListRight[i].z > maxStrength)
+                        {
                             maxStrength = vibrationListRight[i].z;
-                        Debug.Log("lejr");
+                            Debug.Log("lejr");
+                        }
                     }
                 }
 
                 foreach(Vector3 v in deleteIndex)
                 {
-                    vibrationListRight.Remove(v);
+                    vm.vibrationListRight.Remove(v);
                 }
                 deleteIndex.Clear();
+                vm.vibStrengthNowRight = maxStrength;
             }
             else
             {
-                vibStrengthNowRight = 0.0f;
+                vm.vibStrengthNowRight = 0.0f;
             }
             
             //Testing controller motors
             if (testController)
                 controllerTester();
             else
-                GamePad.SetVibration(pIndex, vibStrengthNowLeft, vibStrengthNowRight);
-
+                GamePad.SetVibration(vm.pIndex, vm.vibStrengthNowLeft, vm.vibStrengthNowRight);
+            
         }
 
         public static void AddVibrateRight(float vibStrength, float vibDuration)

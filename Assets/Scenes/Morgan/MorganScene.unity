@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swarm: {fileID: 230935861}
-  testController: 1
+  testController: 0
   playerIndexSet: 0
 --- !u!4 &2041253143
 Transform:
