@@ -5,57 +5,38 @@ using Xenon.Processes;
 namespace Swarm {
 	public class LazerProcess : TimedProcess {
 
-		private enum AttackState {
-			NotLaunched,
-			Telegraph,
-			Attacking
-		}
-
 		private float width;
 		private float telegraphDuration;
 		private float attackDuration;
 		private Lazer prefab;
-		private GameObject telegraphEffect;
 		private Pattern.RuntimeParameters runParams;
-
-		private List<GameObject> telegraphs = new List<GameObject>();
+		
 		private List<Lazer> lazers = new List<Lazer>();
-		private AttackState state = AttackState.NotLaunched;
+		private TelegraphableAttack.State lazerState = TelegraphableAttack.State.Telegraphing;
 
-		public LazerProcess(Pattern.RuntimeParameters rParams, float width, float telegraphDuration, float attackDuration, Lazer prefab, GameObject telegraphEffect) : base(telegraphDuration + attackDuration) {
+		public LazerProcess(Pattern.RuntimeParameters rParams, float width, float telegraphDuration, float attackDuration, Lazer prefab) : base(telegraphDuration + attackDuration) {
 			runParams = rParams;
 			this.width = width;
 			this.telegraphDuration = telegraphDuration;
 			this.attackDuration = attackDuration;
 			this.prefab = prefab;
-			this.telegraphEffect = telegraphEffect;
 		}
 
 		public override void OnBegin() {
 			base.OnBegin();
-			state = AttackState.Telegraph;
-			CreateTelegraph();
+			CreateLazers();
 		}
 
 		public override void OnTerminate() {
 			base.OnTerminate();
-			DestroyLayers();
+			DestroyLazers();
 		}
 
 		public override void TimeUpdated() {
 			base.TimeUpdated();
-			switch (state) {
-				case AttackState.NotLaunched:
-					break;
-				case AttackState.Telegraph:
-					if (t > telegraphDuration) {
-						DestroyTelegraph();
-						CreateLazers();
-						state = AttackState.Attacking;
-					}
-					break;
-				case AttackState.Attacking:
-					break;
+			if (lazerState == TelegraphableAttack.State.Telegraphing && t > telegraphDuration) {
+				LaunchAttacks();
+				lazerState = TelegraphableAttack.State.Attacking;
 			}
 		}
 
@@ -68,25 +49,17 @@ namespace Swarm {
 			}
 		}
 
-		private void DestroyLayers() {
+		private void DestroyLazers() {
 			foreach (Lazer lazer in lazers) {
 				Object.Destroy(lazer.gameObject);
 			}
 			lazers.Clear();
 		}
 
-		private void CreateTelegraph() {
-			foreach (AttackPoint point in runParams.attackPoints) {
-				if (!point.shootingEnabled) continue;
-				telegraphs.Add(Object.Instantiate(telegraphEffect, point.transform.position, Quaternion.Euler(0f, 0f, point.rotation), point.transform));
+		private void LaunchAttacks() {
+			foreach (Lazer lazer in lazers) {
+				lazer.LaunchAttack();
 			}
-		}
-
-		private void DestroyTelegraph() {
-			foreach (GameObject telegraph in telegraphs) {
-				Object.Destroy(telegraph);
-			}
-			telegraphs.Clear();
 		}
 
 	}
