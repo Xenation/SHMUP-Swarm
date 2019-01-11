@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: slow_quick 3
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible: []
+  autoPlaced: 1
+  count: 30
+  startRotation: 0
+  distanceFromCenter: 3
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 3, y: 0}
+    rotation: 0
+  - position: {x: 2.934443, y: 0.6237351}
+    rotation: 11.999992
+  - position: {x: 2.7406363, y: 1.22021}
+    rotation: 23.999996
+  - position: {x: 2.427051, y: 1.7633557}
+    rotation: 35.999996
+  - position: {x: 2.0073917, y: 2.2294345}
+    rotation: 48
+  - position: {x: 1.4999999, y: 2.5980763}
+    rotation: 60.000004
+  - position: {x: 0.92705095, y: 2.8531697}
+    rotation: 72
+  - position: {x: 0.31358525, y: 2.9835658}
+    rotation: 84
+  - position: {x: -0.31358552, y: 2.9835658}
+    rotation: 96
+  - position: {x: -0.92705107, y: 2.8531694}
+    rotation: 108.00001
+  - position: {x: -1.5000002, y: 2.598076}
+    rotation: 120.00001
+  - position: {x: -2.007392, y: 2.2294345}
+    rotation: 132
+  - position: {x: -2.427051, y: 1.7633555}
+    rotation: 144
+  - position: {x: -2.7406363, y: 1.2202097}
+    rotation: 156.00002
+  - position: {x: -2.934443, y: 0.62373483}
+    rotation: 168
+  - position: {x: -3, y: -0.00000026226832}
+    rotation: -180
+  - position: {x: -2.9344428, y: -0.62373537}
+    rotation: -168
+  - position: {x: -2.7406363, y: -1.2202102}
+    rotation: -156
+  - position: {x: -2.4270508, y: -1.7633561}
+    rotation: -143.99998
+  - position: {x: -2.0073915, y: -2.2294345}
+    rotation: -131.99998
+  - position: {x: -1.4999998, y: -2.5980763}
+    rotation: -119.99999
+  - position: {x: -0.9270513, y: -2.8531694}
+    rotation: -108.00001
+  - position: {x: -0.313585, y: -2.9835658}
+    rotation: -96
+  - position: {x: 0.3135865, y: -2.9835656}
+    rotation: -83.999985
+  - position: {x: 0.92705137, y: -2.8531694}
+    rotation: -71.99999
+  - position: {x: 1.4999998, y: -2.5980763}
+    rotation: -60.000008
+  - position: {x: 2.0073922, y: -2.2294343}
+    rotation: -47.999992
+  - position: {x: 2.4270518, y: -1.7633548}
+    rotation: -35.999977
+  - position: {x: 2.7406366, y: -1.2202095}
+    rotation: -23.999987
+  - position: {x: 2.9344428, y: -0.6237353}
+    rotation: -11.999992
+  sequence:
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}
+  - type: 6
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}
+  - type: 6
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 27
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}
+  - type: 6
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 48
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}

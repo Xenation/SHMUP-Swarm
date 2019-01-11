@@ -91,7 +91,9 @@ namespace Swarm
             else
             {
                 //ScreenShake
-                cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
+                cam.transform.position += new Vector3(Random.Range(-0.02f, 0.02f), Random.Range(-0.02f, 0.02f));
+
+
             }
         }
 
@@ -108,7 +110,7 @@ namespace Swarm
             }
             else
             {
-                cam.transform.position += new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f));
+                cam.transform.position += new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
             }
                 
         }

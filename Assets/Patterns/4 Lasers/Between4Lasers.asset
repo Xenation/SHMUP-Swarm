@@ -16,11 +16,43 @@ MonoBehaviour:
   simultaneous: []
   nextPossible: []
   autoPlaced: 1
-  count: 1
+  count: 4
   startRotation: 0
   distanceFromCenter: 1
-  rotationSpeed: 0
+  rotationSpeed: 25
   spawnPoints:
   - position: {x: 1, y: 0}
     rotation: 0
-  sequence: []
+  - position: {x: -0.00000004371139, y: 1}
+    rotation: 90
+  - position: {x: -1, y: -0.00000008742278}
+    rotation: -180
+  - position: {x: 0.000000011924881, y: -1}
+    rotation: -90
+  sequence:
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 25
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 8
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}

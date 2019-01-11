@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: Simple pattern
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: a8301a996f9c21f45b9a4429f18901cc, type: 2}
+  nextPossible:
+  - {fileID: 11400000, guid: b708282ba56474e488e88443d3c0dad3, type: 2}
+  autoPlaced: 0
+  count: 18
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 45
+  spawnPoints:
+  - position: {x: 1, y: 0}
+    rotation: 0
+  - position: {x: 0.99860156, y: 0.21445191}
+    rotation: 0
+  - position: {x: 0.677564, y: 0.7213952}
+    rotation: 60.000004
+  - position: {x: 0.49999997, y: 0.86602545}
+    rotation: 60.000004
+  - position: {x: 0.31619972, y: 1.0044594}
+    rotation: 60.000004
+  - position: {x: -0.33586216, y: 1.0142854}
+    rotation: 120.00001
+  - position: {x: -0.50000006, y: 0.8660254}
+    rotation: 120.00001
+  - position: {x: -0.6480709, y: 0.69683003}
+    rotation: 120.00001
+  - position: {x: -0.9986794, y: 0.22410883}
+    rotation: 180
+  - position: {x: -1, y: -0.00000008742278}
+    rotation: 180
+  - position: {x: -0.9986794, y: -0.21919614}
+    rotation: 180
+  - position: {x: -0.67264843, y: -0.72139525}
+    rotation: 240
+  - position: {x: -0.4999999, y: -0.86602545}
+    rotation: 240
+  - position: {x: -0.34077758, y: -1.0241116}
+    rotation: 240
+  - position: {x: 0.32111576, y: -1.0142856}
+    rotation: 300
+  - position: {x: 0.50000036, y: -0.8660252}
+    rotation: 300.00003
+  - position: {x: 0.6579022, y: -0.69683003}
+    rotation: 300
+  - position: {x: 1.0035106, y: -0.21935807}
+    rotation: 0
+  sequence:
+  - type: 0
+    count: 8
+    duration: 10
+    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+      type: 3}
+    point: {fileID: 0}
