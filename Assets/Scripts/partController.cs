@@ -92,8 +92,6 @@ namespace Swarm
             {
                 //ScreenShake
                 cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
-
-
             }
         }
 
@@ -102,14 +100,17 @@ namespace Swarm
             if (!inDestroyShake)
             {
                 inDestroyShake = true;
-                hitStunFirstFrame = Time.time;
+                destroyFirstFrame = Time.time;
             }
             else if (Time.time > (destroyFirstFrame + destroyDuration))
             {
                 inDestroyShake = false;
             }
             else
+            {
                 cam.transform.position += new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f));
+            }
+                
         }
 
         public void resetPart()
