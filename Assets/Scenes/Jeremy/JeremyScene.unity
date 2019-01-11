@@ -5453,6 +5453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
 --- !u!1 &516683051
 GameObject:
   m_ObjectHideFlags: 0
@@ -10260,46 +10261,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSwarm
       objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitsToCreate
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: bossTransform
-      value: 
-      objectReference: {fileID: 1904157086}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: cursorNormalSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitNormalSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitNormalRadius
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitShrinkRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: suicideSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: freezeTime
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034856, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10355,6 +10316,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitsToCreate
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: bossTransform
+      value: 
+      objectReference: {fileID: 1904157086}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: cursorNormalSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitNormalSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitNormalRadius
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitShrinkRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: suicideSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: freezeTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7103110863226394592, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_Enabled
@@ -10362,6 +10363,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97b8a4c5d62e13f478de6f90a6946bbd, type: 3}
+--- !u!1 &611412576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788165427147069081, guid: 50a6274365a1cac479f4e84b07ee86df,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698669232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &611412577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611412576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64ba7ae63538fb4ba236c8297b04bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eye: {fileID: 850822437}
+  swarm: {fileID: 230935861}
+  maxEyeDistance: 0.3
 --- !u!1 &725464386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1913640488, guid: 50a6274365a1cac479f4e84b07ee86df,
@@ -10395,6 +10417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
 --- !u!1 &736501698
 GameObject:
   m_ObjectHideFlags: 0
@@ -34902,9 +34925,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 87c62e900aa029c448d23657ef4fedef,
         type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: swarm
+      value: 
+      objectReference: {fileID: 230935861}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: pv
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
@@ -34922,6 +34950,14 @@ PrefabInstance:
       propertyPath: eye
       value: 
       objectReference: {fileID: 850822437}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: phase2Threshhold
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: phase3Threshhold
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: pv
       value: 20
@@ -39860,6 +39896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
 --- !u!1001 &1753497910
 PrefabInstance:
   m_ObjectHideFlags: 0
