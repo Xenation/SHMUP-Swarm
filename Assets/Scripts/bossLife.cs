@@ -76,7 +76,6 @@ namespace Swarm
             {
                 AkSoundEngine.SetState("BossPhase", "Phase3");
             }
-            Debug.Log(pv);
 
 
             if (inHitStun == true)
