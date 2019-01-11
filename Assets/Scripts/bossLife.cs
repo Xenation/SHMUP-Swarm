@@ -9,8 +9,9 @@ namespace Swarm
     {
         [SerializeField]
         private int pv;
-        private int phase2Threshhold;
-        private int phase3Threshhold;
+        public int phase2Threshhold;
+        public int phase3Threshhold;
+        private int currentPhase = 1;
         public bool isPart = true;
         private Animator animator;
         public Camera cam;
@@ -158,10 +159,12 @@ namespace Swarm
             if (pv < phase3Threshhold)
             {
                 //Change sprite and patterns to second phase
+                currentPhase = 2;
             }
             else if (pv < phase2Threshhold)
             {
                 //Change sprite and patterns to third phase
+                currentPhase = 3;
             }
         }
 
