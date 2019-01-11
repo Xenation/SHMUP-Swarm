@@ -378,7 +378,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.005955517, w: 0.9999823}
   m_LocalPosition: {x: 0.165, y: 1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1447406585650256678}
   m_Father: {fileID: 4788165427147069084}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.68200004}
@@ -782,7 +783,6 @@ Transform:
   - {fileID: 442947851}
   - {fileID: 6396109771637907798}
   - {fileID: 4959298322142102862}
-  - {fileID: 1447406585650256678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -863,6 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
 --- !u!114 &138413040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,12 +996,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9081071139309854661}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.294, y: 0.74, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.005955517, w: 0.9999823}
+  m_LocalPosition: {x: 0.11445964, y: -1.22145, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4788165427147069084}
-  m_RootOrder: 5
+  m_Father: {fileID: 1913640489}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4207999318067773995
 SpriteRenderer:
@@ -1220,15 +1221,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b61bd4eb7e1580c4dadfddbbbe0e0709, type: 3}
---- !u!95 &6222829873268611721 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7824989932049965587, guid: b61bd4eb7e1580c4dadfddbbbe0e0709,
-    type: 3}
-  m_PrefabInstance: {fileID: 4236792336749033626}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &61005251925673538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4185154512126967512, guid: b61bd4eb7e1580c4dadfddbbbe0e0709,
+    type: 3}
+  m_PrefabInstance: {fileID: 4236792336749033626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6222829873268611721 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7824989932049965587, guid: b61bd4eb7e1580c4dadfddbbbe0e0709,
     type: 3}
   m_PrefabInstance: {fileID: 4236792336749033626}
   m_PrefabAsset: {fileID: 0}

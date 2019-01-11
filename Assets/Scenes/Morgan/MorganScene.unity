@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
 --- !u!95 &456739345 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8678579055738591454, guid: 50a6274365a1cac479f4e84b07ee86df,
@@ -604,6 +605,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
+--- !u!114 &725464394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725464386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64ba7ae63538fb4ba236c8297b04bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eye: {fileID: 2013253404}
+  swarm: {fileID: 230935861}
+  maxEyeDistance: 0.2
 --- !u!1001 &750847408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,6 +1097,18 @@ PrefabInstance:
       propertyPath: explosion_fx
       value: 
       objectReference: {fileID: 456739345}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: eye
+      value: 
+      objectReference: {fileID: 2013253404}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: swarm
+      value: 
+      objectReference: {fileID: 230935861}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: maxEyeDistance
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8882874307180779572, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1130,6 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPattern: {fileID: 0}
+  swarm: {fileID: 0}
 --- !u!1001 &1753497910
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,12 +22,15 @@ namespace Swarm
         private Material mat;
         public Animator explosion_fx;
 
+       
+
         // Start is called before the first frame update
         void Start()
         {
             pv = basepv;
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
+            
         }
 
         // Update is called once per frame

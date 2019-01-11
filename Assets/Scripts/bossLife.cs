@@ -14,15 +14,8 @@ namespace Swarm
         public bool isPart = true;
         private Animator animator;
         public Camera cam;
-
-        public GameObject eye;
-        public float maxEyeDist= 0.5f;
+        
         public PlayerSwarm player;
-        private Vector3 eyeOrigin;
-        private Vector3 eyeOpenOrigin;
-        private Vector3 previousPos;
-        private Vector3 futurePos;
-        private int frames = 0;
 
         public float openingDuration = 5;
         private float openingTime = 2;
@@ -49,8 +42,6 @@ namespace Swarm
             animator = gameObject.GetComponent<Animator>();
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
-            eyeOrigin = eye.transform.position;
-            eyeOpenOrigin = eyeOrigin + new Vector3(0, 1.20f, 0); // 1.20   //0.8 __ 1.93   -0.6f
         }
 
         // Update is called once per frame
@@ -70,41 +61,8 @@ namespace Swarm
 
                 CheckPhase();
             }
-            GameObject head = GameObject.Find("Head");
-            if (isPart)
-            {
-                Vector3 eyeDirection = Vector3.zero;
-                eyeDirection.x = player.cursor.transform.position.x - eyeOrigin.x;
-                eyeDirection.y = player.cursor.transform.position.y - eyeOrigin.y;
-                //eyeDirection.z = player.cursor.transform.position.z - eyeOrigin.z;
+            
 
-                eyeDirection.Normalize();
-                eyeDirection *= maxEyeDist;
-                eye.transform.position = head.transform.position + eyeDirection;
-            }
-            else
-            {
-                if(frames <= 1)
-                {
-                    frames++;
-                    eye.transform.position = new Vector3(Mathf.Lerp(eye.transform.position.x, futurePos.x, 0.5f), Mathf.Lerp(eye.transform.position.y, futurePos.y, 0.5f), eye.transform.position.z);
-                }
-                else
-                {
-                    previousPos = eye.transform.position;
-
-                     Vector3 eyeDirection = Vector3.zero;
-                     eyeDirection.x = Random.Range(-maxEyeDist, maxEyeDist);
-                     eyeDirection.y = Random.Range(-maxEyeDist, maxEyeDist);
-                    //eyeDirection.x = Random.Range(-maxEyeDist, maxEyeDist);
-
-                    //GameObject head = GameObject.Find("Head");
-                     futurePos =  head.transform.position + eyeDirection;
-                    futurePos.y = futurePos.y ;
-                     frames = 0;
-                }
-               
-            }
 
             if (inHitStun == true)
             {
