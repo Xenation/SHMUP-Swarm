@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: bounce2
+  m_EditorClassIdentifier: 
+  finishedDelay: 0
+  simultaneous: []
+  nextPossible:
+  - {fileID: 11400000, guid: c712096cce5fc154ab101452f0b433d8, type: 2}
+  autoPlaced: 0
+  count: 4
+  startRotation: 45
+  distanceFromCenter: 7
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 5.059883, y: 4.9497476}
+    rotation: 315
+  - position: {x: -5.0535855, y: 4.9627204}
+    rotation: 224.99998
+  - position: {x: -5.044572, y: -4.949748}
+    rotation: 135
+  - position: {x: 5.064616, y: -4.9497457}
+    rotation: 45.000004
+  sequence:
+  - type: 0
+    count: 50
+    duration: 1.5
+    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+      type: 3}
+    point: {fileID: 0}

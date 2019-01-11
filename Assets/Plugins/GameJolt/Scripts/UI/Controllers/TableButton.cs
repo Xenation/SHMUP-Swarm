@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 namespace GameJolt.UI.Controllers {
 	public class TableButton : MonoBehaviour {
 		public Text Title;
@@ -16,17 +17,15 @@ namespace GameJolt.UI.Controllers {
 
 		public void Awake() {
 			button = GetComponent<Button>();
-		}
+            this.GetComponent<Button>().onClick.AddListener(onClickOpenMenu);
 
-		public void Init(Table table, int index, LeaderboardsWindow controller, bool active = false) {
+        }
+
+        public void Init(Table table, int index, LeaderboardsWindow controller, bool active = false) {
 			Title.text = table.Name;
 			tabIndex = index;
 			windowController = controller;
 			SetActive(active);
-
-
-			button.onClick.RemoveAllListeners();
-			button.onClick.AddListener(Clicked);
 		}
 
 		public void SetActive(bool active) {
@@ -34,11 +33,17 @@ namespace GameJolt.UI.Controllers {
 			BackgroundImage.color = active ? ActiveBackgroundColour : DefaultBackgroundColour;
 		}
 
-		public void Clicked() {
-			if(!active) {
-				SetActive(!active);
-				windowController.ShowTab(tabIndex);
-			}
-		}
-	}
+
+        void onClickOpenMenu()
+        {
+            Debug.Log("test");
+        }
+
+        /*	public void Clicked() {
+                if(!active) {
+                    SetActive(!active);
+                    windowController.ShowTab(tabIndex);
+                }
+            }*/
+    }
 }

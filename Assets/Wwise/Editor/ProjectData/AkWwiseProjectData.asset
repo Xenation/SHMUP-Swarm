@@ -16,13 +16,13 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 898f6f7d8115964aa3970ca86831ae6d
-    m_lastTime: -8586562036386050450
+    m_lastTime: -8586543904274589341
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586544075463061137
+    m_lastTime: -8586543904290406999
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586544075454075186
+    m_lastTime: -8586543904274848650
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586544075463190794
+    m_lastTime: -8586543904290696225
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -324,7 +324,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 12f391762f07df4187e60b4141493a89
-    m_lastTime: -8586544075463190794
+    m_lastTime: -8586543904290666306
     List:
     - name: ElectroFilter
       guid: c744be5295009945a5dcf3817a66795e
@@ -348,7 +348,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 023fa2e858ecc04f9a82163a94473bfd
-    m_lastTime: -8586546526054654085
+    m_lastTime: -8586543904274738943
     List:
     - name: BossPhase
       guid: d91262db66d97c438ab1c75398ee09bd
@@ -360,11 +360,23 @@ MonoBehaviour:
         ObjectType: 9
       Path: Default Work Unit\BossPhase
       values:
+      - name: Intro
+        guid: de574504fd43434684969beb19b03ef4
+        id: 1125500713
+        PathAndIcons:
+        - ElementName: Intro
+          ObjectType: 8
       - name: None
         guid: e38368a59b4c49409521fafb95248730
         id: 748895195
         PathAndIcons:
         - ElementName: None
+          ObjectType: 8
+      - name: Outro
+        guid: d1602a3fd9f81c4aa2be3ea1ff26e825
+        id: 4184794294
+        PathAndIcons:
+        - ElementName: Outro
           ObjectType: 8
       - name: Phase1
         guid: 11d9145d47fa5e46a0fa4f98edbdd7e7
@@ -388,13 +400,13 @@ MonoBehaviour:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f1e5421d17e46549b6b40ef9a1efd514
-    m_lastTime: -8586546526054873558
+    m_lastTime: -8586543904274659153
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f37b394e8c50524690e7a0ed2fa41fea
-    m_lastTime: -8586562036386060432
+    m_lastTime: -8586543904274639201
     List: []
   ExpandedItems:
   - /SHMUP

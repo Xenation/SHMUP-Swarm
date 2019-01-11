@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: Escalier2
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible: []
+  autoPlaced: 0
+  count: 8
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1.0128378, y: -1.6808478}
+    rotation: 0
+  - position: {x: 1.7212849, y: 0.9508938}
+    rotation: 90
+  - position: {x: -0.5776969, y: 0.9999998}
+    rotation: 90
+  - position: {x: -0.98953646, y: 1.4897914}
+    rotation: 180
+  - position: {x: -1.0641885, y: -0.55172884}
+    rotation: 180
+  - position: {x: -1.7597982, y: -1.0278795}
+    rotation: 270
+  - position: {x: 0.59053403, y: -0.96150744}
+    rotation: 270
+  - position: {x: 1.0023738, y: 0.57598335}
+    rotation: 0
+  sequence:
+  - type: 0
+    count: 9
+    duration: 1
+    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+      type: 3}
+    point: {fileID: 0}

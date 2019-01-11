@@ -22,12 +22,15 @@ namespace Swarm
         private Material mat;
         public Animator explosion_fx;
 
+       
+
         // Start is called before the first frame update
         void Start()
         {
             pv = basepv;
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
+            
         }
 
         // Update is called once per frame
@@ -88,6 +91,13 @@ namespace Swarm
                 inHitStun = false;
                 mat.SetFloat("_ReplaceAmount", 0.0f);
             }
+            else
+            {
+                //ScreenShake
+                cam.transform.position += new Vector3(Random.Range(-0.02f, 0.02f), Random.Range(-0.02f, 0.02f));
+
+
+            }
         }
 
         private void destroyShake()
@@ -95,14 +105,18 @@ namespace Swarm
             if (!inDestroyShake)
             {
                 inDestroyShake = true;
-                hitStunFirstFrame = Time.time;
+                destroyFirstFrame = Time.time;
+                inHitStun = false;
             }
             else if (Time.time > (destroyFirstFrame + destroyDuration))
             {
                 inDestroyShake = false;
             }
             else
-                cam.transform.position += new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, 0.2f));
+            {
+                cam.transform.position += new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+            }
+                
         }
 
         public void resetPart()

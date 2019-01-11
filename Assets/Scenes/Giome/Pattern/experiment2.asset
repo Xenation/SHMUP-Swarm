@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: experiment2
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 0}
+  nextPossible: []
+  autoPlaced: 0
+  count: 30
+  startRotation: 0
+  distanceFromCenter: 2
+  rotationSpeed: 100
+  spawnPoints:
+  - position: {x: 2, y: 0}
+    rotation: 90
+  - position: {x: 1.9562953, y: 0.4158234}
+    rotation: 102
+  - position: {x: 1.8270909, y: 0.8134733}
+    rotation: 114
+  - position: {x: 1.618034, y: 1.1755705}
+    rotation: 126
+  - position: {x: 1.3382611, y: 1.4862897}
+    rotation: 138
+  - position: {x: 0.99999994, y: 1.7320509}
+    rotation: 150
+  - position: {x: 0.61803395, y: 1.9021131}
+    rotation: 162
+  - position: {x: 0.20905684, y: 1.9890438}
+    rotation: 174
+  - position: {x: -0.20905702, y: 1.9890438}
+    rotation: 186
+  - position: {x: -0.61803406, y: 1.902113}
+    rotation: 198
+  - position: {x: -1.0000001, y: 1.7320508}
+    rotation: 210
+  - position: {x: -1.3382614, y: 1.4862896}
+    rotation: 222
+  - position: {x: -1.6180341, y: 1.1755704}
+    rotation: 233.99998
+  - position: {x: -1.827091, y: 0.81347317}
+    rotation: 246
+  - position: {x: -1.9562953, y: 0.41582322}
+    rotation: 258
+  - position: {x: -2, y: -0.00000017484555}
+    rotation: 270
+  - position: {x: -1.9562951, y: -0.41582358}
+    rotation: 282
+  - position: {x: -1.8270909, y: -0.81347346}
+    rotation: 294
+  - position: {x: -1.6180339, y: -1.1755707}
+    rotation: 306
+  - position: {x: -1.338261, y: -1.4862897}
+    rotation: 318
+  - position: {x: -0.9999998, y: -1.7320509}
+    rotation: 330
+  - position: {x: -0.6180342, y: -1.902113}
+    rotation: 342
+  - position: {x: -0.20905668, y: -1.9890438}
+    rotation: 354
+  - position: {x: 0.20905767, y: -1.9890437}
+    rotation: 6
+  - position: {x: 0.61803424, y: -1.902113}
+    rotation: 18.000006
+  - position: {x: 0.9999998, y: -1.7320509}
+    rotation: 30.000002
+  - position: {x: 1.3382615, y: -1.4862895}
+    rotation: 42
+  - position: {x: 1.6180345, y: -1.1755699}
+    rotation: 54.000004
+  - position: {x: 1.8270911, y: -0.813473}
+    rotation: 68
+  - position: {x: 1.9562951, y: -0.41582352}
+    rotation: 80
+  sequence:
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 25
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 5
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}

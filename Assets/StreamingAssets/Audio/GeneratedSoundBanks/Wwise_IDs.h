@@ -45,6 +45,8 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID INTRO = 1125500713U;
+                static const AkUniqueID OUTRO = 4184794294U;
                 static const AkUniqueID PHASE1 = 3630028971U;
                 static const AkUniqueID PHASE2 = 3630028968U;
                 static const AkUniqueID PHASE3 = 3630028969U;
