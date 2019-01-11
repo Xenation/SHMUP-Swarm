@@ -46,7 +46,8 @@ public class bossLife : MonoBehaviour
 		if (!isPart && isAnimationEnd && Time.time - openingTime > openingDuration)
 		{
 			animator.SetBool("isOpen", false);
-			isPart = true;
+            AkSoundEngine.PostEvent("Play_BossClose", gameObject);
+            isPart = true;
             isAnimationEnd = false;
 
             foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
