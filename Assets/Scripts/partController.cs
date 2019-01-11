@@ -18,6 +18,8 @@ public class partController : MonoBehaviour
     public float hitStunDuration = 0.05f;
     public float destroyDuration = 0.2f;
     private Material mat;
+    public Animator explosion_fx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +59,7 @@ public class partController : MonoBehaviour
             mat.SetFloat("_ReplaceAmount", 0.5f);
 			transform.parent.GetComponent<bossLife>().checkParts();
             destroyShake();
+            explosion_fx.SetTrigger("explosion");
 
             //INSERER SON DESTRUCTION D'UNE PARTIE
             AkSoundEngine.PostEvent("Play_HardHit", gameObject);
