@@ -164,16 +164,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
-  unitsToCreate: 60
+  unitsToCreate: 30
   cursorShrinkSpeed: 2.5
   cursorShrinkRadius: 0.5
   unitShrinkSpeed: 8
-  unitShrinkRadius: 0.5
+  unitShrinkRadius: 0.1
   cursorNormalSpeed: 8
   cursorNormalRadius: 1
   unitNormalSpeed: 6
   unitNormalRadius: 0.8
-  suicideSpeed: 10
+  suicideSpeed: 40
+  freezeTime: 0.2
   bossTransform: {fileID: 0}
   debug: 0
   cursorSpeed: 8
