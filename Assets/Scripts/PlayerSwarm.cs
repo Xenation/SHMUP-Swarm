@@ -97,6 +97,7 @@ namespace Swarm {
             {
                 SceneManager.LoadScene("Lose");
             }
+            
         }
 
 		private void FixedUpdate() {

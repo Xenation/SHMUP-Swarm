@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 5590715447422973562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.27, y: 0.27, z: 0}
-  m_LocalScale: {x: 0.08402782, y: 0.08402782, z: 0.08402782}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 1473613707156877505}
   - {fileID: 2762112275091361879}
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b907afaacffc6143bbd258a98c0d53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitsToCreate: 10
+  unitsToCreate: 15
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
   playerSwarm: {fileID: 7103110863744034858, guid: 97b8a4c5d62e13f478de6f90a6946bbd,

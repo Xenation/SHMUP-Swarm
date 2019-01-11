@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: round_breathing1
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: 2a057181b38d0d04194dbb9c5e806ec5, type: 2}
+  nextPossible: []
+  autoPlaced: 1
+  count: 20
+  startRotation: 5
+  distanceFromCenter: 1
+  rotationSpeed: 5
+  spawnPoints:
+  - position: {x: 0.9961947, y: 0.08715574}
+    rotation: 4.999985
+  - position: {x: 0.92050487, y: 0.39073116}
+    rotation: 22.999998
+  - position: {x: 0.7547096, y: 0.656059}
+    rotation: 40.999996
+  - position: {x: 0.5150381, y: 0.8571673}
+    rotation: 59
+  - position: {x: 0.22495104, y: 0.97437006}
+    rotation: 77
+  - position: {x: -0.08715577, y: 0.9961947}
+    rotation: 95
+  - position: {x: -0.39073116, y: 0.92050487}
+    rotation: 113
+  - position: {x: -0.65605915, y: 0.7547095}
+    rotation: 131.00002
+  - position: {x: -0.8571673, y: 0.515038}
+    rotation: 149
+  - position: {x: -0.9743701, y: 0.22495088}
+    rotation: 167.00002
+  - position: {x: -0.9961947, y: -0.08715581}
+    rotation: -175.00002
+  - position: {x: -0.92050475, y: -0.3907313}
+    rotation: -157
+  - position: {x: -0.75470954, y: -0.6560591}
+    rotation: -139
+  - position: {x: -0.5150379, y: -0.8571674}
+    rotation: -120.999985
+  - position: {x: -0.22495072, y: -0.9743701}
+    rotation: -102.999985
+  - position: {x: 0.08715574, y: -0.9961947}
+    rotation: -85.00001
+  - position: {x: 0.39073125, y: -0.9205048}
+    rotation: -66.99999
+  - position: {x: 0.6560592, y: -0.7547094}
+    rotation: -48.999985
+  - position: {x: 0.8571675, y: -0.5150378}
+    rotation: -30.999979
+  - position: {x: 0.97437006, y: -0.22495103}
+    rotation: -13.000001
+  sequence:
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 4,5
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 4,5
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 4,5
+      unityObject: {fileID: 0}

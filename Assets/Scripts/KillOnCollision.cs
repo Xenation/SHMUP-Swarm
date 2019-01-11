@@ -21,11 +21,7 @@ namespace Swarm {
 
             if (pu)
             {
-                AkSoundEngine.PostEvent("Play_Death", gameObject);
-
-                //Debug.Log("Duration : " + vD + "Str = " + vS);
-                VibrationManager.AddVibrateRight(vS, vD);
-                Destroy(collision.gameObject);
+				pu.Die(vD, vS);
             }
         }
        

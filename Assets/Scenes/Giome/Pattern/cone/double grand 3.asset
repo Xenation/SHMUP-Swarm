@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: double grand 3
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: d2e3683d94e6fca44938f28b4de93e4d, type: 2}
+  - {fileID: 11400000, guid: 259bfd2cffe7a45438dce4e17ea4444e, type: 2}
+  nextPossible: []
+  autoPlaced: 0
+  count: 10
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 0, y: 0}
+    rotation: 240
+  - position: {x: 0, y: 0}
+    rotation: 250
+  - position: {x: 0, y: 0}
+    rotation: 260
+  - position: {x: 0, y: 0}
+    rotation: 270
+  - position: {x: 0, y: 0}
+    rotation: 280
+  - position: {x: 0, y: 0}
+    rotation: 290
+  - position: {x: 0, y: 0}
+    rotation: 300
+  sequence:
+  - type: 0
+    count: 3
+    duration: 1
+    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+      type: 3}
+    point: {fileID: 0}

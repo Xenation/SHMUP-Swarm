@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: turn
+  m_EditorClassIdentifier: 
+  finishedDelay: 0
+  simultaneous: []
+  nextPossible: []
+  autoPlaced: 1
+  count: 4
+  startRotation: -20
+  distanceFromCenter: 1
+  rotationSpeed: -50
+  spawnPoints:
+  - position: {x: 0.9396926, y: -0.34202012}
+    rotation: -20.000002
+  - position: {x: 0.34202015, y: 0.9396926}
+    rotation: 70
+  - position: {x: -0.9396927, y: 0.34202}
+    rotation: 160.00002
+  - position: {x: -0.34202006, y: -0.9396927}
+    rotation: -110
+  sequence:
+  - type: 0
+    count: 120
+    duration: 6
+    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+      type: 3}
+    point: {fileID: 0}
