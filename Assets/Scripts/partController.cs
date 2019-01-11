@@ -88,6 +88,13 @@ namespace Swarm
                 inHitStun = false;
                 mat.SetFloat("_ReplaceAmount", 0.0f);
             }
+            else
+            {
+                //ScreenShake
+                cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
+
+
+            }
         }
 
         private void destroyShake()
