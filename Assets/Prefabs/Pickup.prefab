@@ -278,6 +278,8 @@ MonoBehaviour:
     type: 3}
   playerSwarm: {fileID: 7103110863744034858, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
     type: 3}
+  openAnim: {fileID: 1590030085895807542, guid: 3cdc60ce120de394282c5b4df5efe338,
+    type: 3}
 --- !u!95 &6670959170561398652
 Animator:
   serializedVersion: 3

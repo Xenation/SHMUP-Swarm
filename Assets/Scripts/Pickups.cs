@@ -11,6 +11,7 @@ namespace Swarm
         public int unitsToCreate = 10;
         public GameObject unitPrefab;
         public GameObject playerSwarm;
+        public Animator openAnim;
 
         private void Start()
         {
@@ -37,11 +38,18 @@ namespace Swarm
                     player.AddUnit(tmp);
 
                     //INSERER SON DE PICKUP
+                    openAnim.SetTrigger("contact");
                     AkSoundEngine.PostEvent("Play_PickUp", gameObject);
                 }
 
                 Destroy(gameObject);
+                
             }
+        }
+
+        public void stop()
+        {
+            Destroy(gameObject);
         }
 
         public void setPlayer(GameObject player)
