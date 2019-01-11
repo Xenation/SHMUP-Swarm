@@ -8,19 +8,21 @@ namespace Swarm
     public class VibrationManager : MonoBehaviour
     {
 
-        public static PlayerSwarm swarm;
+        public PlayerSwarm swarm;
 
-        public static bool testController;
+        private static VibrationManager vm;
+
+        public bool testController;
 
 
         //Controller
-        public static bool playerIndexSet = false;
-        private static PlayerIndex pIndex;
-        private static GamePadState state;
-        private static GamePadState prevState;
+        public bool playerIndexSet = false;
+        private PlayerIndex pIndex;
+        private GamePadState state;
+        private GamePadState prevState;
 
-        private static float vibStrengthNowRight;
-        private static float vibStrengthNowLeft;
+        private float vibStrengthNowRight;
+        private float vibStrengthNowLeft;
 
         /***************
          * List of all vibrations
@@ -29,8 +31,14 @@ namespace Swarm
          * Z = strength
          * 
         ***************/
-        private static List<Vector3> vibrationListLeft = new List<Vector3>();
-        private static List<Vector3> vibrationListRight = new List<Vector3>();
+        private List<Vector3> vibrationListLeft = new List<Vector3>();
+        private List<Vector3> vibrationListRight = new List<Vector3>();
+
+
+        private void Awake()
+        {
+            vm = this;
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -64,6 +72,7 @@ namespace Swarm
             //Left motor
             if(vibrationListLeft.Count > 0)
             {
+                Debug.Log("JJE");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
@@ -77,6 +86,7 @@ namespace Swarm
                     {
                         if (vib.z > maxStrength)
                             maxStrength = vib.z;
+                        Debug.Log(1323);
                     }
                 }
 
@@ -99,6 +109,7 @@ namespace Swarm
             //Right motor
             if(vibrationListRight.Count > 0)
             {
+                Debug.Log("JJR");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
@@ -114,6 +125,7 @@ namespace Swarm
                     {
                         if (vibrationListRight[i].z > maxStrength)
                             maxStrength = vibrationListRight[i].z;
+                        Debug.Log("lejr");
                     }
                 }
 
@@ -138,22 +150,22 @@ namespace Swarm
 
         public static void AddVibrateRight(float vibStrength, float vibDuration)
         {
-            vibrationListRight.Add(new Vector3(Time.time, vibDuration, vibStrength));
+            vm.vibrationListRight.Add(new Vector3(Time.time, vibDuration, vibStrength));
         }
 
         public static void AddVibrateLeft(float vibStrength, float vibDuration)
         {
-            vibrationListLeft.Add(new Vector3(Time.time, vibDuration, vibStrength));
+            vm.vibrationListLeft.Add(new Vector3(Time.time, vibDuration, vibStrength));
         }
 
         public static void StopVibRight()
         {
-            vibrationListRight.Clear();
+            vm.vibrationListRight.Clear();
         }
 
         public static void StopVibLeft()
         {
-            vibrationListLeft.Clear();
+            vm.vibrationListLeft.Clear();
         }
 
 
@@ -165,7 +177,7 @@ namespace Swarm
 
         private static void controllerTester()
         {
-            GamePad.SetVibration(pIndex, -swarm.cursor.position.x / 10, swarm.cursor.position.x / 10);
+            GamePad.SetVibration(vm.pIndex, -vm.swarm.cursor.position.x / 10, vm.swarm.cursor.position.x / 10);
         }
 
         private void OnDestroy()

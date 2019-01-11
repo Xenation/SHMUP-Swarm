@@ -106,6 +106,7 @@ namespace Swarm
             {
                 inDestroyShake = true;
                 destroyFirstFrame = Time.time;
+                inHitStun = false;
             }
             else if (Time.time > (destroyFirstFrame + destroyDuration))
             {
