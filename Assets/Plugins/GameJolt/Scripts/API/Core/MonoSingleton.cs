@@ -33,9 +33,9 @@ namespace GameJolt.API.Core {
 			}
 
 			// Only set DontDestroyOnLoad to top level objects.
-			if(gameObject.transform.parent == null) {
+			/*if(gameObject.transform.parent == null) {
 				DontDestroyOnLoad(gameObject);
-			}
+			}*/
 
 			return true;
 		}
