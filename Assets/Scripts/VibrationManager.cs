@@ -72,7 +72,6 @@ namespace Swarm
             //Left motor
             if(vm.vibrationListLeft.Count > 0)
             {
-                Debug.Log("JJE");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
@@ -109,7 +108,6 @@ namespace Swarm
             //Right motor
             if(vibrationListRight.Count > 0)
             {
-                Debug.Log("JJR");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
@@ -126,7 +124,6 @@ namespace Swarm
                         if (vm.vibrationListRight[i].z > maxStrength)
                         {
                             maxStrength = vibrationListRight[i].z;
-                            Debug.Log("lejr");
                         }
                     }
                 }
