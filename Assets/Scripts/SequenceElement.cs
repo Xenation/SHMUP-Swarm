@@ -20,7 +20,11 @@ namespace Swarm {
 		/// </summary>
 		Lazer,
 		/// <summary>
-		/// 0/float Telegraph Duration
+		/// 0/float Aim Time
+		/// 1/float Radius
+		/// 2/float Seek Speed
+		/// 3/float Lock Time
+		/// 4/GameObject Prefab
 		/// </summary>
 		Mortar,
 		/// <summary>
@@ -58,7 +62,7 @@ namespace Swarm {
 
 		public static SequenceElementTypeDef bullet = new SequenceElementTypeDef() { fieldNames = new string[] { "Count", "Duration", "Projectile", "Speed Override" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer, SequenceDataType.Floating, SequenceDataType.Projectile, SequenceDataType.Floating } };
 		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Width", "Telegraph Duration", "Duration", "Prefab", "Telegraph Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject, SequenceDataType.GameObject } };
-		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Telegraph Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
+		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Aim Time", "Radius", "Seek Speed", "Lock Time", "Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject } };
 		public static SequenceElementTypeDef delay = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef enablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
 		public static SequenceElementTypeDef disablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
