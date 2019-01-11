@@ -9,10 +9,11 @@ namespace Swarm {
 		private Vector2 velocity;
         private bool inAttack = false;
 
-		public void Init(PlayerSwarm sw) {
+        public void Init(PlayerSwarm sw) {
 			gameObject.layer = LayerMask.NameToLayer("ProjectileUnit");
 			rb = GetComponent<Rigidbody2D>();
 			swarm = sw;
+            this.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
 
             velocity = swarm.bossTransform.position - transform.position;
             velocity.Normalize();
@@ -45,6 +46,9 @@ namespace Swarm {
             inAttack = true;
             //INSERER LE SON D'UN TIR ALLIE
             AkSoundEngine.PostEvent("Play_Shots", gameObject);
+            this.transform.GetChild(0).GetComponent<TrailRenderer>().enabled = true ;
+            this.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+
         }
 
         private void Attack()
