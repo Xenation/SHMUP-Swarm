@@ -59,6 +59,7 @@ namespace Swarm
             if (!isPart && isAnimationEnd && Time.time - openingTime > openingDuration)
             {
                 animator.SetBool("isOpen", false);
+                AkSoundEngine.PostEvent("Play_BossClose", gameObject);
                 isPart = true;
                 isAnimationEnd = false;
 
