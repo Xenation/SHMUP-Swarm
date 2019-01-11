@@ -4,6 +4,8 @@ using System;
 using System.Linq;
 using GameJolt.API;
 using GameJolt.API.Objects;
+using UnityEngine.SceneManagement;
+
 
 namespace GameJolt.UI.Controllers {
 	public class LeaderboardsWindow : BaseWindow {
@@ -69,23 +71,19 @@ namespace GameJolt.UI.Controllers {
 		}
 
 		public override void Dismiss(bool success) {
-			Animator.SetTrigger("Dismiss");
-			if(callback != null) {
-				callback(success);
-				callback = null;
-			}
-		}
+            SceneManager.LoadScene("Menu");
+        }
 
-		public void ShowTab(int index) {
+        public void ShowTab(int index) {
 			// There is no need to set the new tab button active, it has been done internally when the button has been clicked.
-			TabsContainer.GetChild(currentTab).GetComponent<TableButton>().SetActive(false);
+		/*	TabsContainer.GetChild(currentTab).GetComponent<TableButton>().SetActive(false);
 			currentTab = index;
 
 			Animator.SetTrigger("Lock");
 			Animator.SetTrigger("ShowLoadingIndicator");
 
 			// Request new scores.
-			SetScores(tableIDs[currentTab]);
+			SetScores(tableIDs[currentTab]);*/
 		}
 
 		private void SetScores(int tableId) {
@@ -102,7 +100,7 @@ namespace GameJolt.UI.Controllers {
 					}
 
 					Animator.SetTrigger("HideLoadingIndicator");
-					Animator.SetTrigger("Unlock");
+					//Animator.SetTrigger("Unlock");
 				} else {
 					// TODO: Show error notification
 					Animator.SetTrigger("HideLoadingIndicator");

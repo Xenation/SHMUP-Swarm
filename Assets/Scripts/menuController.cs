@@ -18,7 +18,8 @@ public class menuController : MonoBehaviour
 	void Start()
     {
 		GameObject.Find("ButtonPlay").GetComponent<Button>().onClick.AddListener(onClickPlay);
-		GameObject.Find("ButtonTutorial").GetComponent<Button>().onClick.AddListener(onClickTutorial);
+        GameObject.Find("ButtonScore").GetComponent<Button>().onClick.AddListener(onClickScore);
+        GameObject.Find("ButtonTutorial").GetComponent<Button>().onClick.AddListener(onClickTutorial);
 		GameObject.Find("ButtonOption").GetComponent<Button>().onClick.AddListener(openOptions);
 		GameObject.Find("ButtonExit").GetComponent<Button>().onClick.AddListener(onClickExit);
 		GameObject.Find("ButtonCredit").GetComponent<Button>().onClick.AddListener(openCredit);
@@ -54,7 +55,12 @@ public class menuController : MonoBehaviour
 		SceneManager.LoadScene("Tutorial");
 	}
 
-	void openOptions()
+    void onClickScore()
+    {
+        SceneManager.LoadScene("Leaderboard");
+    }
+
+    void openOptions()
 	{
 		menu.SetActive(false);
 		GameObject myEventSystem = GameObject.Find("EventSystem");
