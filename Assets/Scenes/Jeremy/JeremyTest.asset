@@ -52,3 +52,25 @@ MonoBehaviour:
       json: 
       unityObject: {fileID: 8390004620712179679, guid: 04d3795c98831c2409c12d9818b25e97,
         type: 3}
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 5
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}
+    - type: 3
+      json: 
+      unityObject: {fileID: 8390004620712179679, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}

@@ -119,6 +119,7 @@ namespace Swarm {
             if(units.Count == 0)
             {
                 SceneManager.LoadScene("Lose");
+                AkSoundEngine.SetState("BossPhase", "None");
             }
             
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+
 
 public class menuController : MonoBehaviour
 {
@@ -28,9 +30,7 @@ public class menuController : MonoBehaviour
 		option = GameObject.Find("Option");
 		menu = GameObject.Find("Menu");
 		credit = GameObject.Find("Credit");
-
-	
-		option.SetActive(false);
+        option.SetActive(false);
 		credit.SetActive(false);
 	}
 
@@ -39,11 +39,16 @@ public class menuController : MonoBehaviour
     {
         
     }
+    public void OnMove()
+    {
+        AkSoundEngine.PostEvent("Play_UI_Move",gameObject);
+    }
 
-	void onClickPlay()
+    void onClickPlay()
 	{
 		SceneManager.LoadScene("MorganScene");
-	}
+        AkSoundEngine.PostEvent("Play_UI_Start", gameObject);
+    }
 
 	void onClickExit()
 	{
@@ -53,11 +58,13 @@ public class menuController : MonoBehaviour
 	void onClickTutorial()
 	{
 		SceneManager.LoadScene("Tutorial");
-	}
+        AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+    }
 
     void onClickScore()
     {
         SceneManager.LoadScene("Leaderboard");
+        AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
     }
 
     void openOptions()
@@ -66,7 +73,8 @@ public class menuController : MonoBehaviour
 		GameObject myEventSystem = GameObject.Find("EventSystem");
 		option.SetActive(true);
 		myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("MusicSlider"));
-	}
+        AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+    }
 
 	void openCredit()
 	{
@@ -74,7 +82,8 @@ public class menuController : MonoBehaviour
 		GameObject myEventSystem = GameObject.Find("EventSystem");
 		credit.SetActive(true);
 		myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("ButtonRetourCredit"));
-	}
+        AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+    }
 
 	void returnMenuOption()
 	{
@@ -82,7 +91,8 @@ public class menuController : MonoBehaviour
 		GameObject myEventSystem = GameObject.Find("EventSystem");
 		myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("ButtonPlay"));
 		option.SetActive(false);
-	}
+        AkSoundEngine.PostEvent("Play_UI_Back", gameObject);
+    }
 
 	void returnMenuCredit()
 	{
@@ -90,5 +100,6 @@ public class menuController : MonoBehaviour
 		GameObject myEventSystem = GameObject.Find("EventSystem");
 		myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("ButtonPlay"));
 		credit.SetActive(false);
-	}
+        AkSoundEngine.PostEvent("Play_UI_Back", gameObject);
+    }
 }

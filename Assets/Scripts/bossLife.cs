@@ -117,6 +117,7 @@ namespace Swarm
 
 
             SceneManager.LoadScene("Win");
+            AkSoundEngine.SetState("BossPhase", "Outro");
 
         }
 
