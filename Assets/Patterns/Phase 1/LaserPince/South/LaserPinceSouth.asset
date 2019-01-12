@@ -10,51 +10,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: "C\xF4ne1"
+  m_Name: LaserPinceSouth
   m_EditorClassIdentifier: 
   finishedDelay: 1
-  simultaneous: []
+  simultaneous:
+  - {fileID: 11400000, guid: dcfcb186e784afc47888d21d42d3bf6b, type: 2}
+  - {fileID: 11400000, guid: 3de410bfa49df5243a39361504b71de4, type: 2}
   nextPossible:
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: 4ef0c5a4df2d68d4aa9a95909fa56c24, type: 2}
   - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
-  - {fileID: 11400000, guid: 1c13fd356f40af248936511ac0799d59, type: 2}
   autoPlaced: 1
-  count: 2
-  startRotation: 40
+  count: 1
+  startRotation: -70
   distanceFromCenter: 2
   rotationSpeed: 0
   spawnPoints:
-  - position: {x: 1.5320889, y: 1.2855752}
-    rotation: 39.999996
-  - position: {x: -1.5320886, y: -1.2855755}
-    rotation: -139.99998
+  - position: {x: 0.6840403, y: -1.8793852}
+    rotation: -70
   sequence:
-  - type: 8
+  - type: 1
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 90
+      json: 0,5
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 1,5
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 4
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
         type: 3}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 55
+      unityObject: {fileID: 0}
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2,5
+      unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 0}
-  - type: 3
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}
+  - type: 7
     count: 0
     duration: 0
     projectile: {fileID: 0}
@@ -62,35 +79,21 @@ MonoBehaviour:
     - type: 1
       json: 0
       unityObject: {fileID: 0}
-  - type: 6
+  - type: 1
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 90
-      unityObject: {fileID: 0}
-  - type: 8
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 90
+      json: 0,5
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 0
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 4
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
         type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 0}
