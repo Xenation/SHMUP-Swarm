@@ -32,7 +32,8 @@ namespace Swarm {
 		public override void LaunchAttack() {
 			base.LaunchAttack();
 			attack.transform.position = telegraph.transform.position;
-			Collider2D[] touched = Physics2D.OverlapCircleAll(attack.transform.position, radius, LayerMask.GetMask("PlayerUnits"));
+            AkSoundEngine.PostEvent("Stop_Mortier", gameObject);
+            Collider2D[] touched = Physics2D.OverlapCircleAll(attack.transform.position, radius, LayerMask.GetMask("PlayerUnits"));
 			foreach (Collider2D col in touched) {
 				PlayerUnit unit = col.GetComponent<PlayerUnit>();
 				if (unit == null) continue;
@@ -44,9 +45,10 @@ namespace Swarm {
 			if (state == State.Telegraphing && !isLocked) {
 				Vector2 vel = (boss.swarm.cursor.position - telegraph.transform.position).normalized * seekSpeed * Time.deltaTime;
 				telegraph.transform.position += new Vector3(vel.x, vel.y);
-			} else if (state == State.Attacking && attackAnimator.GetCurrentAnimatorStateInfo(0).speed == 0.01f) { // TODO ugly af
+                AkSoundEngine.PostEvent("Play_Mortier", gameObject);
+            } else if (state == State.Attacking && attackAnimator.GetCurrentAnimatorStateInfo(0).speed == 0.01f) { // TODO ugly af
 				Destroy(gameObject);
-			}
+            }
 		}
 		
 	}

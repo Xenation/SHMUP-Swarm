@@ -17,29 +17,46 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac4020f85b9594c4fa792b5663263fe1, type: 2}
   nextPossible:
   - {fileID: 11400000, guid: 6e67ca42a6efa6f4394d31e3013986de, type: 2}
-  autoPlaced: 1
-  count: 3
+  autoPlaced: 0
+  count: 1
   startRotation: 0
   distanceFromCenter: 1
   rotationSpeed: 0
   spawnPoints:
-  - position: {x: 1, y: 0}
+  - position: {x: 2.2321362, y: 0}
     rotation: 0
-  - position: {x: -0.50000006, y: 0.8660254}
-    rotation: 120.00001
-  - position: {x: -0.4999999, y: -0.86602545}
-    rotation: -119.99999
   sequence:
+  - type: 2
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 1131358840666498810, guid: bf85f9ce1977bf14d90b5e05565f5058,
+        type: 3}
   - type: 1
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
+      json: 3
       unityObject: {fileID: 0}
     - type: 1
       json: 5
@@ -47,30 +64,4 @@ MonoBehaviour:
     - type: 3
       json: 
       unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
-        type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 8390004620712179679, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}
-  - type: 1
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 0,5
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 2
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
-    - type: 3
-      json: 
-      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
-        type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 8390004620712179679, guid: 04d3795c98831c2409c12d9818b25e97,
         type: 3}

@@ -139,8 +139,9 @@ namespace Swarm
                 {
                     animator.SetBool("isOpen", true);
                     //part.SetActive(false);
-                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
+                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);               
                 }
+
             }
         }
 
