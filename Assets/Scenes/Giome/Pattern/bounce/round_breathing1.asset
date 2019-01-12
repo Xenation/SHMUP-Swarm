@@ -18,50 +18,50 @@ MonoBehaviour:
   nextPossible: []
   autoPlaced: 1
   count: 20
-  startRotation: 5
+  startRotation: 0
   distanceFromCenter: 1
   rotationSpeed: 5
   spawnPoints:
-  - position: {x: 0.9961947, y: 0.08715574}
-    rotation: 4.999985
-  - position: {x: 0.92050487, y: 0.39073116}
-    rotation: 22.999998
-  - position: {x: 0.7547096, y: 0.656059}
-    rotation: 40.999996
-  - position: {x: 0.5150381, y: 0.8571673}
-    rotation: 59
-  - position: {x: 0.22495104, y: 0.97437006}
-    rotation: 77
-  - position: {x: -0.08715577, y: 0.9961947}
-    rotation: 95
-  - position: {x: -0.39073116, y: 0.92050487}
-    rotation: 113
-  - position: {x: -0.65605915, y: 0.7547095}
-    rotation: 131.00002
-  - position: {x: -0.8571673, y: 0.515038}
-    rotation: 149
-  - position: {x: -0.9743701, y: 0.22495088}
-    rotation: 167.00002
-  - position: {x: -0.9961947, y: -0.08715581}
-    rotation: -175.00002
-  - position: {x: -0.92050475, y: -0.3907313}
-    rotation: -157
-  - position: {x: -0.75470954, y: -0.6560591}
-    rotation: -139
-  - position: {x: -0.5150379, y: -0.8571674}
-    rotation: -120.999985
-  - position: {x: -0.22495072, y: -0.9743701}
-    rotation: -102.999985
-  - position: {x: 0.08715574, y: -0.9961947}
-    rotation: -85.00001
-  - position: {x: 0.39073125, y: -0.9205048}
-    rotation: -66.99999
-  - position: {x: 0.6560592, y: -0.7547094}
-    rotation: -48.999985
-  - position: {x: 0.8571675, y: -0.5150378}
-    rotation: -30.999979
-  - position: {x: 0.97437006, y: -0.22495103}
-    rotation: -13.000001
+  - position: {x: 1, y: 0}
+    rotation: 0
+  - position: {x: 0.95105654, y: 0.309017}
+    rotation: 17.999996
+  - position: {x: 0.809017, y: 0.58778524}
+    rotation: 35.999996
+  - position: {x: 0.58778524, y: 0.809017}
+    rotation: 54.000004
+  - position: {x: 0.30901697, y: 0.95105654}
+    rotation: 72
+  - position: {x: -0.00000004371139, y: 1}
+    rotation: 90
+  - position: {x: -0.30901703, y: 0.9510565}
+    rotation: 108.00001
+  - position: {x: -0.5877852, y: 0.809017}
+    rotation: 126
+  - position: {x: -0.80901706, y: 0.5877852}
+    rotation: 144
+  - position: {x: -0.9510566, y: 0.3090168}
+    rotation: 162.00002
+  - position: {x: -1, y: -0.00000008742278}
+    rotation: -180
+  - position: {x: -0.95105654, y: -0.30901697}
+    rotation: -162
+  - position: {x: -0.80901694, y: -0.58778536}
+    rotation: -143.99998
+  - position: {x: -0.58778507, y: -0.8090171}
+    rotation: -125.999985
+  - position: {x: -0.3090171, y: -0.9510565}
+    rotation: -108.00001
+  - position: {x: 0.000000011924881, y: -1}
+    rotation: -90
+  - position: {x: 0.30901712, y: -0.9510565}
+    rotation: -71.99999
+  - position: {x: 0.5877855, y: -0.8090168}
+    rotation: -53.999985
+  - position: {x: 0.80901724, y: -0.58778495}
+    rotation: -35.999977
+  - position: {x: 0.95105654, y: -0.30901694}
+    rotation: -17.999996
   sequence:
   - type: 0
     count: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 4,5
+      json: 5
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 4,5
+      json: 5
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -139,5 +139,5 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 4,5
+      json: 5
       unityObject: {fileID: 0}

@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: laser_door_easy 2
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible: []
+  autoPlaced: 0
+  count: 80
+  startRotation: 45
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 0.70710677, y: 0.70710677}
+    rotation: 45.000004
+  - position: {x: 0.64944804, y: 0.76040596}
+    rotation: 49.5
+  - position: {x: 0.58778524, y: 0.809017}
+    rotation: 54.000004
+  - position: {x: 0.5224985, y: 0.8526402}
+    rotation: 58.500004
+  - position: {x: 0.45399052, y: 0.8910065}
+    rotation: 63
+  - position: {x: 0.38268343, y: 0.9238795}
+    rotation: 67.5
+  - position: {x: 0.30901697, y: 0.95105654}
+    rotation: 71.99999
+  - position: {x: 0.2334453, y: 0.9723699}
+    rotation: 76.50001
+  - position: {x: 0.15643449, y: 0.98768836}
+    rotation: 81
+  - position: {x: 0.078459084, y: 0.9969173}
+    rotation: 85.5
+  - position: {x: -1, y: -0.00000008742278}
+    rotation: 180
+  - position: {x: -0.9969173, y: -0.07845922}
+    rotation: 184.49997
+  - position: {x: -0.9876883, y: -0.15643461}
+    rotation: 189.00002
+  - position: {x: -0.97236985, y: -0.23344554}
+    rotation: 193.5
+  - position: {x: -0.95105654, y: -0.30901697}
+    rotation: 198
+  - position: {x: -0.9238795, y: -0.38268343}
+    rotation: 202.49998
+  - position: {x: -0.8910065, y: -0.45399055}
+    rotation: 207
+  - position: {x: -0.85264015, y: -0.5224986}
+    rotation: 211.5
+  - position: {x: -0.80901694, y: -0.58778536}
+    rotation: 216.00002
+  - position: {x: -0.7604059, y: -0.64944816}
+    rotation: 220.50002
+  - position: {x: -0.70710665, y: -0.7071069}
+    rotation: 224.99998
+  - position: {x: -0.6494479, y: -0.7604061}
+    rotation: 229.50002
+  - position: {x: -0.58778507, y: -0.8090171}
+    rotation: 234.00002
+  - position: {x: -0.5224983, y: -0.85264033}
+    rotation: 238.50002
+  - position: {x: -0.45399022, y: -0.89100665}
+    rotation: 243.00003
+  - position: {x: -0.38268313, y: -0.9238797}
+    rotation: 247.50002
+  - position: {x: -0.3090171, y: -0.9510565}
+    rotation: 252
+  - position: {x: -0.23344545, y: -0.9723699}
+    rotation: 256.5
+  - position: {x: -0.15643452, y: -0.9876883}
+    rotation: 261
+  - position: {x: -0.078459114, y: -0.9969173}
+    rotation: 265.5
+  - position: {x: 0.000000011924881, y: -1}
+    rotation: 270
+  - position: {x: 1, y: 0.00000017484555}
+    rotation: 0
+  - position: {x: 0.9969173, y: 0.0784593}
+    rotation: 4.5000525
+  - position: {x: 0.9876883, y: 0.1564347}
+    rotation: 9.000015
+  - position: {x: 0.97236985, y: 0.23344563}
+    rotation: 13.500029
+  - position: {x: 0.9510564, y: 0.30901727}
+    rotation: 18.00002
+  - position: {x: 0.9238794, y: 0.38268375}
+    rotation: 22.500023
+  - position: {x: 0.89100635, y: 0.45399082}
+    rotation: 27.000023
+  - position: {x: 0.85264, y: 0.5224989}
+    rotation: 31.500021
+  - position: {x: 0.809017, y: 0.58778524}
+    rotation: 35.999996
+  - position: {x: 0.76040596, y: 0.64944804}
+    rotation: 40.499996
+  sequence:
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: lasers_pute
+  m_EditorClassIdentifier: 
+  finishedDelay: 2
+  simultaneous:
+  - {fileID: 11400000, guid: dd7665c47111dbc41b61cd0953de5f9d, type: 2}
+  nextPossible:
+  - {fileID: 11400000, guid: ac15bd0471bd11f4ab5383629f460217, type: 2}
+  - {fileID: 11400000, guid: b5968a9c01f10554d989f9ee130eabce, type: 2}
+  - {fileID: 11400000, guid: 1422f7d9c3024f54a96bcfcbf2a5bf37, type: 2}
+  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
+  - {fileID: 11400000, guid: b05146d6bb9f1084cba4b3615f79e563, type: 2}
+  - {fileID: 11400000, guid: a5f8be6da4101104cb0a84854f730e52, type: 2}
+  - {fileID: 11400000, guid: a9fa4f751d01cdc48b6dfdc871424054, type: 2}
+  autoPlaced: 1
+  count: 7
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1, y: 0}
+    rotation: 0
+  - position: {x: 0.6234898, y: 0.7818315}
+    rotation: 51.428574
+  - position: {x: -0.22252095, y: 0.9749279}
+    rotation: 102.85715
+  - position: {x: -0.9009689, y: 0.4338836}
+    rotation: 154.28572
+  - position: {x: -0.90096885, y: -0.43388376}
+    rotation: -154.2857
+  - position: {x: -0.222521, y: -0.9749279}
+    rotation: -102.85715
+  - position: {x: 0.62349004, y: -0.7818313}
+    rotation: -51.428555
+  sequence:
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}
