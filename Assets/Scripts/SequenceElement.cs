@@ -61,7 +61,7 @@ namespace Swarm {
 	public struct SequenceElementTypeDef {
 
 		public static SequenceElementTypeDef bullet = new SequenceElementTypeDef() { fieldNames = new string[] { "Count", "Duration", "Projectile", "Speed Override" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer, SequenceDataType.Floating, SequenceDataType.Projectile, SequenceDataType.Floating } };
-		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Width", "Telegraph Duration", "Duration", "Prefab", "Telegraph Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject, SequenceDataType.GameObject } };
+		public static SequenceElementTypeDef lazer = new SequenceElementTypeDef() { fieldNames = new string[] { "Width", "Telegraph Duration", "Duration", "Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject } };
 		public static SequenceElementTypeDef mortar = new SequenceElementTypeDef() { fieldNames = new string[] { "Aim Time", "Radius", "Seek Speed", "Lock Time", "Prefab" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.Floating, SequenceDataType.GameObject } };
 		public static SequenceElementTypeDef delay = new SequenceElementTypeDef() { fieldNames = new string[] { "Duration" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Floating } };
 		public static SequenceElementTypeDef enablePoint = new SequenceElementTypeDef() { fieldNames = new string[] { "Point index" }, fieldTypes = new SequenceDataType[] { SequenceDataType.Integer } };
@@ -184,6 +184,18 @@ namespace Swarm {
 
 		public ref SequenceElementField GetField(string name) {
 			return ref fields[type.FieldNameToIndex(name)];
+		}
+
+		public int GetInt(string name) {
+			return GetField(name).intValue;
+		}
+
+		public float GetFloat(string name) {
+			return GetField(name).floatValue;
+		}
+
+		public GameObject GetGameObject(string name) {
+			return GetField(name).gameObjectValue;
 		}
 
 		public string GetFieldName(int index) {

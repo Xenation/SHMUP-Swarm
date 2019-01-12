@@ -10,7 +10,15 @@ namespace Swarm
 
         public PlayerSwarm swarm;
 
-        private static VibrationManager vm;
+		private static VibrationManager vm {
+			get {
+				if (_vm == null) {
+					_vm = FindObjectOfType<VibrationManager>();
+				}
+				return _vm;
+			}
+		}
+        private static VibrationManager _vm;
 
         public bool testController;
 
@@ -37,7 +45,7 @@ namespace Swarm
 
         private void Awake()
         {
-            vm = this;
+            _vm = this;
         }
 
         // Start is called before the first frame update
@@ -72,7 +80,6 @@ namespace Swarm
             //Left motor
             if(vm.vibrationListLeft.Count > 0)
             {
-                Debug.Log("JJE");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
@@ -109,7 +116,6 @@ namespace Swarm
             //Right motor
             if(vibrationListRight.Count > 0)
             {
-                Debug.Log("JJR");
                 float maxStrength = 0.0f;
                 List<Vector3> deleteIndex = new List<Vector3>();
 
@@ -126,7 +132,6 @@ namespace Swarm
                         if (vm.vibrationListRight[i].z > maxStrength)
                         {
                             maxStrength = vibrationListRight[i].z;
-                            Debug.Log("lejr");
                         }
                     }
                 }

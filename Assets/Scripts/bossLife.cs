@@ -43,6 +43,7 @@ namespace Swarm
             animator = gameObject.GetComponent<Animator>();
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
+            AkSoundEngine.SetState("BossPhase", "Phase1");
         }
 
         // Update is called once per frame
@@ -60,9 +61,21 @@ namespace Swarm
                     part.GetComponent<partController>().resetPart();
                 }
 
-                CheckPhase();
+                CheckPhase();              
             }
-            
+
+            if (currentPhase == 1)
+            {
+                AkSoundEngine.SetState("BossPhase", "Phase1");
+            }
+            else if (currentPhase == 2)
+            {
+                AkSoundEngine.SetState("BossPhase", "Phase2");
+            }
+            else if (currentPhase == 3)
+            {
+                AkSoundEngine.SetState("BossPhase", "Phase3");
+            }
 
 
             if (inHitStun == true)
@@ -104,6 +117,7 @@ namespace Swarm
 
 
             SceneManager.LoadScene("Win");
+            AkSoundEngine.SetState("BossPhase", "Outro");
 
         }
 
@@ -159,12 +173,12 @@ namespace Swarm
             if (pv < phase3Threshhold)
             {
                 //Change sprite and patterns to second phase
-                currentPhase = 2;
+                currentPhase = 3;
             }
             else if (pv < phase2Threshhold)
             {
                 //Change sprite and patterns to third phase
-                currentPhase = 3;
+                currentPhase = 2;
             }
         }
 

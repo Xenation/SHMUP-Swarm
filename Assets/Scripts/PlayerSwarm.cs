@@ -40,6 +40,9 @@ namespace Swarm {
         private float rtpcValue = 5.0f;
         private float distanceToBoss;
 
+        private bool inPause = false;
+        private float defaultTimeScale;
+        
 		private void Awake() {
 			cursor = transform.Find("Cursor");
 			cursorRB = cursor.GetComponent<Rigidbody2D>();
@@ -48,6 +51,7 @@ namespace Swarm {
 				float perim = Random.Range(0f, Mathf.PI);
 				float dist = Random.Range(0f, cursorRadius);
 				Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
+                defaultTimeScale = Time.fixedDeltaTime;
 			}
 
 			GetComponentsInChildren(units);
@@ -76,6 +80,9 @@ namespace Swarm {
                 cursorRadius = cursorShrinkRadius;
                 unitSpeed = unitShrinkSpeed;
                 unitRadius = unitShrinkRadius;
+                nbOfUnits = units.Count;
+
+                //Kill all pyus and change cursor to a bigger pyu.
             }
 
             if (Input.GetButtonUp("Fire2"))
@@ -84,6 +91,22 @@ namespace Swarm {
                 cursorRadius = cursorNormalRadius;
                 unitSpeed = unitNormalSpeed;
                 unitRadius = unitNormalRadius;
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                if (inPause)
+                {
+                    Time.timeScale = 1;
+                    Time.fixedDeltaTime = defaultTimeScale;
+                    inPause = !inPause;
+                }
+                else
+                {
+                    Time.timeScale = 0.01f;
+                    Time.fixedDeltaTime = defaultTimeScale * 0.01f;
+                    inPause = !inPause;
+                }
             }
 
             velocity *= cursorSpeed;
@@ -96,6 +119,7 @@ namespace Swarm {
             if(units.Count == 0)
             {
                 SceneManager.LoadScene("Lose");
+                AkSoundEngine.SetState("BossPhase", "None");
             }
             
         }

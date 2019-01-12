@@ -43,7 +43,13 @@ namespace Swarm
                 }
 
                 Destroy(gameObject);
+                
             }
+        }
+
+        public void stop()
+        {
+            Destroy(gameObject);
         }
 
         public void setPlayer(GameObject player)
