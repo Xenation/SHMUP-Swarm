@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2397939728925872525}
   - component: {fileID: 5936512082597559602}
   - component: {fileID: 6367694771499784727}
-  - component: {fileID: 8803445490551803485}
   - component: {fileID: 4858698822404137294}
+  - component: {fileID: 1738535051842046437}
   m_Layer: 10
   m_Name: PlayerUnitShrink
   m_TagString: Untagged
@@ -72,18 +72,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8803445490551803485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3035400351961606096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79e6f2d0e6b77741ba21eed5784694b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!122 &4858698822404137294
 Halo:
   m_ObjectHideFlags: 0
@@ -96,6 +84,18 @@ Halo:
     serializedVersion: 2
     rgba: 4294967295
   m_Size: 0
+--- !u!114 &1738535051842046437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3035400351961606096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c414beec9741e14eb985df4d37f645f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4489832567249211228
 GameObject:
   m_ObjectHideFlags: 0

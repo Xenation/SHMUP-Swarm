@@ -26,7 +26,7 @@ namespace Swarm {
   
 		public bool debug = false;
         private bool inShrink = false;
-        private int ShrinkUnits;
+        [HideInInspector]public int ShrinkUnits;
 
         [HideInInspector]
         public float cursorSpeed = 5f;

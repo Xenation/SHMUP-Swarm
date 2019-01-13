@@ -23,6 +23,13 @@ namespace Swarm {
             {
 				pu.Die(vD, vS);
             }
+
+            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+            if (ps)
+            {
+                ps.Die(vD, vS);
+            }
         }
        
     }
