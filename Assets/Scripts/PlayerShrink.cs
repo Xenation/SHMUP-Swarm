@@ -58,15 +58,11 @@ namespace Swarm
                 {
                     swarm.ShrinkUnits--;
                 }
-
-                
             }
             else
             {
                 Destroy(gameObject);
             }
-            
         }
-
     }
 }
