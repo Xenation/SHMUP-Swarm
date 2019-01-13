@@ -184,6 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
+  shrinkPrefab: {fileID: 3035400351961606096, guid: fd85b54ad414f0846b8bdf9dff33c170,
+    type: 3}
   unitsToCreate: 30
   cursorShrinkSpeed: 2.5
   cursorShrinkRadius: 0.5
@@ -197,7 +199,9 @@ MonoBehaviour:
   freezeTime: 0.2
   bossTransform: {fileID: 0}
   debug: 0
+  ShrinkUnits: 0
   cursorSpeed: 8
   cursorRadius: 1
   unitSpeed: 6
   unitRadius: 0.8
+  Pause: {fileID: 0}

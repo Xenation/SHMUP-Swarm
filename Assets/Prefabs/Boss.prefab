@@ -884,6 +884,8 @@ MonoBehaviour:
   player: {fileID: 0}
   openingDuration: 5
   hitStunDuration: 0.05
+  endCristalPrefab: {fileID: 5663627458493970703, guid: a322f957b09f1fb45ba743754c59d5a7,
+    type: 3}
 --- !u!95 &3057257070053065724
 Animator:
   serializedVersion: 3
