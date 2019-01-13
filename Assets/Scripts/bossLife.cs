@@ -71,7 +71,7 @@ namespace Swarm
                     part.GetComponent<partController>().resetPart();
                 }
 
-                CheckPhase();              
+                CheckPhase();
             }
 
             if (currentPhase == 1)
@@ -183,15 +183,17 @@ namespace Swarm
 
         private void CheckPhase()
         {
-            if (pv < phase3Threshhold)
+            if (pv <= phase3Threshhold)
             {
                 //Change sprite and patterns to second phase
+                Debug.Log("changed phase to 3");
                 currentPhase = 3;
                 ScoreManager.bossPhase = 3;
             }
-            else if (pv < phase2Threshhold)
+            else if (pv <= phase2Threshhold)
             {
                 //Change sprite and patterns to third phase
+                Debug.Log("phase 2");
                 currentPhase = 2;
                 ScoreManager.bossPhase = 2;
             }
