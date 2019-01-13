@@ -6,6 +6,7 @@ namespace Swarm {
 	public class PlayerSwarm : MonoBehaviour {
 
         public GameObject unitPrefab;
+        public GameObject shrinkPrefab;
 		public int unitsToCreate = 50;
 
         public float cursorShrinkSpeed = 2.5f;
@@ -47,7 +48,7 @@ namespace Swarm {
 
         private SpriteRenderer cursorSprite;
 
-        private PlayerUnit shrinkUnit;
+        private GameObject shrinkUnit;
         
 		private void Awake() {
 			cursor = transform.Find("Cursor");
@@ -68,11 +69,8 @@ namespace Swarm {
             unitSpeed = unitNormalSpeed;
             unitRadius = unitNormalRadius;
 
-            shrinkUnit = new PlayerUnit();
-
-            //Instantiate(unitPrefab, cursor.position, Quaternion.identity, transform);
+            //
             //shrinkUnit.gameObject.transform.localScale = new Vector3(2.0f, 2.0f, 1.0f);
-            //shrinkUnit.gameObject.SetActive(false);
         }
 
 		private void Update() {
@@ -98,7 +96,7 @@ namespace Swarm {
                 inShrink = true;
                 //units.Clear();
                 cursorSprite.color = Color.blue;
-
+                shrinkUnit = Instantiate(shrinkPrefab, cursor.position, Quaternion.identity, transform);
             }
 
             if (inShrink)
@@ -129,9 +127,10 @@ namespace Swarm {
                 cursorRadius = cursorNormalRadius;
                 unitSpeed = unitNormalSpeed;
                 unitRadius = unitNormalRadius;
+                shrinkUnit.SetActive(false);
 
                 //Respawn pyus and change sprite back to cursor
-                for(int i = 0; i < ShrinkUnits; i++)
+                for (int i = 0; i < ShrinkUnits; i++)
                 {
                     float perim = Random.Range(0f, Mathf.PI);
                     float dist = Random.Range(0f, cursorRadius);
@@ -141,6 +140,7 @@ namespace Swarm {
                 inShrink = false;
                 ShrinkUnits = 0;
                 cursorSprite.color = Color.gray;
+
             }
 
             if (Input.GetKeyDown(KeyCode.P))

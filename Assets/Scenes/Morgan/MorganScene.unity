@@ -510,6 +510,12 @@ PrefabInstance:
       propertyPath: testController
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: shrinkPrefab
+      value: 
+      objectReference: {fileID: 3035400351961606096, guid: fd85b54ad414f0846b8bdf9dff33c170,
+        type: 3}
     - target: {fileID: 3150457463489301675, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_ConnectedRigidBody
