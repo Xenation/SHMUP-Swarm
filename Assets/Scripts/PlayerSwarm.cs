@@ -155,7 +155,12 @@ namespace Swarm {
 
             }
 
-            if (Input.GetKeyDown(KeyCode.P))
+
+            /***********
+             * Pause
+             ***********/
+
+            if (Input.GetButtonDown("Pause"))
             {
                 if (inPause)
                 {
