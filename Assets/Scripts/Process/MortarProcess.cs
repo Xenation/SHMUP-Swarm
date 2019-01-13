@@ -54,7 +54,7 @@ namespace Swarm {
 
 		private void LockAll() {
 			foreach (Mortar mortar in mortars) {
-				mortar.Lock();
+				mortar.Lock(lockTime);
 			}
 		}
 

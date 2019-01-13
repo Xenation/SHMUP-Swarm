@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: laser_door_easy
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: 207c34c6bb777ce46a1999a80ca275a4, type: 2}
+  - {fileID: 11400000, guid: 4f6d4d787b2852642b0ef2a9e1733fd5, type: 2}
+  nextPossible:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
+  - {fileID: 11400000, guid: 0d433802f45cc9e498ef5de0c8524b94, type: 2}
+  - {fileID: 11400000, guid: 11f1ea812ca861445bf4309041a2d965, type: 2}
+  autoPlaced: 1
+  count: 4
+  startRotation: 45
+  distanceFromCenter: 2
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1.4142135, y: 1.4142135}
+    rotation: 45
+  - position: {x: -1.4142135, y: 1.4142135}
+    rotation: 135
+  - position: {x: -1.4142133, y: -1.4142138}
+    rotation: -135
+  - position: {x: 1.414214, y: -1.4142131}
+    rotation: -44.999977
+  sequence:
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}

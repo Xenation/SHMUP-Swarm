@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: triskel
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: 55acb6f82d57af64ab44b04feff81252, type: 2}
+  - {fileID: 11400000, guid: b4be5271dd27cf5478f1afa84568ed76, type: 2}
+  nextPossible:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
+  - {fileID: 11400000, guid: 0d433802f45cc9e498ef5de0c8524b94, type: 2}
+  - {fileID: 11400000, guid: 8235a43bd73f0e04faaefa7b9446494a, type: 2}
+  - {fileID: 11400000, guid: 1097c2384d5ad9346bc2f6a9611a06db, type: 2}
+  - {fileID: 11400000, guid: 4ef0c5a4df2d68d4aa9a95909fa56c24, type: 2}
+  autoPlaced: 1
+  count: 3
+  startRotation: 30
+  distanceFromCenter: 2
+  rotationSpeed: 8
+  spawnPoints:
+  - position: {x: 1.7320508, y: 1}
+    rotation: 30.000002
+  - position: {x: -1.7320508, y: 1.0000001}
+    rotation: 150
+  - position: {x: 0.000000023849761, y: -2}
+    rotation: -90
+  sequence:
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: -8
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 3
+      unityObject: {fileID: 0}

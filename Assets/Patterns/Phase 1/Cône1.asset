@@ -16,6 +16,11 @@ MonoBehaviour:
   simultaneous: []
   nextPossible:
   - {fileID: 11400000}
+  - {fileID: 11400000, guid: 4ef0c5a4df2d68d4aa9a95909fa56c24, type: 2}
+  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
+  - {fileID: 11400000, guid: 1c13fd356f40af248936511ac0799d59, type: 2}
+  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
+  - {fileID: 11400000, guid: 1097c2384d5ad9346bc2f6a9611a06db, type: 2}
   autoPlaced: 1
   count: 2
   startRotation: 40
@@ -25,7 +30,7 @@ MonoBehaviour:
   - position: {x: 1.5320889, y: 1.2855752}
     rotation: 39.999996
   - position: {x: -1.5320886, y: -1.2855755}
-    rotation: 220.00002
+    rotation: -139.99998
   sequence:
   - type: 8
     count: 0
@@ -42,7 +47,7 @@ MonoBehaviour:
       json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 7
+      json: 4
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -82,7 +87,7 @@ MonoBehaviour:
       json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 7
+      json: 4
       unityObject: {fileID: 0}
     - type: 3
       json: 
