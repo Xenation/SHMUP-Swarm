@@ -49,6 +49,7 @@ namespace Swarm {
         private SpriteRenderer cursorSprite;
 
         private GameObject shrinkUnit;
+        private float sizeRatio;
         
 		private void Awake() {
 			cursor = transform.Find("Cursor");
@@ -68,8 +69,6 @@ namespace Swarm {
             cursorRadius = cursorNormalRadius;
             unitSpeed = unitNormalSpeed;
             unitRadius = unitNormalRadius;
-
-            //shrinkUnit.gameObject.transform.localScale = new Vector3(2.0f, 2.0f, 1.0f);
         }
 
 		private void Update() {
@@ -96,6 +95,10 @@ namespace Swarm {
                 //units.Clear();
                 //cursorSprite.color = Color.blue;
                 shrinkUnit = Instantiate(shrinkPrefab, cursor.position, Quaternion.identity, transform);
+                shrinkUnit.transform.localScale = new Vector3( shrinkUnit.transform.localScale.x /2, shrinkUnit.transform.localScale.y /2, shrinkUnit.transform.localScale.z);
+                
+                sizeRatio = shrinkUnit.transform.localScale.x;
+
             }
 
             if (inShrink)
@@ -104,20 +107,24 @@ namespace Swarm {
                 Vector3 minDist = new Vector3(cursor.transform.position.x - cursorShrinkRadius, cursor.transform.position.y - cursorShrinkRadius, 0);
                 Vector3 maxDist = new Vector3(cursor.transform.position.x + cursorShrinkRadius, cursor.transform.position.y + cursorShrinkRadius, 0);
 
-                
-
                 foreach (PlayerUnit unit in units)
                 {
+                    float sizeNowt = ShrinkUnits / (ShrinkUnits + units.Count);
+                    shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNowt), sizeRatio + (sizeRatio * sizeNowt), shrinkUnit.transform.localScale.z);
+
                     if (unit.transform.position.x <= maxDist.x &&
                         unit.transform.position.x >= minDist.x &&
                         unit.transform.position.y <= maxDist.y &&
                         unit.transform.position.y >= minDist.y)
                     {
+                        ShrinkUnits = ShrinkUnits + 1;
+                        
                         Destroy(unit.gameObject);
-                        ShrinkUnits++;
                     }
                     //Change size consequently to number of pyus in it
                 }
+                float sizeNow = ShrinkUnits / (ShrinkUnits + units.Count);
+                shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNow), sizeRatio + (sizeRatio * sizeNow), shrinkUnit.transform.localScale.z);
             }
 
             if (Input.GetButtonUp("Fire2"))

@@ -31,6 +31,16 @@ namespace Swarm {
                 ps.Die(vD, vS);
             }
         }
-       
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+            if (ps)
+            {
+                ps.Die(vD, vS);
+            }
+        }
+
     }
 }
