@@ -10,45 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: MS6
+  m_Name: MS5
   m_EditorClassIdentifier: 
   finishedDelay: 1
   simultaneous: []
   nextPossible: []
-  autoPlaced: 1
-  count: 3
+  autoPlaced: 0
+  count: 1
   startRotation: 0
-  distanceFromCenter: 1
+  distanceFromCenter: 2
   rotationSpeed: 0
   spawnPoints:
-  - position: {x: 1, y: 0}
+  - position: {x: 2, y: 0}
     rotation: 0
-  - position: {x: -0.50000006, y: 0.8660254}
-    rotation: 120.00001
-  - position: {x: -0.4999999, y: -0.86602545}
-    rotation: -119.99999
   sequence:
-  - type: 8
+  - type: 2
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 70
+      json: 4,5
       unityObject: {fileID: 0}
     - type: 1
-      json: 11
+      json: 1,2
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
+      json: 9
       unityObject: {fileID: 0}
     - type: 1
-      json: 5
+      json: 0,5
       unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+      unityObject: {fileID: 1131358840666498810, guid: bf85f9ce1977bf14d90b5e05565f5058,
         type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 0}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: Ch_Magn
+  m_Name: Ch_Magn 1
   m_EditorClassIdentifier: 
   finishedDelay: 3
   simultaneous: []
@@ -59,14 +59,6 @@ MonoBehaviour:
     rotation: 144
   - position: {x: 0.00069093704, y: 0.60162205}
     rotation: 154.2857
-  - position: {x: 0.006802261, y: 0.5028438}
-    rotation: 164.57143
-  - position: {x: 0.004407227, y: 0.40927398}
-    rotation: 174.85715
-  - position: {x: 0.0011166334, y: 0.29846105}
-    rotation: 185.14285
-  - position: {x: 0.0035113692, y: 0.20428808}
-    rotation: 195.42856
   - position: {x: 0.0006907582, y: 0.11208776}
     rotation: 205.7143
   - position: {x: 0.00050216913, y: 0.0009433031}
@@ -104,7 +96,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 30
+      json: 20
       unityObject: {fileID: 0}
     - type: 1
       json: 5
@@ -130,7 +122,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 30
+      json: 20
       unityObject: {fileID: 0}
     - type: 1
       json: 5
