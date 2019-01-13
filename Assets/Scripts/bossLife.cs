@@ -30,6 +30,8 @@ namespace Swarm
 
         private float ScoreTimer = 0;
 
+        public GameObject endCristalPrefab;
+
         //Ajouter une référence vers chaque part du boss
 
 
@@ -127,8 +129,12 @@ namespace Swarm
             ScoreManager.bossDead = true;
             //Envoyez le score dans la prochaine scene + leaderboard
 
+            //Spawn a item that when hit, brings you to win screen
+            Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
-            SceneManager.LoadScene("Win");
+            Destroy(this.gameObject);
+
+            //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");
 
         }
