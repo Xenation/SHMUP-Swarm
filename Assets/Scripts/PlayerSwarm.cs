@@ -69,7 +69,6 @@ namespace Swarm {
             unitSpeed = unitNormalSpeed;
             unitRadius = unitNormalRadius;
 
-            //
             //shrinkUnit.gameObject.transform.localScale = new Vector3(2.0f, 2.0f, 1.0f);
         }
 
@@ -95,7 +94,7 @@ namespace Swarm {
                 //Second version of shrink
                 inShrink = true;
                 //units.Clear();
-                cursorSprite.color = Color.blue;
+                //cursorSprite.color = Color.blue;
                 shrinkUnit = Instantiate(shrinkPrefab, cursor.position, Quaternion.identity, transform);
             }
 
@@ -139,7 +138,7 @@ namespace Swarm {
                 GetComponentsInChildren(units);
                 inShrink = false;
                 ShrinkUnits = 0;
-                cursorSprite.color = Color.gray;
+                //cursorSprite.color = Color.gray;
 
             }
 
@@ -201,7 +200,10 @@ namespace Swarm {
 
         public int getNbOfUnits()
         {
-            return units.Count;
+            if (inShrink)
+                return units.Count + ShrinkUnits;
+            else
+                return units.Count;
         }
 	}
 }
