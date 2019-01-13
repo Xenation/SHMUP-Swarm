@@ -10,22 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: "TourC\xF4ne"
+  m_Name: "TourC\xF4ne1"
   m_EditorClassIdentifier: 
   finishedDelay: 1
-  simultaneous:
-  - {fileID: 11400000, guid: 43131b3efdbb5a34ab228fd0c5463454, type: 2}
+  simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 53fb6ed8fbf0c064db347abe0be7b694, type: 2}
-  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
-  autoPlaced: 1
-  count: 1
+  - {fileID: 11400000}
+  autoPlaced: 0
+  count: 8
   startRotation: 30
   distanceFromCenter: 2
   rotationSpeed: 0
   spawnPoints:
-  - position: {x: 1.7320508, y: 1}
-    rotation: 30.000002
+  - position: {x: 0.51763815, y: 1.9318516}
+    rotation: 75
+  - position: {x: -1.0000001, y: 1.7320508}
+    rotation: 120.00001
+  - position: {x: -1.9318517, y: 0.51763785}
+    rotation: 165.00002
+  - position: {x: -1.7320508, y: -0.99999994}
+    rotation: 209.99998
+  - position: {x: -0.51763797, y: -1.9318517}
+    rotation: 255
+  - position: {x: 0.9999998, y: -1.7320509}
+    rotation: 300
+  - position: {x: 1.9318517, y: -0.51763767}
+    rotation: 344.99997
   sequence:
   - type: 8
     count: 0
@@ -39,7 +49,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 3
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -71,7 +81,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -103,7 +113,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -135,7 +145,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -167,7 +177,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -199,7 +209,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -231,7 +241,7 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
