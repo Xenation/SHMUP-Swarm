@@ -16,13 +16,9 @@ MonoBehaviour:
   simultaneous:
   - {fileID: 11400000, guid: 93ed14c2ad6f4ae4bb21d9da5b2d2d71, type: 2}
   - {fileID: 11400000, guid: dd040a8b335dda545a29f3f3773a2d77, type: 2}
-  nextPossible:
-  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
-  - {fileID: 11400000, guid: 1422f7d9c3024f54a96bcfcbf2a5bf37, type: 2}
-  - {fileID: 11400000, guid: a9fa4f751d01cdc48b6dfdc871424054, type: 2}
-  - {fileID: 11400000, guid: b5968a9c01f10554d989f9ee130eabce, type: 2}
-  - {fileID: 11400000, guid: ac15bd0471bd11f4ab5383629f460217, type: 2}
-  - {fileID: 11400000, guid: 73f67e43e8b9cf24aa68d4a51b580803, type: 2}
+  - {fileID: 11400000, guid: 0e495389026a0794da429bb3f5abbc50, type: 2}
+  - {fileID: 11400000, guid: c0d3d0a46e3f3ae4fbf28e5edd9d2986, type: 2}
+  nextPossible: []
   autoPlaced: 1
   count: 2
   startRotation: 0

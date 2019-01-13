@@ -19,7 +19,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1422f7d9c3024f54a96bcfcbf2a5bf37, type: 2}
   - {fileID: 11400000, guid: a9fa4f751d01cdc48b6dfdc871424054, type: 2}
   - {fileID: 11400000, guid: a5f8be6da4101104cb0a84854f730e52, type: 2}
-  - {fileID: 11400000, guid: b05146d6bb9f1084cba4b3615f79e563, type: 2}
   - {fileID: 11400000, guid: ac15bd0471bd11f4ab5383629f460217, type: 2}
   - {fileID: 11400000, guid: 73f67e43e8b9cf24aa68d4a51b580803, type: 2}
   autoPlaced: 1
@@ -41,17 +40,17 @@ MonoBehaviour:
   - position: {x: -0.8660254, y: 0.50000006}
     rotation: 150
   - position: {x: -1, y: -0.00000008742278}
-    rotation: 180
+    rotation: -180
   - position: {x: -0.86602527, y: -0.5000002}
-    rotation: 210
+    rotation: -150
   - position: {x: -0.4999999, y: -0.86602545}
-    rotation: 240
+    rotation: -119.99999
   - position: {x: 0.000000011924881, y: -1}
-    rotation: 270
+    rotation: -90
   - position: {x: 0.4999999, y: -0.86602545}
-    rotation: 300
+    rotation: -60.000008
   - position: {x: 0.86602557, y: -0.49999976}
-    rotation: 330
+    rotation: -29.99998
   sequence:
   - type: 0
     count: 0

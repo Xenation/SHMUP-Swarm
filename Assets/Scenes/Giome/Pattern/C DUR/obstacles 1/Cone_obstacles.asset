@@ -10,37 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: Laser_obstacles
+  m_Name: Cone_obstacles
   m_EditorClassIdentifier: 
-  finishedDelay: 3
-  simultaneous:
-  - {fileID: 11400000, guid: 93ed14c2ad6f4ae4bb21d9da5b2d2d71, type: 2}
-  - {fileID: 11400000, guid: dd040a8b335dda545a29f3f3773a2d77, type: 2}
-  nextPossible:
-  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
-  - {fileID: 11400000, guid: 1422f7d9c3024f54a96bcfcbf2a5bf37, type: 2}
-  - {fileID: 11400000, guid: a9fa4f751d01cdc48b6dfdc871424054, type: 2}
-  - {fileID: 11400000, guid: b5968a9c01f10554d989f9ee130eabce, type: 2}
-  - {fileID: 11400000, guid: ac15bd0471bd11f4ab5383629f460217, type: 2}
-  - {fileID: 11400000, guid: 73f67e43e8b9cf24aa68d4a51b580803, type: 2}
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible: []
   autoPlaced: 1
-  count: 2
+  count: 4
   startRotation: 0
   distanceFromCenter: 2
-  rotationSpeed: 40
+  rotationSpeed: 0
   spawnPoints:
   - position: {x: 2, y: 0}
     rotation: 0
+  - position: {x: -0.00000008742278, y: 2}
+    rotation: 90
   - position: {x: -2, y: -0.00000017484555}
-    rotation: -180
+    rotation: 180
+  - position: {x: 0.000000023849761, y: -2}
+    rotation: 270
   sequence:
-  - type: 1
+  - type: 8
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 60
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 6
       unityObject: {fileID: 0}
     - type: 1
       json: 2
@@ -50,5 +49,8 @@ MonoBehaviour:
       unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
         type: 3}
+    - type: 3
+      json: 
+      unityObject: {fileID: 0}

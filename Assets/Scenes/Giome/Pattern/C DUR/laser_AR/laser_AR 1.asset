@@ -10,35 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: laser_AR
+  m_Name: laser_AR 1
   m_EditorClassIdentifier: 
   finishedDelay: 1
-  simultaneous:
-  - {fileID: 11400000, guid: 0f11f04d0c23b984aa86932245467684, type: 2}
+  simultaneous: []
   nextPossible: []
-  autoPlaced: 0
-  count: 8
-  startRotation: 0
+  autoPlaced: 1
+  count: 7
+  startRotation: 22.5
   distanceFromCenter: 2
-  rotationSpeed: 20
+  rotationSpeed: -20
   spawnPoints:
-  - position: {x: 2, y: 0}
-    rotation: 0
-  - position: {x: 1.4142135, y: 1.4142135}
-    rotation: 45.000004
-  - position: {x: -0.00000008742278, y: 2}
-    rotation: 90
-  - position: {x: -1.4142135, y: 1.4142135}
-    rotation: 135
-  - position: {x: -2, y: -0.00000017484555}
-    rotation: 180
-  - position: {x: -1.4142133, y: -1.4142138}
-    rotation: 224.99998
-  - position: {x: 0.000000023849761, y: -2}
-    rotation: 270
-  - position: {x: 1.414214, y: -1.4142131}
-    rotation: 315.00003
+  - position: {x: 1.847759, y: 0.7653669}
+    rotation: 22.499996
+  - position: {x: 0.55367094, y: 1.9218347}
+    rotation: 73.92857
+  - position: {x: -1.1573424, y: 1.6311218}
+    rotation: 125.35714
+  - position: {x: -1.9968536, y: 0.11214077}
+    rotation: 176.78577
+  - position: {x: -1.3326932, y: -1.4912843}
+    rotation: -131.78572
+  - position: {x: 0.3350126, y: -1.971742}
+    rotation: -80.35713
+  - position: {x: 1.7504468, y: -0.9674378}
+    rotation: -28.928574
   sequence:
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
   - type: 1
     count: 0
     duration: 0
