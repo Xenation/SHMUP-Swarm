@@ -2412,7 +2412,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startPattern
       value: 
-      objectReference: {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5,
+      objectReference: {fileID: 11400000, guid: 07dd3aab330cf9b47af938c6dcc3471f,
         type: 2}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
@@ -3509,6 +3509,16 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 805387868}
+    - target: {fileID: 5839185358902241923, guid: b4d19d836749eb54c8b5befcc2e14141,
+        type: 3}
+      propertyPath: SpawnRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839185358902241923, guid: b4d19d836749eb54c8b5befcc2e14141,
+        type: 3}
+      propertyPath: maxPickups
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d19d836749eb54c8b5befcc2e14141, type: 3}
 --- !u!1 &2074051317

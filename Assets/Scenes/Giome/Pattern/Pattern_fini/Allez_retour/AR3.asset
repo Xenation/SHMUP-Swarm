@@ -16,43 +16,39 @@ MonoBehaviour:
   simultaneous: []
   nextPossible: []
   autoPlaced: 1
-  count: 16
+  count: 14
   startRotation: 0
   distanceFromCenter: 1
-  rotationSpeed: 60
+  rotationSpeed: 70
   spawnPoints:
   - position: {x: 1, y: 0}
     rotation: 0
-  - position: {x: 0.9238795, y: 0.38268346}
-    rotation: 22.499996
-  - position: {x: 0.70710677, y: 0.70710677}
-    rotation: 45
-  - position: {x: 0.38268343, y: 0.9238795}
-    rotation: 67.5
-  - position: {x: -0.00000004371139, y: 1}
-    rotation: 90
-  - position: {x: -0.38268352, y: 0.9238795}
-    rotation: 112.50001
-  - position: {x: -0.70710677, y: 0.70710677}
-    rotation: 135
-  - position: {x: -0.9238796, y: 0.38268328}
-    rotation: 157.50002
+  - position: {x: 0.90096885, y: 0.43388376}
+    rotation: 25.714289
+  - position: {x: 0.6234898, y: 0.7818315}
+    rotation: 51.428577
+  - position: {x: 0.22252086, y: 0.9749279}
+    rotation: 77.14287
+  - position: {x: -0.22252095, y: 0.9749279}
+    rotation: 102.85715
+  - position: {x: -0.6234898, y: 0.7818315}
+    rotation: 128.57143
+  - position: {x: -0.9009689, y: 0.4338836}
+    rotation: 154.28572
   - position: {x: -1, y: -0.00000008742278}
-    rotation: -180
-  - position: {x: -0.9238795, y: -0.38268343}
-    rotation: -157.50002
-  - position: {x: -0.70710665, y: -0.7071069}
-    rotation: -135
-  - position: {x: -0.38268313, y: -0.9238797}
-    rotation: -112.499985
-  - position: {x: 0.000000011924881, y: -1}
-    rotation: -90
-  - position: {x: 0.3826836, y: -0.92387944}
-    rotation: -67.499985
-  - position: {x: 0.707107, y: -0.70710653}
-    rotation: -44.999977
-  - position: {x: 0.92387956, y: -0.38268343}
-    rotation: -22.499996
+    rotation: 180
+  - position: {x: -0.90096885, y: -0.43388376}
+    rotation: 205.7143
+  - position: {x: -0.6234896, y: -0.7818316}
+    rotation: 231.42859
+  - position: {x: -0.222521, y: -0.9749279}
+    rotation: 257.14285
+  - position: {x: 0.22252104, y: -0.9749279}
+    rotation: 282.85715
+  - position: {x: 0.62349004, y: -0.7818313}
+    rotation: 308.57144
+  - position: {x: 0.90096885, y: -0.43388376}
+    rotation: 334.2857
   sequence:
   - type: 0
     count: 0
@@ -78,7 +74,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: -60
+      json: -70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -104,7 +100,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -130,7 +126,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: -60
+      json: -70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -156,7 +152,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -182,7 +178,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: -60
+      json: -70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -208,7 +204,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -234,7 +230,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: -60
+      json: -70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -260,7 +256,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -286,7 +282,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: -60
+      json: -70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -312,7 +308,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -338,7 +334,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: -60
+      json: -70
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -364,5 +360,5 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
