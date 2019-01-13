@@ -53,18 +53,10 @@ namespace Swarm {
 		}
 
 		private void Update() {
-<<<<<<< HEAD
-			if (state == State.Telegraphing && !isLocked) {
-				Vector2 vel = (boss.swarm.cursor.position - telegraph.transform.position).normalized * seekSpeed * Time.deltaTime;
-				telegraph.transform.position += new Vector3(vel.x, vel.y);
-                AkSoundEngine.PostEvent("Play_Mortier", gameObject);
-            } else if (state == State.Attacking && attackAnimator.GetCurrentAnimatorStateInfo(0).speed == 0.01f) { // TODO ugly af
-				Destroy(gameObject);
-            }
-=======
 			if (state == State.Telegraphing) {
 				Vector2 vel;
 				if (!isLocked) { // Seeking
+                    AkSoundEngine.PostEvent("Play_Mortier", gameObject);
 					vel = (boss.swarm.cursor.position - telegraph.transform.position).normalized * seekSpeed * Time.deltaTime;
 					telegraph.transform.position += new Vector3(vel.x, vel.y);
 					// Align with boss
@@ -79,8 +71,7 @@ namespace Swarm {
 			} else if (state == State.Attacking && attackAnimator.GetCurrentAnimatorStateInfo(0).speed == 0.01f) { // TODO ugly af
 				Destroy(gameObject);
 			}
->>>>>>> master
-		}
-		
-	}
+        }
+
+    }
 }
