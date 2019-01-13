@@ -2412,7 +2412,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startPattern
       value: 
-      objectReference: {fileID: 11400000, guid: a1de909962dfdd3428424ef3bf93e931,
+      objectReference: {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5,
         type: 2}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}

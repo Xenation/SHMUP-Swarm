@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c78345b0d64b7d04da020d736a6be3c4, type: 2}
   - {fileID: 11400000, guid: 5e2e3ab1e9d762445b6cad1eede602c3, type: 2}
   nextPossible:
-  - {fileID: 11400000, guid: 354e8cc77d95f2740bace4c4d94cd462, type: 2}
+  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
   autoPlaced: 1
   count: 1
   startRotation: -70

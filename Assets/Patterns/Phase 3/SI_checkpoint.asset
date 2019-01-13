@@ -10,37 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: test
+  m_Name: SI_checkpoint
   m_EditorClassIdentifier: 
   finishedDelay: 1
   simultaneous: []
-  nextPossible: []
+  nextPossible:
+  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
   autoPlaced: 1
   count: 2
-  startRotation: 0
-  distanceFromCenter: 1
-  rotationSpeed: 50
+  startRotation: 90
+  distanceFromCenter: 2
+  rotationSpeed: 120
   spawnPoints:
-  - position: {x: 1, y: 0}
-    rotation: 0
-  - position: {x: -1, y: -0.00000008742278}
-    rotation: -180
+  - position: {x: -0.00000008742278, y: 2}
+    rotation: 90
+  - position: {x: 0.000000023849761, y: -2}
+    rotation: 270
   sequence:
-  - type: 0
+  - type: 1
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
-    - type: 0
-      json: 10
-      unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 0,2
       unityObject: {fileID: 0}
-    - type: 2
-      json: 
-      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-        type: 3}
     - type: 1
       json: 2
       unityObject: {fileID: 0}
+    - type: 1
+      json: 7,5
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}

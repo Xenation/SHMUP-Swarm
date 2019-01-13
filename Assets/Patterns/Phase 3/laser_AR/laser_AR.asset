@@ -15,7 +15,8 @@ MonoBehaviour:
   finishedDelay: 1
   simultaneous:
   - {fileID: 11400000, guid: 0f11f04d0c23b984aa86932245467684, type: 2}
-  nextPossible: []
+  nextPossible:
+  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
   autoPlaced: 1
   count: 7
   startRotation: 0

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishedDelay: 1
   simultaneous: []
-  nextPossible: []
+  nextPossible:
+  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 1
   count: 2
   startRotation: 90

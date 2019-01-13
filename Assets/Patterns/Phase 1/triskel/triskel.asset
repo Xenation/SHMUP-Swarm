@@ -17,12 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55acb6f82d57af64ab44b04feff81252, type: 2}
   - {fileID: 11400000, guid: b4be5271dd27cf5478f1afa84568ed76, type: 2}
   nextPossible:
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
-  - {fileID: 11400000, guid: 0d433802f45cc9e498ef5de0c8524b94, type: 2}
-  - {fileID: 11400000, guid: 8235a43bd73f0e04faaefa7b9446494a, type: 2}
-  - {fileID: 11400000, guid: 1097c2384d5ad9346bc2f6a9611a06db, type: 2}
-  - {fileID: 11400000, guid: 4ef0c5a4df2d68d4aa9a95909fa56c24, type: 2}
+  - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
   count: 3
   startRotation: 30

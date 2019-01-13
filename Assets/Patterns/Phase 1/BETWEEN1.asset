@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: BETWEEN1
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible:
+  - {fileID: 11400000, guid: 53fb6ed8fbf0c064db347abe0be7b694, type: 2}
+  - {fileID: 11400000, guid: e0aa956fe52a3c84e81434e2d08e8369, type: 2}
+  - {fileID: 11400000, guid: 4ef0c5a4df2d68d4aa9a95909fa56c24, type: 2}
+  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
+  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
+  - {fileID: 11400000, guid: 0d433802f45cc9e498ef5de0c8524b94, type: 2}
+  - {fileID: 11400000, guid: 11f1ea812ca861445bf4309041a2d965, type: 2}
+  - {fileID: 11400000, guid: 1c13fd356f40af248936511ac0799d59, type: 2}
+  - {fileID: 11400000, guid: 8235a43bd73f0e04faaefa7b9446494a, type: 2}
+  - {fileID: 11400000, guid: 1097c2384d5ad9346bc2f6a9611a06db, type: 2}
+  autoPlaced: 1
+  count: 1
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1, y: 0}
+    rotation: 0
+  sequence: []
