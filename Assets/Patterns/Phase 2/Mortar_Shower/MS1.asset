@@ -12,20 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
   m_Name: MS1
   m_EditorClassIdentifier: 
-  finishedDelay: 1
+  finishedDelay: 4
   simultaneous:
   - {fileID: 11400000, guid: bf44d95309675aa4dbfa54402e4fee5c, type: 2}
   - {fileID: 11400000, guid: 91ef79a3272866140ab3059f74071a25, type: 2}
   - {fileID: 11400000, guid: a30b0bfc342e3d34188667e24c8c8a59, type: 2}
   - {fileID: 11400000, guid: 8e2b5a4c1fd25714cae55602a2ee2fc6, type: 2}
-  - {fileID: 11400000, guid: aaaa5f21a20f92243a29af1fc9a99b6d, type: 2}
+  - {fileID: 0}
   nextPossible:
-  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
-  - {fileID: 11400000, guid: 1422f7d9c3024f54a96bcfcbf2a5bf37, type: 2}
-  - {fileID: 11400000, guid: a5f8be6da4101104cb0a84854f730e52, type: 2}
-  - {fileID: 11400000, guid: b5968a9c01f10554d989f9ee130eabce, type: 2}
-  - {fileID: 11400000, guid: ac15bd0471bd11f4ab5383629f460217, type: 2}
-  - {fileID: 11400000, guid: 73f67e43e8b9cf24aa68d4a51b580803, type: 2}
+  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 0
   count: 1
   startRotation: 0

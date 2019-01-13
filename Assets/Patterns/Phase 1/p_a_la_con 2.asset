@@ -16,12 +16,7 @@ MonoBehaviour:
   simultaneous:
   - {fileID: 11400000, guid: ceb50b62daa2a3c41a5a09e92df62999, type: 2}
   nextPossible:
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
-  - {fileID: 11400000, guid: 11f1ea812ca861445bf4309041a2d965, type: 2}
-  - {fileID: 11400000, guid: 8235a43bd73f0e04faaefa7b9446494a, type: 2}
-  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
-  - {fileID: 11400000, guid: 53fb6ed8fbf0c064db347abe0be7b694, type: 2}
+  - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
   count: 1
   startRotation: 0

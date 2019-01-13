@@ -15,7 +15,7 @@ MonoBehaviour:
   finishedDelay: 1
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 73f67e43e8b9cf24aa68d4a51b580803, type: 2}
+  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 1
   count: 1
   startRotation: 0
@@ -24,12 +24,4 @@ MonoBehaviour:
   spawnPoints:
   - position: {x: 1, y: 0}
     rotation: 0
-  sequence:
-  - type: 3
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
+  sequence: []

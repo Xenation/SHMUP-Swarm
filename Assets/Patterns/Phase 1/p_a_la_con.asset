@@ -15,13 +15,7 @@ MonoBehaviour:
   finishedDelay: 1
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 0d433802f45cc9e498ef5de0c8524b94, type: 2}
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: 11f1ea812ca861445bf4309041a2d965, type: 2}
-  - {fileID: 11400000, guid: 8235a43bd73f0e04faaefa7b9446494a, type: 2}
-  - {fileID: 11400000, guid: 53fb6ed8fbf0c064db347abe0be7b694, type: 2}
-  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
-  - {fileID: 11400000, guid: 1c13fd356f40af248936511ac0799d59, type: 2}
+  - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
   count: 8
   startRotation: 0

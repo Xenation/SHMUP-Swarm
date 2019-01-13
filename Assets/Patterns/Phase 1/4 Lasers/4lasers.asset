@@ -16,9 +16,7 @@ MonoBehaviour:
   simultaneous:
   - {fileID: 11400000, guid: 99cadc0d64d8a16489ed5ed227e581ee, type: 2}
   nextPossible:
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
-  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
+  - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
   count: 4
   startRotation: 0
@@ -30,9 +28,9 @@ MonoBehaviour:
   - position: {x: -0.000000109278474, y: 2.5}
     rotation: 90
   - position: {x: -2.5, y: -0.00000021855695}
-    rotation: 180
+    rotation: -180
   - position: {x: 0.000000029812202, y: -2.5}
-    rotation: 270
+    rotation: -90
   sequence:
   - type: 1
     count: 0
