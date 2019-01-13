@@ -117,7 +117,7 @@ namespace Swarm {
                         Destroy(unit.gameObject);
                         ShrinkUnits++;
                     }
-
+                    //Change size consequently to number of pyus in it
                 }
             }
 
@@ -127,7 +127,7 @@ namespace Swarm {
                 cursorRadius = cursorNormalRadius;
                 unitSpeed = unitNormalSpeed;
                 unitRadius = unitNormalRadius;
-                shrinkUnit.SetActive(false);
+                Destroy(shrinkUnit);
 
                 //Respawn pyus and change sprite back to cursor
                 for (int i = 0; i < ShrinkUnits; i++)
@@ -166,7 +166,7 @@ namespace Swarm {
             rtpcValue = Vector3.Distance(bossTransform.position, cursor.transform.position);
             AkSoundEngine.SetRTPCValue("ElectroFilter", rtpcValue);
 
-            if(units.Count == 0 && !inShrink)
+            if( units.Count == 0 && (!inShrink || !shrinkUnit ) )
             {
                 SceneManager.LoadScene("Lose");
                 AkSoundEngine.SetState("BossPhase", "None");
