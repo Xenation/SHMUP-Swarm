@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
   m_Name: START
   m_EditorClassIdentifier: 
-  finishedDelay: 1
+  finishedDelay: 3
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
+  - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
   count: 1
   startRotation: 0
@@ -24,12 +24,4 @@ MonoBehaviour:
   spawnPoints:
   - position: {x: 1, y: 0}
     rotation: 0
-  sequence:
-  - type: 3
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
+  sequence: []

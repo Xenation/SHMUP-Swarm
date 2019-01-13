@@ -22,7 +22,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586543645638319069
+    m_lastTime: -8586542773036422907
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586543645638419090
+    m_lastTime: -8586542784561649310
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -348,7 +348,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 023fa2e858ecc04f9a82163a94473bfd
-    m_lastTime: -8586543645627406640
+    m_lastTime: -8586542801894328328
     List:
     - name: BossPhase
       guid: d91262db66d97c438ab1c75398ee09bd
@@ -384,17 +384,35 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: Phase1
           ObjectType: 8
+      - name: Phase1Transition
+        guid: f3a68d592d55f64b8caa4e2da14912c8
+        id: 3519008002
+        PathAndIcons:
+        - ElementName: Phase1Transition
+          ObjectType: 8
       - name: Phase2
         guid: b6a1587738869342985fc16b03d8d235
         id: 3630028968
         PathAndIcons:
         - ElementName: Phase2
           ObjectType: 8
+      - name: Phase2Transition
+        guid: 60c5bfeb9a374141b3a9cf5df104bfa6
+        id: 3266709961
+        PathAndIcons:
+        - ElementName: Phase2Transition
+          ObjectType: 8
       - name: Phase3
         guid: 28ee786a3cf3564a81d8742f58aca09c
         id: 3630028969
         PathAndIcons:
         - ElementName: Phase3
+          ObjectType: 8
+      - name: Phase3Transition
+        guid: 2e5df5e9afcdf24098d9c41636640ca4
+        id: 494684172
+        PathAndIcons:
+        - ElementName: Phase3Transition
           ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu

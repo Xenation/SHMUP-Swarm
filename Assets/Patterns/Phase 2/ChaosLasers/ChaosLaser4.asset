@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: ChaosLaser4
+  m_EditorClassIdentifier: 
+  finishedDelay: 0
+  simultaneous: []
+  nextPossible:
+  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
+  - {fileID: 11400000, guid: c70c49374e5709e448505d0de02f3a04, type: 2}
+  - {fileID: 11400000, guid: b26f8c586fcd62a4db3fbe7603bd2c5e, type: 2}
+  - {fileID: 11400000, guid: ab1afdf6d9cc86d4592917953402fc7b, type: 2}
+  - {fileID: 11400000, guid: 4bcda905c01282d4a8e50ebb189fc91b, type: 2}
+  - {fileID: 11400000, guid: 03ced037dbe061e4f912b26bfaba4b9c, type: 2}
+  - {fileID: 11400000, guid: c43e4e3630abd384d9aba851d628e19f, type: 2}
+  - {fileID: 11400000, guid: b5968a9c01f10554d989f9ee130eabce, type: 2}
+  autoPlaced: 1
+  count: 1
+  startRotation: 135
+  distanceFromCenter: 2
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: -1.4142135, y: 1.4142135}
+    rotation: 135
+  sequence:
+  - type: 8
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 90
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+        type: 3}
+    - type: 3
+      json: 
+      unityObject: {fileID: 0}

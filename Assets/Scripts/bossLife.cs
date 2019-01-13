@@ -44,6 +44,16 @@ namespace Swarm
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
             AkSoundEngine.SetState("BossPhase", "Phase1");
+
+
+            if (ScoreManager.bossPhase == 2)
+            {
+                pv = phase2Threshhold;
+            }
+            else if (ScoreManager.bossPhase == 3)
+            {
+                pv = phase3Threshhold;
+            }
         }
 
         // Update is called once per frame
@@ -61,7 +71,7 @@ namespace Swarm
                     part.GetComponent<partController>().resetPart();
                 }
 
-                CheckPhase();              
+                CheckPhase();
             }
 
             if (currentPhase == 1)
@@ -113,6 +123,8 @@ namespace Swarm
         public void End()
         {
             ScoreTimer = Time.time - ScoreTimer;
+            ScoreManager.endTime = Time.time;
+            ScoreManager.bossDead = true;
             //Envoyez le score dans la prochaine scene + leaderboard
 
 
@@ -139,8 +151,9 @@ namespace Swarm
                 {
                     animator.SetBool("isOpen", true);
                     //part.SetActive(false);
-                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
+                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);               
                 }
+
             }
         }
 
@@ -170,15 +183,24 @@ namespace Swarm
 
         private void CheckPhase()
         {
-            if (pv < phase3Threshhold)
+            if (pv <= phase3Threshhold)
             {
                 //Change sprite and patterns to second phase
+                Debug.Log("changed phase to 3");
                 currentPhase = 3;
+                ScoreManager.bossPhase = 3;
             }
-            else if (pv < phase2Threshhold)
+            else if (pv <= phase2Threshhold)
             {
                 //Change sprite and patterns to third phase
+                Debug.Log("phase 2");
                 currentPhase = 2;
+                ScoreManager.bossPhase = 2;
+            }
+            else
+            {
+                currentPhase = 1;
+                ScoreManager.bossPhase = 1;
             }
         }
 

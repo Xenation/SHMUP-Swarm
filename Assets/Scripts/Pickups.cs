@@ -41,7 +41,6 @@ namespace Swarm
                     openAnim.SetTrigger("contact");
                     AkSoundEngine.PostEvent("Play_PickUp", gameObject);
                 }
-
                 Destroy(gameObject);
                 
             }
@@ -55,6 +54,11 @@ namespace Swarm
         public void setPlayer(GameObject player)
         {
             playerSwarm = player;
+        }
+
+        private void OnDestroy()
+        {
+            Swarm.PickupSpawner.currentPickups.Remove(this);
         }
     }
 }

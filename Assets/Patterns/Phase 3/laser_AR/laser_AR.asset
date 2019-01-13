@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: laser_AR
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: 0f11f04d0c23b984aa86932245467684, type: 2}
+  nextPossible:
+  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
+  autoPlaced: 1
+  count: 7
+  startRotation: 0
+  distanceFromCenter: 2
+  rotationSpeed: 20
+  spawnPoints:
+  - position: {x: 2, y: 0}
+    rotation: 0
+  - position: {x: 1.2469796, y: 1.563663}
+    rotation: 51.428574
+  - position: {x: -0.4450419, y: 1.9498558}
+    rotation: 102.85715
+  - position: {x: -1.8019378, y: 0.8677672}
+    rotation: 154.28572
+  - position: {x: -1.8019377, y: -0.8677675}
+    rotation: -154.2857
+  - position: {x: -0.445042, y: -1.9498558}
+    rotation: -102.85715
+  - position: {x: 1.2469801, y: -1.5636626}
+    rotation: -51.428555
+  sequence:
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: lasers_pute
+  m_EditorClassIdentifier: 
+  finishedDelay: 2
+  simultaneous:
+  - {fileID: 11400000, guid: dd7665c47111dbc41b61cd0953de5f9d, type: 2}
+  nextPossible:
+  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
+  autoPlaced: 1
+  count: 7
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1, y: 0}
+    rotation: 0
+  - position: {x: 0.6234898, y: 0.7818315}
+    rotation: 51.428574
+  - position: {x: -0.22252095, y: 0.9749279}
+    rotation: 102.85715
+  - position: {x: -0.9009689, y: 0.4338836}
+    rotation: 154.28572
+  - position: {x: -0.90096885, y: -0.43388376}
+    rotation: -154.2857
+  - position: {x: -0.222521, y: -0.9749279}
+    rotation: -102.85715
+  - position: {x: 0.62349004, y: -0.7818313}
+    rotation: -51.428555
+  sequence:
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}

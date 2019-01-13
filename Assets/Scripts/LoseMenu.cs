@@ -11,6 +11,7 @@ public class LoseMenu : MonoBehaviour
     {
         GameObject.Find("returnToMenu").GetComponent<Button>().onClick.AddListener(onClickMenu);
         GameObject.Find("Retry").GetComponent<Button>().onClick.AddListener(onClickRetry);
+        GameObject.Find("Checkpoint").GetComponent<Button>().onClick.AddListener(onClickCheckpoint);
     }
 
     // Update is called once per frame
@@ -25,6 +26,12 @@ public class LoseMenu : MonoBehaviour
     }
 
     void onClickRetry()
+    {
+        ScoreManager.bossDead = true;
+        SceneManager.LoadScene("MorganScene");
+    }
+
+    void onClickCheckpoint()
     {
         SceneManager.LoadScene("MorganScene");
     }

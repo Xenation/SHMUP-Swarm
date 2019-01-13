@@ -6,6 +6,7 @@ namespace Swarm {
 	public class PlayerSwarm : MonoBehaviour {
 
         public GameObject unitPrefab;
+        public GameObject shrinkPrefab;
 		public int unitsToCreate = 50;
 
         public float cursorShrinkSpeed = 2.5f;
@@ -24,6 +25,8 @@ namespace Swarm {
         private int nbOfUnits;
   
 		public bool debug = false;
+        private bool inShrink = false;
+        [HideInInspector]public int ShrinkUnits;
 
         [HideInInspector]
         public float cursorSpeed = 5f;
@@ -42,6 +45,11 @@ namespace Swarm {
 
         private bool inPause = false;
         private float defaultTimeScale;
+
+        private SpriteRenderer cursorSprite;
+
+        private GameObject shrinkUnit;
+        private float sizeRatio;
         
 		private void Awake() {
 			cursor = transform.Find("Cursor");
@@ -51,9 +59,10 @@ namespace Swarm {
 				float perim = Random.Range(0f, Mathf.PI);
 				float dist = Random.Range(0f, cursorRadius);
 				Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
-                defaultTimeScale = Time.fixedDeltaTime;
 			}
 
+            defaultTimeScale = Time.fixedDeltaTime;
+            cursorSprite = cursor.GetComponent<SpriteRenderer>();
 			GetComponentsInChildren(units);
 
             cursorSpeed = cursorNormalSpeed;
@@ -79,10 +88,49 @@ namespace Swarm {
                 cursorSpeed = cursorShrinkSpeed;
                 cursorRadius = cursorShrinkRadius;
                 unitSpeed = unitShrinkSpeed;
-                unitRadius = unitShrinkRadius;
-                nbOfUnits = units.Count;
+                //unitRadius = unitShrinkRadius;
 
+                //Second version of shrink
+                inShrink = true;
+                shrinkUnit = Instantiate(shrinkPrefab, cursor.position, Quaternion.identity, transform);
+                shrinkUnit.transform.localScale = new Vector3( shrinkUnit.transform.localScale.x /2, shrinkUnit.transform.localScale.y /2, shrinkUnit.transform.localScale.z);
+                
+                sizeRatio = shrinkUnit.transform.localScale.x;
+
+            }
+
+            if (inShrink)
+            {
                 //Kill all pyus and change cursor to a bigger pyu.
+                Vector3 minDist = new Vector3(cursor.transform.position.x - cursorShrinkRadius, cursor.transform.position.y - cursorShrinkRadius, 0);
+                Vector3 maxDist = new Vector3(cursor.transform.position.x + cursorShrinkRadius, cursor.transform.position.y + cursorShrinkRadius, 0);
+
+                foreach (PlayerUnit unit in units)
+                {
+                    if (unit.transform.position.x <= maxDist.x &&
+                        unit.transform.position.x >= minDist.x &&
+                        unit.transform.position.y <= maxDist.y &&
+                        unit.transform.position.y >= minDist.y)
+                    {
+                        ++ShrinkUnits;
+                        
+                        if (units.Count > 1)
+                        {
+                            float sizeNow = (float)ShrinkUnits / ((float)ShrinkUnits + (float)units.Count);
+                            shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNow), sizeRatio + (sizeRatio * sizeNow), shrinkUnit.transform.localScale.z);
+                        }
+                        else if (units.Count == 1)
+                        {
+                            shrinkUnit.transform.localScale = new Vector3(sizeRatio + sizeRatio, sizeRatio + sizeRatio, shrinkUnit.transform.localScale.z);
+                        }
+
+
+                        Destroy(unit.gameObject);
+                    }
+                    //Change size consequently to number of pyus in it
+                }
+
+               
             }
 
             if (Input.GetButtonUp("Fire2"))
@@ -91,6 +139,20 @@ namespace Swarm {
                 cursorRadius = cursorNormalRadius;
                 unitSpeed = unitNormalSpeed;
                 unitRadius = unitNormalRadius;
+                Destroy(shrinkUnit);
+
+                //Respawn pyus and change sprite back to cursor
+                for (int i = 0; i < ShrinkUnits; i++)
+                {
+                    float perim = Random.Range(0f, Mathf.PI);
+                    float dist = Random.Range(0f, cursorRadius);
+                    Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
+                }
+                GetComponentsInChildren(units);
+                inShrink = false;
+                ShrinkUnits = 0;
+                //cursorSprite.color = Color.gray;
+
             }
 
             if (Input.GetKeyDown(KeyCode.P))
@@ -103,8 +165,8 @@ namespace Swarm {
                 }
                 else
                 {
-                    Time.timeScale = 0.01f;
-                    Time.fixedDeltaTime = defaultTimeScale * 0.01f;
+                    Time.timeScale = 0.001f;
+                    Time.fixedDeltaTime = defaultTimeScale * 0.001f;
                     inPause = !inPause;
                 }
             }
@@ -116,8 +178,11 @@ namespace Swarm {
             rtpcValue = Vector3.Distance(bossTransform.position, cursor.transform.position);
             AkSoundEngine.SetRTPCValue("ElectroFilter", rtpcValue);
 
-            if(units.Count == 0)
+            if( units.Count == 0 && (!inShrink || !shrinkUnit ) )
             {
+                ScoreManager.endTime = Time.time;
+                ScoreManager.bossDead = false;
+
                 SceneManager.LoadScene("Lose");
                 AkSoundEngine.SetState("BossPhase", "None");
             }
@@ -151,7 +216,10 @@ namespace Swarm {
 
         public int getNbOfUnits()
         {
-            return units.Count;
+            if (inShrink)
+                return units.Count + ShrinkUnits;
+            else
+                return units.Count;
         }
 	}
 }

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: BETWEEN3
+  m_EditorClassIdentifier: 
+  finishedDelay: 3
+  simultaneous: []
+  nextPossible:
+  - {fileID: 11400000, guid: 0e24649c5296ccf4c9247b10719b9257, type: 2}
+  - {fileID: 11400000, guid: 38443ae4e91075b429b18c4d14801e49, type: 2}
+  - {fileID: 11400000, guid: 354e8cc77d95f2740bace4c4d94cd462, type: 2}
+  - {fileID: 11400000, guid: f85daa41419eca941944815482ea6c71, type: 2}
+  - {fileID: 11400000, guid: 07dd3aab330cf9b47af938c6dcc3471f, type: 2}
+  - {fileID: 11400000, guid: c359ff47bbf428b4fadec86ec9963ecb, type: 2}
+  autoPlaced: 1
+  count: 1
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1, y: 0}
+    rotation: 0
+  sequence: []

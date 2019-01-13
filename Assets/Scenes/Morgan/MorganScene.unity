@@ -510,6 +510,12 @@ PrefabInstance:
       propertyPath: testController
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: shrinkPrefab
+      value: 
+      objectReference: {fileID: 3035400351961606096, guid: fd85b54ad414f0846b8bdf9dff33c170,
+        type: 3}
     - target: {fileID: 3150457463489301675, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -949,6 +955,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ac4020f85b9594c4fa792b5663263fe1,
         type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: swarm
+      value: 
+      objectReference: {fileID: 230935861}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: pv
       value: 5
@@ -972,6 +983,14 @@ PrefabInstance:
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: maxEyeDist
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: phase2Threshhold
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: phase3Threshhold
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1479841545, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: vibDuration
@@ -1309,6 +1328,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1698669232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1914248585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914248586}
+  - component: {fileID: 1914248587}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1914248586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914248585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 883.5153, y: 304.28156, z: 29.083376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1914248587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914248585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34d0155ed82e5040a6f6e221033641e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2013253404 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9081071139309854661, guid: 50a6274365a1cac479f4e84b07ee86df,
