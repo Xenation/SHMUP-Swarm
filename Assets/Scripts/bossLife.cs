@@ -136,6 +136,7 @@ namespace Swarm
 
             //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");
+            AkSoundEngine.PostEvent("Stop_SFX", gameObject);
 
         }
 
@@ -157,9 +158,9 @@ namespace Swarm
                 {
                     animator.SetBool("isOpen", true);
                     //part.SetActive(false);
-                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);               
+                    
                 }
-
+                AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
             }
         }
 
