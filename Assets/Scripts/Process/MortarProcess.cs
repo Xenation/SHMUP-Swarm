@@ -11,7 +11,8 @@ namespace Swarm {
 		private float lockTime;
 		private GameObject prefab;
 
-		private Mortar.State mortarState;
+		private TelegraphableAttack.State mortarState = TelegraphableAttack.State.Telegraphing;
+		private bool isLocked = false;
 		private Pattern.RuntimeParameters runParams;
 		private List<Mortar> mortars = new List<Mortar>();
 
@@ -22,7 +23,6 @@ namespace Swarm {
 			this.seekSpeed = seekSpeed;
 			this.lockTime = lockTime;
 			this.prefab = prefab;
-			mortarState = Mortar.State.Seeking;
 		}
 
 		public override void OnBegin() {
@@ -32,14 +32,15 @@ namespace Swarm {
 
 		public override void TimeUpdated() {
 			base.TimeUpdated();
-			if (mortarState == Mortar.State.Seeking && t > aimTime) {
-				SetStates(Mortar.State.Locking);
+			if (mortarState == Mortar.State.Telegraphing && t > aimTime && !isLocked) {
+				LockAll();
+				isLocked = true;
 			}
 		}
 
 		public override void OnTerminate() {
 			base.OnTerminate();
-			SetStates(Mortar.State.Attack);
+			LaunchAttacks();
 		}
 
 		private void CreateMortars() {
@@ -51,9 +52,15 @@ namespace Swarm {
 			}
 		}
 
-		private void SetStates(Mortar.State nState) {
+		private void LockAll() {
 			foreach (Mortar mortar in mortars) {
-				mortar.SetState(nState);
+				mortar.Lock(lockTime);
+			}
+		}
+
+		private void LaunchAttacks() {
+			foreach (Mortar mortar in mortars) {
+				mortar.LaunchAttack();
 			}
 		}
 

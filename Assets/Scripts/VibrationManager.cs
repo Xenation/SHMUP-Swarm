@@ -10,7 +10,15 @@ namespace Swarm
 
         public PlayerSwarm swarm;
 
-        private static VibrationManager vm;
+		private static VibrationManager vm {
+			get {
+				if (_vm == null) {
+					_vm = FindObjectOfType<VibrationManager>();
+				}
+				return _vm;
+			}
+		}
+        private static VibrationManager _vm;
 
         public bool testController;
 
@@ -37,7 +45,7 @@ namespace Swarm
 
         private void Awake()
         {
-            vm = this;
+            _vm = this;
         }
 
         // Start is called before the first frame update

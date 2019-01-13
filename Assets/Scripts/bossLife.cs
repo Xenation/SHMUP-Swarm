@@ -76,7 +76,6 @@ namespace Swarm
             {
                 AkSoundEngine.SetState("BossPhase", "Phase3");
             }
-            //Debug.Log(pv);
 
 
             if (inHitStun == true)
@@ -118,6 +117,7 @@ namespace Swarm
 
 
             SceneManager.LoadScene("Win");
+            AkSoundEngine.SetState("BossPhase", "Outro");
 
         }
 
@@ -139,8 +139,9 @@ namespace Swarm
                 {
                     animator.SetBool("isOpen", true);
                     //part.SetActive(false);
-                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
+                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);               
                 }
+
             }
         }
 

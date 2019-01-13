@@ -1,28 +1,25 @@
 ﻿using UnityEngine;
 
 namespace Swarm {
-	[RequireComponent(typeof(BoxCollider2D))]
-	public class Lazer : MonoBehaviour {
-
+	public class Lazer : TelegraphableAttack {
+		
 		private BoxCollider2D col;
 
-		private void Awake() {
-			col = GetComponent<BoxCollider2D>();
-            AkSoundEngine.PostEvent("Play_Laser", gameObject);
-        }
+		protected override void OnAwake() {
+			col = attack.GetComponent<BoxCollider2D>();
+			AkSoundEngine.PostEvent("Play_Laser", gameObject);
+		}
 
 		public void SetWidth(float width) {
-			Transform rayTransf = transform.Find("Ray");
+			Transform rayTransf = attack.transform.Find("Ray");
 			rayTransf.localScale = new Vector3(rayTransf.localScale.x, width, rayTransf.localScale.z);
-			Transform startTransf = transform.Find("Start");
+			Transform startTransf = attack.transform.Find("Start");
 			startTransf.localScale = new Vector3(width, width, startTransf.localScale.z);
 			col.size = new Vector2(col.size.x, width);
-
 		}
-        private void OnDestroy()
-        {
+
+        private void OnDestroy() {
             AkSoundEngine.PostEvent("Stop_Laser", gameObject);
-            
         }
     }
 }

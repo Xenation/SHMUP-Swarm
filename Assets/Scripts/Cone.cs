@@ -3,21 +3,20 @@ using UnityEngine;
 
 namespace Swarm {
 	[RequireComponent(typeof(PolygonCollider2D))]
-	public class Cone : MonoBehaviour {
+	public class Cone : TelegraphableAttack {
 		
 		private PolygonCollider2D col;
-		private MeshFilter filter;
 		private Mesh mesh;
 
 		private List<int> indices = new List<int>();
 		private List<Vector3> vertices = new List<Vector3>();
 		private List<Vector2> uvs = new List<Vector2>();
 
-		private void Awake() {
+		protected override void OnAwake() {
 			col = GetComponent<PolygonCollider2D>();
-			filter = GetComponent<MeshFilter>();
-            mesh = filter.mesh;
-            AkSoundEngine.PostEvent("Play_Cone", gameObject);
+			col.enabled = false;
+			mesh = GetComponent<MeshFilter>().mesh;
+			
 		}
 
 		public void SetAngleRadius(float angle, float radius) {
@@ -29,9 +28,16 @@ namespace Swarm {
 			mesh.SetUVs(0, uvs);
 			mesh.SetTriangles(indices, 0);
 		}
-        private void OnDestroy()
-        {
+
+		public override void LaunchAttack() {
+			base.LaunchAttack();
+			col.enabled = true;
+            AkSoundEngine.PostEvent("Play_Cone", gameObject);
+        }
+
+		private void OnDestroy() {
             AkSoundEngine.PostEvent("Stop_Cone", gameObject);
         }
-    }
+		
+	}
 }

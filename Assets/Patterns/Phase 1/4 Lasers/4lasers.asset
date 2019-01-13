@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: 4lasers
+  m_EditorClassIdentifier: 
+  finishedDelay: 5
+  simultaneous:
+  - {fileID: 11400000, guid: 99cadc0d64d8a16489ed5ed227e581ee, type: 2}
+  nextPossible:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: d91e21c9ffe71ab4e9c834a89371b78f, type: 2}
+  - {fileID: 11400000, guid: 57951dcc3bc77254f80a3a249bcd7fe9, type: 2}
+  autoPlaced: 1
+  count: 4
+  startRotation: 0
+  distanceFromCenter: 2.5
+  rotationSpeed: 5
+  spawnPoints:
+  - position: {x: 2.5, y: 0}
+    rotation: 0
+  - position: {x: -0.000000109278474, y: 2.5}
+    rotation: 90
+  - position: {x: -2.5, y: -0.00000021855695}
+    rotation: 180
+  - position: {x: 0.000000029812202, y: -2.5}
+    rotation: 270
+  sequence:
+  - type: 1
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 0,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+        type: 3}

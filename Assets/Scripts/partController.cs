@@ -114,7 +114,7 @@ namespace Swarm
             }
             else
             {
-                cam.transform.position += new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+                cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
             }
                 
         }

@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: ConeJoliPinceNorth
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible: []
+  autoPlaced: 1
+  count: 1
+  startRotation: 90
+  distanceFromCenter: 2
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: -0.00000008742278, y: 2}
+    rotation: 90
+  sequence:
+  - type: 8
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 45
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 10
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1,5
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 4,5
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+        type: 3}
+    - type: 3
+      json: 
+      unityObject: {fileID: 0}
