@@ -32,19 +32,46 @@ MonoBehaviour:
     rotation: 300
   sequence:
   - type: 0
-    count: 50
-    duration: 2
-    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-      type: 3}
-    point: {fileID: 0}
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 50
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}
   - type: 3
     count: 0
-    duration: 2
+    duration: 0
     projectile: {fileID: 0}
-    point: {fileID: 0}
+    fields:
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
   - type: 0
-    count: 30
-    duration: 1
-    projectile: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-      type: 3}
-    point: {fileID: 0}
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 30
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 0
+      unityObject: {fileID: 0}
