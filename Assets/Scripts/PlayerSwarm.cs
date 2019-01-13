@@ -180,6 +180,9 @@ namespace Swarm {
 
             if( units.Count == 0 && (!inShrink || !shrinkUnit ) )
             {
+                ScoreManager.endTime = Time.time;
+                ScoreManager.bossDead = false;
+
                 SceneManager.LoadScene("Lose");
                 AkSoundEngine.SetState("BossPhase", "None");
             }

@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class winMenu : MonoBehaviour
 {
+    public Text name;
+    public Text score;
+
     // Start is called before the first frame update
     void Start()
     {
         GameObject.Find("returnToMenu").GetComponent<Button>().onClick.AddListener(onClickMenu);
         GameObject.Find("SubmitScore").GetComponent<Button>().onClick.AddListener(onClickSubmit);
+        score.text = ScoreManager.textScore;
     }
 
     // Update is called once per frame
@@ -26,6 +30,6 @@ public class winMenu : MonoBehaviour
 
     void onClickSubmit()
     {
-        //Mettre le score en ligne
+        ScoreManager.sendScore(name.text); //Add Name from submit text field
     }
 }

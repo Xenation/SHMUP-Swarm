@@ -26,6 +26,7 @@ public class LoseMenu : MonoBehaviour
 
     void onClickRetry()
     {
+        ScoreManager.bossDead = true;
         SceneManager.LoadScene("MorganScene");
     }
 }

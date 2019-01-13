@@ -44,6 +44,16 @@ namespace Swarm
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
             AkSoundEngine.SetState("BossPhase", "Phase1");
+
+
+            if (ScoreManager.bossPhase == 2)
+            {
+                pv = phase2Threshhold;
+            }
+            else if (ScoreManager.bossPhase == 3)
+            {
+                pv = phase3Threshhold;
+            }
         }
 
         // Update is called once per frame
@@ -113,6 +123,8 @@ namespace Swarm
         public void End()
         {
             ScoreTimer = Time.time - ScoreTimer;
+            ScoreManager.endTime = Time.time;
+            ScoreManager.bossDead = true;
             //Envoyez le score dans la prochaine scene + leaderboard
 
 
@@ -175,11 +187,18 @@ namespace Swarm
             {
                 //Change sprite and patterns to second phase
                 currentPhase = 3;
+                ScoreManager.bossPhase = 3;
             }
             else if (pv < phase2Threshhold)
             {
                 //Change sprite and patterns to third phase
                 currentPhase = 2;
+                ScoreManager.bossPhase = 2;
+            }
+            else
+            {
+                currentPhase = 1;
+                ScoreManager.bossPhase = 1;
             }
         }
 
