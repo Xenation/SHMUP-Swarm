@@ -92,8 +92,6 @@ namespace Swarm {
 
                 //Second version of shrink
                 inShrink = true;
-                //units.Clear();
-                //cursorSprite.color = Color.blue;
                 shrinkUnit = Instantiate(shrinkPrefab, cursor.position, Quaternion.identity, transform);
                 shrinkUnit.transform.localScale = new Vector3( shrinkUnit.transform.localScale.x /2, shrinkUnit.transform.localScale.y /2, shrinkUnit.transform.localScale.z);
                 
@@ -109,22 +107,30 @@ namespace Swarm {
 
                 foreach (PlayerUnit unit in units)
                 {
-                    float sizeNowt = ShrinkUnits / (ShrinkUnits + units.Count);
-                    shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNowt), sizeRatio + (sizeRatio * sizeNowt), shrinkUnit.transform.localScale.z);
-
                     if (unit.transform.position.x <= maxDist.x &&
                         unit.transform.position.x >= minDist.x &&
                         unit.transform.position.y <= maxDist.y &&
                         unit.transform.position.y >= minDist.y)
                     {
-                        ShrinkUnits = ShrinkUnits + 1;
+                        ++ShrinkUnits;
                         
+                        if (units.Count > 1)
+                        {
+                            float sizeNow = (float)ShrinkUnits / ((float)ShrinkUnits + (float)units.Count);
+                            shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNow), sizeRatio + (sizeRatio * sizeNow), shrinkUnit.transform.localScale.z);
+                        }
+                        else if (units.Count == 1)
+                        {
+                            shrinkUnit.transform.localScale = new Vector3(sizeRatio + sizeRatio, sizeRatio + sizeRatio, shrinkUnit.transform.localScale.z);
+                        }
+
+
                         Destroy(unit.gameObject);
                     }
                     //Change size consequently to number of pyus in it
                 }
-                float sizeNow = ShrinkUnits / (ShrinkUnits + units.Count);
-                shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNow), sizeRatio + (sizeRatio * sizeNow), shrinkUnit.transform.localScale.z);
+
+               
             }
 
             if (Input.GetButtonUp("Fire2"))
