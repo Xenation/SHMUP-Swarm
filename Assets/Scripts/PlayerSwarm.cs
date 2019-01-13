@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Swarm {
@@ -50,6 +51,8 @@ namespace Swarm {
 
         private GameObject shrinkUnit;
         private float sizeRatio;
+
+        public Text Pause;
         
 		private void Awake() {
 			cursor = transform.Find("Cursor");
@@ -167,12 +170,14 @@ namespace Swarm {
                     Time.timeScale = 1;
                     Time.fixedDeltaTime = defaultTimeScale;
                     inPause = !inPause;
+                    Pause.text = "";
                 }
                 else
                 {
                     Time.timeScale = 0.001f;
                     Time.fixedDeltaTime = defaultTimeScale * 0.001f;
                     inPause = !inPause;
+                    Pause.text = "Pause \n Press P or Start to resume";
                 }
             }
 
