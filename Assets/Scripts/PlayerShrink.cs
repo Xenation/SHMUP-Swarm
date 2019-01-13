@@ -52,7 +52,7 @@ namespace Swarm
                 }
                 else if (swarm.units.Count > 0 && swarm.ShrinkUnits == 0)
                 {
-                    Destroy(swarm.units[0].gameObject);
+                    swarm.units[0].Die();
                 }
                 else
                 {
