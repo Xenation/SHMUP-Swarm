@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586541272710786805
+    m_lastTime: -8586541203673101737
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586541452369125983
+    m_lastTime: -8586541203673341424
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -317,6 +317,18 @@ MonoBehaviour:
       - ElementName: Stop_Mortier
         ObjectType: 3
       Path: Default Work Unit\Stop_Mortier
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music
+      guid: 9804428bf802a64187d8d309bc1d07fe
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Music
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
