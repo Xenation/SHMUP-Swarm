@@ -3,7 +3,7 @@ using UnityEngine;
 using Xenon.Processes;
 
 namespace Swarm {
-	public class MortarProcess : TimedProcess {
+	public class MortarProcess : TimedProcess, AbortableProcess {
 
 		private float aimTime;
 		private float radius;
@@ -32,7 +32,7 @@ namespace Swarm {
 
 		public override void TimeUpdated() {
 			base.TimeUpdated();
-			if (mortarState == Mortar.State.Telegraphing && t > aimTime && !isLocked) {
+			if (mortarState == TelegraphableAttack.State.Telegraphing && t > aimTime && !isLocked) {
 				LockAll();
 				isLocked = true;
 			}
@@ -64,5 +64,14 @@ namespace Swarm {
 			}
 		}
 
+		private void DestroyAll() {
+			foreach (Mortar mortar in mortars) {
+				Object.Destroy(mortar.gameObject);
+			}
+		}
+
+		public void Abort() {
+			DestroyAll();
+		}
 	}
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 using Xenon.Processes;
 
 namespace Swarm {
-	public class LazerProcess : TimedProcess {
+	public class LazerProcess : TimedProcess, AbortableProcess {
 
 		private float width;
 		private float telegraphDuration;
@@ -60,6 +60,10 @@ namespace Swarm {
 			foreach (Lazer lazer in lazers) {
 				lazer.LaunchAttack();
 			}
+		}
+
+		public void Abort() {
+			DestroyLazers();
 		}
 
 	}

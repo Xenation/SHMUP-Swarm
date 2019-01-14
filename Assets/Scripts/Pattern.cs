@@ -16,13 +16,18 @@ namespace Swarm {
 
 		public RuntimeParameters runParams;
 
+		public delegate void PatternEnd(Pattern next);
+		public event PatternEnd OnPatternEnded;
+
 		// Sequence
 		private ProcessManager procManager;
+		private SequenceProcess sequenceProcess;
 		
 		private bool suppressNext = false;
 
 		public void Initialize(PatternDefinition def) {
 			definition = def;
+			Debug.Log("Starting Pattern: " + definition.name);
 			runParams = new RuntimeParameters() { rotationSpeed = def.rotationSpeed };
 
 			// Spawn Points
@@ -33,9 +38,9 @@ namespace Swarm {
 
 			// Sequence
 			procManager = new ProcessManager();
-			SequenceProcess seqProc = new SequenceProcess(definition.sequence, runParams, definition.finishedDelay);
-			seqProc.TerminateCallback += SequenceFinished;
-			procManager.LaunchProcess(seqProc);
+			sequenceProcess = new SequenceProcess(definition.sequence, runParams, definition.finishedDelay);
+			sequenceProcess.TerminateCallback += SequenceFinished;
+			procManager.LaunchProcess(sequenceProcess);
 
 			// Simultaneous Patterns
 			foreach (PatternDefinition defSimult in definition.simultaneous) {
@@ -53,10 +58,26 @@ namespace Swarm {
 		}
 
 		private void SequenceFinished() {
+			Debug.Log("Finished Pattern: " + definition.name);
 			if (!suppressNext) {
 				PatternDefinition nextDef = definition.GetRandomNext();
+				Pattern nextPat = null;
 				if (nextDef != null) {
-					nextDef.Attach(gameObject);
+					nextPat = nextDef.Attach(gameObject);
+				}
+				OnPatternEnded?.Invoke(nextPat);
+			}
+			Destroy(this);
+			Destroy(runParams.pointsParent.gameObject);
+		}
+
+		public void Terminate() {
+			Debug.Log("Terminating Pattern: " + definition.name);
+			sequenceProcess.Terminate();
+			if (!suppressNext) {
+				foreach (Pattern simult in GetComponents<Pattern>()) {
+					if (!simult.suppressNext) continue;
+					simult.Terminate();
 				}
 			}
 			Destroy(this);

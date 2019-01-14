@@ -22,7 +22,7 @@ namespace Swarm
         // Update is called once per frame
         void Update()
         {
-            if (bl.isPart)
+            if (bl.hasPartsAlive)
             {
                 Vector3 eyeDirection = Vector3.zero;
                 Vector3 playerLocal = transform.InverseTransformPoint(swarm.cursor.transform.position);

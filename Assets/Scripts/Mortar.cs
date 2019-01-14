@@ -35,8 +35,8 @@ namespace Swarm {
 
 		public void Lock(float lockTime) {
 			isLocked = true;
-            AkSoundEngine.PostEvent("Stop_Mortier", gameObject);
-            visualProjectile.SetActive(true);
+			AkSoundEngine.PostEvent("Stop_Mortier", gameObject);
+			visualProjectile.SetActive(true);
 			visualProjectileSpeed = (telegraph.transform.position - visualProjectile.transform.position).magnitude / lockTime;
 		}
 
