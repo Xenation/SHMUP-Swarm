@@ -92,9 +92,9 @@ namespace Swarm
         }
 
 		private void Damaged() {
-			isDestroyed = true;
+			
 			//mat.SetFloat("_ReplaceAmount", 0.5f);
-			transform.parent.GetComponent<bossLife>().checkParts();
+			
 			destroyShake();
 			explosion_fx.SetTrigger("explosion");
 
@@ -102,7 +102,9 @@ namespace Swarm
 			AkSoundEngine.PostEvent("Play_HardHit", gameObject);
             this.GetComponent<Collider2D>().isTrigger = true;
 			sprRenderer.sprite = destroyedSprites[boss.phaseIndex];
-		}
+            isDestroyed = true;
+            transform.parent.GetComponent<bossLife>().checkParts();
+        }
 
 		public void Heal() {
 			isDestroyed = false;
