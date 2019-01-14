@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 1
-  basepv: 1
+  basepv: 15
   isDestroyed: 0
   cam: {fileID: 0}
   hitStunDuration: 0.05
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 1
-  basepv: 1
+  basepv: 15
   isDestroyed: 0
   cam: {fileID: 0}
   hitStunDuration: 0.05
@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 1913640492}
   - component: {fileID: 725464387}
   - component: {fileID: 7642762790660658203}
+  - component: {fileID: 43817398}
   m_Layer: 0
   m_Name: Head
   m_TagString: part
@@ -444,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 1
-  basepv: 1
+  basepv: 15
   isDestroyed: 0
   cam: {fileID: 0}
   hitStunDuration: 0.05
@@ -559,6 +560,21 @@ PolygonCollider2D:
       - {x: 0.675, y: -0.93}
       - {x: 0.645, y: -0.96}
       - {x: 0.615, y: -0.96999997}
+--- !u!114 &43817398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913640488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64ba7ae63538fb4ba236c8297b04bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eye: {fileID: 9081071139309854661}
+  swarm: {fileID: 0}
+  maxEyeDistance: 0.25
 --- !u!1 &4024477420749147756
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pv: 1
-  basepv: 1
+  basepv: 15
   isDestroyed: 0
   cam: {fileID: 0}
   hitStunDuration: 0.05
@@ -862,8 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c19869212dc4c74d8511c77a4164582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPattern: {fileID: 0}
   swarm: {fileID: 0}
+  phases: []
 --- !u!114 &138413040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,14 +892,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e100992b27bd742918ce70c4156d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pv: 5
-  phase2Threshhold: 0
-  phase3Threshhold: 0
-  isPart: 1
+  pv: 300
+  phase2Threshhold: 100
+  phase3Threshhold: 200
+  hasPartsAlive: 1
   cam: {fileID: 0}
   player: {fileID: 0}
-  openingDuration: 5
-  hitStunDuration: 0.05
+  openingDuration: 7
+  hitStunDuration: 0.03
   endCristalPrefab: {fileID: 5663627458493970703, guid: a322f957b09f1fb45ba743754c59d5a7,
     type: 3}
 --- !u!95 &3057257070053065724
