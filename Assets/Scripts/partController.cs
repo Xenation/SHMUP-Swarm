@@ -100,7 +100,7 @@ namespace Swarm
 
 			//INSERER SON DESTRUCTION D'UNE PARTIE
 			AkSoundEngine.PostEvent("Play_HardHit", gameObject);
-
+            this.GetComponent<Collider2D>().isTrigger = true;
 			sprRenderer.sprite = destroyedSprites[boss.phaseIndex];
 		}
 
@@ -108,9 +108,9 @@ namespace Swarm
 			isDestroyed = false;
 			pv = basepv;
 			mat.SetFloat("_ReplaceAmount", 0.0f);
-
-			//sprRenderer.sprite = healedSprites[boss.phaseIndex];
-			mat.SetTexture("_SecondTex", healedSprites[boss.phaseIndex].texture);
+            this.GetComponent<Collider2D>().isTrigger = false;
+            //sprRenderer.sprite = healedSprites[boss.phaseIndex];
+            mat.SetTexture("_SecondTex", healedSprites[boss.phaseIndex].texture);
 			regenStartTime = Time.time;
 			isRegenerating = true;
 		}
