@@ -10,30 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: rosace1
+  m_Name: AR2
   m_EditorClassIdentifier: 
-  finishedDelay: 0
-  simultaneous:
-  - {fileID: 11400000, guid: a8e0691cd112b264bac602a53e50552b, type: 2}
-  - {fileID: 11400000, guid: 754a8ab6e1815d942b782e8ec92b112e, type: 2}
+  finishedDelay: 4
+  simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
+  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
   autoPlaced: 1
-  count: 5
+  count: 10
   startRotation: 0
   distanceFromCenter: 1
-  rotationSpeed: 20
+  rotationSpeed: 60
   spawnPoints:
   - position: {x: 1, y: 0}
     rotation: 0
+  - position: {x: 0.809017, y: 0.58778524}
+    rotation: 35.999996
   - position: {x: 0.30901697, y: 0.95105654}
     rotation: 72
+  - position: {x: -0.30901703, y: 0.9510565}
+    rotation: 108.00001
   - position: {x: -0.80901706, y: 0.5877852}
     rotation: 144
+  - position: {x: -1, y: -0.00000008742278}
+    rotation: -180
   - position: {x: -0.80901694, y: -0.58778536}
     rotation: -143.99998
+  - position: {x: -0.3090171, y: -0.9510565}
+    rotation: -108.00001
   - position: {x: 0.30901712, y: -0.9510565}
     rotation: -71.99999
+  - position: {x: 0.80901724, y: -0.58778495}
+    rotation: -35.999977
   sequence:
   - type: 0
     count: 0
@@ -41,17 +49,25 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 15
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 2
+      json: 2,5
+      unityObject: {fileID: 0}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: -60
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -59,17 +75,25 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 5
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 2
+      json: 2,5
+      unityObject: {fileID: 0}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 60
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -77,17 +101,25 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 15
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 2
+      json: 2,5
+      unityObject: {fileID: 0}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: -60
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -95,17 +127,25 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 5
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 2
+      json: 2,5
+      unityObject: {fileID: 0}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 60
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -113,17 +153,25 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 15
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 2
+      json: 2,5
+      unityObject: {fileID: 0}
+  - type: 7
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: -60
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -131,33 +179,23 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 5
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 2
+      json: 2,5
       unityObject: {fileID: 0}
-  - type: 0
+  - type: 7
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
-    - type: 0
-      json: 15
-      unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
-      unityObject: {fileID: 0}
-    - type: 2
-      json: 
-      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-        type: 3}
-    - type: 1
-      json: 2
+      json: 60
       unityObject: {fileID: 0}

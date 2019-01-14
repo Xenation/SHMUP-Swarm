@@ -102,46 +102,20 @@ MonoBehaviour:
   - position: {x: 0.98768836, y: -0.15643436}
     rotation: -8.999991
   sequence:
-  - type: 1
+  - type: 0
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
-    - type: 1
-      json: 0,5
+    - type: 0
+      json: 0
       unityObject: {fileID: 0}
     - type: 1
-      json: 5
+      json: 0
       unityObject: {fileID: 0}
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
-    - type: 3
+    - type: 2
       json: 
-      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
-        type: 3}
-  - type: 8
-    count: 0
-    duration: 0
-    projectile: {fileID: 0}
-    fields:
-    - type: 1
-      json: 25
       unityObject: {fileID: 0}
     - type: 1
-      json: 20
+      json: 0
       unityObject: {fileID: 0}
-    - type: 1
-      json: 2
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 5
-      unityObject: {fileID: 0}
-    - type: 3
-      json: 
-      unityObject: {fileID: 5142820275938122126, guid: 96d4820d32d16b144aab7cf8fa877155,
-        type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 8390004620712179679, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}

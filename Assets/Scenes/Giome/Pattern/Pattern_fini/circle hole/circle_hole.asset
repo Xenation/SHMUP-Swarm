@@ -166,7 +166,7 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -274,5 +274,5 @@ MonoBehaviour:
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 0
+      json: 2
       unityObject: {fileID: 0}

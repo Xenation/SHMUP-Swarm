@@ -18,19 +18,15 @@ MonoBehaviour:
   nextPossible:
   - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
-  count: 4
+  count: 2
   startRotation: 0
   distanceFromCenter: 2.5
   rotationSpeed: 5
   spawnPoints:
   - position: {x: 2.5, y: 0}
     rotation: 0
-  - position: {x: -0.000000109278474, y: 2.5}
-    rotation: 90
   - position: {x: -2.5, y: -0.00000021855695}
     rotation: -180
-  - position: {x: 0.000000029812202, y: -2.5}
-    rotation: -90
   sequence:
   - type: 1
     count: 0
@@ -38,7 +34,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 2

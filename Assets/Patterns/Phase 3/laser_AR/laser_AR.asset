@@ -18,25 +18,21 @@ MonoBehaviour:
   nextPossible:
   - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
   autoPlaced: 1
-  count: 7
+  count: 5
   startRotation: 0
   distanceFromCenter: 2
   rotationSpeed: 20
   spawnPoints:
   - position: {x: 2, y: 0}
     rotation: 0
-  - position: {x: 1.2469796, y: 1.563663}
-    rotation: 51.428574
-  - position: {x: -0.4450419, y: 1.9498558}
-    rotation: 102.85715
-  - position: {x: -1.8019378, y: 0.8677672}
-    rotation: 154.28572
-  - position: {x: -1.8019377, y: -0.8677675}
-    rotation: -154.2857
-  - position: {x: -0.445042, y: -1.9498558}
-    rotation: -102.85715
-  - position: {x: 1.2469801, y: -1.5636626}
-    rotation: -51.428555
+  - position: {x: 0.61803395, y: 1.9021131}
+    rotation: 72
+  - position: {x: -1.6180341, y: 1.1755704}
+    rotation: 144
+  - position: {x: -1.6180339, y: -1.1755707}
+    rotation: -143.99998
+  - position: {x: 0.61803424, y: -1.902113}
+    rotation: -71.99999
   sequence:
   - type: 1
     count: 0
@@ -44,7 +40,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 2
@@ -62,7 +58,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 2
@@ -80,7 +76,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 2

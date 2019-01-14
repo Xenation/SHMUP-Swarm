@@ -19,25 +19,25 @@ MonoBehaviour:
   autoPlaced: 1
   count: 8
   startRotation: 0
-  distanceFromCenter: 1
+  distanceFromCenter: 2
   rotationSpeed: 25
   spawnPoints:
-  - position: {x: 1, y: 0}
+  - position: {x: 2, y: 0}
     rotation: 0
-  - position: {x: 0.70710677, y: 0.70710677}
-    rotation: 45
-  - position: {x: -0.00000004371139, y: 1}
+  - position: {x: 1.4142135, y: 1.4142135}
+    rotation: 45.000004
+  - position: {x: -0.00000008742278, y: 2}
     rotation: 90
-  - position: {x: -0.70710677, y: 0.70710677}
+  - position: {x: -1.4142135, y: 1.4142135}
     rotation: 135
-  - position: {x: -1, y: -0.00000008742278}
-    rotation: -180
-  - position: {x: -0.70710665, y: -0.7071069}
-    rotation: -135
-  - position: {x: 0.000000011924881, y: -1}
-    rotation: -90
-  - position: {x: 0.707107, y: -0.70710653}
-    rotation: -44.999977
+  - position: {x: -2, y: -0.00000017484555}
+    rotation: 180
+  - position: {x: -1.4142133, y: -1.4142138}
+    rotation: 224.99998
+  - position: {x: 0.000000023849761, y: -2}
+    rotation: 270
+  - position: {x: 1.414214, y: -1.4142131}
+    rotation: 315.00003
   sequence:
   - type: 0
     count: 0

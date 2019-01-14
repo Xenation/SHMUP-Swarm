@@ -10,49 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: ChaosLaser2
+  m_Name: laser_door_easy
   m_EditorClassIdentifier: 
-  finishedDelay: 0
-  simultaneous: []
+  finishedDelay: 1
+  simultaneous:
+  - {fileID: 11400000, guid: 207c34c6bb777ce46a1999a80ca275a4, type: 2}
+  - {fileID: 11400000, guid: 4f6d4d787b2852642b0ef2a9e1733fd5, type: 2}
   nextPossible:
-  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
-  - {fileID: 11400000, guid: b26f8c586fcd62a4db3fbe7603bd2c5e, type: 2}
-  - {fileID: 11400000, guid: 67862c81bf30823449896fc4cce2e232, type: 2}
-  - {fileID: 11400000, guid: ab1afdf6d9cc86d4592917953402fc7b, type: 2}
-  - {fileID: 11400000, guid: 4bcda905c01282d4a8e50ebb189fc91b, type: 2}
-  - {fileID: 11400000, guid: 03ced037dbe061e4f912b26bfaba4b9c, type: 2}
-  - {fileID: 11400000, guid: c43e4e3630abd384d9aba851d628e19f, type: 2}
   - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 1
-  count: 1
+  count: 4
   startRotation: 45
   distanceFromCenter: 2
   rotationSpeed: 0
   spawnPoints:
   - position: {x: 1.4142135, y: 1.4142135}
     rotation: 45
+  - position: {x: -1.4142135, y: 1.4142135}
+    rotation: 135
+  - position: {x: -1.4142133, y: -1.4142138}
+    rotation: -135
+  - position: {x: 1.414214, y: -1.4142131}
+    rotation: -44.999977
   sequence:
-  - type: 8
+  - type: 1
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 90
+      json: 0,2
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
       json: 10
       unityObject: {fileID: 0}
-    - type: 1
-      json: 1
-      unityObject: {fileID: 0}
-    - type: 1
-      json: 0,5
-      unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
         type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 0}

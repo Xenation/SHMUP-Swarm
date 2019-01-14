@@ -10,19 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: rosace1
+  m_Name: rosace2
   m_EditorClassIdentifier: 
   finishedDelay: 0
-  simultaneous:
-  - {fileID: 11400000, guid: a8e0691cd112b264bac602a53e50552b, type: 2}
-  - {fileID: 11400000, guid: 754a8ab6e1815d942b782e8ec92b112e, type: 2}
-  nextPossible:
-  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
+  simultaneous: []
+  nextPossible: []
   autoPlaced: 1
   count: 5
   startRotation: 0
   distanceFromCenter: 1
-  rotationSpeed: 20
+  rotationSpeed: -15
   spawnPoints:
   - position: {x: 1, y: 0}
     rotation: 0
@@ -59,7 +56,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 5
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
@@ -95,7 +92,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 5
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
@@ -131,7 +128,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 5
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
