@@ -20,8 +20,6 @@ public class menuController : MonoBehaviour
 
     public Slider sliderVolume;
 
-    public AK.Wwise.RTPC volume;
-
     // Start is called before the first frame update
     void Start()
     {

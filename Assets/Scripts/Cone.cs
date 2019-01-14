@@ -7,6 +7,7 @@ namespace Swarm {
 		
 		private PolygonCollider2D col;
 		private Mesh mesh;
+		private MeshFilter meshTelegraphFilter;
 
 		private List<int> indices = new List<int>();
 		private List<Vector3> vertices = new List<Vector3>();
@@ -15,8 +16,8 @@ namespace Swarm {
 		protected override void OnAwake() {
 			col = GetComponent<PolygonCollider2D>();
 			col.enabled = false;
-			mesh = GetComponent<MeshFilter>().mesh;
-			
+			mesh = attack.GetComponent<MeshFilter>().mesh;
+			meshTelegraphFilter = telegraph.GetComponent<MeshFilter>();
 		}
 
 		public void SetAngleRadius(float angle, float radius) {
@@ -27,6 +28,10 @@ namespace Swarm {
 			mesh.SetVertices(vertices);
 			mesh.SetUVs(0, uvs);
 			mesh.SetTriangles(indices, 0);
+			meshTelegraphFilter.mesh.Clear();
+			meshTelegraphFilter.mesh.SetVertices(vertices);
+			meshTelegraphFilter.mesh.SetUVs(0, uvs);
+			meshTelegraphFilter.mesh.SetTriangles(indices, 0);
 		}
 
 		public override void LaunchAttack() {

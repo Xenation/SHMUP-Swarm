@@ -216,7 +216,7 @@ namespace Swarm {
             velocity *= cursorSpeed;
 
             //Le nombre d'unitées est obtenable avec units.Count
-            AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
+            AkSoundEngine.SetRTPCValue("PyuNumber", (units.Count+ShrinkUnits));
             rtpcValue = Vector3.Distance(bossTransform.position, cursor.transform.position);
             AkSoundEngine.SetRTPCValue("ElectroFilter", rtpcValue);
 
@@ -224,9 +224,9 @@ namespace Swarm {
             {
                 ScoreManager.endTime = Time.time;
                 ScoreManager.bossDead = false;
-
+                AkSoundEngine.PostEvent("Stop_Music", gameObject);
                 SceneManager.LoadScene("Lose");
-                AkSoundEngine.SetState("BossPhase", "None");
+
             }
             
         }

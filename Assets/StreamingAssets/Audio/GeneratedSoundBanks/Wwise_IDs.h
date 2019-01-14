@@ -35,6 +35,8 @@ namespace AK
         static const AkUniqueID STOP_CONE = 1532176313U;
         static const AkUniqueID STOP_LASER = 738066393U;
         static const AkUniqueID STOP_MORTIER = 1370337034U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
+        static const AkUniqueID STOP_SFX = 287728669U;
     } // namespace EVENTS
 
     namespace STATES
@@ -59,6 +61,8 @@ namespace AK
     {
         static const AkUniqueID ELECTROFILTER = 3262157761U;
         static const AkUniqueID PYUNUMBER = 1131003326U;
+        static const AkUniqueID VOLUMEMUSIC = 3923584592U;
+        static const AkUniqueID VOLUMESFX = 399092848U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
