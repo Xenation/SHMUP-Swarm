@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: distanceRatio
       value: 2.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4767980066131717826, guid: b9c1c729f5dc43e499514374427c125e,
+        type: 3}
+      propertyPath: newCamera
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9c1c729f5dc43e499514374427c125e, type: 3}
 --- !u!1 &223271349
@@ -1299,27 +1304,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 43817398, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: swarm
-      value: 
-      objectReference: {fileID: 230935861}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: phases.Array.size
@@ -1355,8 +1339,29 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 230935861}
+    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2080624393}
+    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2080624393}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2080624393}
     - target: {fileID: 572149457510042393, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
+      propertyPath: swarm
+      value: 
+      objectReference: {fileID: 230935861}
+    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2080624393}
+    - target: {fileID: 43817398, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: swarm
       value: 
       objectReference: {fileID: 230935861}
