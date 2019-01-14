@@ -46,6 +46,7 @@ namespace Swarm {
 			foreach (AttackPoint point in runParams.attackPoints) {
 				if (!point.shootingEnabled) continue;
 				Cone cone = Object.Instantiate(prefab.gameObject, point.transform.position, Quaternion.Euler(0f, 0f, point.rotation), point.transform).GetComponent<Cone>();
+				cone.SetAngleRadius(angle, radius);
 				cones.Add(cone);
 			}
 		}
@@ -60,7 +61,6 @@ namespace Swarm {
 		private void LaunchAttacks() {
 			foreach (Cone cone in cones) {
 				cone.LaunchAttack();
-				cone.SetAngleRadius(angle, radius);
 			}
 		}
 

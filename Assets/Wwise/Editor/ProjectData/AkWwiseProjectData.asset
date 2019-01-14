@@ -22,7 +22,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586542071064550240
+    m_lastTime: -8586541240367845250
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586543645627446651
+    m_lastTime: -8586541203673101737
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586542784561649310
+    m_lastTime: -8586541203673341424
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -320,11 +320,35 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Music
+      guid: 9804428bf802a64187d8d309bc1d07fe
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_SFX
+      guid: c13ba974ff005548bc8347e4cfde2ca4
+      id: 287728669
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_SFX
+        ObjectType: 3
+      Path: Default Work Unit\Stop_SFX
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 12f391762f07df4187e60b4141493a89
-    m_lastTime: -8586543645638429093
+    m_lastTime: -8586541272897902430
     List:
     - name: ElectroFilter
       guid: c744be5295009945a5dcf3817a66795e
@@ -344,6 +368,24 @@ MonoBehaviour:
       - ElementName: PyuNumber
         ObjectType: 13
       Path: Default Work Unit\PyuNumber
+    - name: VolumeMusic
+      guid: 0e8deea8a863bc49a68bac62190a2b61
+      id: 3923584592
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VolumeMusic
+        ObjectType: 13
+      Path: Default Work Unit\VolumeMusic
+    - name: VolumeSfx
+      guid: 2b44a18dac7fd44f8ce2d79b43f9ce4c
+      id: 399092848
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VolumeSfx
+        ObjectType: 13
+      Path: Default Work Unit\VolumeSfx
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
