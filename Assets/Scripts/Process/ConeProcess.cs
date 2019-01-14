@@ -3,7 +3,7 @@ using UnityEngine;
 using Xenon.Processes;
 
 namespace Swarm {
-	public class ConeProcess : TimedProcess {
+	public class ConeProcess : TimedProcess, AbortableProcess {
 
 		private float angle;
 		private float radius;
@@ -62,6 +62,10 @@ namespace Swarm {
 				cone.LaunchAttack();
 				cone.SetAngleRadius(angle, radius);
 			}
+		}
+
+		public void Abort() {
+			DestroyCones();
 		}
 
 	}

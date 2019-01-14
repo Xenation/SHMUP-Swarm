@@ -9,10 +9,12 @@ namespace Swarm
     {
         [SerializeField]
         private int pv;
+		public int health { get { return pv; } }
         public int phase2Threshhold;
         public int phase3Threshhold;
         private int currentPhase = 1;
-        public bool isPart = true;
+		private List<partController> parts = new List<partController>(4);
+        public bool hasPartsAlive = true;
         private Animator animator;
         public Camera cam;
         
@@ -30,12 +32,17 @@ namespace Swarm
 
         private float ScoreTimer = 0;
 
+		public delegate void EventNotify();
+		public event EventNotify OnStunStarted;
+		public event EventNotify OnStunEnded;
+
         //Ajouter une référence vers chaque part du boss
 
 
         private void Awake()
         {
-            ScoreTimer = Time.time;
+			GetComponentsInChildren(parts);
+			ScoreTimer = Time.time;
         }
         // Start is called before the first frame update
         void Start()
@@ -59,19 +66,19 @@ namespace Swarm
         // Update is called once per frame
         void Update()
         {
-            if (!isPart && isAnimationEnd && Time.time - openingTime > openingDuration)
+            if (!hasPartsAlive && isAnimationEnd && Time.time - openingTime > openingDuration)
             {
                 animator.SetBool("isOpen", false);
                 AkSoundEngine.PostEvent("Play_BossClose", gameObject);
-                isPart = true;
+                hasPartsAlive = true;
                 isAnimationEnd = false;
 
                 foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
                 {
                     part.GetComponent<partController>().resetPart();
                 }
-
-                CheckPhase();
+				
+				OnStunEnded?.Invoke();
             }
 
             if (currentPhase == 1)
@@ -96,7 +103,7 @@ namespace Swarm
 
         void OnCollisionEnter2D(Collision2D col)
         {
-            if (!isPart && isAnimationEnd && col.gameObject.layer == LayerMask.NameToLayer("ProjectileUnit"))
+            if (!hasPartsAlive && isAnimationEnd && col.gameObject.layer == LayerMask.NameToLayer("ProjectileUnit"))
             {
                 lowerPV();
                 hitstun();
@@ -135,26 +142,20 @@ namespace Swarm
 
         public void checkParts()
         {
-            isPart = false;
-            foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
-            {
-                if (!part.GetComponent<partController>().isDestroyed)
-                {
-                    isPart = true;
-                }
-            }
+			hasPartsAlive = false;
+			foreach (partController part in parts) {
+				if (!part.isDestroyed) {
+					hasPartsAlive = true;
+				}
+			}
 
-            if (!isPart)
+            if (!hasPartsAlive)
             {
                 openingTime = Time.time;
-                foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
-                {
-                    animator.SetBool("isOpen", true);
-                    //part.SetActive(false);
-                    AkSoundEngine.PostEvent("Play_BossOpen", gameObject);               
-                }
-
-            }
+				animator.SetBool("isOpen", true);
+				AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
+				OnStunStarted?.Invoke();
+			}
         }
 
         private void hitstun()
@@ -181,28 +182,10 @@ namespace Swarm
             }
         }
 
-        private void CheckPhase()
-        {
-            if (pv <= phase3Threshhold)
-            {
-                //Change sprite and patterns to second phase
-                Debug.Log("changed phase to 3");
-                currentPhase = 3;
-                ScoreManager.bossPhase = 3;
-            }
-            else if (pv <= phase2Threshhold)
-            {
-                //Change sprite and patterns to third phase
-                Debug.Log("phase 2");
-                currentPhase = 2;
-                ScoreManager.bossPhase = 2;
-            }
-            else
-            {
-                currentPhase = 1;
-                ScoreManager.bossPhase = 1;
-            }
-        }
+		public void SetPhase(int phase) {
+			currentPhase = phase;
+			ScoreManager.bossPhase = phase;
+		}
 
         private void OnDestroy()
         {

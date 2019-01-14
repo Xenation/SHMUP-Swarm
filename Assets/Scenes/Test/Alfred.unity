@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: bossTransform
       value: 
       objectReference: {fileID: 1775890838}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitsToCreate
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8018811773805060492, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_Constraints
@@ -1135,6 +1140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
+      propertyPath: phases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
       propertyPath: burstToExec
       value: testBurst
       objectReference: {fileID: 0}
@@ -1264,6 +1274,57 @@ PrefabInstance:
       propertyPath: swarm
       value: 
       objectReference: {fileID: 166588369}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[0].startPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 47324d7cff6ed1248ae35155098ecbed,
+        type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[0].resetPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f0fa94cc597a9b49b5936bb0a0a47a1,
+        type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[1].startPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 47324d7cff6ed1248ae35155098ecbed,
+        type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[0].lifeThreshold
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[1].lifeThreshold
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[2].lifeThreshold
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[1].resetPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ec7d488e63106543a01014595fe4566,
+        type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[2].startPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f0fa94cc597a9b49b5936bb0a0a47a1,
+        type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[2].resetPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 47324d7cff6ed1248ae35155098ecbed,
+        type: 2}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
@@ -1272,6 +1333,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 166588369}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: phase2Threshhold
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: phase3Threshhold
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 

@@ -21,6 +21,13 @@ namespace Swarm {
 			}
 		}
 
+		private void CurrentTerminated() {
+			if (first.Attached.Count > 0) {
+				first = first.Attached[0];
+				first.TerminateCallback += CurrentTerminated;
+			}
+		}
+
 		private void LastTerminated() {
 			Terminate();
 		}
@@ -32,6 +39,7 @@ namespace Swarm {
 				return;
 			}
 			last.TerminateCallback += LastTerminated;
+			first.TerminateCallback += CurrentTerminated;
 			manager.LaunchProcess(first);
 		}
 
@@ -40,7 +48,9 @@ namespace Swarm {
 		}
 
 		public override void OnTerminate() {
-			
+			if (first != null && first is AbortableProcess abortable) {
+				abortable.Abort();
+			}
 		}
 
 	}
