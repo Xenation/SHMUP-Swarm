@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
   m_Name: Ch_Magn 1
   m_EditorClassIdentifier: 
-  finishedDelay: 3
+  finishedDelay: 4
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
+  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
   autoPlaced: 0
   count: 35
   startRotation: 0

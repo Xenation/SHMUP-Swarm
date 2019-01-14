@@ -34,7 +34,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0,2
       unityObject: {fileID: 0}
     - type: 1
       json: 0

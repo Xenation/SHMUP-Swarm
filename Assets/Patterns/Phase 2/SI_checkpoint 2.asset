@@ -20,12 +20,12 @@ MonoBehaviour:
   count: 2
   startRotation: 90
   distanceFromCenter: 2
-  rotationSpeed: 80
+  rotationSpeed: 70
   spawnPoints:
   - position: {x: -0.00000008742278, y: 2}
     rotation: 90
   - position: {x: 0.000000023849761, y: -2}
-    rotation: -90
+    rotation: 270
   sequence:
   - type: 1
     count: 0

@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ab1afdf6d9cc86d4592917953402fc7b, type: 2}
   - {fileID: 11400000, guid: 4bcda905c01282d4a8e50ebb189fc91b, type: 2}
   - {fileID: 11400000, guid: c43e4e3630abd384d9aba851d628e19f, type: 2}
-  - {fileID: 11400000, guid: a5f8be6da4101104cb0a84854f730e52, type: 2}
+  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 1
   count: 1
   startRotation: 270
@@ -30,7 +30,7 @@ MonoBehaviour:
   rotationSpeed: 0
   spawnPoints:
   - position: {x: 0.000000023849761, y: -2}
-    rotation: 270
+    rotation: -90
   sequence:
   - type: 8
     count: 0

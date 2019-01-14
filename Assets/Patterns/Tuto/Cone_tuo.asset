@@ -10,36 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: SiphonClassique
+  m_Name: Cone_tuo
   m_EditorClassIdentifier: 
-  finishedDelay: 1
+  finishedDelay: 2
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
+  - {fileID: 11400000, guid: c79970bd84d20134fbabdcaf80e9def2, type: 2}
   autoPlaced: 1
-  count: 1
+  count: 3
   startRotation: 0
-  distanceFromCenter: 1
-  rotationSpeed: 200
+  distanceFromCenter: 2
+  rotationSpeed: 0
   spawnPoints:
-  - position: {x: 1, y: 0}
+  - position: {x: 2, y: 0}
     rotation: 0
+  - position: {x: -1.0000001, y: 1.7320508}
+    rotation: 120.00001
+  - position: {x: -0.9999998, y: -1.7320509}
+    rotation: -119.99999
   sequence:
-  - type: 0
+  - type: 8
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
-    - type: 0
-      json: 100
+    - type: 1
+      json: 60
       unityObject: {fileID: 0}
     - type: 1
-      json: 5
+      json: 3,5
       unityObject: {fileID: 0}
-    - type: 2
-      json: 
-      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
-        type: 3}
+    - type: 1
+      json: 2
+      unityObject: {fileID: 0}
     - type: 1
       json: 1
+      unityObject: {fileID: 0}
+    - type: 3
+      json: 
+      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+        type: 3}
+    - type: 3
+      json: 
       unityObject: {fileID: 0}

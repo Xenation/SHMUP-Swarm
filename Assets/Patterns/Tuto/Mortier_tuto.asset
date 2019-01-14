@@ -10,49 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: rosace3
+  m_Name: Mortier_tuto
   m_EditorClassIdentifier: 
-  finishedDelay: 3
+  finishedDelay: 4
   simultaneous: []
-  nextPossible: []
+  nextPossible:
+  - {fileID: 11400000, guid: 579e456b4fec7d24b8da0798dbb00fb7, type: 2}
   autoPlaced: 1
-  count: 5
-  startRotation: 0
+  count: 1
+  startRotation: -90
   distanceFromCenter: 2
-  rotationSpeed: 22.5
+  rotationSpeed: 0
   spawnPoints:
-  - position: {x: 2, y: 0}
-    rotation: 0
-  - position: {x: 0.61803395, y: 1.9021131}
-    rotation: 71.99999
-  - position: {x: -1.6180341, y: 1.1755704}
-    rotation: 144
-  - position: {x: -1.6180339, y: -1.1755707}
-    rotation: 216.00002
-  - position: {x: 0.61803424, y: -1.902113}
-    rotation: 288
+  - position: {x: -0.00000008742278, y: -2}
+    rotation: -90
   sequence:
-  - type: 8
+  - type: 2
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 120
+      json: 3
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
+      json: 2,5
       unityObject: {fileID: 0}
     - type: 1
-      json: 1
+      json: 6
       unityObject: {fileID: 0}
     - type: 1
-      json: 5
+      json: 0,8
       unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5966894017839790611, guid: d7893d37577ac9e469dee99e2cac116e,
+      unityObject: {fileID: 1131358840666498810, guid: bf85f9ce1977bf14d90b5e05565f5058,
         type: 3}
-    - type: 3
-      json: 
-      unityObject: {fileID: 0}

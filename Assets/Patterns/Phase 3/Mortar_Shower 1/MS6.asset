@@ -34,7 +34,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 80
+      json: 70
       unityObject: {fileID: 0}
     - type: 1
       json: 11

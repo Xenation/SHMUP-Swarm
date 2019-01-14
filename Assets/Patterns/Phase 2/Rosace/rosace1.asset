@@ -17,14 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a8e0691cd112b264bac602a53e50552b, type: 2}
   - {fileID: 11400000, guid: 754a8ab6e1815d942b782e8ec92b112e, type: 2}
   nextPossible:
-  - {fileID: 11400000, guid: d75b8359fbb8b5e41ba2efc9578e16aa, type: 2}
-  - {fileID: 11400000, guid: 1422f7d9c3024f54a96bcfcbf2a5bf37, type: 2}
-  - {fileID: 11400000, guid: a9fa4f751d01cdc48b6dfdc871424054, type: 2}
-  - {fileID: 11400000, guid: a5f8be6da4101104cb0a84854f730e52, type: 2}
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: b5968a9c01f10554d989f9ee130eabce, type: 2}
-  - {fileID: 11400000, guid: ac15bd0471bd11f4ab5383629f460217, type: 2}
-  - {fileID: 11400000, guid: 73f67e43e8b9cf24aa68d4a51b580803, type: 2}
+  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 1
   count: 5
   startRotation: 0
@@ -34,13 +27,13 @@ MonoBehaviour:
   - position: {x: 1, y: 0}
     rotation: 0
   - position: {x: 0.30901697, y: 0.95105654}
-    rotation: 71.99999
+    rotation: 72
   - position: {x: -0.80901706, y: 0.5877852}
     rotation: 144
   - position: {x: -0.80901694, y: -0.58778536}
-    rotation: 216.00002
+    rotation: -143.99998
   - position: {x: 0.30901712, y: -0.9510565}
-    rotation: 288
+    rotation: -71.99999
   sequence:
   - type: 0
     count: 0
@@ -48,7 +41,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 30
+      json: 15
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
@@ -84,7 +77,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 30
+      json: 15
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
@@ -120,7 +113,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 30
+      json: 15
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
@@ -156,7 +149,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 0
-      json: 30
+      json: 15
       unityObject: {fileID: 0}
     - type: 1
       json: 0,5
