@@ -34,7 +34,7 @@ namespace Swarm
             {
                 //INSERER SON DE PICKUP
                 // just a test
-                //pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
+                pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
                 openAnim.SetTrigger("collision"); // TODO temporarly disabled to avoid console flood
                 AkSoundEngine.PostEvent("Play_PickUp", gameObject);
                 Destroy(coll);                
