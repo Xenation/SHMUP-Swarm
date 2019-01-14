@@ -32,5 +32,13 @@ namespace Swarm
                 currentPickups.Add(currentPickup);
             }       
         }
+
+        public void spawnAt(Vector3 pos)
+        {
+            GameObject tmp = Instantiate(Pickup);
+            Pickups currentPickup = tmp.GetComponent<Pickups>();
+            currentPickup.setPlayer(Player);
+            currentPickups.Add(currentPickup);
+        }
     }
 }

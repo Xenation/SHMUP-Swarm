@@ -48,7 +48,6 @@ namespace Swarm
             Debug.Log("before for");
             for (int i = 0; i < unitsToCreate; i++)
             {
-                Transform pos = playerSwarm.transform.GetChild(0);
 
                 float playerX = playerSwarm.cursor.position.x;
                 float playerY = playerSwarm.cursor.position.y;
