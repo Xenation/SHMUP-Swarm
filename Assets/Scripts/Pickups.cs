@@ -15,7 +15,6 @@ namespace Swarm
         public Animator openAnim;
         private Animator pickAnim;
         private Collider2D coll;
-        //private GameObject swarm;
 
         private int randomSign()
         {
@@ -38,8 +37,7 @@ namespace Swarm
                 //pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
                 openAnim.SetTrigger("collision"); // TODO temporarly disabled to avoid console flood
                 AkSoundEngine.PostEvent("Play_PickUp", gameObject);
-                Destroy(coll);
-                //swarm = collision.gameObject;
+                Destroy(coll);                
             }
         }
 

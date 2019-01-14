@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swarm: {fileID: 0}
-  testController: 0
+  testController: 1
   playerIndexSet: 0
+  vibrations: 1
