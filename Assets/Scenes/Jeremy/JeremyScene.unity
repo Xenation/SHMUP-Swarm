@@ -10307,6 +10307,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSwarm
       objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitsToCreate
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: bossTransform
+      value: 
+      objectReference: {fileID: 1904157086}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: cursorNormalSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitNormalSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitNormalRadius
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: unitShrinkRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: suicideSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: freezeTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034856, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10361,46 +10401,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitsToCreate
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: bossTransform
-      value: 
-      objectReference: {fileID: 1904157086}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: cursorNormalSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitNormalSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitNormalRadius
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: unitShrinkRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: suicideSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: freezeTime
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7103110863226394592, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
@@ -34969,7 +34969,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startPattern
       value: 
-      objectReference: {fileID: 11400000, guid: 87c62e900aa029c448d23657ef4fedef,
+      objectReference: {fileID: 11400000, guid: b43a65f13ca72d844bbbf54ae20a9483,
         type: 2}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}

@@ -32,6 +32,8 @@ namespace Swarm
 
         private float ScoreTimer = 0;
 
+        public GameObject endCristalPrefab;
+
 		public delegate void EventNotify();
 		public event EventNotify OnStunStarted;
 		public event EventNotify OnStunEnded;
@@ -134,9 +136,14 @@ namespace Swarm
             ScoreManager.bossDead = true;
             //Envoyez le score dans la prochaine scene + leaderboard
 
+            //Spawn a item that when hit, brings you to win screen
+            Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
 
-            SceneManager.LoadScene("Win");
+            Destroy(this.gameObject);
+
+            //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");
+            AkSoundEngine.PostEvent("Stop_SFX", gameObject);
 
         }
 

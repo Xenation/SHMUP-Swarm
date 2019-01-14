@@ -44,22 +44,25 @@ namespace Swarm
             AkSoundEngine.PostEvent("Play_Death", gameObject);
             VibrationManager.AddVibrateRight(vibStrength, vibDuration);
 
-            if(swarm.ShrinkUnits > 0)
+            if(swarm.ShrinkUnits > 0 || swarm.units.Count > 0)
             {
-                if(swarm.units.Count > 0 && swarm.ShrinkUnits == 0)
+                if(swarm.units.Count > 0 && swarm.ShrinkUnits > 0)
                 {
-                    PlayerUnit toKill = swarm.units[0];
-                    Destroy(toKill);
+                    swarm.ShrinkUnits--;
                 }
-
-                swarm.ShrinkUnits--;
+                else if (swarm.units.Count > 0 && swarm.ShrinkUnits == 0)
+                {
+                    swarm.units[0].Die();
+                }
+                else
+                {
+                    swarm.ShrinkUnits--;
+                }
             }
             else
             {
                 Destroy(gameObject);
             }
-            
         }
-
     }
 }

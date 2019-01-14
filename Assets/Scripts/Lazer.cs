@@ -7,7 +7,7 @@ namespace Swarm {
 
 		protected override void OnAwake() {
 			col = attack.GetComponent<BoxCollider2D>();
-			AkSoundEngine.PostEvent("Play_Laser", gameObject);
+			
 		}
 
 		public void SetWidth(float width) {
@@ -16,7 +16,8 @@ namespace Swarm {
 			Transform startTransf = attack.transform.Find("Start");
 			startTransf.localScale = new Vector3(width, width, startTransf.localScale.z);
 			col.size = new Vector2(col.size.x, width);
-		}
+            AkSoundEngine.PostEvent("Play_Laser", gameObject);
+        }
 
         private void OnDestroy() {
             AkSoundEngine.PostEvent("Stop_Laser", gameObject);

@@ -32,6 +32,8 @@ namespace Swarm
         private float vibStrengthNowRight;
         private float vibStrengthNowLeft;
 
+        public bool vibrations = true;
+
         /***************
          * List of all vibrations
          * X = startTime
@@ -59,6 +61,8 @@ namespace Swarm
         // Update is called once per frame
         void FixedUpdate()
         {
+            if (!vibrations)
+                return;
             //Controller
             if (!vm.playerIndexSet || !vm.prevState.IsConnected)
             {

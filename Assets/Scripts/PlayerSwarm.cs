@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Swarm {
@@ -50,6 +51,8 @@ namespace Swarm {
 
         private GameObject shrinkUnit;
         private float sizeRatio;
+
+        public Text Pause;
         
 		private void Awake() {
 			cursor = transform.Find("Cursor");
@@ -104,7 +107,8 @@ namespace Swarm {
                 //Kill all pyus and change cursor to a bigger pyu.
                 Vector3 minDist = new Vector3(cursor.transform.position.x - cursorShrinkRadius, cursor.transform.position.y - cursorShrinkRadius, 0);
                 Vector3 maxDist = new Vector3(cursor.transform.position.x + cursorShrinkRadius, cursor.transform.position.y + cursorShrinkRadius, 0);
-
+                //v1
+                /*
                 foreach (PlayerUnit unit in units)
                 {
                     if (unit.transform.position.x <= maxDist.x &&
@@ -127,7 +131,33 @@ namespace Swarm {
 
                         Destroy(unit.gameObject);
                     }
-                    //Change size consequently to number of pyus in it
+                }
+                */
+
+
+                //V2
+
+            for(int i = 0; i < units.Count; i++)
+                {
+                    if (units[i].transform.position.x <= maxDist.x &&
+                        units[i].transform.position.x >= minDist.x &&
+                        units[i].transform.position.y <= maxDist.y &&
+                        units[i].transform.position.y >= minDist.y)
+                    {
+                        if (units.Count > 1)
+                        {
+                            float sizeNow = (float)ShrinkUnits / ((float)ShrinkUnits + (float)units.Count);
+                            shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNow), sizeRatio + (sizeRatio * sizeNow), shrinkUnit.transform.localScale.z);
+                        }
+                        else if (units.Count == 1)
+                        {
+                            shrinkUnit.transform.localScale = new Vector3(sizeRatio + sizeRatio, sizeRatio + sizeRatio, shrinkUnit.transform.localScale.z);
+                        }
+
+                        Destroy(units[i].gameObject);
+
+                        ++ShrinkUnits;
+                    }
                 }
 
                
@@ -155,19 +185,26 @@ namespace Swarm {
 
             }
 
-            if (Input.GetKeyDown(KeyCode.P))
+
+            /***********
+             * Pause
+             ***********/
+
+            if (Input.GetButtonDown("Pause"))
             {
                 if (inPause)
                 {
                     Time.timeScale = 1;
                     Time.fixedDeltaTime = defaultTimeScale;
                     inPause = !inPause;
+                    Pause.text = "";
                 }
                 else
                 {
                     Time.timeScale = 0.001f;
                     Time.fixedDeltaTime = defaultTimeScale * 0.001f;
                     inPause = !inPause;
+                    Pause.text = "Pause \n Press P or Start to resume";
                 }
             }
 
