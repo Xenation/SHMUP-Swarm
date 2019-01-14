@@ -8,6 +8,7 @@ namespace Swarm {
 		private Rigidbody2D rb;
 		private Vector2 velocity;
         private bool inAttack = false;
+        public GameObject deathAnim;
 
         public void Init(PlayerSwarm sw) {
 			gameObject.layer = LayerMask.NameToLayer("ProjectileUnit");
@@ -27,10 +28,11 @@ namespace Swarm {
 			Boss boss = collision.gameObject.GetComponent<Boss>();
 			partController part = collision.gameObject.GetComponent<partController>();
 			if (boss || part) {
-                //Add vibration
-				Destroy(gameObject);
                 //SON DE MORT A L'IMPACT EN MODE KAMIKAZE
                 AkSoundEngine.PostEvent("Play_Death", gameObject);
+                Instantiate(deathAnim, transform.position, Quaternion.identity, transform.parent);
+                //Add vibration
+                Destroy(gameObject);
 			}
 		}
 

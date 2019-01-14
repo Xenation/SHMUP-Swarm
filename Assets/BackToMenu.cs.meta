@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 4156c3a62e9adab4ea102bc32f1d4414
+guid: b66aebe20ec76ad46aba420b67c419e5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - deathAnim: {fileID: 8776140973424014578, guid: f21579d7735b92c46a083159f8f62f4d,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

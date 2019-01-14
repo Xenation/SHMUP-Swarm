@@ -66,7 +66,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5de79dca023269e479b83e3602700f4c, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 1
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Username: {fileID: 11477424}
   Value: {fileID: 11435500}
-  DefaultColour: {r: 1, g: 1, b: 1, a: 1}
-  HighlightColour: {r: 0.8000001, g: 1, b: 0, a: 1}
+  DefaultColour: {r: 0.08627451, g: 0.5882353, b: 0.49411768, a: 1}
+  HighlightColour: {r: 0.08627451, g: 0.5882353, b: 0.49411768, a: 1}
 --- !u!1 &181278
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5de79dca023269e479b83e3602700f4c, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 1
