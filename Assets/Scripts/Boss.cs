@@ -8,7 +8,7 @@ namespace Swarm {
 
 		private Pattern currentPattern;
 		private bossLife bLife;
-		private int phaseIndex = 0;
+		public int phaseIndex { get; private set; }
 
 		private void Awake() {
 			bLife = GetComponent<bossLife>();
@@ -18,10 +18,6 @@ namespace Swarm {
 				currentPattern = phases[phaseIndex].startPattern.Attach(gameObject);
 				currentPattern.OnPatternEnded += PatternChange;
 			}
-		}
-
-		private void Update() {
-			
 		}
 
 		private void PhaseChange(int prevPhase, int currentPhase) {
