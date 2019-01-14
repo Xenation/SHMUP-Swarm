@@ -72,6 +72,7 @@ namespace Swarm {
         {
             //METTRE SON DE LA MORT
             swarm.RemoveUnit(this);
+            Debug.Log("unit died here...");
         }
 
     }
