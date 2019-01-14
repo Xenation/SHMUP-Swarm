@@ -99,7 +99,6 @@ namespace GameJolt.UI {
 		/// </summary>
 		/// <param name="callback">A callback function accepting a single parameter, a boolean indicating success.</param>
 		public void ShowLeaderboards(Action<bool> callback) {
-            Debug.Log("test");
             leaderboardsWindow.Show(callback);
 		}
 
