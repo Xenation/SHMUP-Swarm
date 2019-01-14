@@ -46,7 +46,7 @@ public class menuController : MonoBehaviour
 
     void onClickPlay()
 	{
-		SceneManager.LoadScene("MorganScene");
+		SceneManager.LoadScene("PlayScene");
         AkSoundEngine.PostEvent("Play_UI_Start", gameObject);
     }
 
