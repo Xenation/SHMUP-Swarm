@@ -224,9 +224,9 @@ namespace Swarm {
             {
                 ScoreManager.endTime = Time.time;
                 ScoreManager.bossDead = false;
-
+                AkSoundEngine.PostEvent("Stop_Music", gameObject);
                 SceneManager.LoadScene("Lose");
-                AkSoundEngine.SetState("BossPhase", "None");
+
             }
             
         }
