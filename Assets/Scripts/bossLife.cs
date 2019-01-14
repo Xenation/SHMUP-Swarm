@@ -10,8 +10,6 @@ namespace Swarm
         [SerializeField]
         private int pv;
 		public int health { get { return pv; } }
-        public int phase2Threshhold;
-        public int phase3Threshhold;
         private int currentPhase = 1;
 		private List<partController> parts = new List<partController>(4);
         public bool hasPartsAlive = true;
@@ -40,6 +38,8 @@ namespace Swarm
 
         private int testLife = 0;
 
+		private Boss boss;
+
         //Ajouter une référence vers chaque part du boss
 
 
@@ -47,6 +47,7 @@ namespace Swarm
         {
 			GetComponentsInChildren(parts);
 			ScoreTimer = Time.time;
+			boss = GetComponent<Boss>();
         }
         // Start is called before the first frame update
         void Start()
@@ -59,11 +60,13 @@ namespace Swarm
 
             if (ScoreManager.bossPhase == 2)
             {
-                pv = phase2Threshhold;
+                pv = boss.phases[2].lifeThreshold;
+                AkSoundEngine.SetState("BossPhase", "Phase2");
             }
             else if (ScoreManager.bossPhase == 3)
             {
-                pv = phase3Threshhold;
+                pv = boss.phases[3].lifeThreshold;
+                AkSoundEngine.SetState("BossPhase", "Phase3");
             }
         }
 
