@@ -592,18 +592,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &542243289 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8245331866538602076, guid: e9e6b174fcb56654c94989f19b0bffea,
-    type: 3}
-  m_PrefabInstance: {fileID: 587980919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &567539724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -615,16 +603,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerSwarm
-      objectReference: {fileID: 0}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: Pause
-      value: 
-      objectReference: {fileID: 542243289}
-    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-        type: 3}
-      propertyPath: suicideSpeed
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034856, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
@@ -2459,6 +2437,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7128300558497081947, guid: bc705cee7501be44882c235b615aa5de,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128300558671486817, guid: bc705cee7501be44882c235b615aa5de,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7128300557812859277, guid: bc705cee7501be44882c235b615aa5de,
         type: 3}
       propertyPath: m_Color.r
@@ -2473,16 +2461,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7128300558497081947, guid: bc705cee7501be44882c235b615aa5de,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7128300558671486817, guid: bc705cee7501be44882c235b615aa5de,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc705cee7501be44882c235b615aa5de, type: 3}
