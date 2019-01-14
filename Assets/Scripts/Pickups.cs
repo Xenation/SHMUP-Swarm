@@ -24,7 +24,7 @@ namespace Swarm
         private void Start()
         {
             transform.position = new Vector2(  (float)randomSign() * Random.Range(2.5f, 5) , (float)randomSign() * Random.Range(2.5f, 5) );
-            coll = GetComponent<Collider2D>();
+			coll = GetComponent<Collider2D>();
             pickAnim = GetComponent<Animator>();
         }
 

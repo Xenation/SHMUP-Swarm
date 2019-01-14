@@ -273,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79e6f2d0e6b77741ba21eed5784694b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathAnim: {fileID: 8776140973424014578, guid: f21579d7735b92c46a083159f8f62f4d,
+    type: 3}
 --- !u!122 &9222634189677127920
 Halo:
   m_ObjectHideFlags: 0

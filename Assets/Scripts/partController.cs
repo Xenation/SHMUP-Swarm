@@ -22,7 +22,16 @@ namespace Swarm
         private Material mat;
         public Animator explosion_fx;
 
-       
+		public float regenTime = .5f;
+		[Tooltip("Full Heath Sprites For Each Phase")]
+		public Sprite[] healedSprites;
+		[Tooltip("Destroyed Sprites For Each Phase")]
+		public Sprite[] destroyedSprites;
+
+		private Boss boss;
+		private SpriteRenderer sprRenderer;
+		private float regenStartTime = 0f;
+		private bool isRegenerating = false;
 
         // Start is called before the first frame update
         void Start()
@@ -30,7 +39,8 @@ namespace Swarm
             pv = basepv;
             SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
             mat = rend.material;
-            
+			boss = GetComponentInParent<Boss>();
+			sprRenderer = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -40,6 +50,16 @@ namespace Swarm
                 hitstun();
             if (inDestroyShake)
                 destroyShake();
+			if (isRegenerating) {
+				float progress = (Time.time - regenStartTime) / regenTime;
+				if (progress >= 1f) {
+					isRegenerating = false;
+					sprRenderer.sprite = healedSprites[boss.phaseIndex];
+					mat.SetFloat("_TransitionHeight", 0f);
+				} else {
+					mat.SetFloat("_TransitionHeight", progress);
+				}
+			}
         }
 
         private void FixedUpdate()
@@ -60,14 +80,7 @@ namespace Swarm
             pv--;
             if (pv <= 0)
             {
-                isDestroyed = true;
-                mat.SetFloat("_ReplaceAmount", 0.5f);
-                transform.parent.GetComponent<bossLife>().checkParts();
-                destroyShake();
-                explosion_fx.SetTrigger("explosion");
-
-                //INSERER SON DESTRUCTION D'UNE PARTIE
-                AkSoundEngine.PostEvent("Play_HardHit", gameObject);
+				Damaged();
             }
             else
             {
@@ -77,6 +90,30 @@ namespace Swarm
                 AkSoundEngine.PostEvent("Play_NormalHit", gameObject);
             }
         }
+
+		private void Damaged() {
+			isDestroyed = true;
+			//mat.SetFloat("_ReplaceAmount", 0.5f);
+			transform.parent.GetComponent<bossLife>().checkParts();
+			destroyShake();
+			explosion_fx.SetTrigger("explosion");
+
+			//INSERER SON DESTRUCTION D'UNE PARTIE
+			AkSoundEngine.PostEvent("Play_HardHit", gameObject);
+
+			sprRenderer.sprite = destroyedSprites[boss.phaseIndex];
+		}
+
+		public void Heal() {
+			isDestroyed = false;
+			pv = basepv;
+			mat.SetFloat("_ReplaceAmount", 0.0f);
+
+			//sprRenderer.sprite = healedSprites[boss.phaseIndex];
+			mat.SetTexture("_SecondTex", healedSprites[boss.phaseIndex].texture);
+			regenStartTime = Time.time;
+			isRegenerating = true;
+		}
 
         private void hitstun()
         {
@@ -117,13 +154,6 @@ namespace Swarm
                 cam.transform.position += new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f));
             }
                 
-        }
-
-        public void resetPart()
-        {
-            isDestroyed = false;
-            pv = basepv;
-            mat.SetFloat("_ReplaceAmount", 0.0f);
         }
 
         public void animationEnd(bool endAnimation)
