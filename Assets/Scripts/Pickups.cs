@@ -27,7 +27,7 @@ namespace Swarm
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerUnits"))
             {
-                /*
+                
                 for (int i = 0; i < unitsToCreate; i++)
                 {
                     Transform pos = playerSwarm.transform.GetChild(0);
@@ -40,7 +40,7 @@ namespace Swarm
                     player.AddUnit(tmp);
                     
                 }
-            */
+            
                 //INSERER SON DE PICKUP
                 pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
                 openAnim.SetTrigger("collision"); // TODO temporarly disabled to avoid console flood
