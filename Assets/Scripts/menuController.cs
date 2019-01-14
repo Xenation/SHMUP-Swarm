@@ -111,11 +111,11 @@ public class menuController : MonoBehaviour
 
     public void ChangeMusic()
     {
-        //volume.SetGlobalValue(sliderMusic.value);
+        AkSoundEngine.SetRTPCValue("VolumeMusic", sliderMusic.value);
     }
 
     public void ChangeVolume()
     {
-        AkSoundEngine.SetOutputVolume(0, sliderVolume.value);
+        AkSoundEngine.SetRTPCValue("VolumeSfx", sliderVolume.value);
     }
 }
