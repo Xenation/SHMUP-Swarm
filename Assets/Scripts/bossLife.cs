@@ -74,13 +74,13 @@ namespace Swarm
                 AkSoundEngine.PostEvent("Play_BossClose", gameObject);
                 hasPartsAlive = true;
                 isAnimationEnd = false;
+				
+				OnStunEnded?.Invoke();
 
                 foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
                 {
-                    part.GetComponent<partController>().resetPart();
+                    part.GetComponent<partController>().Heal();
                 }
-				
-				OnStunEnded?.Invoke();
             }
 
             if (currentPhase == 1)

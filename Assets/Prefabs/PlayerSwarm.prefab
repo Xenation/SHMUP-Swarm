@@ -136,7 +136,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 10
+  m_Distance: 11
   m_MaxDistanceOnly: 1
 --- !u!1 &7103110863744034858
 GameObject:
@@ -186,22 +186,23 @@ MonoBehaviour:
     type: 3}
   shrinkPrefab: {fileID: 3035400351961606096, guid: fd85b54ad414f0846b8bdf9dff33c170,
     type: 3}
-  unitsToCreate: 30
+  unitsToCreate: 20
   cursorShrinkSpeed: 2.5
   cursorShrinkRadius: 0.5
-  unitShrinkSpeed: 8
-  unitShrinkRadius: 0.1
-  cursorNormalSpeed: 8
+  unitShrinkSpeed: 30
+  unitShrinkRadius: 0.2
+  cursorNormalSpeed: 10
   cursorNormalRadius: 1
-  unitNormalSpeed: 6
+  unitNormalSpeed: 9
   unitNormalRadius: 0.8
-  suicideSpeed: 40
+  suicideSpeed: 42
   freezeTime: 0.2
-  bossTransform: {fileID: 0}
+  bossTransform: {fileID: 4788165427147069084, guid: 50a6274365a1cac479f4e84b07ee86df,
+    type: 3}
   debug: 0
   ShrinkUnits: 0
   cursorSpeed: 8
   cursorRadius: 1
-  unitSpeed: 6
+  unitSpeed: 10
   unitRadius: 0.8
   Pause: {fileID: 0}

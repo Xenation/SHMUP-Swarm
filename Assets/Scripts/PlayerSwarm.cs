@@ -75,10 +75,12 @@ namespace Swarm {
         }
 
 		private void Update() {
-			velocity.x = Input.GetAxisRaw("Horizontal");
+            if (!inPause)
+            {
+                velocity.x = Input.GetAxisRaw("Horizontal");
 			velocity.y = Input.GetAxisRaw("Vertical");
-			//velocity.Normalize();
-
+            //velocity.Normalize();
+            
 			if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed) {
                 if(units.Count > 1)
                 {
@@ -187,7 +189,7 @@ namespace Swarm {
                 //cursorSprite.color = Color.gray;
 
             }
-
+            }
 
             /***********
              * Pause

@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a0fb7f429cc91458e355d7fe683198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolSize: 200
+  poolSize: 1500

@@ -10,6 +10,7 @@ namespace Swarm {
 
 		private Vector2 velocity;
 
+        public GameObject deathAnim;
         
 
         private void Awake() {
@@ -52,6 +53,7 @@ namespace Swarm {
 
 		public void Suicide() {
 			ProjectileUnit projUnit = gameObject.AddComponent<ProjectileUnit>();
+            projUnit.deathAnim = deathAnim;
 			projUnit.Init(swarm);
 			Destroy(this);
 		}

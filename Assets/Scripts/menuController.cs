@@ -16,8 +16,14 @@ public class menuController : MonoBehaviour
 
 	private GameObject credit;
 
-	// Start is called before the first frame update
-	void Start()
+    public Slider sliderMusic;
+
+    public Slider sliderVolume;
+
+    public AK.Wwise.RTPC volume;
+
+    // Start is called before the first frame update
+    void Start()
     {
 		GameObject.Find("ButtonPlay").GetComponent<Button>().onClick.AddListener(onClickPlay);
         GameObject.Find("ButtonTutorial").GetComponent<Button>().onClick.AddListener(onClickTutorial);
@@ -46,7 +52,7 @@ public class menuController : MonoBehaviour
 
     void onClickPlay()
 	{
-		SceneManager.LoadScene("MorganScene");
+		SceneManager.LoadScene("PlayScene");
         AkSoundEngine.PostEvent("Play_UI_Start", gameObject);
     }
 
@@ -101,5 +107,15 @@ public class menuController : MonoBehaviour
 		myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(GameObject.Find("ButtonPlay"));
 		credit.SetActive(false);
         AkSoundEngine.PostEvent("Play_UI_Back", gameObject);
+    }
+
+    public void ChangeMusic()
+    {
+        AkSoundEngine.SetRTPCValue("VolumeMusic", sliderMusic.value);
+    }
+
+    public void ChangeVolume()
+    {
+        AkSoundEngine.SetRTPCValue("VolumeSfx", sliderVolume.value);
     }
 }
