@@ -36,6 +36,8 @@ namespace Swarm
 		public event EventNotify OnStunStarted;
 		public event EventNotify OnStunEnded;
 
+        private int testLife = 0;
+
 		private Boss boss;
 
         //Ajouter une référence vers chaque part du boss
@@ -203,13 +205,25 @@ namespace Swarm
             //SceneManager.LoadScene("Win");
         }
 
-        public void AlertObservers(string message)
+        /*public void AlertObservers(string message)
         {
+            Debug.Log("Bug out of if " + testLife);
+            testLife++;
             if (message.Equals("AttackAnimationEnded"))
             {
+                Debug.Log("in if");
                 isAnimationEnd = true;
             }
         }
+        */
+
+        public void AlertObservers()
+        {
+            Debug.Log("Bug out of if " + testLife);
+            testLife++;
+            isAnimationEnd = true;
+        }
+
     }
 
 }
