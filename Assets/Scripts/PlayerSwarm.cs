@@ -216,7 +216,7 @@ namespace Swarm {
             velocity *= cursorSpeed;
 
             //Le nombre d'unitées est obtenable avec units.Count
-            AkSoundEngine.SetRTPCValue("PyuNumber", units.Count);
+            AkSoundEngine.SetRTPCValue("PyuNumber", (units.Count+ShrinkUnits));
             rtpcValue = Vector3.Distance(bossTransform.position, cursor.transform.position);
             AkSoundEngine.SetRTPCValue("ElectroFilter", rtpcValue);
 
