@@ -34,6 +34,7 @@ namespace Swarm
             if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerUnits"))
             {
                 //INSERER SON DE PICKUP
+                // just a test
                 //pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
                 openAnim.SetTrigger("collision"); // TODO temporarly disabled to avoid console flood
                 AkSoundEngine.PostEvent("Play_PickUp", gameObject);
