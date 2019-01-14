@@ -80,10 +80,13 @@ namespace Swarm {
 			//velocity.Normalize();
 
 			if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed) {
-                
-				PlayerUnit unit = units[0];
-				units.RemoveAt(0);
-				unit.Suicide();
+                if(units.Count > 1)
+                {
+                    PlayerUnit unit = units[0];
+				    units.RemoveAt(0);
+				    unit.Suicide();
+                }
+				
 			}
 
             if (Input.GetButtonDown("Fire2"))
