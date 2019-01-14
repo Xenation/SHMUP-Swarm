@@ -15,13 +15,14 @@ namespace Swarm
         private int part = 0;
         private bool thumbStickMoved = false;
         private Vector3 originalPos;
-
+        private PickupSpawner spawner;
         // Start is called before the first frame update
         void Start()
         {
             description.text = "";
             timeSpent = Time.time;
             originalPos = swarm.cursor.position;
+            spawner = pickupSpawner.GetComponent<PickupSpawner>();
         }
 
         // Update is called once per frame
@@ -50,8 +51,16 @@ namespace Swarm
             {
                 description.text = "Go on this pikcup to get more pyu's";
                 part++;
-                PickupSpawner lel = pickupSpawner.GetComponent<PickupSpawner>();
-                lel.spawnAt(new Vector3(swarm.cursor.position.x + 1, swarm.cursor.position.y, swarm.cursor.position.z));
+                spawner.spawnAt(new Vector3(swarm.cursor.position.x + 1, swarm.cursor.position.y, swarm.cursor.position.z));
+            }
+            else if ( spawner.nbOfPickups == 0 && part == 3)
+            {
+                description.text = "shrink";
+                part++;
+            }
+            else if(Input.GetButtonUp("Fire2") && part == 4)
+            {
+                description.text = "Wow ur a genius !";
             }
         }
     }

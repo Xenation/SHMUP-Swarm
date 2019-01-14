@@ -12,6 +12,7 @@ namespace Swarm
         public int SpawnRate;
         private float timeSpent = 0;
         public int maxPickups = 3;
+        public int nbOfPickups = 0;
         [HideInInspector]public static List<Pickups> currentPickups;
 
         private void Start()
@@ -30,7 +31,8 @@ namespace Swarm
                 currentPickup.setPlayer(Player);
                 timeSpent = 0;
                 currentPickups.Add(currentPickup);
-            }       
+            }
+            nbOfPickups = currentPickups.Count;
         }
 
         public void spawnAt(Vector3 pos)
