@@ -136,10 +136,10 @@ namespace Swarm
             ScoreManager.bossDead = true;
             //Envoyez le score dans la prochaine scene + leaderboard
 
-            //Spawn a item that when hit, brings you to win screen
-            Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+			GetComponent<Boss>().Die();
 
-            Destroy(this.gameObject);
+            //Spawn a item that when hit, brings you to win screen
+            Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
 
             //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");

@@ -38,7 +38,7 @@ namespace Swarm
                     player.AddUnit(tmp);
 
                     //INSERER SON DE PICKUP
-                    openAnim.SetTrigger("contact");
+                    //openAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
                     AkSoundEngine.PostEvent("Play_PickUp", gameObject);
                 }
                 Destroy(gameObject);

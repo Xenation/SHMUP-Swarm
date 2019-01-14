@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using Xenon;
 
 namespace Swarm {
 	public class Boss : MonoBehaviour {
@@ -64,6 +62,17 @@ namespace Swarm {
 		private void PatternChange(Pattern nPattern) {
 			currentPattern = nPattern;
 			Debug.Log("Changed Pattern!");
+		}
+
+		public void Die() {
+			foreach (Transform child in transform) {
+				Destroy(child.gameObject);
+			}
+			Component[] bossComponents = GetComponents<Component>();
+			foreach (Component comp in bossComponents) {
+				if (comp is Transform) continue;
+				Destroy(comp);
+			}
 		}
 
 	}
