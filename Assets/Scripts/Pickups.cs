@@ -34,7 +34,7 @@ namespace Swarm
             {
                 //INSERER SON DE PICKUP
                 // just a test
-                //pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
+                pickAnim.SetTrigger("contact"); // TODO temporarly disabled to avoid console flood
                 openAnim.SetTrigger("collision"); // TODO temporarly disabled to avoid console flood
                 AkSoundEngine.PostEvent("Play_PickUp", gameObject);
                 Destroy(coll);                
@@ -48,7 +48,6 @@ namespace Swarm
             Debug.Log("before for");
             for (int i = 0; i < unitsToCreate; i++)
             {
-                Transform pos = playerSwarm.transform.GetChild(0);
 
                 float playerX = playerSwarm.cursor.position.x;
                 float playerY = playerSwarm.cursor.position.y;
