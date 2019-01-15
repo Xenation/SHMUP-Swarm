@@ -53,6 +53,8 @@ namespace Swarm {
         private float sizeRatio;
 
         public Text Pause;
+
+        public bool tutorial = false;
         
 		private void Awake() {
 			cursor = transform.Find("Cursor");
@@ -225,7 +227,15 @@ namespace Swarm {
                 ScoreManager.endTime = Time.time;
                 ScoreManager.bossDead = false;
                 AkSoundEngine.PostEvent("Stop_Music", gameObject);
-                SceneManager.LoadScene("Lose");
+                if (tutorial)
+                {
+                    SceneManager.LoadScene("TutorialScene");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Lose");
+
+                }
 
             }
             

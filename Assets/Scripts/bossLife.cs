@@ -40,6 +40,8 @@ namespace Swarm
 
 		private Boss boss;
 
+        public bool Tutorial = false;
+
         //Ajouter une référence vers chaque part du boss
 
 
@@ -143,8 +145,10 @@ namespace Swarm
 			GetComponent<Boss>().Die();
 
             //Spawn a item that when hit, brings you to win screen
-            Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
-
+            GameObject goec = Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
+            //Add tuto part
+            EndCristal ec = goec.transform.GetComponent<EndCristal>();
+            ec.tutorial = Tutorial;
             //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");
             AkSoundEngine.PostEvent("Stop_SFX", gameObject);
