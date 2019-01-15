@@ -166,7 +166,7 @@ namespace Swarm
 
             if (!hasPartsAlive)
             {
-                bossSmoke.active = false;
+                //bossSmoke.active = false;
                 openingTime = Time.time;
                 animator.SetBool("isOpen", true);
 				AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
