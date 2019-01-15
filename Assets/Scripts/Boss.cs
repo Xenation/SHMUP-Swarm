@@ -56,7 +56,9 @@ namespace Swarm {
 		}
 
 		private void PatternChange(Pattern nPattern) {
+			currentPattern.OnPatternEnded -= PatternChange;
 			currentPattern = nPattern;
+			currentPattern.OnPatternEnded += PatternChange;
 			Debug.Log("Changed Pattern!");
 		}
 
