@@ -32,6 +32,9 @@ namespace Swarm
 		private SpriteRenderer sprRenderer;
 		private float regenStartTime = 0f;
 		private bool isRegenerating = false;
+        public List<Animator> sparklesList;
+        private float lastSparkleTime ;
+        public float sparkleTimerDuration = 0.7f;
 
         // Start is called before the first frame update
         void Start()
@@ -60,11 +63,12 @@ namespace Swarm
 					mat.SetFloat("_TransitionHeight", progress);
 				}
 			}
-        }
-
-        private void FixedUpdate()
-        {
-
+            if (isDestroyed && Time.time - lastSparkleTime > sparkleTimerDuration)
+            {
+                lastSparkleTime = Time.time;
+                int randSparkle = Random.Range(0, sparklesList.Count-1);
+                sparklesList[randSparkle].SetTrigger("sparkleTrigger");
+            }
         }
 
         void OnCollisionEnter2D(Collision2D col)
@@ -85,7 +89,7 @@ namespace Swarm
             else
             {
                 hitstun();
-
+                lastSparkleTime = Time.time;
                 //INSERER SON DEGATS
                 AkSoundEngine.PostEvent("Play_NormalHit", gameObject);
             }
@@ -104,6 +108,10 @@ namespace Swarm
 			sprRenderer.sprite = destroyedSprites[boss.phaseIndex];
             isDestroyed = true;
             transform.parent.GetComponent<bossLife>().checkParts();
+            foreach (Animator spark in sparklesList)
+            {
+                spark.gameObject.SetActive(true);
+            }
         }
 
 		public void Heal() {
@@ -115,6 +123,10 @@ namespace Swarm
             mat.SetTexture("_SecondTex", healedSprites[boss.phaseIndex].texture);
 			regenStartTime = Time.time;
 			isRegenerating = true;
+            foreach (Animator spark in sparklesList)
+            {
+                spark.gameObject.SetActive(false);
+            }
 		}
 
         private void hitstun()

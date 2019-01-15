@@ -4,32 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class winMenu : MonoBehaviour
-{
-    public Text name;
-    public Text score;
+namespace Swarm {
+	public class winMenu : MonoBehaviour {
+		public Text name;
+		public Text score;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        GameObject.Find("returnToMenu").GetComponent<Button>().onClick.AddListener(onClickMenu);
-        GameObject.Find("SubmitScore").GetComponent<Button>().onClick.AddListener(onClickSubmit);
-        score.text = ScoreManager.textScore;
-    }
+		// Start is called before the first frame update
+		void Start() {
+			GameObject.Find("returnToMenu").GetComponent<Button>().onClick.AddListener(onClickMenu);
+			GameObject.Find("SubmitScore").GetComponent<Button>().onClick.AddListener(onClickSubmit);
+			score.text = ScoreManager.textScore;
+		}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		// Update is called once per frame
+		void Update() {
 
-    void onClickMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
+		}
 
-    void onClickSubmit()
-    {
-        ScoreManager.sendScore(name.text); //Add Name from submit text field
-    }
+		void onClickMenu() {
+			SceneSwitcher.SwitchScene("Menu");
+		}
+
+		void onClickSubmit() {
+			ScoreManager.sendScore(name.text); //Add Name from submit text field
+		}
+	}
 }

@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BackToMenu : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+namespace Swarm {
+	public class BackToMenu : MonoBehaviour {
+		// Start is called before the first frame update
+		void Start() {
 
-    }
+		}
 
-    public void backMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
+		public void backMenu() {
+			SceneSwitcher.SwitchScene("Menu");
+		}
+	}
 }

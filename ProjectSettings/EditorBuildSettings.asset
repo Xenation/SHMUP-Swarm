@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Morgan/Win.unity
     guid: edec9f8bd56f8e94e86e06730ef5e39e
   - enabled: 1
-    path: Assets/Scenes/Ambroise/Tutorial.unity
-    guid: 517f185358d16cb49be98c4c69eea593
-  - enabled: 1
     path: Assets/Scenes/Morgan/Lose.unity
     guid: 3883db29de7f07a45836ad4f94e41299
   - enabled: 1
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Morgan/Leaderboard.unity
     guid: 43072eb2fa7308f468773681a96b2016
+  - enabled: 1
+    path: Assets/Scenes/Morgan/TutorialScene.unity
+    guid: 0eb9e6ebcaf7fda4da576e719300fdad
   m_configObjects: {}
