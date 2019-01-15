@@ -1363,6 +1363,21 @@ PrefabInstance:
       propertyPath: swarm
       value: 
       objectReference: {fileID: 230935861}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[0].lifeThreshold
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[1].lifeThreshold
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[2].lifeThreshold
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
@@ -1371,23 +1386,52 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 230935861}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: pv
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: pv
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: pv
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: basepv
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8670838844811716622, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: m_DrawMode
