@@ -28,7 +28,7 @@ namespace Swarm
             velocity = toCursor.normalized;
             if (cursorDistance < swarm.cursorRadius)
             {
-                velocity *= cursorDistance / swarm.cursorRadius;
+                velocity *= (cursorDistance / 2) / swarm.cursorRadius;
             }
             velocity *= swarm.unitSpeed;
         }
@@ -36,7 +36,8 @@ namespace Swarm
         private void FixedUpdate()
         {
             rb.velocity = velocity;
-            rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
+            if(velocity != Vector2.zero)
+                rb.rotation = Vector2.SignedAngle(Vector2.up, velocity.normalized);
         }
 
         public void Die(float vibDuration = 1.0f, float vibStrength = 2.0f)
@@ -63,6 +64,19 @@ namespace Swarm
             {
                 Destroy(gameObject);
             }
+        }
+
+        public void kill()
+        {
+            swarm.ShrinkUnits = 0;
+            
+            foreach( PlayerUnit unit in swarm.units)
+            {
+                swarm.units.Remove(unit);
+                unit.Die();
+            }
+
+            Destroy(gameObject);
         }
     }
 }
