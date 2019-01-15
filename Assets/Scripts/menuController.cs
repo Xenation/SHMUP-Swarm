@@ -61,7 +61,7 @@ public class menuController : MonoBehaviour
 
 	void onClickTutorial()
 	{
-		SceneManager.LoadScene("Tutorial");
+		SceneManager.LoadScene("TutorialScene");
         AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
     }
 
