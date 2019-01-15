@@ -171,6 +171,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &199465829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7432015850201415298, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_Name
+      value: VibrationManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.4475503
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3946018
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.056961954
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415296, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432015850201415297, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: swarm
+      value: 
+      objectReference: {fileID: 1573999200}
+    - target: {fileID: 7432015850201415297, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: testController
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93afccde75b64164cb5cefdc3e8e25cb, type: 3}
 --- !u!1001 &420462167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -585,7 +664,7 @@ PrefabInstance:
     - target: {fileID: 5839185358902241923, guid: b4d19d836749eb54c8b5befcc2e14141,
         type: 3}
       propertyPath: SpawnRate
-      value: 5000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5839185358902241923, guid: b4d19d836749eb54c8b5befcc2e14141,
         type: 3}
@@ -644,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.08627451, g: 0.5882353, b: 0.49411765, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -652,7 +731,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5de79dca023269e479b83e3602700f4c, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -684,6 +763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerSwarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: tutorial
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7103110863744034856, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
