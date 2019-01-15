@@ -15,7 +15,7 @@ namespace Swarm
         public bool hasPartsAlive = true;
         private Animator animator;
         public Camera cam;
-        
+        public GameObject bossSmoke;
         public PlayerSwarm player;
 
         public float openingDuration = 5;
@@ -45,7 +45,7 @@ namespace Swarm
 
         private void Awake()
         {
-			GetComponentsInChildren(parts);
+            GetComponentsInChildren(parts);
 			ScoreTimer = Time.time;
 			boss = GetComponent<Boss>();
         }
@@ -78,10 +78,9 @@ namespace Swarm
                 animator.SetBool("isOpen", false);
                 AkSoundEngine.PostEvent("Play_BossClose", gameObject);
                 hasPartsAlive = true;
-                isAnimationEnd = false;
-				
-				OnStunEnded?.Invoke();
-
+                isAnimationEnd = false;       
+                OnStunEnded?.Invoke();
+                bossSmoke.active = true;
                 foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
                 {
                     part.GetComponent<partController>().Heal();
@@ -163,8 +162,9 @@ namespace Swarm
 
             if (!hasPartsAlive)
             {
+                bossSmoke.active = false;
                 openingTime = Time.time;
-				animator.SetBool("isOpen", true);
+                animator.SetBool("isOpen", true);
 				AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
 				OnStunStarted?.Invoke();
 			}
