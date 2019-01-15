@@ -9,9 +9,9 @@ namespace Swarm {
 		public SequenceElementProcess(SequenceElement seqElem, Pattern.RuntimeParameters runParams) {
 			switch (seqElem.type) {
 				case SequenceElementType.Bullet:
-					float count = seqElem.GetField("Count").intValue;
+					float count = seqElem.GetInt("Count");
 					for (int i = 0; i < count; i++) {
-						AddProcess(new ShootProcess(seqElem.GetField("Projectile").projectileValue, runParams.attackPoints, seqElem.GetFloat("Speed Override")));
+						AddProcess(new ShootProcess(seqElem.GetProjectile("Projectile"), runParams.attackPoints, seqElem.GetFloat("Speed Override")));
 						AddProcess(new TimedProcess(seqElem.GetFloat("Duration") / count));
 					}
 					break;

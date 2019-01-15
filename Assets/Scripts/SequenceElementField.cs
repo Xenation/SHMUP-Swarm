@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.Serialization;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -16,7 +17,7 @@ namespace Swarm {
 	public struct SequenceElementField : ISerializationCallbackReceiver {
 
 		/*[FieldOffset(0)] */public SequenceDataType type;
-		
+
 		[System.NonSerialized/*, FieldOffset(8)*/] public int intValue;
 		[System.NonSerialized/*, FieldOffset(8)*/] public float floatValue;
 		[System.NonSerialized/*, FieldOffset(8)*/] public Projectile projectileValue;
@@ -24,6 +25,7 @@ namespace Swarm {
 
 		[SerializeField/*, FieldOffset(16)*/] private string json;
 		[SerializeField] private Object unityObject;
+		private bool unserialize;
 
 		public SequenceElementField(int val) {
 			type = SequenceDataType.Integer;
@@ -33,6 +35,7 @@ namespace Swarm {
 			intValue = val;
 			json = null;
 			unityObject = null;
+			unserialize = false;
 		}
 
 
@@ -44,6 +47,7 @@ namespace Swarm {
 			floatValue = val;
 			json = null;
 			unityObject = null;
+			unserialize = false;
 		}
 
 		public SequenceElementField(Projectile val) {
@@ -54,6 +58,7 @@ namespace Swarm {
 			projectileValue = val;
 			json = null;
 			unityObject = null;
+			unserialize = false;
 		}
 
 		public SequenceElementField(GameObject val) {
@@ -64,10 +69,12 @@ namespace Swarm {
 			gameObjectValue = val;
 			json = null;
 			unityObject = null;
+			unserialize = false;
 		}
 
 #if UNITY_EDITOR
 		public void DrawField(Rect rect, string label, Object tomark) {
+			if (unserialize) Unserialize();
 			switch (type) {
 				case SequenceDataType.Integer:
 					int prevInt = intValue;
@@ -102,6 +109,7 @@ namespace Swarm {
 #endif
 
 		public void ConvertTo(SequenceDataType nType) {
+			if (unserialize) Unserialize();
 			switch (type) {
 				case SequenceDataType.Floating:
 					switch (nType) {
@@ -152,6 +160,11 @@ namespace Swarm {
 		}
 
 		public void OnAfterDeserialize() {
+			unserialize = true;
+		}
+
+		public void Unserialize() {
+			if (!unserialize) return;
 			switch (type) {
 				case SequenceDataType.Integer:
 					intValue = int.Parse(json);
@@ -169,6 +182,7 @@ namespace Swarm {
 					break;
 			}
 			json = null;
+			unserialize = false;
 		}
 
 		public static implicit operator SequenceElementField(int val) {

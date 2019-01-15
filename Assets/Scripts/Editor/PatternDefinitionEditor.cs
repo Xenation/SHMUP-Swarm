@@ -151,7 +151,7 @@ namespace Swarm.Editor {
 				patternDefinition.sequence[index].ResetData();
 			}
 			for (int i = 0; i < patternDefinition.sequence[index].fields.Length; i++) {
-				patternDefinition.sequence[index].fields[i].DrawField(rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f), patternDefinition.sequence[index].GetFieldName(i), patternDefinition);
+				patternDefinition.sequence[index].GetField(i).DrawField(rect.SubVerticalRect(EditorGUIUtility.singleLineHeight, 2f), patternDefinition.sequence[index].GetFieldName(i), patternDefinition);
 			}
 		}
 

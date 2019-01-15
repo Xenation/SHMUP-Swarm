@@ -170,39 +170,65 @@ namespace Swarm {
 		
 		public SequenceElementField[] fields = new SequenceElementField[0];
 
+		private bool unserialize = false;
+
 		public ref int Int(int i) {
+			Unserialize();
+			fields[i].Unserialize();
 			return ref fields[i].intValue;
 		}
 
 		public ref float Float(int i) {
+			Unserialize();
+			fields[i].Unserialize();
 			return ref fields[i].floatValue;
 		}
 
 		public ref Projectile Projectile(int i) {
+			Unserialize();
+			fields[i].Unserialize();
 			return ref fields[i].projectileValue;
 		}
 
 		public ref SequenceElementField GetField(string name) {
+			Unserialize();
+			fields[type.FieldNameToIndex(name)].Unserialize();
 			return ref fields[type.FieldNameToIndex(name)];
 		}
 
+		public ref SequenceElementField GetField(int i) {
+			Unserialize();
+			fields[i].Unserialize();
+			return ref fields[i];
+		}
+
 		public int GetInt(string name) {
+			Unserialize();
 			return GetField(name).intValue;
 		}
 
 		public float GetFloat(string name) {
+			Unserialize();
 			return GetField(name).floatValue;
 		}
 
+		public Projectile GetProjectile(string name) {
+			Unserialize();
+			return GetField(name).projectileValue;
+		}
+
 		public GameObject GetGameObject(string name) {
+			Unserialize();
 			return GetField(name).gameObjectValue;
 		}
 
 		public string GetFieldName(int index) {
+			Unserialize();
 			return type.FieldIndexToName(index);
 		}
 
 		public void Convert() {
+			Unserialize();
 			ResetData();
 			switch (type) {
 				case SequenceElementType.Bullet:
@@ -221,10 +247,12 @@ namespace Swarm {
 		}
 
 		public bool CheckDataValidity() {
+			Unserialize();
 			return type.GetDef().Matches(fields);
 		}
 
 		public void ResetData() {
+			Unserialize();
 			type.GetDef().ResetFields(ref fields);
 		}
 
@@ -233,9 +261,16 @@ namespace Swarm {
 		}
 
 		public void OnAfterDeserialize() {
+			unserialize = true;
+			Debug.Log("after deserialize");
+		}
+
+		public void Unserialize() {
+			if (!unserialize) return;
 			if (!CheckDataValidity()) {
 				type.GetDef().UpdateFields(ref fields);
 			}
+			unserialize = false;
 		}
 
 	}
