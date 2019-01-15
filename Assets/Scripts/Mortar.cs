@@ -76,7 +76,7 @@ namespace Swarm {
 			} else if (state == State.Attacking && attackAnimator.GetCurrentAnimatorStateInfo(0).speed == 0.01f) { // TODO ugly af
 				Destroy(gameObject);
 			}
-        }
+		}
 
     }
 }

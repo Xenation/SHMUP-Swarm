@@ -160,12 +160,10 @@ namespace Swarm {
 					floatValue = float.Parse(json);
 					break;
 				case SequenceDataType.Projectile:
-					if (unityObject == null) break;
-					projectileValue = (Projectile) unityObject;
+					projectileValue = unityObject as Projectile;
 					break;
 				case SequenceDataType.GameObject:
-					if (unityObject == null) break;
-					gameObjectValue = (GameObject) unityObject;
+					gameObjectValue = unityObject as GameObject;
 					break;
 			}
 			json = null;
