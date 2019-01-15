@@ -11,6 +11,8 @@ namespace Swarm
     {
 
         public PlayerSwarm player;
+        public float X;
+        public float Y;
 
         public float distanceRatio = 10.0f;
         public float distance = 5.0f;
@@ -27,7 +29,8 @@ namespace Swarm
 
             if (newCamera)
             {
-                Vector3 dir = player.cursor.transform.position;
+                Vector3 center = new Vector3(X,Y);
+                Vector3 dir = player.cursor.transform.position - center;
                 dir.Normalize();
 
                 Vector3 decal = -dir * 2;
@@ -46,7 +49,7 @@ namespace Swarm
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, (player.cursor.position / distanceRatio) + new Vector3(0, 0, -10f), 3f * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, (player.cursor.position / distanceRatio) + new Vector3(X, Y, -10f), 3f * Time.deltaTime);
 
             }
 

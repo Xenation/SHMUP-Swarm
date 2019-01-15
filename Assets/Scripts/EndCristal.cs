@@ -21,7 +21,12 @@ namespace Swarm
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            SceneManager.LoadScene("Win");
+            PlayerUnit pyu = collision.gameObject.GetComponent<PlayerUnit>();
+            if (pyu)
+            {
+                SceneManager.LoadScene("Win");
+            }
+            
         }
     }
 }
