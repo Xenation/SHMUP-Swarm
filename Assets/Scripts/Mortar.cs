@@ -46,9 +46,14 @@ namespace Swarm {
 			attack.transform.position = telegraph.transform.position;
             Collider2D[] touched = Physics2D.OverlapCircleAll(attack.transform.position, radius, LayerMask.GetMask("PlayerUnits"));
 			foreach (Collider2D col in touched) {
+                PlayerShrink ps = col.GetComponent<PlayerShrink>();
+
 				PlayerUnit unit = col.GetComponent<PlayerUnit>();
-				if (unit == null) continue;
-				unit.Die();
+				if (unit == null && ps == null) continue;
+				if(ps == null)
+                    unit.Die();
+                if (unit == null)
+                    ps.kill();
 			}
 		}
 
@@ -71,7 +76,7 @@ namespace Swarm {
 			} else if (state == State.Attacking && attackAnimator.GetCurrentAnimatorStateInfo(0).speed == 0.01f) { // TODO ugly af
 				Destroy(gameObject);
 			}
-        }
+		}
 
     }
 }
