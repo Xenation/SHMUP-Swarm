@@ -59,6 +59,7 @@ namespace Swarm {
 		}
 
 		private void LaunchAttacks() {
+			mortarState = TelegraphableAttack.State.Attacking;
 			foreach (Mortar mortar in mortars) {
 				mortar.LaunchAttack();
 			}
@@ -71,6 +72,7 @@ namespace Swarm {
 		}
 
 		public void Abort() {
+			if (mortarState == TelegraphableAttack.State.Attacking) return;
 			DestroyAll();
 		}
 	}
