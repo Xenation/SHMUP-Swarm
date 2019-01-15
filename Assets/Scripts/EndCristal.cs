@@ -27,11 +27,11 @@ namespace Swarm
             {
                 if (tutorial)
                 {
-                    SceneManager.LoadScene("Menu");
+					SceneSwitcher.SwitchScene("Menu");
                 }
                 else
                 {
-                    SceneManager.LoadScene("Win");
+					SceneSwitcher.SwitchScene("Win", 2f, 1f);
                 }
             }
             

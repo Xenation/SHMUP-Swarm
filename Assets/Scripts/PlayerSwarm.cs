@@ -229,12 +229,11 @@ namespace Swarm {
                 AkSoundEngine.PostEvent("Stop_Music", gameObject);
                 if (tutorial)
                 {
-                    SceneManager.LoadScene("TutorialScene");
+					SceneSwitcher.SwitchScene("TutorialScene");
                 }
                 else
                 {
-                    SceneManager.LoadScene("Lose");
-
+					SceneSwitcher.SwitchScene("Lose");
                 }
 
             }
