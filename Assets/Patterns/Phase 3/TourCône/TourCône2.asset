@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: "TourC\xF4ne1"
+  m_Name: "TourC\xF4ne2"
   m_EditorClassIdentifier: 
   finishedDelay: 1
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
+  - {fileID: 11400000}
   autoPlaced: 0
   count: 8
   startRotation: 30
@@ -43,16 +43,16 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 30
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 4
       unityObject: {fileID: 0}
     - type: 1
       json: 3
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -75,16 +75,16 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 40
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 5
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -107,16 +107,16 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 50
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 6
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -142,13 +142,13 @@ MonoBehaviour:
       json: 60
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 7
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -171,16 +171,16 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 70
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 8
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -203,16 +203,16 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 80
       unityObject: {fileID: 0}
     - type: 1
-      json: 10
+      json: 9
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -235,16 +235,16 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 60
+      json: 90
       unityObject: {fileID: 0}
     - type: 1
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 2
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 1
       unityObject: {fileID: 0}
     - type: 3
       json: 

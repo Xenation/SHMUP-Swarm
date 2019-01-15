@@ -20,13 +20,13 @@ MonoBehaviour:
   autoPlaced: 1
   count: 2
   startRotation: 0
-  distanceFromCenter: 2.5
+  distanceFromCenter: 2
   rotationSpeed: 5
   spawnPoints:
-  - position: {x: 2.5, y: 0}
+  - position: {x: 2, y: 0}
     rotation: 0
-  - position: {x: -2.5, y: -0.00000021855695}
-    rotation: -180
+  - position: {x: -2, y: -0.00000017484555}
+    rotation: 180
   sequence:
   - type: 1
     count: 0
