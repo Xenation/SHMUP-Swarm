@@ -23,7 +23,8 @@ namespace Swarm {
 		private void OnCollisionEnter2D(Collision2D collision) {
 			if (!gameObject.activeInHierarchy) return;
 			PlayerUnit unit = collision.gameObject.GetComponent<PlayerUnit>();
-			if (unit != null) {
+            PlayerShrink shrink = collision.gameObject.GetComponent<PlayerShrink>();
+			if (unit || shrink) {
 				ProjectileManager.I.ProjectileDeath(this);
 			}
 		}
