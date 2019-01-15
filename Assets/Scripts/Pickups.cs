@@ -45,7 +45,7 @@ namespace Swarm
 
         public void stop()
         {
-            Debug.Log("before for");
+            //Debug.Log("before for");
             for (int i = 0; i < unitsToCreate; i++)
             {
 
@@ -54,8 +54,8 @@ namespace Swarm
 
                 GameObject tmp = Instantiate(unitPrefab, new Vector2(Random.Range(playerX - 0.1f, playerX + 0.1f), Random.Range(playerY - 0.1f, playerY + 0.1f)), Quaternion.identity, playerSwarm.transform);
                 playerSwarm.AddUnit(tmp);
-                Debug.Log("lalaala");
-                Debug.Log(tmp);
+                //Debug.Log("lalaala");
+                //Debug.Log(tmp);
 
             }
             Destroy(gameObject);
