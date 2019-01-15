@@ -7,6 +7,7 @@ namespace Swarm
 {
     public class EndCristal : MonoBehaviour
     {
+        public bool tutorial;
         // Start is called before the first frame update
         void Start()
         {
@@ -21,7 +22,19 @@ namespace Swarm
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            SceneManager.LoadScene("Win");
+            PlayerUnit pyu = collision.gameObject.GetComponent<PlayerUnit>();
+            if (pyu)
+            {
+                if (tutorial)
+                {
+                    SceneManager.LoadScene("Menu");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Win");
+                }
+            }
+            
         }
     }
 }

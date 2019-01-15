@@ -16,14 +16,8 @@ namespace Swarm
         private Animator pickAnim;
         private Collider2D coll;
 
-        private int randomSign()
-        {
-            return Random.value < .5 ? 1 : -1;
-        }
-
         private void Start()
         {
-            transform.position = new Vector2(  (float)randomSign() * Random.Range(2.5f, 5) , (float)randomSign() * Random.Range(2.5f, 5) );
 			coll = GetComponent<Collider2D>();
             pickAnim = GetComponent<Animator>();
         }

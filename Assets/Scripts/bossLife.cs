@@ -15,7 +15,7 @@ namespace Swarm
         public bool hasPartsAlive = true;
         private Animator animator;
         public Camera cam;
-        
+        public GameObject bossSmoke;
         public PlayerSwarm player;
 
         public float openingDuration = 5;
@@ -40,12 +40,14 @@ namespace Swarm
 
 		private Boss boss;
 
+        public bool Tutorial = false;
+
         //Ajouter une référence vers chaque part du boss
 
 
         private void Awake()
         {
-			GetComponentsInChildren(parts);
+            GetComponentsInChildren(parts);
 			ScoreTimer = Time.time;
 			boss = GetComponent<Boss>();
         }
@@ -78,10 +80,9 @@ namespace Swarm
                 animator.SetBool("isOpen", false);
                 AkSoundEngine.PostEvent("Play_BossClose", gameObject);
                 hasPartsAlive = true;
-                isAnimationEnd = false;
-				
-				OnStunEnded?.Invoke();
-
+                isAnimationEnd = false;       
+                OnStunEnded?.Invoke();
+                bossSmoke.active = true;
                 foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
                 {
                     part.GetComponent<partController>().Heal();
@@ -144,8 +145,10 @@ namespace Swarm
 			GetComponent<Boss>().Die();
 
             //Spawn a item that when hit, brings you to win screen
-            Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
-
+            GameObject goec = Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
+            //Add tuto part
+            EndCristal ec = goec.transform.GetComponent<EndCristal>();
+            ec.tutorial = Tutorial;
             //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");
             AkSoundEngine.PostEvent("Stop_SFX", gameObject);
@@ -163,8 +166,9 @@ namespace Swarm
 
             if (!hasPartsAlive)
             {
+                bossSmoke.active = false;
                 openingTime = Time.time;
-				animator.SetBool("isOpen", true);
+                animator.SetBool("isOpen", true);
 				AkSoundEngine.PostEvent("Play_BossOpen", gameObject);
 				OnStunStarted?.Invoke();
 			}
