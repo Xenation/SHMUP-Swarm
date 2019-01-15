@@ -65,5 +65,18 @@ namespace Swarm
                 Destroy(gameObject);
             }
         }
+
+        public void kill()
+        {
+            swarm.ShrinkUnits = 0;
+            
+            foreach( PlayerUnit unit in swarm.units)
+            {
+                swarm.units.Remove(unit);
+                unit.Die();
+            }
+
+            Destroy(gameObject);
+        }
     }
 }
