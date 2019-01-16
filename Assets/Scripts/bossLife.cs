@@ -40,6 +40,10 @@ namespace Swarm
 
 		private Boss boss;
 
+        public Animator bossExpl;
+
+        public int vibStrength, vibDuration;
+
         public bool Tutorial = false;
 
         //Ajouter une référence vers chaque part du boss
@@ -122,17 +126,20 @@ namespace Swarm
         void lowerPV()
         {
             pv--;
+            VibrationManager.AddVibrateRight(vibStrength, vibDuration);
+            AkSoundEngine.PostEvent("Play_CoeurHit", gameObject);
+
             if (pv <= 0)
             {
-
-                Invoke("End", 1.0f);
+                bossExpl.SetTrigger("explode");
+                Invoke("End", 2.0f);
 
                 //Destroy(this.gameObject);
             }
             else
             {
                 //INSERER SON DEGAT SUR BOSS
-                AkSoundEngine.PostEvent("Play_CoeurHit", gameObject);
+                
             }
         }
 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1b594608b701b4e9daf85f2610e3dc, type: 3}
+  m_Name: C5CBC488-3B08-4A33-9D3B-F30336B86562
+  m_EditorClassIdentifier: 
+  objectName: Play_CoeurHit
+  id: 3726300835
+  guid: C5CBC488-3B08-4A33-9D3B-F30336B86562

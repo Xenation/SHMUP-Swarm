@@ -22,11 +22,13 @@ namespace Swarm {
 		}
 
 		void onClickMenu() {
-			SceneSwitcher.SwitchScene("Menu");
+            AkSoundEngine.PostEvent("Stop_Music", gameObject);
+            SceneSwitcher.SwitchScene("Menu");
 		}
 
 		void onClickSubmit() {
-			ScoreManager.sendScore(name.text); //Add Name from submit text field
+            AkSoundEngine.PostEvent("Stop_Music", gameObject);
+            ScoreManager.sendScore(name.text); //Add Name from submit text field
 		}
 	}
 }

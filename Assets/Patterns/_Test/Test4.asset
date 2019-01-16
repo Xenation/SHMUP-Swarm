@@ -10,49 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
-  m_Name: lasers_pute
+  m_Name: Test4
   m_EditorClassIdentifier: 
-  finishedDelay: 2
-  simultaneous:
-  - {fileID: 11400000, guid: dd7665c47111dbc41b61cd0953de5f9d, type: 2}
+  finishedDelay: 5
+  simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
+  - {fileID: 11400000, guid: 47324d7cff6ed1248ae35155098ecbed, type: 2}
   autoPlaced: 1
-  count: 7
+  count: 3
   startRotation: 0
   distanceFromCenter: 2
-  rotationSpeed: 0
+  rotationSpeed: 40
   spawnPoints:
   - position: {x: 2, y: 0}
     rotation: 0
-  - position: {x: 1.2469796, y: 1.563663}
-    rotation: 51.428577
-  - position: {x: -0.4450419, y: 1.9498558}
-    rotation: 102.85715
-  - position: {x: -1.8019378, y: 0.8677672}
-    rotation: 154.28572
-  - position: {x: -1.8019377, y: -0.8677675}
-    rotation: 205.7143
-  - position: {x: -0.445042, y: -1.9498558}
-    rotation: 257.14285
-  - position: {x: 1.2469801, y: -1.5636626}
-    rotation: 308.57144
+  - position: {x: -1.0000001, y: 1.7320508}
+    rotation: 120.00001
+  - position: {x: -0.9999998, y: -1.7320509}
+    rotation: 240
   sequence:
-  - type: 1
+  - type: 2
     count: 0
     duration: 0
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,2
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
       json: 10
       unityObject: {fileID: 0}
+    - type: 1
+      json: 5
+      unityObject: {fileID: 0}
     - type: 3
       json: 
-      unityObject: {fileID: 5772800137770347922, guid: 072652e2fbed2c8409ff3144836afbcd,
+      unityObject: {fileID: 1131358840666498810, guid: bf85f9ce1977bf14d90b5e05565f5058,
         type: 3}
