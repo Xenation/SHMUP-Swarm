@@ -62,6 +62,7 @@ namespace Swarm {
 
 		void onClickScore() {
             AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+            AkSoundEngine.PostEvent("Stop_Music", gameObject);
             SceneSwitcher.SwitchScene("Leaderboard");
 		}
 

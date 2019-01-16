@@ -43,6 +43,7 @@ namespace Swarm {
 
 		public override void LaunchAttack() {
 			if (!isLocked) { // Means prematurely cancelled
+                AkSoundEngine.PostEvent("Stop_MortierSeeking", gameObject);
 				Destroy(gameObject);
 			}
 			base.LaunchAttack();

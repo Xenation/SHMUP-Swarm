@@ -22,7 +22,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586539618632480539
+    m_lastTime: -8586539530947107228
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586539611220414056
+    m_lastTime: -8586539523533867896
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586539611220563899
+    m_lastTime: -8586539525337851048
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -341,6 +341,18 @@ MonoBehaviour:
       - ElementName: Stop_Mortier
         ObjectType: 3
       Path: Default Work Unit\Stop_Mortier
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_MortierSeeking
+      guid: 9bf694662ee2d04198ab448fdea0a853
+      id: 222291854
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_MortierSeeking
+        ObjectType: 3
+      Path: Default Work Unit\Stop_MortierSeeking
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
