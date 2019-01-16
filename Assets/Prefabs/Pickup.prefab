@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b907afaacffc6143bbd258a98c0d53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitsToCreate: 12
+  unitsToCreate: 15
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
   playerSwarm: {fileID: 0}
