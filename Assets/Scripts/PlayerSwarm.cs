@@ -248,6 +248,7 @@ namespace Swarm
                 }
                 else
                 {
+                    AkSoundEngine.PostEvent("Stop_SFX", gameObject);
                     AkSoundEngine.PostEvent("Stop_Music", gameObject);
                     SceneSwitcher.SwitchScene("Lose");
                 }
