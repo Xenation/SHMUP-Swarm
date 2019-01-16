@@ -41,7 +41,7 @@ MonoBehaviour:
       json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 6
+      json: 10
       unityObject: {fileID: 0}
     - type: 1
       json: 5
