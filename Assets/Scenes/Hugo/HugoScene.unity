@@ -229,7 +229,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startPattern
       value: 
-      objectReference: {fileID: 11400000, guid: 354e8cc77d95f2740bace4c4d94cd462,
+      objectReference: {fileID: 11400000, guid: eebd35ea70537d446a51551971115f37,
         type: 2}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
@@ -791,6 +791,12 @@ PrefabInstance:
       propertyPath: cursorNormalSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7103110863744034859, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
+        type: 3}
+      propertyPath: shrinkPrefab
+      value: 
+      objectReference: {fileID: 3035400351961606096, guid: fd85b54ad414f0846b8bdf9dff33c170,
+        type: 3}
     - target: {fileID: 3150457463489301675, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
         type: 3}
       propertyPath: m_Distance
