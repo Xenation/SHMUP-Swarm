@@ -149,8 +149,13 @@ namespace Swarm
 				dieDuration = 1f;
                 Invoke("End", 2.0f);
 
-                //Destroy(this.gameObject);
-            }
+				//Spawn a item that when hit, brings you to win screen
+				GameObject goec = Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
+				//Add tuto part
+				EndCristal ec = goec.transform.GetComponent<EndCristal>();
+				ec.tutorial = Tutorial;
+				//Destroy(this.gameObject);
+			}
             else
             {
                 //INSERER SON DEGAT SUR BOSS
@@ -166,12 +171,7 @@ namespace Swarm
             //Envoyez le score dans la prochaine scene + leaderboard
 
 			GetComponent<Boss>().Die();
-
-            //Spawn a item that when hit, brings you to win screen
-            GameObject goec = Instantiate(endCristalPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity, transform);
-            //Add tuto part
-            EndCristal ec = goec.transform.GetComponent<EndCristal>();
-            ec.tutorial = Tutorial;
+			
             //SceneManager.LoadScene("Win");
             AkSoundEngine.SetState("BossPhase", "Outro");
             AkSoundEngine.PostEvent("Stop_SFX", gameObject);
