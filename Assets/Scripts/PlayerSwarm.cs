@@ -58,6 +58,8 @@ namespace Swarm
 
         public bool tutorial = false;
 
+        public GameObject backgroundPause;
+
         private void Awake()
         {
             cursor = transform.Find("Cursor");
@@ -216,6 +218,7 @@ namespace Swarm
                     Time.fixedDeltaTime = defaultTimeScale;
                     inPause = !inPause;
                     Pause.text = "";
+                    backgroundPause.SetActive(false);
                 }
                 else
                 {
@@ -223,6 +226,7 @@ namespace Swarm
                     Time.fixedDeltaTime = defaultTimeScale * 0.001f;
                     inPause = !inPause;
                     Pause.text = "Pause \n Press P or Start to resume";
+                    backgroundPause.SetActive(true);
                 }
             }
 
