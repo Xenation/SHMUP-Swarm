@@ -908,6 +908,11 @@ PrefabInstance:
       propertyPath: swarm
       value: 
       objectReference: {fileID: 230935861}
+    - target: {fileID: 7432015850201415297, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: testController
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93afccde75b64164cb5cefdc3e8e25cb, type: 3}
 --- !u!1001 &659845038
@@ -1683,11 +1688,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 572149457510042393, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: swarm
-      value: 
-      objectReference: {fileID: 230935861}
     - target: {fileID: 4788165427147069084, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1748,80 +1748,14 @@ PrefabInstance:
       propertyPath: swarm
       value: 
       objectReference: {fileID: 230935861}
-    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: phases.Array.data[0].lifeThreshold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: phases.Array.data[1].lifeThreshold
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: phases.Array.data[2].lifeThreshold
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 230935861}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: pv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
-    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: basepv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: pv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: basepv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: pv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
-      propertyPath: basepv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 2080624393}
-    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: basepv
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8670838844811716622, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
 --- !u!1 &1841637958

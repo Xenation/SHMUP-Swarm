@@ -15,7 +15,6 @@ MonoBehaviour:
   finishedDelay: 0
   simultaneous:
   - {fileID: 11400000, guid: a8e0691cd112b264bac602a53e50552b, type: 2}
-  - {fileID: 11400000, guid: 754a8ab6e1815d942b782e8ec92b112e, type: 2}
   nextPossible:
   - {fileID: 11400000, guid: 23790afcf2f78fa4c89ec7ec024065ba, type: 2}
   autoPlaced: 1
@@ -27,13 +26,13 @@ MonoBehaviour:
   - position: {x: 1, y: 0}
     rotation: 0
   - position: {x: 0.30901697, y: 0.95105654}
-    rotation: 72
+    rotation: 71.99999
   - position: {x: -0.80901706, y: 0.5877852}
     rotation: 144
   - position: {x: -0.80901694, y: -0.58778536}
-    rotation: -143.99998
+    rotation: 216.00002
   - position: {x: 0.30901712, y: -0.9510565}
-    rotation: -71.99999
+    rotation: 288
   sequence:
   - type: 0
     count: 0

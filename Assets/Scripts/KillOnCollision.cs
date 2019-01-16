@@ -56,6 +56,44 @@ namespace Swarm {
                 }
             }
         }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            PlayerUnit pu = collision.gameObject.GetComponent<PlayerUnit>();
+
+            if (pu)
+            {
+                pu.Die(vD, vS);
+            }
+
+            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+            if (ps)
+            {
+                if (lazer)
+                {
+                    firstHitTime = Time.time;
+                }
+                else
+                {
+                    ps.Die(vD, vS);
+                }
+            }
+        }
+
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+            if (ps)
+            {
+                if (lazer && Time.time > (firstHitTime + (1.0f / (float)dmgPerSecond)))
+                {
+                    Debug.Log("ouch " + Time.time);
+                    ps.Die(vD, vS);
+                    firstHitTime = Time.time;
+                }
+            }
+        }
 
     }
 }

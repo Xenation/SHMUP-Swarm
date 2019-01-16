@@ -330,7 +330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to menu
+  m_Text: MAIN MENU
 --- !u!222 &494058221
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -375,8 +375,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030477, y: -96}
-  m_SizeDelta: {x: 685.1, y: 55.3}
+  m_AnchoredPosition: {x: 0.000030477, y: -82}
+  m_SizeDelta: {x: 685.1, y: 133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598442073
 MonoBehaviour:
@@ -504,8 +504,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: -449}
-  m_SizeDelta: {x: 160, y: 150}
+  m_AnchoredPosition: {x: 0, y: -206.3}
+  m_SizeDelta: {x: 160, y: 115.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &703378624
 MonoBehaviour:
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_SubmitButton: Fire1
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 703378622}
+  m_FirstSelected: {fileID: 598442071}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &784455759
@@ -735,18 +735,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5de79dca023269e479b83e3602700f4c, type: 3}
-    m_FontSize: 30
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RESTART FROM CHECKPOINT
+  m_Text: CONTINUE
 --- !u!222 &1090903728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -899,7 +899,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: RESTART
 --- !u!222 &1211321866
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1107,8 +1107,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369, y: -449}
-  m_SizeDelta: {x: 366.1, y: 150}
+  m_AnchoredPosition: {x: 0, y: -315.69998}
+  m_SizeDelta: {x: 366.1, y: 103.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1744493919
 MonoBehaviour:
