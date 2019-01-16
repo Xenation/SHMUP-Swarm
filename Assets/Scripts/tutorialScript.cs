@@ -41,6 +41,7 @@ namespace Swarm
             l.enabled = false;
             rt.enabled = false;
             pickup.enabled = false;
+            AkSoundEngine.SetState("BossPhase", "Phase1");
         }
 
         // Update is called once per frame

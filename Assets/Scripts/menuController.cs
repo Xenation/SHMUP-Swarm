@@ -45,8 +45,10 @@ namespace Swarm {
 		}
 
 		void onClickPlay() {
-			SceneSwitcher.SwitchScene("PlayScene");
-			AkSoundEngine.PostEvent("Play_UI_Start", gameObject);
+            AkSoundEngine.PostEvent("Stop_Music", gameObject);
+            AkSoundEngine.PostEvent("Play_UI_Start", gameObject);
+            SceneSwitcher.SwitchScene("PlayScene");
+			
 		}
 
 		void onClickExit() {
@@ -54,13 +56,13 @@ namespace Swarm {
 		}
 
 		void onClickTutorial() {
-			SceneSwitcher.SwitchScene("TutorialScene");
-			AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+            AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+            SceneSwitcher.SwitchScene("TutorialScene");
 		}
 
 		void onClickScore() {
-			SceneSwitcher.SwitchScene("Leaderboard");
-			AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+            AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
+            SceneSwitcher.SwitchScene("Leaderboard");
 		}
 
 		void openOptions() {
