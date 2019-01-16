@@ -49,7 +49,7 @@ public class ScoreManager : MonoBehaviour
 
         if(scene.name == "Lose")
         {
-            pastTime = endTime - startTime;
+            pastTime += (endTime - startTime);
         }
 
         if(scene.name == "Win")
@@ -59,7 +59,10 @@ public class ScoreManager : MonoBehaviour
 
         if(scene.name == "Menu")
         {
-
+            resetScore();
+            bossDead = false;
+            bossPhase = 1;
+            pastTime = 0;
         }
     }
 
@@ -68,9 +71,9 @@ public class ScoreManager : MonoBehaviour
         resetScore();
         gameScore = time;
         leaderBScore = (int)time;
-        float tmpMin = leaderBScore / 60.0f;
-        int tmpSec = (int) (leaderBScore - tmpMin);
-        textScore += (int)tmpMin + " min " + tmpSec;
+        int tmpMin =(int) (leaderBScore / 60.0f);
+        int tmpSec = (int) (leaderBScore - (tmpMin * 60));
+        textScore += tmpMin + " min " + tmpSec;
     }
 
     public static int getScore()
