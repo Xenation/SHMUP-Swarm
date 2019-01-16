@@ -7,6 +7,10 @@
 		_TransitionHeight("TransitionHeight", Range(0, 1)) = 0
 		_TransitionLineWidth("TransitionLineWidth", Range(0, 1)) = 0.05
 		_TransitionLineColor("TransitionLineColor", Color) = (0.5, 1, 0.5, 1)
+		_DisolveAmount("DisolveAmount", Range(0, 1)) = 0
+		_DisolveScale("DisolveScale", Float) = 3
+		_DisolveEdgeColor("DisolveEdgeColor", Color) = (1, 0, 0, 1)
+		_DisolvePower("DisolvePower", Range(1, 20)) = 3
     }
     SubShader {
         Tags {
@@ -25,6 +29,7 @@
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+			#include "Simplex2D.hlsl"
 
             struct appdata {
                 float4 vertex : POSITION;
@@ -33,6 +38,7 @@
 
             struct v2f {
                 float2 uv : TEXCOORD0;
+				float3 worldPos : TEXCOORD1;
                 float4 vertex : SV_POSITION;
             };
 
@@ -43,11 +49,16 @@
 			float _TransitionHeight;
 			float _TransitionLineWidth;
 			half4 _TransitionLineColor;
+			float _DisolveAmount;
+			float _DisolveScale;
+			half4 _DisolveEdgeColor;
+			float _DisolvePower;
 
             v2f vert (appdata v) {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex);
                 return o;
             }
 
@@ -72,6 +83,15 @@
 				col *= mainMult;
 				col += _TransitionLineColor * lineMult * (mainCol.a * inLineHeight + secondCol.a * (1 - inLineHeight));
 				col += secondCol * secMult;
+
+				if (_DisolveAmount > 0.001) {
+					//_DisolveAmount = (sin(_Time.z) + 1) / 2;
+					float disolve = (snoise(i.worldPos * _DisolveScale) + 1) * 0.5 - _DisolveAmount;
+					col.a *= step(0, disolve);
+					disolve = pow(1 - disolve, _DisolvePower);
+					col.rgb = col.rgb * (1 - disolve) + _DisolveEdgeColor.rgb * disolve;
+				}
+
                 return col;
             }
             ENDCG
