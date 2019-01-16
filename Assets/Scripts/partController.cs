@@ -174,6 +174,11 @@ namespace Swarm
         {
 
         }
+
+		public void SetDisolveProgress(float progress) {
+			mat.SetFloat("_DisolveAmount", progress);
+		}
+
     }
 
 }

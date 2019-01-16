@@ -5987,7 +5987,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0eb3bcc84ac455546a8db702c26a89fb, type: 2}
+  - {fileID: 2100000, guid: 84899628bef940e499389cee88a8abe4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12969,6 +12969,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: B_E_Down
       objectReference: {fileID: 0}
+    - target: {fileID: 3590355392242796613, guid: a7215fdadfe4ef848bdbb345f0487693,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1432028677
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590355392242796613, guid: a7215fdadfe4ef848bdbb345f0487693,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3590355392242796615, guid: a7215fdadfe4ef848bdbb345f0487693,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13023,16 +13033,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3590355392242796613, guid: a7215fdadfe4ef848bdbb345f0487693,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1432028677
-      objectReference: {fileID: 0}
-    - target: {fileID: 3590355392242796613, guid: a7215fdadfe4ef848bdbb345f0487693,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7215fdadfe4ef848bdbb345f0487693, type: 3}

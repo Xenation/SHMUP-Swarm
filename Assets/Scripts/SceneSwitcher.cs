@@ -14,7 +14,7 @@ namespace Swarm {
 		private bool isSwitching = false;
 
 		private void Awake() {
-			if (I == null) {
+			if (I != null) {
 				Destroy(gameObject);
 				return;
 			}

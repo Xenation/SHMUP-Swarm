@@ -23,6 +23,9 @@ namespace Swarm
         private bool isAnimationEnd = false;
 
         private bool inHitStun = false;
+		private bool isDying = false;
+		private float dieStartTime = 0f;
+		private float dieDuration = 0f;
         private Material mat;
 
         public float hitStunDuration = 0.05f;
@@ -112,6 +115,15 @@ namespace Swarm
             {
                 hitstun();
             }
+
+			if (isDying) {
+				float progress = (Time.time - dieStartTime) / dieDuration;
+				if (progress > 1f) progress = 1f;
+				mat.SetFloat("_DisolveAmount", progress);
+				foreach (partController part in parts) {
+					part.SetDisolveProgress(progress);
+				}
+			}
         }
 
         void OnCollisionEnter2D(Collision2D col)
@@ -132,6 +144,9 @@ namespace Swarm
             if (pv <= 0)
             {
                 bossExpl.SetTrigger("explode");
+				isDying = true;
+				dieStartTime = Time.time;
+				dieDuration = 2f;
                 Invoke("End", 2.0f);
 
                 //Destroy(this.gameObject);
