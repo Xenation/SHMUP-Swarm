@@ -274,11 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b907afaacffc6143bbd258a98c0d53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitsToCreate: 10
+  unitsToCreate: 12
   unitPrefab: {fileID: 4730632575370699443, guid: bfb8ff794d2d7294995293d91bf8e3a5,
     type: 3}
-  playerSwarm: {fileID: 7103110863744034858, guid: 97b8a4c5d62e13f478de6f90a6946bbd,
-    type: 3}
+  playerSwarm: {fileID: 0}
   openAnim: {fileID: 7754555224856579597}
 --- !u!95 &6670959170561398652
 Animator:

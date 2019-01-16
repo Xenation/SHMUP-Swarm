@@ -15,7 +15,6 @@ MonoBehaviour:
   finishedDelay: 0
   simultaneous:
   - {fileID: 11400000, guid: a8e0691cd112b264bac602a53e50552b, type: 2}
-  - {fileID: 11400000, guid: 754a8ab6e1815d942b782e8ec92b112e, type: 2}
   - {fileID: 11400000, guid: 0f435ee694888fc4299127948390c7ba, type: 2}
   nextPossible:
   - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
