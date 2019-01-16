@@ -83,6 +83,7 @@ namespace Swarm
                 isAnimationEnd = false;       
                 OnStunEnded?.Invoke();
                 bossSmoke.active = true;
+                AkSoundEngine.PostEvent("Play_Repa", gameObject);
                 foreach (GameObject part in GameObject.FindGameObjectsWithTag("part"))
                 {
                     part.GetComponent<partController>().Heal();
