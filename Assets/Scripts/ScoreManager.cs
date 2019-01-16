@@ -34,11 +34,7 @@ public class ScoreManager : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Level Loaded");
-        Debug.Log(scene.name);
-        Debug.Log(mode);
-
-        if (scene.name == "MorganScene") //Change to final level
+        if (scene.name == "PlayScene")
         {
             startTime = Time.time;
 
