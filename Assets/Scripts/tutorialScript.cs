@@ -49,13 +49,13 @@ namespace Swarm
 
             if(Time.time - timeSpent > startTime && part == 0)
             {
-                description.text = "These are your Units.\nThey are both your munitions and lives.";
+                description.text = "These are your units.\nThey are both your munitions and lives!";
                 part++;
                 timeSpent = Time.time;
             }
             else if (Time.time - timeSpent > startTime && part == 1)
             {
-                description.text = "Move with the left thumbstick.";
+                description.text = "Move with the         left thumbstick or DIRECTINAL KEYS";
                 l.enabled = true;
 
                 if (swarm.cursor.position != originalPos)
@@ -69,7 +69,7 @@ namespace Swarm
             else if (thumbStickMoved && part == 2)
             {
                 l.enabled = false;
-                description.text = "Go on this pickup to get more pyus.";
+                description.text = "Go on          to have more units";
                 pickup.enabled = true;
                 part++;
                 spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //swarm.cursor.position.z));
@@ -77,14 +77,14 @@ namespace Swarm
             else if ( spawner.nbOfPickups == 0 && part == 3)
             {
                 pickup.enabled = false;
-                description.text = "You can transform into a bigger Unit by holding Right Trigger. \nIn this form you are stronger.\nHowever you are slower, and you can't shoot.";
+                description.text = "You can transform into a bigger unit by holding         or RIGHT CLICK \n In this form you are stronger.\nHowever you are slower, and you can't shoot.";
                 part++;
                 rt.enabled = true;
             }
             else if(Input.GetButtonUp("Fire2") && part == 4)
             {
                 rt.enabled = false;
-                description.text = "Here is your enemy.\nPress A to shoot a pyu.";
+                description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit";
                 a.enabled = true;
 
                 boss.gameObject.SetActive(true);
@@ -98,17 +98,17 @@ namespace Swarm
             else if(Input.GetButtonUp("Fire1") && part == 5)
             {
                 a.enabled = false;
-                description.text = "You must destroy all 4 parts of it's armor.";
+                description.text = "You must destroy all 4 parts of its armor.";
                 part++;
             }
             else if ( !boss.hasPartsAlive && part == 6)
             {
-                description.text = "Then attack it it's heart.";
+                description.text = "Then attack its heart.";
                 part++;
             }
             else if ( boss ==null && part == 7)
             {
-                description.text = "Now let's go for real.\nDon't get all your unitss killed.\nGood Luck !";
+                description.text = "Let's go for real now!\nDon't get all your units killed!\n";
             }
         }
     }
