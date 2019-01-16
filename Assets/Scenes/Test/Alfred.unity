@@ -1419,23 +1419,44 @@ PrefabInstance:
       propertyPath: phase3Threshhold
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: pv
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: basepv
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4788165427147069086, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

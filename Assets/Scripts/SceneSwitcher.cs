@@ -7,6 +7,8 @@ using Xenon.Processes;
 namespace Swarm {
 	public class SceneSwitcher : Singleton<SceneSwitcher> {
 
+		private static bool created = false;
+
 		private Graphic fader;
 
 		private ProcessManager procManager;
@@ -14,10 +16,11 @@ namespace Swarm {
 		private bool isSwitching = false;
 
 		private void Awake() {
-			if (I != null) {
+			if (created) {
 				Destroy(gameObject);
 				return;
 			}
+			created = true;
 			procManager = new ProcessManager();
 			fader = GetComponentInChildren<Graphic>();
 			DontDestroyOnLoad(gameObject);

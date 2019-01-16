@@ -146,7 +146,7 @@ namespace Swarm
                 bossExpl.SetTrigger("explode");
 				isDying = true;
 				dieStartTime = Time.time;
-				dieDuration = 2f;
+				dieDuration = 1f;
                 Invoke("End", 2.0f);
 
                 //Destroy(this.gameObject);
