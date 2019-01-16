@@ -22,7 +22,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586541240367845250
+    m_lastTime: -8586539618632480539
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586541203673101737
+    m_lastTime: -8586539611220414056
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586541203673341424
+    m_lastTime: -8586539611220563899
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -164,6 +164,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Menu
+      guid: dd51e50c64d96845b84ba681ee3bbc09
+      id: 1278378707
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Menu
+        ObjectType: 3
+      Path: Default Work Unit\Play_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Mortier
       guid: 555e40ecc0f088428fd980927ffdc28e
       id: 3355890260
@@ -209,6 +221,18 @@ MonoBehaviour:
       - ElementName: Play_PickUp
         ObjectType: 3
       Path: Default Work Unit\Play_PickUp
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Repa
+      guid: d9a723c6137a3b43a143f6151fd1813d
+      id: 2586684224
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Repa
+        ObjectType: 3
+      Path: Default Work Unit\Play_Repa
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -453,5 +477,6 @@ MonoBehaviour:
   ExpandedItems:
   - /SHMUP
   - /SHMUP/Events
+  - /SHMUP/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

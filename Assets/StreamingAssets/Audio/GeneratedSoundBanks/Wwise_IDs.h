@@ -22,10 +22,12 @@ namespace AK
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_HARDHIT = 1822128376U;
         static const AkUniqueID PLAY_LASER = 2270376495U;
+        static const AkUniqueID PLAY_MENU = 1278378707U;
         static const AkUniqueID PLAY_MORTIER = 3355890260U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_NORMALHIT = 4153769294U;
         static const AkUniqueID PLAY_PICKUP = 3860455926U;
+        static const AkUniqueID PLAY_REPA = 2586684224U;
         static const AkUniqueID PLAY_SHOTS = 3061091197U;
         static const AkUniqueID PLAY_UI_BACK = 1386224142U;
         static const AkUniqueID PLAY_UI_MOVE = 249738436U;
@@ -74,8 +76,11 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMB = 1117531639U;
+        static const AkUniqueID BOSSATTACK = 2555063238U;
+        static const AkUniqueID BOSSSFX = 1163612179U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PYUSFX = 3759253538U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BUSSES
