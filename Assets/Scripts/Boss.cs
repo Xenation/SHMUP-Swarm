@@ -20,6 +20,14 @@ namespace Swarm {
 			}
 		}
 
+        public void SetPhase(int phase)
+        {
+            currentPattern.Terminate();
+            phaseIndex = phase;
+            currentPattern = phases[phaseIndex].startPattern.Attach(gameObject);
+            currentPattern.OnPatternEnded += PatternChange;
+        }
+
 		private void PhaseChange(int prevPhase, int currentPhase) {
 			phaseIndex = currentPhase;
 			currentPattern = phases[phaseIndex].startPattern.Attach(gameObject);

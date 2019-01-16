@@ -70,11 +70,23 @@ namespace Swarm
             if (ScoreManager.bossPhase == 2)
             {
                 pv = boss.phases[1].lifeThreshold;
+                boss.SetPhase(1);
+                currentPhase = 2;
+                foreach (partController part in parts)
+                {
+                    part.ResetSprite();
+                }
                 AkSoundEngine.SetState("BossPhase", "Phase2");
             }
             else if (ScoreManager.bossPhase == 3)
             {
                 pv = boss.phases[2].lifeThreshold;
+                boss.SetPhase(2);
+                currentPhase = 3;
+                foreach (partController part in parts)
+                {
+                    part.ResetSprite();
+                }
                 AkSoundEngine.SetState("BossPhase", "Phase3");
             }
         }

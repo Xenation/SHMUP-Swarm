@@ -1854,19 +1854,36 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 1468293996, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 1913640492, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: basepv
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 2080624393}
+    - target: {fileID: 8015809409135751195, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: basepv
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 43817398, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}

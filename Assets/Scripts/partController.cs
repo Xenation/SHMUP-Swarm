@@ -36,14 +36,18 @@ namespace Swarm
         private float lastSparkleTime ;
         public float sparkleTimerDuration = 0.7f;
 
+        private void Awake()
+        {
+            SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
+            mat = rend.material;
+            boss = GetComponentInParent<Boss>();
+            sprRenderer = GetComponent<SpriteRenderer>();
+        }
+
         // Start is called before the first frame update
         void Start()
         {
             pv = basepv;
-            SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
-            mat = rend.material;
-			boss = GetComponentInParent<Boss>();
-			sprRenderer = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -93,6 +97,11 @@ namespace Swarm
                 //INSERER SON DEGATS
                 AkSoundEngine.PostEvent("Play_NormalHit", gameObject);
             }
+        }
+
+        public void ResetSprite()
+        {
+            sprRenderer.sprite = healedSprites[boss.phaseIndex];
         }
 
 		private void Damaged() {
