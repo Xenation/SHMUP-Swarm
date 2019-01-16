@@ -27,11 +27,13 @@ namespace Swarm
             {
                 if (tutorial)
                 {
-					SceneSwitcher.SwitchScene("Menu");
+                    AkSoundEngine.PostEvent("Stop_Music", gameObject);
+                    SceneSwitcher.SwitchScene("Menu");
                 }
                 else
                 {
-					SceneSwitcher.SwitchScene("Win", 2f, 1f);
+                    AkSoundEngine.PostEvent("Stop_Music", gameObject);
+                    SceneSwitcher.SwitchScene("Win", 2f, 1f);
                 }
             }
             
