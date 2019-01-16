@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Xenon;
 
 namespace Swarm {
 	public class Mortar : TelegraphableAttack {
@@ -41,6 +42,9 @@ namespace Swarm {
 		}
 
 		public override void LaunchAttack() {
+			if (!isLocked) { // Means prematurely cancelled
+				Destroy(gameObject);
+			}
 			base.LaunchAttack();
 			visualProjectile.SetActive(false);
 			attack.transform.position = telegraph.transform.position;
@@ -62,7 +66,7 @@ namespace Swarm {
 				Vector2 vel;
 				if (!isLocked) { // Seeking
                     AkSoundEngine.PostEvent("Play_Mortier", gameObject);
-					vel = (boss.swarm.cursor.position - telegraph.transform.position).normalized * seekSpeed * Time.deltaTime;
+					vel = (boss.swarm.cursor.position - telegraph.transform.position).RemapMagnitude(0f, 0.1f, 0f, 1f).ClampMagnitude(0f, 1f) * seekSpeed * Time.deltaTime;
 					telegraph.transform.position += new Vector3(vel.x, vel.y);
 					// Align with boss
 					Vector2 toCrosshair = ((Vector2) telegraph.transform.position - (Vector2) boss.transform.position).normalized;

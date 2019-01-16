@@ -73,7 +73,7 @@ namespace Swarm {
 
 		public void Terminate() {
 			Debug.Log("Terminating Pattern: " + definition.name);
-			sequenceProcess.Terminate();
+			sequenceProcess.Abort();
 			if (!suppressNext) {
 				foreach (Pattern simult in GetComponents<Pattern>()) {
 					if (!simult.suppressNext) continue;

@@ -26,6 +26,7 @@ namespace Swarm {
 		}
 
 		public override void OnBegin() {
+			//Debug.Log("MortarProcess OnBegin");
 			base.OnBegin();
 			CreateMortars();
 		}
@@ -39,6 +40,7 @@ namespace Swarm {
 		}
 
 		public override void OnTerminate() {
+			//Debug.Log("MortarProcess OnTerminate");
 			base.OnTerminate();
 			LaunchAttacks();
 		}
@@ -72,7 +74,9 @@ namespace Swarm {
 		}
 
 		public void Abort() {
+			//Debug.Log("MortarProcess Abort");
 			if (mortarState == TelegraphableAttack.State.Attacking) return;
+			//Debug.Log("MortarProcess Telegraph Abort");
 			DestroyAll();
 		}
 	}

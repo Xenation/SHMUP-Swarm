@@ -32,7 +32,6 @@ namespace Swarm
                 }
                 else
                 {
-                    AkSoundEngine.PostEvent("Stop_Music", gameObject);
                     SceneSwitcher.SwitchScene("Win", 2f, 1f);
                 }
             }
