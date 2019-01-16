@@ -692,6 +692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 166588369}
+  X: 0
+  Y: 0
   distanceRatio: 10
   distance: 5
   newCamera: 0
@@ -1065,6 +1067,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4788165427147069081, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 4788165427147069084, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,11 +1126,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4788165427147069081, guid: 50a6274365a1cac479f4e84b07ee86df,
-        type: 3}
-      propertyPath: m_Name
-      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}
@@ -1280,7 +1282,7 @@ PrefabInstance:
         type: 3}
       propertyPath: phases.Array.data[0].startPattern
       value: 
-      objectReference: {fileID: 11400000, guid: 47324d7cff6ed1248ae35155098ecbed,
+      objectReference: {fileID: 11400000, guid: 0ba1d9ce2de168445a01040ca32892c3,
         type: 2}
     - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
         type: 3}

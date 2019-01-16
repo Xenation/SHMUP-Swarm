@@ -2,7 +2,7 @@
 using Xenon;
 
 namespace Swarm {
-	public class CompositeProcess : Process {
+	public class CompositeProcess : Process, AbortableProcess {
 
 		private ProcessManager manager;
 		private Process first;
@@ -48,10 +48,17 @@ namespace Swarm {
 		}
 
 		public override void OnTerminate() {
+			Debug.Log("Composite OnTerminate");
 			if (first != null && first is AbortableProcess abortable) {
 				abortable.Abort();
 			}
 		}
 
+		public void Abort() {
+			//Debug.Log("Composite Abort");
+			if (first != null && first is AbortableProcess abortable) {
+				abortable.Abort();
+			}
+		}
 	}
 }

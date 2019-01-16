@@ -41,6 +41,9 @@ namespace Swarm {
 		}
 
 		public override void LaunchAttack() {
+			if (!isLocked) { // Means prematurely cancelled
+				Destroy(gameObject);
+			}
 			base.LaunchAttack();
 			visualProjectile.SetActive(false);
 			attack.transform.position = telegraph.transform.position;

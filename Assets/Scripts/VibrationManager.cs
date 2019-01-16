@@ -97,7 +97,7 @@ namespace Swarm
                     {
                         if (vib.z > maxStrength)
                             maxStrength = vib.z;
-                        Debug.Log(1323);
+                        //Debug.Log(1323);
                     }
                 }
 
