@@ -14,6 +14,7 @@ namespace Swarm
         public Image l;
         public Image a;
         public Image rt;
+        public Image pickup;
 
         private float timeSpent;
         public float startTime = 2.0f;
@@ -39,6 +40,7 @@ namespace Swarm
             a.enabled = false;
             l.enabled = false;
             rt.enabled = false;
+            pickup.enabled = false;
         }
 
         // Update is called once per frame
@@ -68,11 +70,13 @@ namespace Swarm
             {
                 l.enabled = false;
                 description.text = "Go on this pickup to get more pyus.";
+                pickup.enabled = true;
                 part++;
                 spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //swarm.cursor.position.z));
             }
             else if ( spawner.nbOfPickups == 0 && part == 3)
             {
+                pickup.enabled = false;
                 description.text = "You can transform into a bigger Unit by holding Right Trigger. \nIn this form you are stronger.\nHowever you are slower, and you can't shoot.";
                 part++;
                 rt.enabled = true;

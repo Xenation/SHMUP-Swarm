@@ -6,6 +6,9 @@ namespace Swarm {
         
         public float vD = 1.0f;
         public float vS = 2.0f;
+        public bool lazer = false;
+        public int dmgPerSecond = 5;
+        private float firstHitTime = 0;
 
         private CircleCollider2D bossCollider;
 
@@ -28,7 +31,14 @@ namespace Swarm {
 
             if (ps)
             {
-                ps.Die(vD, vS);
+                if (lazer)
+                {
+                    firstHitTime = Time.time;
+                }
+                else
+                {
+                    ps.Die(vD, vS);
+                }
             }
         }
 
@@ -38,7 +48,12 @@ namespace Swarm {
 
             if (ps)
             {
-                ps.Die(vD, vS);
+                if (lazer && Time.time > (firstHitTime + (1.0f / (float)dmgPerSecond)))
+                {
+                    Debug.Log("ouch " + Time.time);
+                    ps.Die(vD, vS);
+                    firstHitTime = Time.time;
+                }
             }
         }
 
