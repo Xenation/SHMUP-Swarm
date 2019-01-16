@@ -29,6 +29,7 @@ namespace Swarm {
 		void onClickSubmit() {
             AkSoundEngine.PostEvent("Stop_Music", gameObject);
             ScoreManager.sendScore(name.text); //Add Name from submit text field
+            SceneSwitcher.SwitchScene("Menu");
 		}
 	}
 }

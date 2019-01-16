@@ -25,6 +25,7 @@ namespace Swarm {
 			currentPattern = phases[phaseIndex].startPattern.Attach(gameObject);
 			currentPattern.OnPatternEnded += PatternChange;
 			bLife.SetPhase(currentPhase + 1);
+            ScoreManager.bossPhase = currentPhase + 1;
 			Debug.Log("Changed Phase: " + prevPhase + " --> " + currentPhase);
 		}
 

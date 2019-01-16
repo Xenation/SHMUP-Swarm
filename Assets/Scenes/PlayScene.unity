@@ -1837,6 +1837,11 @@ PrefabInstance:
       propertyPath: swarm
       value: 
       objectReference: {fileID: 230935861}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[1].lifeThreshold
+      value: 149
+      objectReference: {fileID: 0}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: player
       value: 
