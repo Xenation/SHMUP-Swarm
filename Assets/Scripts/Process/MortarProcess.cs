@@ -68,8 +68,9 @@ namespace Swarm {
 		}
 
 		private void DestroyAll() {
-			foreach (Mortar mortar in mortars) {
-				Object.Destroy(mortar.gameObject);
+            foreach (Mortar mortar in mortars) {
+                AkSoundEngine.PostEvent("Stop_MortierSeeking",mortar.gameObject);
+                Object.Destroy(mortar.gameObject);
 			}
 		}
 

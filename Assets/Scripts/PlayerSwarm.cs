@@ -241,13 +241,14 @@ namespace Swarm
             {
                 ScoreManager.endTime = Time.time;
                 ScoreManager.bossDead = false;
-                AkSoundEngine.PostEvent("Stop_Music", gameObject);
+                
                 if (tutorial)
                 {
                     SceneSwitcher.SwitchScene("TutorialScene");
                 }
                 else
                 {
+                    AkSoundEngine.PostEvent("Stop_Music", gameObject);
                     SceneSwitcher.SwitchScene("Lose");
                 }
 

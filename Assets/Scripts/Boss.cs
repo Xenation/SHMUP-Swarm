@@ -73,6 +73,7 @@ namespace Swarm {
 
 		public void Die() {
 			foreach (Transform child in transform) {
+				if (child.GetComponent<EndCristal>() != null) continue;
 				Destroy(child.gameObject);
 			}
 			Component[] bossComponents = GetComponents<Component>();
