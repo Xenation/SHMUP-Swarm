@@ -60,7 +60,7 @@ namespace Swarm {
 
 		public void Die(float vibDuration = 1.0f, float vibStrength = 2.0f) {
 			AkSoundEngine.PostEvent("Play_Death", gameObject);
-			VibrationManager.AddVibrateRight(vibStrength, vibDuration);
+			VibrationManager.AddVibrateLeft(vibStrength, vibDuration);
 			Destroy(gameObject);
 		}
 

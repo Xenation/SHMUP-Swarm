@@ -4834,6 +4834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vD: 1
   vS: 2
+  lazer: 1
+  dmgPerSecond: 5
 --- !u!1 &5664803934802710922
 GameObject:
   m_ObjectHideFlags: 0
@@ -10006,6 +10008,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lazer Telegraph
       objectReference: {fileID: 0}
+    - target: {fileID: 2539021221340130398, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539021221340130398, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944396182579610203, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944396182579610203, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944396182579610203, guid: 04d3795c98831c2409c12d9818b25e97,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8390004620712179675, guid: 04d3795c98831c2409c12d9818b25e97,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10060,31 +10087,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944396182579610203, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4.468
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944396182579610203, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944396182579610203, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2539021221340130398, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2539021221340130398, guid: 04d3795c98831c2409c12d9818b25e97,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d3795c98831c2409c12d9818b25e97, type: 3}
