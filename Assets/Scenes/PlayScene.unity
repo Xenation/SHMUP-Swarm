@@ -908,6 +908,11 @@ PrefabInstance:
       propertyPath: swarm
       value: 
       objectReference: {fileID: 230935861}
+    - target: {fileID: 7432015850201415297, guid: 93afccde75b64164cb5cefdc3e8e25cb,
+        type: 3}
+      propertyPath: testController
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93afccde75b64164cb5cefdc3e8e25cb, type: 3}
 --- !u!1001 &659845038
@@ -1671,6 +1676,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -214.97299}
+--- !u!95 &1532987451 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5700571477016014058, guid: 50a6274365a1cac479f4e84b07ee86df,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698669232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1698669232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1775,6 +1786,18 @@ PrefabInstance:
       propertyPath: pv
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: vibStrength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: vibDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
+      propertyPath: bossExpl
+      value: 
+      objectReference: {fileID: 1532987451}
     - target: {fileID: 442947854, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
@@ -1821,6 +1844,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DrawMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 421136050588000968, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
