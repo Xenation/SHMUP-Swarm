@@ -64,18 +64,20 @@ namespace Swarm
                     thumbStickMoved = true;
                     part++;
                 }
+                timeSpent = Time.time;
                     
                 
             }
-            else if (thumbStickMoved && part == 2)
+            else if (thumbStickMoved && Time.time - timeSpent > startTime  && part == 2)
             {
                 l.enabled = false;
                 description.text = "Go on          to have more units";
                 pickup.enabled = true;
                 part++;
                 spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //swarm.cursor.position.z));
+                timeSpent = Time.time;
             }
-            else if ( spawner.nbOfPickups == 0 && part == 3)
+            else if (Time.time - timeSpent >startTime  && part == 3)
             {
                 pickup.enabled = false;
                 description.text = "You can transform into a bigger unit by holding         or RIGHT CLICK \n In this form you are stronger.\nHowever you are slower, and you can't shoot.";

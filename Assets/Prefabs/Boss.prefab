@@ -732,7 +732,6 @@ GameObject:
   - component: {fileID: 725464387}
   - component: {fileID: 7642762790660658203}
   - component: {fileID: 572149457510042393}
-  - component: {fileID: 43817398}
   m_Layer: 0
   m_Name: Head
   m_TagString: part
@@ -971,21 +970,6 @@ MonoBehaviour:
   eye: {fileID: 9081071139309854661}
   swarm: {fileID: 0}
   maxEyeDistance: 0.2
---- !u!114 &43817398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913640488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e64ba7ae63538fb4ba236c8297b04bfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eye: {fileID: 9081071139309854661}
-  swarm: {fileID: 0}
-  maxEyeDistance: 0.25
 --- !u!1 &4024477420749147756
 GameObject:
   m_ObjectHideFlags: 0

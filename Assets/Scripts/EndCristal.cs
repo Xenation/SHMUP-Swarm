@@ -28,7 +28,7 @@ namespace Swarm
                 if (tutorial)
                 {
                     AkSoundEngine.PostEvent("Stop_Music", gameObject);
-                    SceneSwitcher.SwitchScene("Menu");
+                    SceneSwitcher.SwitchScene("PlayScene");
                 }
                 else
                 {
