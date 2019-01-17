@@ -15,6 +15,7 @@ namespace Swarm
         public Image a;
         public Image rt;
         public Image pickup;
+        public Lazer lazer;
 
         private float timeSpent;
         public float startTime = 2.0f;
@@ -25,6 +26,7 @@ namespace Swarm
         private CameraController Cc;
         private DistanceJoint2D playerMovement;
         private int prevUnitCount;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -75,7 +77,7 @@ namespace Swarm
                 description.text = "Go on          to have more units";
                 pickup.enabled = true;
                 part++;
-                spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //swarm.cursor.position.z));
+                spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //Change position of the pickup according to the player.
                 timeSpent = Time.time;
                 prevUnitCount = swarm.units.Count;
             }
@@ -86,32 +88,44 @@ namespace Swarm
                 part++;
                 rt.enabled = true;
             }
-            else if(Input.GetButtonUp("Fire2") && part == 4)
+
+            //ADD PART TO SHOW THAT SHRINK HELPS AGAINST LAZERS
+            else if (Input.GetButtonUp("Fire2") && part == 4)
             {
                 rt.enabled = false;
+                description.text = "Lazer on the right side, go through it in shrink not to die";
+                part++;
+
+                //Activate lazer
+                //Instantiate();
+            }
+            else if(swarm.cursor.localPosition.x > 11 && part == 5) //Check position of player (if he is to the right of the lazer)
+            {
+                //Deactivate lazer
+
                 description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit";
                 a.enabled = true;
 
                 boss.gameObject.SetActive(true);
                 playerMovement.enabled = true;
-                //Add boss and change camera
+
                 Cc.X = 0;
                 Cc.Y = 0;
 
                 part++;
             }
-            else if(Input.GetButtonUp("Fire1") && part == 5)
+            else if(Input.GetButtonUp("Fire1") && part == 6)
             {
                 a.enabled = false;
                 description.text = "You must destroy all 4 parts of its armor.";
                 part++;
             }
-            else if ( !boss.hasPartsAlive && part == 6)
+            else if ( !boss.hasPartsAlive && part == 7)
             {
                 description.text = "Then attack its heart.";
                 part++;
             }
-            else if ( boss ==null && part == 7)
+            else if ( boss ==null && part == 8)
             {
                 description.text = "Let's go for real now!\nDon't get all your units killed!\n";
             }

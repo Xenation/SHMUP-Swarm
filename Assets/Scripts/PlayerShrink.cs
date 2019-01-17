@@ -13,6 +13,8 @@ namespace Swarm
 
         private Vector2 velocity;
 
+        public int mortarDmg = 15;
+
 
 
         private void Awake()
@@ -45,19 +47,15 @@ namespace Swarm
             AkSoundEngine.PostEvent("Play_Death", gameObject);
             VibrationManager.AddVibrateRight(vibStrength, vibDuration);
 
-            if(swarm.ShrinkUnits > 0 || swarm.units.Count > 0)
+            if((swarm.ShrinkUnits + swarm.units.Count) > 1)
             {
-                if(swarm.units.Count > 0 && swarm.ShrinkUnits > 0)
+                if(swarm.ShrinkUnits > 0)
                 {
                     swarm.ShrinkUnits--;
-                }
-                else if (swarm.units.Count > 0 && swarm.ShrinkUnits == 0)
-                {
-                    swarm.units[0].Die();
                 }
                 else
                 {
-                    swarm.ShrinkUnits--;
+                    swarm.units[0].Die();
                 }
             }
             else
@@ -68,7 +66,7 @@ namespace Swarm
 
         public void kill()
         {
-            if((swarm.ShrinkUnits + swarm.units.Count) < 15)
+            if((swarm.ShrinkUnits + swarm.units.Count) <= mortarDmg)
             {
                 swarm.ShrinkUnits = 0;
 
@@ -82,7 +80,7 @@ namespace Swarm
             }
             else
             {
-                int dmg = 15;
+                int dmg = mortarDmg;
 
                 if (dmg < swarm.ShrinkUnits)
                     swarm.ShrinkUnits -= dmg;

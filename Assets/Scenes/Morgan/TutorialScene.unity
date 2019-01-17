@@ -366,6 +366,18 @@ PrefabInstance:
       propertyPath: phases.Array.data[2].lifeThreshold
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[0].startPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e9baed9cc439f943b5aef34a76f2dc2,
+        type: 2}
+    - target: {fileID: 2710803816441514192, guid: 50a6274365a1cac479f4e84b07ee86df,
+        type: 3}
+      propertyPath: phases.Array.data[0].resetPattern
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e9baed9cc439f943b5aef34a76f2dc2,
+        type: 2}
     - target: {fileID: 138413040, guid: 50a6274365a1cac479f4e84b07ee86df, type: 3}
       propertyPath: cam
       value: 
