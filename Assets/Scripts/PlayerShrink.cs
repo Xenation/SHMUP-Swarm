@@ -13,6 +13,8 @@ namespace Swarm
 
         private Vector2 velocity;
 
+        public int mortarDmg = 15;
+
 
 
         private void Awake()
@@ -68,7 +70,7 @@ namespace Swarm
 
         public void kill()
         {
-            if((swarm.ShrinkUnits + swarm.units.Count) < 15)
+            if((swarm.ShrinkUnits + swarm.units.Count) < mortarDmg)
             {
                 swarm.ShrinkUnits = 0;
 
@@ -82,7 +84,7 @@ namespace Swarm
             }
             else
             {
-                int dmg = 15;
+                int dmg = mortarDmg;
 
                 if (dmg < swarm.ShrinkUnits)
                     swarm.ShrinkUnits -= dmg;
