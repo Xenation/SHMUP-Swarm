@@ -159,6 +159,12 @@ namespace Swarm
                 Collider2D bossColl = GetComponent<Collider2D>();
                 bossColl.enabled = false;
 
+                foreach( partController part in parts)
+                {
+                    Collider2D pColl = part.GetComponent<Collider2D>();
+                    pColl.enabled = false;
+                }
+
                 bossExpl.SetTrigger("explode");
 				isDying = true;
 				dieStartTime = Time.time;
