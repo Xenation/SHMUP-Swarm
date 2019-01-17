@@ -155,6 +155,10 @@ namespace Swarm
 
             if (pv <= 0)
             {
+                //stop pyus from colliding with boss when dead
+                Collider2D bossColl = GetComponent<Collider2D>();
+                bossColl.enabled = false;
+
                 bossExpl.SetTrigger("explode");
 				isDying = true;
 				dieStartTime = Time.time;
