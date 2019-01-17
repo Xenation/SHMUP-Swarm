@@ -221,7 +221,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5590715447422973562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -602,6 +602,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5092739232169232458, guid: 3cdc60ce120de394282c5b4df5efe338,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092739232169232458, guid: 3cdc60ce120de394282c5b4df5efe338,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 9.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092739232169232458, guid: 3cdc60ce120de394282c5b4df5efe338,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092739232169232458, guid: 3cdc60ce120de394282c5b4df5efe338,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2beb2ac4166bbee4b831fdf80f1dd9bf,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cdc60ce120de394282c5b4df5efe338, type: 3}
 --- !u!4 &4448417220009237862 stripped
