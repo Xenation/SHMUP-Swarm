@@ -16,7 +16,7 @@ namespace Swarm
         private Animator pickAnim;
         private Collider2D coll;
 
-        private void Start()
+        private void Awake()
         {
 			coll = GetComponent<Collider2D>();
             pickAnim = GetComponent<Animator>();

@@ -23,7 +23,7 @@ MonoBehaviour:
   rotationSpeed: 0
   spawnPoints:
   - position: {x: -0.00000008742278, y: -2}
-    rotation: -90
+    rotation: 270
   sequence:
   - type: 2
     count: 0
@@ -34,13 +34,13 @@ MonoBehaviour:
       json: 3
       unityObject: {fileID: 0}
     - type: 1
-      json: 2,5
+      json: 2.5
       unityObject: {fileID: 0}
     - type: 1
       json: 6
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,8
+      json: 0.8
       unityObject: {fileID: 0}
     - type: 3
       json: 
