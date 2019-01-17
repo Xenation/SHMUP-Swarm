@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2549765799de33e4c92ba783cf32d16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingPref: {fileID: 4304256740956682605, guid: c06ce9e23dbf581479ee260d3636694b,
+    type: 3}
 --- !u!1 &109520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4009,8 @@ MonoBehaviour:
   TableButton: {fileID: 130644, guid: 9e52985d8cf62ae4daad0318fe9f396d, type: 3}
   ScoresScrollRect: {fileID: 11401016}
   ScoreItem: {fileID: 130188, guid: 9ea8f958f1717d94aaeea61adc37626f, type: 3}
+  loadingPrefab: {fileID: 4304256740956682605, guid: c06ce9e23dbf581479ee260d3636694b,
+    type: 3}
 --- !u!1 &196684
 GameObject:
   m_ObjectHideFlags: 0
