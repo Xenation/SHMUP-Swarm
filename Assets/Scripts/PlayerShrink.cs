@@ -68,15 +68,38 @@ namespace Swarm
 
         public void kill()
         {
-            swarm.ShrinkUnits = 0;
-            
-            foreach( PlayerUnit unit in swarm.units)
+            if((swarm.ShrinkUnits + swarm.units.Count) < 15)
             {
-                swarm.units.Remove(unit);
-                unit.Die();
-            }
+                swarm.ShrinkUnits = 0;
 
-            Destroy(gameObject);
+                foreach (PlayerUnit unit in swarm.units)
+                {
+                    swarm.units.Remove(unit);
+                    unit.Die();
+                }
+
+                Destroy(gameObject);
+            }
+            else
+            {
+                int dmg = 15;
+
+                if (dmg < swarm.ShrinkUnits)
+                    swarm.ShrinkUnits -= dmg;
+                else
+                {
+                    dmg -= swarm.ShrinkUnits;
+                    swarm.ShrinkUnits = 0;
+
+                    for(int i = 0; i < dmg; i++)
+                    {
+                        swarm.units[i].Die();
+                        swarm.units.RemoveAt(i);
+                    }
+                }
+            }
+            
+
         }
     }
 }
