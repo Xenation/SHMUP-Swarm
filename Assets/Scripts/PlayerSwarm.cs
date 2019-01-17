@@ -86,7 +86,15 @@ namespace Swarm
         {
             if (!inPause)
             {
-                velocity.x = Input.GetAxisRaw("Horizontal");
+#if UNITY_EDITOR
+				// DEBUG
+				if (Input.GetKey(KeyCode.Keypad0)) {
+					GameObject tmp = Instantiate(unitPrefab, new Vector2(Random.Range(cursor.position.x - 0.1f, cursor.position.x + 0.1f), Random.Range(cursor.position.y - 0.1f, cursor.position.y + 0.1f)), Quaternion.identity, transform);
+					AddUnit(tmp);
+				}
+#endif
+
+				velocity.x = Input.GetAxisRaw("Horizontal");
                 velocity.y = Input.GetAxisRaw("Vertical");
                 //velocity.Normalize();
 
