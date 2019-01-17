@@ -24,6 +24,7 @@ namespace Swarm
         private PickupSpawner spawner;
         private CameraController Cc;
         private DistanceJoint2D playerMovement;
+        private int prevUnitCount;
         // Start is called before the first frame update
         void Start()
         {
@@ -68,7 +69,7 @@ namespace Swarm
                     
                 
             }
-            else if (thumbStickMoved && Time.time - timeSpent > startTime  && part == 2)
+            else if (thumbStickMoved && (Time.time - timeSpent) > startTime  && part == 2)
             {
                 l.enabled = false;
                 description.text = "Go on          to have more units";
@@ -76,8 +77,9 @@ namespace Swarm
                 part++;
                 spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //swarm.cursor.position.z));
                 timeSpent = Time.time;
+                prevUnitCount = swarm.units.Count;
             }
-            else if (Time.time - timeSpent >startTime  && part == 3)
+            else if (swarm.units.Count > prevUnitCount && part == 3)
             {
                 pickup.enabled = false;
                 description.text = "You can transform into a bigger unit by holding         or RIGHT CLICK \n In this form you are stronger.\nHowever you are slower, and you can't shoot.";
