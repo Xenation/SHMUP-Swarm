@@ -25,8 +25,8 @@ namespace GameJolt.UI.Controllers {
 		}
 
 		public void Show(Action<bool> callback, int? activeTable, int[] visibleTables) {
-            //Animator.SetTrigger("Leaderboards");
-            //Animator.SetTrigger("ShowLoadingIndicator");
+            Animator.SetTrigger("Leaderboards");
+            Animator.SetTrigger("ShowLoadingIndicator");
 			this.callback = callback;
 
 			Scores.GetTables(tables => {
@@ -54,7 +54,7 @@ namespace GameJolt.UI.Controllers {
 					SetScores(activeId);
 				} else {
 					// TODO: Show error notification
-					//Animator.SetTrigger("HideLoadingIndicator");
+					Animator.SetTrigger("HideLoadingIndicator");
 					Dismiss(false);
 				}
 			});
