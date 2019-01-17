@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using UnityEngine;
+using System.Globalization;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -14,6 +15,9 @@ namespace Swarm {
 
 	[System.Serializable/*, StructLayout(LayoutKind.Explicit)*/]
 	public struct SequenceElementField : ISerializationCallbackReceiver {
+
+		private static CultureInfo format = new CultureInfo("en-US");
+		private static CultureInfo formatFR = new CultureInfo("fr-FR");
 
 		/*[FieldOffset(0)] */public SequenceDataType type;
 		
@@ -137,10 +141,10 @@ namespace Swarm {
 		public void OnBeforeSerialize() {
 			switch (type) {
 				case SequenceDataType.Integer:
-					json = intValue.ToString();
+					json = intValue.ToString(format);
 					break;
 				case SequenceDataType.Floating:
-					json = floatValue.ToString();
+					json = floatValue.ToString(format);
 					break;
 				case SequenceDataType.Projectile:
 					unityObject = projectileValue;
@@ -154,10 +158,14 @@ namespace Swarm {
 		public void OnAfterDeserialize() {
 			switch (type) {
 				case SequenceDataType.Integer:
-					intValue = int.Parse(json);
+					intValue = int.Parse(json, format);
 					break;
 				case SequenceDataType.Floating:
-					floatValue = float.Parse(json);
+					if (json.Contains(",")) {
+						floatValue = float.Parse(json, formatFR);
+					} else {
+						floatValue = float.Parse(json, format);
+					}
 					break;
 				case SequenceDataType.Projectile:
 					projectileValue = unityObject as Projectile;

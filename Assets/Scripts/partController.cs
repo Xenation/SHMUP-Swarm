@@ -21,6 +21,7 @@ namespace Swarm
         public float destroyDuration = 0.2f;
         private Material mat;
         public Animator explosion_fx;
+		public Color destroyedTint = Color.white;
 
 		public float regenTime = .5f;
 		[Tooltip("Full Heath Sprites For Each Phase")]
@@ -63,6 +64,7 @@ namespace Swarm
 					isRegenerating = false;
 					sprRenderer.sprite = healedSprites[boss.phaseIndex];
 					mat.SetFloat("_TransitionHeight", 0f);
+					mat.SetColor("_MainTint", Color.white);
 				} else {
 					mat.SetFloat("_TransitionHeight", progress);
 				}
@@ -105,8 +107,9 @@ namespace Swarm
         }
 
 		private void Damaged() {
-			
+
 			//mat.SetFloat("_ReplaceAmount", 0.5f);
+			mat.SetColor("_MainTint", destroyedTint);
 			
 			destroyShake();
 			explosion_fx.SetTrigger("explosion");
