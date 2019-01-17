@@ -28,9 +28,8 @@ namespace GameJolt.UI.Controllers {
 
 		public void Show(Action<bool> callback, int? activeTable, int[] visibleTables) {
             //Animator.SetTrigger("ShowLoadingIndicator");
-            load = Instantiate(loadingPrefab, Vector3.zero , Quaternion.identity, transform);
-            RectTransform rectTransform = load.GetComponent<RectTransform>();
-            rectTransform.anchoredPosition = Vector2.zero;
+            load = transform.Find("ScrollView").Find("Loading").gameObject;
+            load.SetActive(true);
 
 			this.callback = callback;
 
@@ -60,8 +59,8 @@ namespace GameJolt.UI.Controllers {
 				} else {
                     // TODO: Show error notification
                     //Animator.SetTrigger("HideLoadingIndicator");
-                    Destroy(load);
-					Dismiss(false);
+                    load.SetActive(false);
+                    Dismiss(false);
 				}
 			});
 		}
@@ -106,13 +105,13 @@ namespace GameJolt.UI.Controllers {
 					}
 
 					Animator.SetTrigger("HideLoadingIndicator");
-                    Destroy(load);
+                    load.SetActive(false);
                     //Animator.SetTrigger("Unlock");
                 } else {
 					// TODO: Show error notification
 					Animator.SetTrigger("HideLoadingIndicator");
-                    Destroy(load);
-					Dismiss(false);
+                    load.SetActive(false);
+                    Dismiss(false);
 				}
 			}, tableId, 50);
 		}
