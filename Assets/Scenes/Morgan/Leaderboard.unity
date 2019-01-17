@@ -212,6 +212,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameJoltAPI
       objectReference: {fileID: 0}
+    - target: {fileID: 116330, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_Name
+      value: ButtonRetourCredit
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_Text
+      value: 'BACK
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5de79dca023269e479b83e3602700f4c,
+        type: 3}
+    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 481182, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -395,11 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22410292, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
-      objectReference: {fileID: 0}
-    - target: {fileID: 116330, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_Name
-      value: ButtonRetourCredit
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11415996, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -488,33 +515,6 @@ PrefabInstance:
     - target: {fileID: 11406640, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_Text
-      value: 'BACK
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 5de79dca023269e479b83e3602700f4c,
-        type: 3}
-    - target: {fileID: 11488110, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2e587034d846647b593aa159d7ed8d, type: 3}
@@ -747,7 +747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020386903, y: 0.82151735}
   m_AnchorMax: {x: 0.5687085, y: 0.947}
-  m_AnchoredPosition: {x: -0.5, y: 0.03999996}
+  m_AnchoredPosition: {x: -0.5, y: 0.040008545}
   m_SizeDelta: {x: -3.800003, y: 2.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009946784
