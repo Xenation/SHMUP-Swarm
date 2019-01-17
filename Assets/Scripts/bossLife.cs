@@ -155,6 +155,8 @@ namespace Swarm
 
             if (pv <= 0)
             {
+                Collider2D bossColl = GetComponent<Collider2D>();
+                bossColl.enabled = false;
                 bossExpl.SetTrigger("explode");
 				isDying = true;
 				dieStartTime = Time.time;
