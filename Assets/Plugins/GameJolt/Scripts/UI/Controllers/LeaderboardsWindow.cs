@@ -19,14 +19,18 @@ namespace GameJolt.UI.Controllers {
 
 		private int[] tableIDs;
 		private int currentTab;
+        public GameObject loadingPrefab;
+        private GameObject load;
 
 		public override void Show(Action<bool> callback) {
             Show(callback, null, null);
 		}
 
 		public void Show(Action<bool> callback, int? activeTable, int[] visibleTables) {
-            Animator.SetTrigger("Leaderboards");
-            Animator.SetTrigger("ShowLoadingIndicator");
+            //Animator.SetTrigger("ShowLoadingIndicator");
+            load = transform.Find("ScrollView").Find("Loading").gameObject;
+            load.SetActive(true);
+
 			this.callback = callback;
 
 			Scores.GetTables(tables => {
@@ -53,9 +57,10 @@ namespace GameJolt.UI.Controllers {
 
 					SetScores(activeId);
 				} else {
-					// TODO: Show error notification
-					Animator.SetTrigger("HideLoadingIndicator");
-					Dismiss(false);
+                    // TODO: Show error notification
+                    //Animator.SetTrigger("HideLoadingIndicator");
+                    load.SetActive(false);
+                    Dismiss(false);
 				}
 			});
 		}
@@ -100,11 +105,13 @@ namespace GameJolt.UI.Controllers {
 					}
 
 					Animator.SetTrigger("HideLoadingIndicator");
-					//Animator.SetTrigger("Unlock");
-				} else {
+                    load.SetActive(false);
+                    //Animator.SetTrigger("Unlock");
+                } else {
 					// TODO: Show error notification
 					Animator.SetTrigger("HideLoadingIndicator");
-					Dismiss(false);
+                    load.SetActive(false);
+                    Dismiss(false);
 				}
 			}, tableId, 50);
 		}

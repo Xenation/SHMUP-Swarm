@@ -13,6 +13,7 @@ namespace GameJolt.UI {
 		private TrophiesWindow trophiesWindow;
 		private LeaderboardsWindow leaderboardsWindow;
 		private Behaviours.NotificationCentre notificationCentre;
+        public GameObject loadingPref;
 
 		/// <summary>
 		/// Init this instance.
@@ -43,6 +44,7 @@ namespace GameJolt.UI {
 					leaderboardsWindow = children.GetComponent<LeaderboardsWindow>();
 					if(leaderboardsWindow != null) {
 						leaderboardsWindow.Init(animator);
+                        leaderboardsWindow.loadingPrefab = loadingPref;
 					}
 				}
 			}
