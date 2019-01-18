@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
@@ -94,6 +95,7 @@ public class ScoreManager : MonoBehaviour
             bossPhase = 1;
             pastTime = 0;
         }
+
     }
 
     public static void setScore(float time)
