@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class LeaderboardManager : MonoBehaviour
 {
-    public Text stats;
+    public GameObject stats;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +22,14 @@ public class LeaderboardManager : MonoBehaviour
         //});
 
         GameJoltUI.Instance.ShowLeaderboards();
+        
+        stats.transform.Find("totalPyus").GetComponent<Text>().text = "Total Pyus collected : " + ScoreManager.totalPyus;
+        stats.transform.Find("wins").GetComponent<Text>().text = "Number of Wins : " + ScoreManager.nbOfWins;
+        stats.transform.Find("shot").GetComponent<Text>().text = "Number of Pyus shot : " + ScoreManager.nbPyuShot;
+        stats.transform.Find("killed").GetComponent<Text>().text = "Numer of Pyus killed : " + ScoreManager.nbPyuKilled;
+        stats.transform.Find("totalPlayed").GetComponent<Text>().text = "Number of games played : " + ScoreManager.nbOfGamesPlayed;
 
-        stats.text = "Total Pyus collected : " + ScoreManager.totalPyus
-            + "\nNumber of Pyus shot : " + ScoreManager.nbPyuShot
-            + "\nNumer of Pyus killed : " + ScoreManager.nbPyuKilled
-            + "\nNumber of Wins : " + ScoreManager.nbOfWins
-            + "\nNumber of games played : " + ScoreManager.nbOfGamesPlayed;
+        
     }
 
     // Update is called once per frame
