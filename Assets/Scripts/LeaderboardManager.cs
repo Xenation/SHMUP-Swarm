@@ -8,6 +8,12 @@ public class LeaderboardManager : MonoBehaviour
 {
     public GameObject stats;
 
+    public string totalPyu = "";
+    public string wins = "";
+    public string shot = "";
+    public string killed = "";
+    public string totalPlayed = "";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +29,11 @@ public class LeaderboardManager : MonoBehaviour
 
         GameJoltUI.Instance.ShowLeaderboards();
         
-        stats.transform.Find("totalPyus").GetComponent<Text>().text = "Total Pyus collected : " + ScoreManager.totalPyus;
-        stats.transform.Find("wins").GetComponent<Text>().text = "Number of Wins : " + ScoreManager.nbOfWins;
-        stats.transform.Find("shot").GetComponent<Text>().text = "Number of Pyus shot : " + ScoreManager.nbPyuShot;
-        stats.transform.Find("killed").GetComponent<Text>().text = "Numer of Pyus killed : " + ScoreManager.nbPyuKilled;
-        stats.transform.Find("totalPlayed").GetComponent<Text>().text = "Number of games played : " + ScoreManager.nbOfGamesPlayed;
+        stats.transform.Find("totalPyus").GetComponent<Text>().text = totalPyu + ScoreManager.totalPyus;
+        stats.transform.Find("wins").GetComponent<Text>().text = wins + ScoreManager.nbOfWins;
+        stats.transform.Find("shot").GetComponent<Text>().text = shot + ScoreManager.nbPyuShot;
+        stats.transform.Find("killed").GetComponent<Text>().text = killed + ScoreManager.nbPyuKilled;
+        stats.transform.Find("totalPlayed").GetComponent<Text>().text = totalPlayed + ScoreManager.nbOfGamesPlayed;
 
         
     }

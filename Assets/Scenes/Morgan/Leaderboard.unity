@@ -873,6 +873,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 1109213201}
+  totalPyu: 'Total of pyus : '
+  wins: 'wins : '
+  shot: 'shots : '
+  killed: 'killed : '
+  totalPlayed: 'total games played : '
 --- !u!1 &1109213201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 91585587243650193, guid: 7a2e587034d846647b593aa159d7ed8d,
