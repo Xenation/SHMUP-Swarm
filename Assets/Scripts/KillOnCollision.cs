@@ -89,7 +89,7 @@ namespace Swarm {
             {
                 if (lazer && Time.time > (firstHitTime + (1.0f / (float)dmgPerSecond)))
                 {
-                    Debug.Log("ouch " + Time.time);
+                    //Debug.Log("ouch " + Time.time);
                     ps.Die(vD, vS);
                     firstHitTime = Time.time;
                 }
