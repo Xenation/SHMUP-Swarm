@@ -32,6 +32,7 @@ namespace Swarm
                 }
                 else
                 {
+                    ScoreManager.nbOfWins++;
                     SceneSwitcher.SwitchScene("Win", 2f, 1f);
                 }
             }

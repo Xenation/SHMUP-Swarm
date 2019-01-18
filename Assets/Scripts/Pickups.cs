@@ -53,6 +53,7 @@ namespace Swarm
 
             }
             Destroy(gameObject);
+            ScoreManager.totalPyus++;
             
             Swarm.PickupSpawner.currentPickups.Remove(this);
         }

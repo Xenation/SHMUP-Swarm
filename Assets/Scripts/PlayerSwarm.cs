@@ -71,6 +71,7 @@ namespace Swarm
                 float dist = Random.Range(0f, cursorRadius);
                 Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
             }
+            ScoreManager.totalPyus += unitsToCreate;
 
             defaultTimeScale = Time.fixedDeltaTime;
             cursorSprite = cursor.GetComponent<SpriteRenderer>();
@@ -97,6 +98,7 @@ namespace Swarm
                         PlayerUnit unit = units[0];
                         units.RemoveAt(0);
                         unit.Suicide();
+                        ScoreManager.nbPyuShot++;
                     }
 
                 }

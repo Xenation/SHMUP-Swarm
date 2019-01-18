@@ -25,6 +25,7 @@ namespace Swarm {
             if (pu)
             {
 				pu.Die(vD, vS);
+                ScoreManager.nbPyuKilled++;
             }
 
             PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();

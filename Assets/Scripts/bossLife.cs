@@ -57,6 +57,7 @@ namespace Swarm
             GetComponentsInChildren(parts);
 			ScoreTimer = Time.time;
 			boss = GetComponent<Boss>();
+            ScoreManager.nbOfGamesPlayed++;
         }
         // Start is called before the first frame update
         void Start()

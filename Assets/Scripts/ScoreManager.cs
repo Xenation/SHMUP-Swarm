@@ -16,6 +16,15 @@ public class ScoreManager : MonoBehaviour
     private static int leaderBScore = 0;
     public static string textScore = "";
 
+    //SinglePlayer stats
+    [HideInInspector] public static int nbPyuShot; //done
+    [HideInInspector] public static int nbPyuKilled; //done (check mortar
+    [HideInInspector] public static int totalPyus; 
+    [HideInInspector] public static int nbOfWins; //done
+    [HideInInspector] public static int nbOfGamesPlayed; //done
+    //[HideInInspector] public static int nbOfDeaths;
+    [HideInInspector] public static float averageNbOfPyus; //MAYBE
+
     private void Start()
     {
         Object.DontDestroyOnLoad(this.gameObject);
