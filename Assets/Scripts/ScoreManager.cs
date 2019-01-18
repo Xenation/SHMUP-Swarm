@@ -6,28 +6,49 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
 
-    private static float startTime;                     // Start of boss fight
+    private static float startTime;                         // Start of boss fight
     private static float pastTime = 0;                      //For checkpoints
-    [HideInInspector] public static float endTime;      //Time at which the scene changed
+    [HideInInspector] public static float endTime;          //Time at which the scene changed
     [HideInInspector] public static int bossPhase = 1;      //The boss's phase when scene changed
-    [HideInInspector] public static bool bossDead = false;      //If the boss is dead
+    [HideInInspector] public static bool bossDead = false;  //If the boss is dead
 
     private static float gameScore = 0.0f;
     private static int leaderBScore = 0;
     public static string textScore = "";
 
-    //SinglePlayer stats
-    [HideInInspector] public static int nbPyuShot; //done
-    [HideInInspector] public static int nbPyuKilled; //done (check mortar
-    [HideInInspector] public static int totalPyus; 
-    [HideInInspector] public static int nbOfWins; //done
-    [HideInInspector] public static int nbOfGamesPlayed; //done
+    [HideInInspector] public static int nbPyuShot           = 0;  //done
+    [HideInInspector] public static int nbPyuKilled         = 0;  //done
+    [HideInInspector] public static int totalPyus           = 0;  //done
+    [HideInInspector] public static int nbOfWins            = 0;  //done
+    [HideInInspector] public static int nbOfGamesPlayed     = 0;  //done
     //[HideInInspector] public static int nbOfDeaths;
-    [HideInInspector] public static float averageNbOfPyus; //MAYBE
+    [HideInInspector] public static float averageNbOfPyus   = 0; //MAYBE
+
 
     private void Start()
     {
         Object.DontDestroyOnLoad(this.gameObject);
+        //read local file for player satts
+        if (!PlayerPrefs.HasKey("nbPuyShot"))
+        {
+            //Set all keys
+            PlayerPrefs.SetInt("nbPyuShot", nbPyuShot);
+            PlayerPrefs.SetInt("nbPyuKilled", nbPyuKilled);
+            PlayerPrefs.SetInt("totalPyus", totalPyus);
+            PlayerPrefs.SetInt("nbOfWins", nbOfWins);
+            PlayerPrefs.SetInt("nbOfGamesPlayed", nbOfGamesPlayed);
+            PlayerPrefs.SetFloat("averageNbOfPyus", averageNbOfPyus);
+        }
+        else
+        {
+            //Get all keys
+            nbPyuShot       = PlayerPrefs.GetInt("nbPyuShot", nbPyuShot);
+            nbPyuKilled     = PlayerPrefs.GetInt("nbPyuKilled", nbPyuKilled);
+            totalPyus       = PlayerPrefs.GetInt("totalPyus", totalPyus);
+            nbOfWins        = PlayerPrefs.GetInt("nbOfWins", nbOfWins);
+            nbOfGamesPlayed = PlayerPrefs.GetInt("nbOfGamesPlayed", nbOfGamesPlayed);
+            averageNbOfPyus = PlayerPrefs.GetFloat("averageNbOfPyus", averageNbOfPyus);
+        }
     }
 
 
@@ -108,5 +129,15 @@ public class ScoreManager : MonoBehaviour
         GameJolt.API.Scores.Add(scoreValue, scoreText, guestName, tableID, extraData, (bool success) => {
             Debug.Log(string.Format("Score Add {0}.", success ? "Successful" : "Failed"));
         });
+    }
+
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetInt("nbPyuShot", nbPyuShot);
+        PlayerPrefs.SetInt("nbPyuKilled", nbPyuKilled);
+        PlayerPrefs.SetInt("totalPyus", totalPyus);
+        PlayerPrefs.SetInt("nbOfWins", nbOfWins);
+        PlayerPrefs.SetInt("nbOfGamesPlayed", nbOfGamesPlayed);
+        PlayerPrefs.SetFloat("averageNbOfPyus", averageNbOfPyus);
     }
 }

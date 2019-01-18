@@ -46,7 +46,6 @@ namespace Swarm
         {
             AkSoundEngine.PostEvent("Play_Death", gameObject);
             VibrationManager.AddVibrateRight(vibStrength, vibDuration);
-            ScoreManager.nbPyuKilled++;
 
             if ((swarm.ShrinkUnits + swarm.units.Count) > 1)
             {
@@ -69,6 +68,8 @@ namespace Swarm
         {
             if((swarm.ShrinkUnits + swarm.units.Count) <= mortarDmg)
             {
+                ScoreManager.nbPyuKilled += swarm.ShrinkUnits + swarm.units.Count;
+
                 swarm.ShrinkUnits = 0;
 
                 foreach (PlayerUnit unit in swarm.units)
@@ -81,6 +82,8 @@ namespace Swarm
             }
             else
             {
+                ScoreManager.nbPyuKilled += mortarDmg;
+
                 int dmg = mortarDmg;
 
                 if (dmg < swarm.ShrinkUnits)
