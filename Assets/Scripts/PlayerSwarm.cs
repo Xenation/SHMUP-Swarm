@@ -111,7 +111,7 @@ namespace Swarm
 
                 }
 
-                if (Input.GetButtonDown("Fire2"))
+                if (Input.GetAxisRaw("Fire2") >= 0.8f && !inShrink)
                 {
                     cursorSpeed = cursorShrinkSpeed;
                     cursorRadius = cursorShrinkRadius;
@@ -125,6 +125,25 @@ namespace Swarm
 
                     sizeRatio = shrinkUnit.transform.localScale.x;
 
+                }
+                else if(Input.GetAxisRaw("Fire2") <= 0.8f && inShrink)
+                {
+                    cursorSpeed = cursorNormalSpeed;
+                    cursorRadius = cursorNormalRadius;
+                    unitSpeed = unitNormalSpeed;
+                    unitRadius = unitNormalRadius;
+                    Destroy(shrinkUnit);
+
+                    //Respawn pyus and change sprite back to cursor
+                    for (int i = 0; i < ShrinkUnits; i++)
+                    {
+                        float perim = Random.Range(0f, Mathf.PI);
+                        float dist = Random.Range(0f, cursorRadius);
+                        Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
+                    }
+                    GetComponentsInChildren(units);
+                    inShrink = false;
+                    ShrinkUnits = 0;
                 }
 
                 if (inShrink)
@@ -188,27 +207,12 @@ namespace Swarm
 
                 }
 
-                if (Input.GetButtonUp("Fire2"))
+                /*if (Input.GetAxisRaw("Fire2") <= 0.8f)
                 {
-                    cursorSpeed = cursorNormalSpeed;
-                    cursorRadius = cursorNormalRadius;
-                    unitSpeed = unitNormalSpeed;
-                    unitRadius = unitNormalRadius;
-                    Destroy(shrinkUnit);
-
-                    //Respawn pyus and change sprite back to cursor
-                    for (int i = 0; i < ShrinkUnits; i++)
-                    {
-                        float perim = Random.Range(0f, Mathf.PI);
-                        float dist = Random.Range(0f, cursorRadius);
-                        Instantiate(unitPrefab, cursor.position + new Vector3(Mathf.Cos(perim) * dist, Mathf.Sin(perim) * dist), Quaternion.identity, transform);
-                    }
-                    GetComponentsInChildren(units);
-                    inShrink = false;
-                    ShrinkUnits = 0;
+                    
                     //cursorSprite.color = Color.gray;
 
-                }
+                }*/
             }
             if (inPause)
             {
