@@ -50,6 +50,7 @@ namespace Swarm {
 			visualProjectile.SetActive(false);
 			attack.transform.position = telegraph.transform.position;
             Collider2D[] touched = Physics2D.OverlapCircleAll(attack.transform.position, radius / 2f, LayerMask.GetMask("PlayerUnits"));
+            AkSoundEngine.PostEvent("Mortar_Out", gameObject);
 			foreach (Collider2D col in touched) {
                 PlayerShrink ps = col.GetComponent<PlayerShrink>();
 

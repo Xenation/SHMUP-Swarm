@@ -13,6 +13,7 @@ namespace Swarm
 
         public Button continueButton;
         public Button menuButton;
+        private Button prevButton;
 
         void Start()
         {
@@ -27,6 +28,8 @@ namespace Swarm
         {
             EventSystem.current.SetSelectedGameObject(menuButton.gameObject, null);
             EventSystem.current.SetSelectedGameObject(continueButton.gameObject, null);
+            prevButton = continueButton;
+            continueButton.Select();
         }
 
         // Update is called once per frame
@@ -35,10 +38,16 @@ namespace Swarm
             if(Input.GetAxis("Vertical") > 0.1f)
             {
                 EventSystem.current.SetSelectedGameObject(continueButton.gameObject, null);
+                prevButton = continueButton;
             }
-            if(Input.GetAxis("Vertical") < -0.1f)
+            else if(Input.GetAxis("Vertical") < -0.1f)
             {
                 EventSystem.current.SetSelectedGameObject(menuButton.gameObject, null);
+                prevButton = menuButton;
+            }
+            else
+            {
+                EventSystem.current.SetSelectedGameObject(prevButton.gameObject, null);
             }
         }
 
