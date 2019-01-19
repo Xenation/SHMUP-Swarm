@@ -39,7 +39,7 @@ MonoBehaviour:
       json: 7
       unityObject: {fileID: 0}
     - type: 1
-      json: 0.5
+      json: 0.4
       unityObject: {fileID: 0}
     - type: 3
       json: 

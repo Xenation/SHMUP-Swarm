@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishedDelay: 1
   simultaneous: []
-  nextPossible: []
+  nextPossible:
+  - {fileID: 11400000, guid: 5e5fe0717ac9c8b4ab24859536510740, type: 2}
   autoPlaced: 1
   count: 1
   startRotation: 0
@@ -30,10 +31,10 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
       json: 0
@@ -56,10 +57,10 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
       json: 0
@@ -74,7 +75,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
   - type: 1
     count: 0
@@ -82,10 +83,10 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,9
+      json: 0.9
       unityObject: {fileID: 0}
     - type: 1
       json: 0
@@ -116,13 +117,13 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
       json: 0
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -142,13 +143,13 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
       json: 0
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -160,7 +161,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
   - type: 1
     count: 0
@@ -168,13 +169,13 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 1
       json: 0
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,9
+      json: 0.9
       unityObject: {fileID: 0}
     - type: 3
       json: 

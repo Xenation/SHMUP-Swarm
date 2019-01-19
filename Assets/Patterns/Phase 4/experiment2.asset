@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
   m_Name: experiment2
   m_EditorClassIdentifier: 
-  finishedDelay: 1
+  finishedDelay: 3
   simultaneous:
   - {fileID: 0}
-  nextPossible: []
+  nextPossible:
+  - {fileID: 11400000, guid: 5e5fe0717ac9c8b4ab24859536510740, type: 2}
   autoPlaced: 0
   count: 30
   startRotation: 0
