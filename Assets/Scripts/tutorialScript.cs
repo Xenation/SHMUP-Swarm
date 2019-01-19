@@ -74,34 +74,28 @@ namespace Swarm
             else if (thumbStickMoved && (Time.time - timeSpent) > startTime  && part == 2)
             {
                 l.enabled = false;
-                description.text = "Go on          to have more units";
-                pickup.enabled = true;
-                part++;
-                spawner.spawnAt(new Vector3(swarm.transform.position.x + 0.1f, swarm.transform.position.y + 0.1f)); //Change position of the pickup according to the player.
-                timeSpent = Time.time;
-                prevUnitCount = swarm.units.Count;
-            }
-            else if (swarm.units.Count > prevUnitCount && part == 3)
-            {
-                pickup.enabled = false;
+
                 description.text = "You can transform into a bigger unit by holding         or SHIFT \n In this form you are stronger.\n";
                 part++;
                 rt.enabled = true;
-            }
 
-            //ADD PART TO SHOW THAT SHRINK HELPS AGAINST LAZERS
-            else if (Input.GetAxisRaw("Fire2") >= 0.8f && part == 4)
+               
+            }
+            else if( Input.GetAxisRaw("Fire2") >= 0.8f && part == 3)
             {
                 rt.enabled = false;
-                description.text = "Go to the right!";
+                description.text = "Go on          to have more units";
+                pickup.enabled = true;
                 part++;
-
-                //Activate lazer
-                //Instantiate();
+                spawner.spawnAt(new Vector3(-9, swarm.transform.position.y + 0.1f)); //Change position of the pickup according to the player.
+                timeSpent = Time.time;
+                prevUnitCount = swarm.units.Count;
             }
-            else if(swarm.cursor.localPosition.x > 11 && part == 5) //Check position of player (if he is to the right of the lazer)
+            //ADD PART TO SHOW THAT SHRINK HELPS AGAINST LAZERS
+            else if (swarm.units.Count > prevUnitCount && part == 4)
             {
                 //Deactivate lazer
+                pickup.enabled = false;
 
                 description.text = "Here is your enemy.\nPress       or SPACE BAR to shoot an unit.\n You automaticly shoot towards the boss";
                 a.enabled = true;
@@ -114,18 +108,18 @@ namespace Swarm
 
                 part++;
             }
-            else if(Input.GetButtonUp("Fire1") && part == 6)
+            else if(Input.GetButtonUp("Fire1") && part == 5)
             {
                 a.enabled = false;
                 description.text = "You must destroy all 4 parts of its armor.";
                 part++;
             }
-            else if ( !boss.hasPartsAlive && part == 7)
+            else if ( !boss.hasPartsAlive && part == 6)
             {
                 description.text = "Then attack its heart.";
                 part++;
             }
-            else if ( boss ==null && part == 8)
+            else if ( boss ==null && part == 7)
             {
                 description.text = "Let's go for real now!\nDon't get all your units killed!\n";
             }
