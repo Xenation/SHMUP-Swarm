@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Morgan/TutorialScene.unity
     guid: 0eb9e6ebcaf7fda4da576e719300fdad
+  - enabled: 1
+    path: Assets/Scenes/Morgan/cinematic.unity
+    guid: add7917ade02c134a998bb3e0176d17f
   m_configObjects: {}

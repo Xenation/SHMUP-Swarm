@@ -62,6 +62,8 @@ namespace Swarm
 
         public Button continueButton;
 
+        private bool firstFramOut = false;
+
         private void Awake()
         {
             cursor = transform.Find("Cursor");
@@ -103,7 +105,7 @@ namespace Swarm
                 velocity.y = Input.GetAxisRaw("Vertical");
                 //velocity.Normalize();
 
-                if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed)
+                if (Input.GetButtonDown("Fire1") && units.Count > 0 && cursorSpeed != cursorShrinkSpeed && !firstFramOut)
                 {
                     if (units.Count > 1)
                     {
@@ -113,6 +115,10 @@ namespace Swarm
                         ScoreManager.nbPyuShot++;
                     }
 
+                }
+                else if(firstFramOut)
+                {
+                    firstFramOut = false;
                 }
 
                 if (Input.GetAxisRaw("Fire2") >= 0.8f && !inShrink)
@@ -249,6 +255,7 @@ namespace Swarm
                 inPause = !inPause;
                 backgroundPause.SetActive(false);
                 pauseMenu.SetActive(false);
+                firstFramOut = true;
             }
         }
 

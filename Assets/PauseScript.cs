@@ -49,6 +49,7 @@ namespace Swarm
 
         private void onClickMenu()
         {
+            swarm.switchPause(false);
             SceneSwitcher.SwitchScene("Menu");
         }
     }
