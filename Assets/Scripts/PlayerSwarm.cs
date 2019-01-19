@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 namespace Swarm
 {
@@ -59,6 +60,7 @@ namespace Swarm
         public bool tutorial = false;
 
         public GameObject backgroundPause;
+        public GameObject pauseMenu;
 
         private void Awake()
         {
@@ -153,33 +155,6 @@ namespace Swarm
                     //Kill all pyus and change cursor to a bigger pyu.
                     Vector3 minDist = new Vector3(cursor.transform.position.x - cursorShrinkRadius, cursor.transform.position.y - cursorShrinkRadius, 0);
                     Vector3 maxDist = new Vector3(cursor.transform.position.x + cursorShrinkRadius, cursor.transform.position.y + cursorShrinkRadius, 0);
-                    //v1
-                    /*
-                    foreach (PlayerUnit unit in units)
-                    {
-                        if (unit.transform.position.x <= maxDist.x &&
-                            unit.transform.position.x >= minDist.x &&
-                            unit.transform.position.y <= maxDist.y &&
-                            unit.transform.position.y >= minDist.y)
-                        {
-                            ++ShrinkUnits;
-
-                            if (units.Count > 1)
-                            {
-                                float sizeNow = (float)ShrinkUnits / ((float)ShrinkUnits + (float)units.Count);
-                                shrinkUnit.transform.localScale = new Vector3(sizeRatio + (sizeRatio * sizeNow), sizeRatio + (sizeRatio * sizeNow), shrinkUnit.transform.localScale.z);
-                            }
-                            else if (units.Count == 1)
-                            {
-                                shrinkUnit.transform.localScale = new Vector3(sizeRatio + sizeRatio, sizeRatio + sizeRatio, shrinkUnit.transform.localScale.z);
-                            }
-
-
-                            Destroy(unit.gameObject);
-                        }
-                    }
-                    */
-
 
                     //V2
 
@@ -205,22 +180,14 @@ namespace Swarm
                             ++ShrinkUnits;
                         }
                     }
-
-
                 }
-
-                /*if (Input.GetAxisRaw("Fire2") <= 0.8f)
-                {
-                    
-                    //cursorSprite.color = Color.gray;
-
-                }*/
             }
             if (inPause)
             {
                 velocity.x = 0;
                 velocity.y = 0;
             }
+
 
             /***********
              * Pause
@@ -230,19 +197,11 @@ namespace Swarm
             {
                 if (inPause)
                 {
-                    Time.timeScale = 1;
-                    Time.fixedDeltaTime = defaultTimeScale;
-                    inPause = !inPause;
-                    Pause.text = "";
-                    backgroundPause.SetActive(false);
+                    switchPause(false);
                 }
                 else
                 {
-                    Time.timeScale = 0.001f;
-                    Time.fixedDeltaTime = defaultTimeScale * 0.001f;
-                    inPause = !inPause;
-                    Pause.text = "Pause \n Press P or Start to resume";
-                    backgroundPause.SetActive(true);
+                    switchPause(true);
                 }
             }
 
@@ -272,6 +231,29 @@ namespace Swarm
 
             }
 
+        }
+
+        public void switchPause(bool on)
+        {
+            if (on)
+            {
+                Time.timeScale = 0.001f;
+                Time.fixedDeltaTime = defaultTimeScale * 0.001f;
+                inPause = !inPause;
+                Pause.text = "Pause \n Press P or Start to resume";
+                backgroundPause.SetActive(true);
+                pauseMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(GameObject.Find("Continue"));
+            }
+            else
+            {
+                Time.timeScale = 1;
+                Time.fixedDeltaTime = defaultTimeScale;
+                inPause = !inPause;
+                Pause.text = "";
+                backgroundPause.SetActive(false);
+                pauseMenu.SetActive(false);
+            }
         }
 
         private void FixedUpdate()
