@@ -70,6 +70,8 @@ namespace Swarm
             cursorRB = cursor.GetComponent<Rigidbody2D>();
 
             unitsToCreate = ScoreManager.pyusAtLastPhase;
+            if (unitsToCreate < 20)
+                unitsToCreate = 20;
 
             for (int i = 0; i < unitsToCreate; i++)
             {
