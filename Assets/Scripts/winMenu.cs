@@ -3,22 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 namespace Swarm {
 	public class winMenu : MonoBehaviour {
 		public Text name;
 		public Text score;
 
+		private EventSystem eventSystem;
+		private Button retMenu;
+		private Button submit;
+		private InputField nameField;
+		private Selectable outOfField; // Ugly bypass to avoid the double down input
+
+		private bool isSelectingDown = false;
+
 		// Start is called before the first frame update
 		void Start() {
-			GameObject.Find("returnToMenu").GetComponent<Button>().onClick.AddListener(onClickMenu);
-			GameObject.Find("SubmitScore").GetComponent<Button>().onClick.AddListener(onClickSubmit);
+			eventSystem = FindObjectOfType<EventSystem>();
+			retMenu = GameObject.Find("returnToMenu").GetComponent<Button>();
+			retMenu.onClick.AddListener(onClickMenu);
+			submit = GameObject.Find("SubmitScore").GetComponent<Button>();
+			submit.onClick.AddListener(onClickSubmit);
+			nameField = GameObject.Find("NameField").GetComponent<InputField>();
+			outOfField = GameObject.Find("OutOfField").GetComponent<Selectable>();
 			score.text = ScoreManager.textScore;
 		}
 
 		// Update is called once per frame
 		void Update() {
-
+			if (eventSystem.currentSelectedGameObject == nameField.gameObject) {
+				if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetAxisRaw("JoyVertical") < 0f) {
+					Debug.Log("switching to submit");
+					eventSystem.SetSelectedGameObject(outOfField.gameObject);
+					isSelectingDown = true;
+				}
+			}
 		}
 
 		void onClickMenu() {
