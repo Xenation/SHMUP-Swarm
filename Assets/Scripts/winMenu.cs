@@ -26,6 +26,7 @@ namespace Swarm {
 			submit = GameObject.Find("SubmitScore").GetComponent<Button>();
 			submit.onClick.AddListener(onClickSubmit);
 			nameField = GameObject.Find("NameField").GetComponent<InputField>();
+			nameField.onEndEdit.AddListener(OnNameEndEdit);
 			outOfField = GameObject.Find("OutOfField").GetComponent<Selectable>();
 			score.text = ScoreManager.textScore;
 		}
@@ -51,5 +52,10 @@ namespace Swarm {
             ScoreManager.sendScore(name.text); //Add Name from submit text field
             SceneSwitcher.SwitchScene("Menu");
 		}
+
+		private void OnNameEndEdit(string name) {
+			onClickSubmit();
+		}
+
 	}
 }
