@@ -38,7 +38,7 @@ namespace Swarm {
                 }
                 else
                 {
-                    ScoreManager.nbPyuKilled--;
+                    ScoreManager.nbPyuKilled++;
                     ps.Die(vD, vS);
                 }
             }
@@ -52,7 +52,7 @@ namespace Swarm {
             {
                 if (lazer && Time.time > (firstHitTime + (1.0f / (float)dmgPerSecond)))
                 {
-                    Debug.Log("ouch " + Time.time);
+                    ScoreManager.nbPyuKilled++;
                     ps.Die(vD, vS);
                     firstHitTime = Time.time;
                 }
@@ -64,6 +64,7 @@ namespace Swarm {
 
             if (pu)
             {
+                ScoreManager.nbPyuKilled++;
                 pu.Die(vD, vS);
             }
 
@@ -77,6 +78,7 @@ namespace Swarm {
                 }
                 else
                 {
+                    ScoreManager.nbPyuKilled++;
                     ps.Die(vD, vS);
                 }
             }
@@ -90,7 +92,7 @@ namespace Swarm {
             {
                 if (lazer && Time.time > (firstHitTime + (1.0f / (float)dmgPerSecond)))
                 {
-                    //Debug.Log("ouch " + Time.time);
+                    ScoreManager.nbPyuKilled++;
                     ps.Die(vD, vS);
                     firstHitTime = Time.time;
                 }
