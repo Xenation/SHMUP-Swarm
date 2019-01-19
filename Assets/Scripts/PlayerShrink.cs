@@ -13,7 +13,7 @@ namespace Swarm
 
         private Vector2 velocity;
 
-        public int mortarDmg = 15;
+        public int mortarDmg = 20;
 
 
 
