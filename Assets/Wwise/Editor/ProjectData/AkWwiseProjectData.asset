@@ -22,7 +22,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f68c3a13b89a145835cc0a1e0db27b7
-    m_lastTime: -8586539530947107228
+    m_lastTime: -8586539274584595887
     List:
     - name: Rev
       guid: 4c9e66656c13574a8d67f379fd6d3aad
@@ -39,7 +39,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 244abfbb0095c14eb0f174697cefa6ed
-    m_lastTime: -8586539523533867896
+    m_lastTime: -8586536823044289464
     List:
     - name: Main_Bank
       guid: 7eb536d41637b245aaeb68c1eaa0e937
@@ -54,7 +54,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3eaae172fd2c184583ca1012ddcff4ad
-    m_lastTime: -8586539512174910084
+    m_lastTime: -8586536824789075752
     List:
     - name: Play_Amb
       guid: ddc55d6f1487144b836699945890c16a
@@ -101,6 +101,18 @@ MonoBehaviour:
       - ElementName: Play_Bullets
         ObjectType: 3
       Path: Default Work Unit\Play_Bullets
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Cinematic
+      guid: 24d538b88ca4674c88b29ef5fd047367
+      id: 2900783425
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Cinematic
+        ObjectType: 3
+      Path: Default Work Unit\Play_Cinematic
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -384,7 +396,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 12f391762f07df4187e60b4141493a89
-    m_lastTime: -8586541272897902430
+    m_lastTime: -8586540125384268153
     List:
     - name: ElectroFilter
       guid: c744be5295009945a5dcf3817a66795e
