@@ -90,7 +90,7 @@ namespace Swarm
             }
 
             //ADD PART TO SHOW THAT SHRINK HELPS AGAINST LAZERS
-            else if (Input.GetButtonUp("Fire2") && part == 4)
+            else if (Input.GetAxisRaw("Fire2") >= 0.8f && part == 4)
             {
                 rt.enabled = false;
                 description.text = "Lazer on the right side, go through it in shrink not to die";
@@ -103,7 +103,7 @@ namespace Swarm
             {
                 //Deactivate lazer
 
-                description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit";
+                description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit.\nYou automaticly shoot towards the boss";
                 a.enabled = true;
 
                 boss.gameObject.SetActive(true);

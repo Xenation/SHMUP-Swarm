@@ -589,7 +589,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2aec4751c516ef844975f9aee18b36d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2df09e2fa4ee7f84f93ff1166419fe09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -759,6 +759,7 @@ MonoBehaviour:
   a: {fileID: 1275671235}
   rt: {fileID: 681453405}
   pickup: {fileID: 1191488014}
+  lazer: {fileID: 0}
   startTime: 2
 --- !u!114 &719923245
 MonoBehaviour:
