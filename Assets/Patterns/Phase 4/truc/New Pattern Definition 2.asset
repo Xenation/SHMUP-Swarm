@@ -19,8 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0aeac188d2ce85046940efce85e658c0, type: 2}
   nextPossible:
   - {fileID: 11400000, guid: 5e5fe0717ac9c8b4ab24859536510740, type: 2}
-  autoPlaced: 1
-  count: 2
+  autoPlaced: 0
+  count: 4
   startRotation: 0
   distanceFromCenter: 2
   rotationSpeed: 0
@@ -28,7 +28,9 @@ MonoBehaviour:
   - position: {x: 2, y: 0}
     rotation: 0
   - position: {x: -2, y: -0.00000017484555}
-    rotation: -180
+    rotation: 180
+  - position: {x: 0.000000023849761, y: -2}
+    rotation: 270
   sequence:
   - type: 8
     count: 0
@@ -42,7 +44,7 @@ MonoBehaviour:
       json: 11
       unityObject: {fileID: 0}
     - type: 1
-      json: 2
+      json: 3.5
       unityObject: {fileID: 0}
     - type: 1
       json: 10

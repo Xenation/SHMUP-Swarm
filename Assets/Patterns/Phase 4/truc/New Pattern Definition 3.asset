@@ -52,7 +52,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 0.5
+      json: 2
       unityObject: {fileID: 0}
   - type: 1
     count: 0
