@@ -84,7 +84,7 @@ namespace Swarm
             else if (swarm.units.Count > prevUnitCount && part == 3)
             {
                 pickup.enabled = false;
-                description.text = "You can transform into a bigger unit by holding         or RIGHT CLICK \n In this form you are stronger.\nHowever you are slower, and you can't shoot.";
+                description.text = "You can transform into a bigger unit by holding         or SHIFT \n In this form you are stronger.\n";
                 part++;
                 rt.enabled = true;
             }
@@ -93,7 +93,7 @@ namespace Swarm
             else if (Input.GetAxisRaw("Fire2") >= 0.8f && part == 4)
             {
                 rt.enabled = false;
-                description.text = "Lazer on the right side, go through it in shrink not to die";
+                description.text = "Go to the right!";
                 part++;
 
                 //Activate lazer
@@ -103,7 +103,7 @@ namespace Swarm
             {
                 //Deactivate lazer
 
-                description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit.\nYou automaticly shoot towards the boss";
+                description.text = "Here is your enemy.\nPress       or SPACE BAR to shoot an unit.\n You automaticly shoot towards the boss";
                 a.enabled = true;
 
                 boss.gameObject.SetActive(true);
