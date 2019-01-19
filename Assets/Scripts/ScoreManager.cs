@@ -92,6 +92,7 @@ public class ScoreManager : MonoBehaviour
                     bossPhase = 1;
                     pyusAtLastPhase = 20;
                 }
+
                 play = true;
                 win = false;
                 lose = false;
@@ -106,6 +107,7 @@ public class ScoreManager : MonoBehaviour
             if (!lose)
             {
                 pastTime += (endTime - startTime);
+
                 play = false;
                 win = false;
                 lose = true;
@@ -118,6 +120,7 @@ public class ScoreManager : MonoBehaviour
             if (!win)
             {
                 setScore(pastTime + (endTime - startTime));
+
                 play = false;
                 win = true;
                 lose = false;
@@ -134,6 +137,7 @@ public class ScoreManager : MonoBehaviour
                 bossPhase = 1;
                 pastTime = 0;
                 pyusAtLastPhase = 20;
+
                 play = false;
                 win = false;
                 lose = false;
