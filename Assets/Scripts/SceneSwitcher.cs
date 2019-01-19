@@ -24,6 +24,11 @@ namespace Swarm {
 			procManager = new ProcessManager();
 			fader = GetComponentInChildren<Graphic>();
 			DontDestroyOnLoad(gameObject);
+
+            //Disable mouse
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
 		}
 
 		private void Update() {
