@@ -6080,7 +6080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4788165427147069081}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49275804ce973954b8cede02d76bfcf5, type: 3}
   m_Name: 
@@ -13043,6 +13043,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4959298322142102862}
     m_Modifications:
+    - target: {fileID: 1777132541094639477, guid: 1e181c09bffa2b14089b99a87372789f,
+        type: 3}
+      propertyPath: m_Name
+      value: eplosion all
+      objectReference: {fileID: 0}
     - target: {fileID: 1777132541094639475, guid: 1e181c09bffa2b14089b99a87372789f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13097,11 +13102,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777132541094639477, guid: 1e181c09bffa2b14089b99a87372789f,
-        type: 3}
-      propertyPath: m_Name
-      value: eplosion all
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e181c09bffa2b14089b99a87372789f, type: 3}

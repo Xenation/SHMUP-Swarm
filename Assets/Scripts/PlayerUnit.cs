@@ -60,10 +60,12 @@ namespace Swarm {
 
 		public void Die(float vibDuration = 1.0f, float vibStrength = 2.0f) {
 			AkSoundEngine.PostEvent("Play_Death", gameObject);
-            ScoreManager.nbPyuKilled++;
+            Debug.Log("Killed");
+            Debug.Log(this.gameObject);
 			VibrationManager.AddVibrateLeft(vibStrength, vibDuration);
 			Destroy(gameObject);
-		}
+            ScoreManager.nbPyuKilled++;
+        }
 
 		private void DebugVelocity(Vector2 vel, Color col) {
 			if (!swarm.debug) return;

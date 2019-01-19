@@ -45,7 +45,7 @@ namespace Swarm
         public void Die(float vibDuration = 1.0f, float vibStrength = 2.0f)
         {
             AkSoundEngine.PostEvent("Play_Death", gameObject);
-            ScoreManager.nbPyuKilled++;
+            
             VibrationManager.AddVibrateRight(vibStrength, vibDuration);
 
             if ((swarm.ShrinkUnits + swarm.units.Count) > 1)
@@ -63,6 +63,7 @@ namespace Swarm
             {
                 Destroy(gameObject);
             }
+            ScoreManager.nbPyuKilled++;
         }
 
         public void kill()

@@ -20,24 +20,31 @@ namespace Swarm {
         
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            PlayerUnit pu = collision.gameObject.GetComponent<PlayerUnit>();
-
-            if (pu)
+            if (gameObject.name != "Boss")
             {
-				pu.Die(vD, vS);
-            }
+                PlayerUnit pu = collision.gameObject.GetComponent<PlayerUnit>();
 
-            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
-
-            if (ps)
-            {
-                if (lazer)
+                if (pu)
                 {
-                    firstHitTime = Time.time;
+                    pu.GetComponent<Collider2D>().enabled = false;
+                    Debug.Log("Hello" + gameObject.name);
+                    pu.Die(vD, vS);
                 }
                 else
                 {
-                    ps.Die(vD, vS);
+                    PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+                    if (ps)
+                    {
+                        if (lazer)
+                        {
+                            firstHitTime = Time.time;
+                        }
+                        else
+                        {
+                            ps.Die(vD, vS);
+                        }
+                    }
                 }
             }
         }
@@ -57,26 +64,34 @@ namespace Swarm {
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            PlayerUnit pu = collision.gameObject.GetComponent<PlayerUnit>();
-
-            if (pu)
+            if(gameObject.name != "Boss")
             {
-                pu.Die(vD, vS);
-            }
+                PlayerUnit pu = collision.gameObject.GetComponent<PlayerUnit>();
 
-            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
-
-            if (ps)
-            {
-                if (lazer)
+                if (pu)
                 {
-                    firstHitTime = Time.time;
+                    pu.GetComponent<Collider2D>().enabled = false;
+                    Debug.Log("Bye" + gameObject.name);
+                    pu.Die(vD, vS);
                 }
                 else
                 {
-                    ps.Die(vD, vS);
+                    PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+                    if (ps)
+                    {
+                        if (lazer)
+                        {
+                            firstHitTime = Time.time;
+                        }
+                        else
+                        {
+                            ps.Die(vD, vS);
+                        }
+                    }
                 }
             }
+            
         }
 
         private void OnTriggerStay2D(Collider2D collision)
