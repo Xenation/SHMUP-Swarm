@@ -90,7 +90,7 @@ namespace Swarm
             }
 
             //ADD PART TO SHOW THAT SHRINK HELPS AGAINST LAZERS
-            else if (Input.GetButtonUp("Fire2") && part == 4)
+            else if (Input.GetAxisRaw("Fire2") >= 0.8f && part == 4)
             {
                 rt.enabled = false;
                 description.text = "Lazer on the right side, go through it in shrink not to die";
