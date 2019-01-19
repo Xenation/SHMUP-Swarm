@@ -57,7 +57,7 @@ namespace Swarm {
 
 		void onClickTutorial() {
             AkSoundEngine.PostEvent("Play_UI_Valide", gameObject);
-            SceneSwitcher.SwitchScene("TutorialScene");
+            SceneSwitcher.SwitchScene("cinematic");
 		}
 
 		void onClickScore() {
