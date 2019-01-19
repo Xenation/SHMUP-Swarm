@@ -23,7 +23,9 @@ namespace Swarm
         private void OnCollisionEnter2D(Collision2D collision)
         {
             PlayerUnit pyu = collision.gameObject.GetComponent<PlayerUnit>();
-            if (pyu)
+            PlayerShrink ps = collision.gameObject.GetComponent<PlayerShrink>();
+
+            if (pyu || ps)
             {
                 if (tutorial)
                 {
@@ -36,6 +38,7 @@ namespace Swarm
                     SceneSwitcher.SwitchScene("Win", 2f, 1f);
                 }
             }
+
             
         }
     }
