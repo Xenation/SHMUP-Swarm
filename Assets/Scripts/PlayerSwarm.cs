@@ -65,6 +65,8 @@ namespace Swarm
             cursor = transform.Find("Cursor");
             cursorRB = cursor.GetComponent<Rigidbody2D>();
 
+            unitsToCreate = ScoreManager.pyusAtLastPhase;
+
             for (int i = 0; i < unitsToCreate; i++)
             {
                 float perim = Random.Range(0f, Mathf.PI);

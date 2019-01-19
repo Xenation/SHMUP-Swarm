@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     [HideInInspector] public static float endTime;          //Time at which the scene changed
     [HideInInspector] public static int bossPhase = 1;      //The boss's phase when scene changed
     [HideInInspector] public static bool bossDead = false;  //If the boss is dead
+    [HideInInspector] public static int pyusAtLastPhase = 20;
 
     private static float gameScore = 0.0f;
     private static int leaderBScore = 0;
@@ -77,6 +78,7 @@ public class ScoreManager : MonoBehaviour
                 pastTime = 0;
                 bossDead = false;
                 bossPhase = 1;
+                pyusAtLastPhase = 20;
             }
         }
 
@@ -98,6 +100,7 @@ public class ScoreManager : MonoBehaviour
             bossDead = false;
             bossPhase = 1;
             pastTime = 0;
+            pyusAtLastPhase = 20;
         }
 
     }

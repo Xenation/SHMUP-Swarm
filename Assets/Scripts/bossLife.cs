@@ -247,6 +247,15 @@ namespace Swarm
 		public void SetPhase(int phase) {
 			currentPhase = phase;
 			ScoreManager.bossPhase = phase;
+            int nbPyus = player.units.Count + player.ShrinkUnits;
+            if (nbPyus > 20)
+            {
+                ScoreManager.pyusAtLastPhase = nbPyus;
+            }
+            else
+            {
+                ScoreManager.pyusAtLastPhase = 20;
+            }
 		}
 
         private void OnDestroy()
