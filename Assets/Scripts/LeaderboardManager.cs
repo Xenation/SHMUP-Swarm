@@ -36,8 +36,6 @@ public class LeaderboardManager : MonoBehaviour
         stats.transform.Find("killed").GetComponent<Text>().text = killed + ScoreManager.nbPyuKilled;
         stats.transform.Find("totalPlayed").GetComponent<Text>().text = totalPlayed + ScoreManager.nbOfGamesPlayed;
         stats.transform.Find("Loses").GetComponent<Text>().text = loses + ScoreManager.nbOfLoses;
-
-        
     }
 
     // Update is called once per frame

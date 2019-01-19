@@ -103,7 +103,7 @@ namespace Swarm
             {
                 //Deactivate lazer
 
-                description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit";
+                description.text = "Here is your enemy.\nPress       or LEFT CLICK to shoot an unit.\nYou automaticly shoot towards the boss";
                 a.enabled = true;
 
                 boss.gameObject.SetActive(true);
