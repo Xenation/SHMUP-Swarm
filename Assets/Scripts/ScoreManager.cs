@@ -27,6 +27,11 @@ public class ScoreManager : MonoBehaviour
     //[HideInInspector] public static int nbOfDeaths;
     [HideInInspector] public static float averageNbOfPyus   = 0; //MAYBE
 
+    private bool play = false;
+    private bool win = false;
+    private bool lose = false;
+    private bool menu = false;
+
 
     private void Start()
     {
@@ -67,42 +72,73 @@ public class ScoreManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        
+    }
+
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "PlayScene")
         {
-            startTime = Time.time;
-
-            if (bossDead)
+            if (!play)
             {
-                pastTime = 0;
-                bossDead = false;
-                bossPhase = 1;
-                pyusAtLastPhase = 20;
+                startTime = Time.time;
+
+                if (bossDead)
+                {
+                    pastTime = 0;
+                    bossDead = false;
+                    bossPhase = 1;
+                    pyusAtLastPhase = 20;
+                }
+                play = true;
+                win = false;
+                lose = false;
+                menu = false;
             }
+            
         }
 
 
         if(scene.name == "Lose")
         {
-            //nbOfLoses++;
-            pastTime += (endTime - startTime);
-            //nbOfLoses++;
+            if (!lose)
+            {
+                pastTime += (endTime - startTime);
+                play = false;
+                win = false;
+                lose = true;
+                menu = false;
+            }
         }
 
         if(scene.name == "Win")
         {
-            //nbOfWins++;
-            setScore(pastTime + (endTime - startTime));
+            if (!win)
+            {
+                setScore(pastTime + (endTime - startTime));
+                play = false;
+                win = true;
+                lose = false;
+                menu = false;
+            }
         }
 
         if(scene.name == "Menu")
         {
-            resetScore();
-            bossDead = false;
-            bossPhase = 1;
-            pastTime = 0;
-            pyusAtLastPhase = 20;
+            if (!menu)
+            {
+                resetScore();
+                bossDead = false;
+                bossPhase = 1;
+                pastTime = 0;
+                pyusAtLastPhase = 20;
+                play = false;
+                win = false;
+                lose = false;
+                menu = true;
+            }
         }
 
     }
