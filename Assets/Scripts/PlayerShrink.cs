@@ -61,6 +61,8 @@ namespace Swarm
             }
             else
             {
+                swarm.ShrinkUnits = 0;
+                swarm.units.Clear();
                 Destroy(gameObject);
             }
             ScoreManager.nbPyuKilled++;

@@ -37,13 +37,13 @@ namespace Swarm
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetAxis("Vertical") > 0.1f)
+            if(Input.GetAxis("Vertical") > 0.1f ||Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 EventSystem.current.SetSelectedGameObject(continueButton.gameObject, null);
                 continueButton.Select();
                 prevButton = continueButton;
             }
-            else if(Input.GetAxis("Vertical") < -0.1f)
+            else if(Input.GetAxis("Vertical") < -0.1f || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 EventSystem.current.SetSelectedGameObject(menuButton.gameObject, null);
                 menuButton.Select();
