@@ -22,6 +22,7 @@ public class ScoreManager : MonoBehaviour
     [HideInInspector] public static int totalPyus           = 0;  //done
     [HideInInspector] public static int nbOfWins            = 0;  //done
     [HideInInspector] public static int nbOfGamesPlayed     = 0;  //done
+    [HideInInspector] public static int nbOfLoses           = 0;  //done
     //[HideInInspector] public static int nbOfDeaths;
     [HideInInspector] public static float averageNbOfPyus   = 0; //MAYBE
 
@@ -37,18 +38,20 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("nbPyuKilled", nbPyuKilled);
             PlayerPrefs.SetInt("totalPyus", totalPyus);
             PlayerPrefs.SetInt("nbOfWins", nbOfWins);
-            PlayerPrefs.SetInt("nbOfGamesPlayed", nbOfGamesPlayed);
+            PlayerPrefs.SetInt("nbOfGamesPlayed", nbOfLoses);
+            PlayerPrefs.SetInt("nbOfLoses", nbOfGamesPlayed);
             PlayerPrefs.SetFloat("averageNbOfPyus", averageNbOfPyus);
         }
         else
         {
             //Get all keys
-            nbPyuShot       = PlayerPrefs.GetInt("nbPyuShot", nbPyuShot);
-            nbPyuKilled     = PlayerPrefs.GetInt("nbPyuKilled", nbPyuKilled);
-            totalPyus       = PlayerPrefs.GetInt("totalPyus", totalPyus);
-            nbOfWins        = PlayerPrefs.GetInt("nbOfWins", nbOfWins);
-            nbOfGamesPlayed = PlayerPrefs.GetInt("nbOfGamesPlayed", nbOfGamesPlayed);
-            averageNbOfPyus = PlayerPrefs.GetFloat("averageNbOfPyus", averageNbOfPyus);
+            nbPyuShot       = PlayerPrefs.GetInt("nbPyuShot");
+            nbPyuKilled     = PlayerPrefs.GetInt("nbPyuKilled");
+            totalPyus       = PlayerPrefs.GetInt("totalPyus");
+            nbOfWins        = PlayerPrefs.GetInt("nbOfWins");
+            nbOfGamesPlayed = PlayerPrefs.GetInt("nbOfGamesPlayed");
+            nbOfLoses       = PlayerPrefs.GetInt("nbOfLoses");
+            averageNbOfPyus = PlayerPrefs.GetFloat("averageNbOfPyus");
         }
     }
 
@@ -81,6 +84,7 @@ public class ScoreManager : MonoBehaviour
         if(scene.name == "Lose")
         {
             pastTime += (endTime - startTime);
+            nbOfLoses++;
         }
 
         if(scene.name == "Win")

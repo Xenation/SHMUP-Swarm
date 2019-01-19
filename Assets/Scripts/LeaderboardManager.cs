@@ -13,6 +13,7 @@ public class LeaderboardManager : MonoBehaviour
     public string shot = "";
     public string killed = "";
     public string totalPlayed = "";
+    public string loses = "";
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class LeaderboardManager : MonoBehaviour
         stats.transform.Find("shot").GetComponent<Text>().text = shot + ScoreManager.nbPyuShot;
         stats.transform.Find("killed").GetComponent<Text>().text = killed + ScoreManager.nbPyuKilled;
         stats.transform.Find("totalPlayed").GetComponent<Text>().text = totalPlayed + ScoreManager.nbOfGamesPlayed;
+        stats.transform.Find("Loses").GetComponent<Text>().text = loses + ScoreManager.nbOfLoses;
 
         
     }
