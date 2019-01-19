@@ -36,7 +36,7 @@ namespace Swarm {
 
 		public void Lock(float lockTime) {
 			isLocked = true;
-			AkSoundEngine.PostEvent("Stop_Mortier", gameObject);
+			//AkSoundEngine.PostEvent("Stop_Mortier", gameObject);
 			visualProjectile.SetActive(true);
 			visualProjectileSpeed = (telegraph.transform.position - visualProjectile.transform.position).magnitude / lockTime;
 		}
@@ -50,7 +50,7 @@ namespace Swarm {
 			visualProjectile.SetActive(false);
 			attack.transform.position = telegraph.transform.position;
             Collider2D[] touched = Physics2D.OverlapCircleAll(attack.transform.position, radius / 2f, LayerMask.GetMask("PlayerUnits"));
-            AkSoundEngine.PostEvent("Mortar_Out", gameObject);
+            AkSoundEngine.PostEvent("Stop_Mortier", gameObject);
 			foreach (Collider2D col in touched) {
                 PlayerShrink ps = col.GetComponent<PlayerShrink>();
 
