@@ -86,7 +86,7 @@ public class ScoreManager : MonoBehaviour
         if(scene.name == "Lose")
         {
             pastTime += (endTime - startTime);
-            nbOfLoses++;
+            //nbOfLoses++;
         }
 
         if(scene.name == "Win")
