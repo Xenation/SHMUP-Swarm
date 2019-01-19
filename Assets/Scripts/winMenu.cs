@@ -29,6 +29,7 @@ namespace Swarm {
 			nameField.onEndEdit.AddListener(OnNameEndEdit);
 			outOfField = GameObject.Find("OutOfField").GetComponent<Selectable>();
 			score.text = ScoreManager.textScore;
+            ScoreManager.nbOfWins++;
 		}
 
 		// Update is called once per frame

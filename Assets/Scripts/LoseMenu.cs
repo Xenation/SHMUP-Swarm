@@ -11,6 +11,7 @@ namespace Swarm {
 			GameObject.Find("returnToMenu").GetComponent<Button>().onClick.AddListener(onClickMenu);
 			GameObject.Find("Retry").GetComponent<Button>().onClick.AddListener(onClickRetry);
 			GameObject.Find("Checkpoint").GetComponent<Button>().onClick.AddListener(onClickCheckpoint);
+            ScoreManager.nbOfLoses++;
 		}
 
 		// Update is called once per frame
