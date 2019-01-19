@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace Swarm
 {
@@ -10,16 +11,35 @@ namespace Swarm
         // Start is called before the first frame update
         public PlayerSwarm swarm;
 
+        public Button continueButton;
+        public Button menuButton;
+
         void Start()
         {
-            GameObject.Find("Continue").GetComponent<Button>().onClick.AddListener(onClickContinue);
-            GameObject.Find("Menu").GetComponent<Button>().onClick.AddListener(onClickMenu);
+            continueButton.onClick.AddListener(onClickContinue);
+            menuButton.onClick.AddListener(onClickMenu);
+
+            EventSystem.current.SetSelectedGameObject(menuButton.gameObject, null);
+            EventSystem.current.SetSelectedGameObject(continueButton.gameObject, null);
+        }
+
+        private void OnEnable()
+        {
+            EventSystem.current.SetSelectedGameObject(menuButton.gameObject, null);
+            EventSystem.current.SetSelectedGameObject(continueButton.gameObject, null);
         }
 
         // Update is called once per frame
         void Update()
         {
-
+            if(Input.GetAxis("Vertical") > 0.1f)
+            {
+                EventSystem.current.SetSelectedGameObject(continueButton.gameObject, null);
+            }
+            if(Input.GetAxis("Vertical") < -0.1f)
+            {
+                EventSystem.current.SetSelectedGameObject(menuButton.gameObject, null);
+            }
         }
 
         private void onClickContinue()

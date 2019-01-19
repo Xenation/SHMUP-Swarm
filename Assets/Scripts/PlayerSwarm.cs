@@ -55,12 +55,12 @@ namespace Swarm
         private GameObject shrinkUnit;
         private float sizeRatio;
 
-        public Text Pause;
-
         public bool tutorial = false;
 
         public GameObject backgroundPause;
         public GameObject pauseMenu;
+
+        public Button continueButton;
 
         private void Awake()
         {
@@ -239,17 +239,14 @@ namespace Swarm
                 Time.timeScale = 0.001f;
                 Time.fixedDeltaTime = defaultTimeScale * 0.001f;
                 inPause = !inPause;
-                Pause.text = "Pause \n Press P or Start to resume";
                 backgroundPause.SetActive(true);
                 pauseMenu.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(GameObject.Find("Continue"));
             }
             else
             {
                 Time.timeScale = 1;
                 Time.fixedDeltaTime = defaultTimeScale;
                 inPause = !inPause;
-                Pause.text = "";
                 backgroundPause.SetActive(false);
                 pauseMenu.SetActive(false);
             }
