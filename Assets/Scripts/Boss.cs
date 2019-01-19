@@ -34,7 +34,8 @@ namespace Swarm {
 			currentPattern.OnPatternEnded += PatternChange;
 			bLife.SetPhase(currentPhase + 1);
             ScoreManager.bossPhase = currentPhase + 1;
-			Debug.Log("Changed Phase: " + prevPhase + " --> " + currentPhase);
+            ScoreManager.pyusAtLastPhase = swarm.units.Count + swarm.ShrinkUnits;
+			//Debug.Log("Changed Phase: " + prevPhase + " --> " + currentPhase);
 		}
 
 		private void StunStarted() {
