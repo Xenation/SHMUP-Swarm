@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b719f22875b8cf344890c259ea289bd8, type: 3}
+  m_Name: BETWEEN4
+  m_EditorClassIdentifier: 
+  finishedDelay: 1
+  simultaneous: []
+  nextPossible:
+  - {fileID: 11400000, guid: b8e29744c05cd064592973b1e02edc43, type: 2}
+  - {fileID: 11400000, guid: f1d83a12586a2c14f90cf4c2400378ca, type: 2}
+  - {fileID: 11400000, guid: 087cf4335a1153c4ba06f8d8fad374b2, type: 2}
+  - {fileID: 11400000, guid: 64893b1e92fb8af459e8d530b25f85a0, type: 2}
+  - {fileID: 11400000, guid: 7e93eb9cf2176b44d8346ed36dda0cb3, type: 2}
+  - {fileID: 11400000, guid: c359ff47bbf428b4fadec86ec9963ecb, type: 2}
+  - {fileID: 11400000, guid: 07dd3aab330cf9b47af938c6dcc3471f, type: 2}
+  - {fileID: 11400000, guid: a5f8be6da4101104cb0a84854f730e52, type: 2}
+  autoPlaced: 1
+  count: 1
+  startRotation: 0
+  distanceFromCenter: 1
+  rotationSpeed: 0
+  spawnPoints:
+  - position: {x: 1, y: 0}
+    rotation: 0
+  sequence: []

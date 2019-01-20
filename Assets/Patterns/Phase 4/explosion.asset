@@ -27,9 +27,9 @@ MonoBehaviour:
   - position: {x: -0.00000004371139, y: 1}
     rotation: 90
   - position: {x: -1, y: -0.00000008742278}
-    rotation: 180
+    rotation: -180
   - position: {x: 0.000000011924881, y: -1}
-    rotation: 270
+    rotation: -90
   sequence:
   - type: 0
     count: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
       json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 2
       json: 

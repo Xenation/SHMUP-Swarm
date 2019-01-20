@@ -15,7 +15,7 @@ MonoBehaviour:
   finishedDelay: 1
   simultaneous: []
   nextPossible:
-  - {fileID: 11400000, guid: 2764ea5783e65744f90ebda929d300e5, type: 2}
+  - {fileID: 11400000, guid: 5e5fe0717ac9c8b4ab24859536510740, type: 2}
   autoPlaced: 0
   count: 8
   startRotation: 30
@@ -52,7 +52,7 @@ MonoBehaviour:
       json: 3
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -81,10 +81,10 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 1.8
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -113,10 +113,10 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 1.4
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -145,10 +145,10 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -177,10 +177,10 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 0.8
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -209,10 +209,10 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 0.6
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 
@@ -241,10 +241,10 @@ MonoBehaviour:
       json: 10
       unityObject: {fileID: 0}
     - type: 1
-      json: 1,8
+      json: 0.4
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.5
       unityObject: {fileID: 0}
     - type: 3
       json: 

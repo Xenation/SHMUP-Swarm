@@ -48,7 +48,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 1
+      json: 2.5
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -59,14 +59,14 @@ MonoBehaviour:
       json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.1
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 5
+      json: 3
       unityObject: {fileID: 0}
   - type: 3
     count: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     projectile: {fileID: 0}
     fields:
     - type: 1
-      json: 2,5
+      json: 2.8
       unityObject: {fileID: 0}
   - type: 0
     count: 0
@@ -85,12 +85,38 @@ MonoBehaviour:
       json: 1
       unityObject: {fileID: 0}
     - type: 1
-      json: 0,5
+      json: 0.1
       unityObject: {fileID: 0}
     - type: 2
       json: 
       unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
         type: 3}
     - type: 1
-      json: 5
+      json: 3
+      unityObject: {fileID: 0}
+  - type: 3
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 1
+      json: 2.8
+      unityObject: {fileID: 0}
+  - type: 0
+    count: 0
+    duration: 0
+    projectile: {fileID: 0}
+    fields:
+    - type: 0
+      json: 1
+      unityObject: {fileID: 0}
+    - type: 1
+      json: 0.1
+      unityObject: {fileID: 0}
+    - type: 2
+      json: 
+      unityObject: {fileID: 1783513460360557033, guid: 552704554f71f5d4791893e24ecb80ca,
+        type: 3}
+    - type: 1
+      json: 3
       unityObject: {fileID: 0}
