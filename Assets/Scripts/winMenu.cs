@@ -35,12 +35,19 @@ namespace Swarm {
 		// Update is called once per frame
 		void Update() {
 			if (eventSystem.currentSelectedGameObject == nameField.gameObject) {
-				if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetAxisRaw("JoyVertical") < 0f) {
+				if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetAxis("JoyVertical") < -0.1f) {
 					Debug.Log("switching to submit");
 					eventSystem.SetSelectedGameObject(outOfField.gameObject);
 					isSelectingDown = true;
 				}
 			}
+            else if(eventSystem.currentSelectedGameObject == submit.gameObject)
+            {
+                if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetAxis("JoyVertical") > 0.1f)
+                {
+                    //eventSystem.SetSelectedGameObject(nameField.gameObject);
+                }
+            }
 		}
 
 		void onClickMenu() {
@@ -55,7 +62,7 @@ namespace Swarm {
 		}
 
 		private void OnNameEndEdit(string name) {
-			onClickSubmit();
+			//onClickSubmit();
 		}
 
 	}
