@@ -81,6 +81,7 @@ namespace Swarm
         private void onClickMenu()
         {
             swarm.switchPause(false);
+            AkSoundEngine.PostEvent("Stop_SFX", gameObject);
             SceneSwitcher.SwitchScene("Menu");
         }
     }
