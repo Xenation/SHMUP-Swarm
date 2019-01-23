@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Xenon;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager : Singleton<ScoreManager>
 {
 
     private static float startTime;                         // Start of boss fight
@@ -32,6 +33,17 @@ public class ScoreManager : MonoBehaviour
     private bool lose = false;
     private bool menu = false;
 
+    private static bool created = false;
+
+    private void Awake()
+    {
+        if (created)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        created = true;
+    }
 
     private void Start()
     {
@@ -112,6 +124,7 @@ public class ScoreManager : MonoBehaviour
                 win = false;
                 lose = true;
                 menu = false;
+                Debug.Log(pastTime);
             }
         }
 
@@ -120,11 +133,13 @@ public class ScoreManager : MonoBehaviour
             if (!win)
             {
                 setScore(pastTime + (endTime - startTime));
+                //pastTime = 0;
 
                 play = false;
                 win = true;
                 lose = false;
                 menu = false;
+                Debug.Log(pastTime);
             }
         }
 
